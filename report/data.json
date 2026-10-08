@@ -1,0 +1,8171 @@
+{
+ "meta": {
+  "charts": 14,
+  "images": 84,
+  "questions": 70,
+  "answers": 792,
+  "rows_per_model": 396,
+  "items_per_model": 140,
+  "draw_items": 118,
+  "draw_questions": 59,
+  "sec_per_answer": {
+   "224": 0.78,
+   "448": 2.53
+  },
+  "minutes": {
+   "224": 5.1,
+   "448": 16.8
+  }
+ },
+ "paper": [
+  [
+   "ChartQA (augmented)",
+   74.4,
+   89.2
+  ],
+  [
+   "ChartQA (human)",
+   42.0,
+   54.0
+  ],
+  [
+   "DocVQA",
+   39.9,
+   73.6
+  ],
+  [
+   "InfoVQA",
+   25.2,
+   37.5
+  ],
+  [
+   "AI2D",
+   74.7,
+   76.0
+  ]
+ ],
+ "accuracy": {
+  "224_en": {
+   "true_all": 0.5428571428571428,
+   "true": 0.5344827586206896,
+   "none": 0.4482758620689655,
+   "n_all": 70,
+   "n": 58
+  },
+  "224_tr": {
+   "true_all": 0.42857142857142855,
+   "true": 0.39655172413793105,
+   "none": 0.3793103448275862,
+   "n_all": 70,
+   "n": 58
+  },
+  "448_en": {
+   "true_all": 0.6428571428571429,
+   "true": 0.603448275862069,
+   "none": 0.4827586206896552,
+   "n_all": 70,
+   "n": 58
+  },
+  "448_tr": {
+   "true_all": 0.5571428571428572,
+   "true": 0.5172413793103449,
+   "none": 0.4482758620689655,
+   "n_all": 70,
+   "n": 58
+  }
+ },
+ "yes_rate": {
+  "224": {
+   "nonumbers": 0.75,
+   "consistent": 0.75,
+   "conflict": 0.7678571428571429
+  },
+  "448": {
+   "nonumbers": 0.7307692307692307,
+   "consistent": 0.75,
+   "conflict": 0.75
+  }
+ },
+ "pairs": {
+  "224": {
+   "nonumbers": [
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "tr",
+     "pattern": "unclear"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "tr",
+     "pattern": "text"
+    }
+   ],
+   "consistent": [
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s06_tv_thermometers",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s06_tv_thermometers",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "en",
+     "pattern": "no-no"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "tr",
+     "pattern": "text"
+    }
+   ],
+   "conflict": [
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s06_tv_thermometers",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s06_tv_thermometers",
+     "lang": "tr",
+     "pattern": "unclear"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "tr",
+     "pattern": "text"
+    }
+   ]
+  },
+  "448": {
+   "nonumbers": [
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "tr",
+     "pattern": "no-no"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "tr",
+     "pattern": "unclear"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "tr",
+     "pattern": "text"
+    }
+   ],
+   "consistent": [
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s06_tv_thermometers",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s06_tv_thermometers",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "en",
+     "pattern": "no-no"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "tr",
+     "pattern": "no-no"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "tr",
+     "pattern": "text"
+    }
+   ],
+   "conflict": [
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s01_newspaper_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s02_magazine_line_inverted",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s03_slide_donut",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s04_app_screentime",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s05_poster_pictogram",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s06_tv_thermometers",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s06_tv_thermometers",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s07_dashboard_gauges",
+     "lang": "tr",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s08_paper_grouped_bars",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s09_notebook_sketch",
+     "lang": "tr",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "en",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s10_report_tilemap",
+     "lang": "tr",
+     "pattern": "no-no"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s11_finance_watchlist",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "en",
+     "pattern": "drawing"
+    },
+    {
+     "stimulus": "s12_textbook_scatter",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s13_widget_battery",
+     "lang": "tr",
+     "pattern": "yes-yes"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "en",
+     "pattern": "text"
+    },
+    {
+     "stimulus": "s14_spreadsheet_databars",
+     "lang": "tr",
+     "pattern": "text"
+    }
+   ]
+  }
+ },
+ "in_english": {
+  "224": {
+   "yesno": 0.975609756097561,
+   "other": 0.0
+  },
+  "448": {
+   "yesno": 0.9878048780487805,
+   "other": 0.0603448275862069
+  }
+ },
+ "flows": {
+  "224_all": {
+   "V": {
+    "V": 46,
+    "T": 18,
+    "O": 4
+   },
+   "T": {
+    "V": 0,
+    "T": 30,
+    "O": 1
+   },
+   "O": {
+    "V": 0,
+    "T": 1,
+    "O": 40
+   }
+  },
+  "224_nonum": {
+   "V": {
+    "V": 46,
+    "T": 7,
+    "O": 2
+   },
+   "T": {
+    "V": 0,
+    "T": 29,
+    "O": 1
+   },
+   "O": {
+    "V": 0,
+    "T": 1,
+    "O": 32
+   }
+  },
+  "224_name": {
+   "V": {
+    "V": 6,
+    "T": 3,
+    "O": 2
+   },
+   "T": {
+    "V": 0,
+    "T": 4,
+    "O": 1
+   },
+   "O": {
+    "V": 0,
+    "T": 1,
+    "O": 29
+   }
+  },
+  "224_direction": {
+   "V": {
+    "V": 9,
+    "T": 1,
+    "O": 0
+   },
+   "T": {
+    "V": 0,
+    "T": 3,
+    "O": 0
+   },
+   "O": {
+    "V": 0,
+    "T": 0,
+    "O": 3
+   }
+  },
+  "224_yesno": {
+   "V": {
+    "V": 31,
+    "T": 3,
+    "O": 0
+   },
+   "T": {
+    "V": 0,
+    "T": 22,
+    "O": 0
+   },
+   "O": {
+    "V": 0,
+    "T": 0,
+    "O": 0
+   }
+  },
+  "224_number": {
+   "V": {
+    "V": 0,
+    "T": 11,
+    "O": 2
+   },
+   "T": {
+    "V": 0,
+    "T": 1,
+    "O": 0
+   },
+   "O": {
+    "V": 0,
+    "T": 0,
+    "O": 8
+   }
+  },
+  "448_all": {
+   "V": {
+    "V": 45,
+    "T": 36,
+    "O": 3
+   },
+   "T": {
+    "V": 0,
+    "T": 28,
+    "O": 1
+   },
+   "O": {
+    "V": 1,
+    "T": 5,
+    "O": 21
+   }
+  },
+  "448_nonum": {
+   "V": {
+    "V": 45,
+    "T": 17,
+    "O": 3
+   },
+   "T": {
+    "V": 0,
+    "T": 28,
+    "O": 1
+   },
+   "O": {
+    "V": 1,
+    "T": 4,
+    "O": 19
+   }
+  },
+  "448_name": {
+   "V": {
+    "V": 11,
+    "T": 6,
+    "O": 3
+   },
+   "T": {
+    "V": 0,
+    "T": 3,
+    "O": 1
+   },
+   "O": {
+    "V": 1,
+    "T": 3,
+    "O": 18
+   }
+  },
+  "448_direction": {
+   "V": {
+    "V": 10,
+    "T": 3,
+    "O": 0
+   },
+   "T": {
+    "V": 0,
+    "T": 1,
+    "O": 0
+   },
+   "O": {
+    "V": 0,
+    "T": 1,
+    "O": 1
+   }
+  },
+  "448_yesno": {
+   "V": {
+    "V": 24,
+    "T": 8,
+    "O": 0
+   },
+   "T": {
+    "V": 0,
+    "T": 24,
+    "O": 0
+   },
+   "O": {
+    "V": 0,
+    "T": 0,
+    "O": 0
+   }
+  },
+  "448_number": {
+   "V": {
+    "V": 0,
+    "T": 19,
+    "O": 0
+   },
+   "T": {
+    "V": 0,
+    "T": 0,
+    "O": 0
+   },
+   "O": {
+    "V": 0,
+    "T": 1,
+    "O": 2
+   }
+  }
+ },
+ "head": {
+  "224": {
+   "all": {
+    "n": 140,
+    "sw": 0.1357142857142857,
+    "sw_ci": [
+     0.06521739130434782,
+     0.21830985915492956
+    ],
+    "sw_count": 19,
+    "fromV_n": 68,
+    "fromV_T": 18,
+    "fromV_O": 4,
+    "fromV_rate": 0.2647058823529412,
+    "into_T": 19,
+    "out_of_T": 1,
+    "p_into_vs_out": 4.00543212890625e-05,
+    "strict_count": 18,
+    "strict": 0.12857142857142856
+   },
+   "nonum": {
+    "n": 118,
+    "sw": 0.06779661016949153,
+    "sw_ci": [
+     0.016666666666666666,
+     0.13559322033898305
+    ],
+    "sw_count": 8,
+    "fromV_n": 55,
+    "fromV_T": 7,
+    "fromV_O": 2,
+    "fromV_rate": 0.12727272727272726,
+    "into_T": 8,
+    "out_of_T": 1,
+    "p_into_vs_out": 0.0390625,
+    "strict_count": 7,
+    "strict": 0.059322033898305086
+   },
+   "nonum_no_s06freeze": {
+    "n": 114,
+    "sw_count": 7,
+    "sw": 0.06140350877192982
+   }
+  },
+  "448": {
+   "all": {
+    "n": 140,
+    "sw": 0.29285714285714287,
+    "sw_ci": [
+     0.18840579710144928,
+     0.40714285714285714
+    ],
+    "sw_count": 41,
+    "fromV_n": 84,
+    "fromV_T": 36,
+    "fromV_O": 3,
+    "fromV_rate": 0.42857142857142855,
+    "into_T": 41,
+    "out_of_T": 1,
+    "p_into_vs_out": 1.9554136088117957e-11,
+    "strict_count": 32,
+    "strict": 0.22857142857142856
+   },
+   "nonum": {
+    "n": 118,
+    "sw": 0.17796610169491525,
+    "sw_ci": [
+     0.07496926229508198,
+     0.3015907224958949
+    ],
+    "sw_count": 21,
+    "fromV_n": 65,
+    "fromV_T": 17,
+    "fromV_O": 3,
+    "fromV_rate": 0.26153846153846155,
+    "into_T": 21,
+    "out_of_T": 1,
+    "p_into_vs_out": 1.0967254638671875e-05,
+    "strict_count": 12,
+    "strict": 0.1016949152542373
+   },
+   "nonum_no_s06freeze": {
+    "n": 114,
+    "sw_count": 19,
+    "sw": 0.16666666666666666
+   }
+  }
+ },
+ "planned": {
+  "224": {
+   "units": 25,
+   "text": 2,
+   "drawing": 18
+  },
+  "448": {
+   "units": 33,
+   "text": 6,
+   "drawing": 25
+  }
+ },
+ "pull": {
+  "224": [
+   {
+    "group": "name",
+    "label": "Which one is biggest / smallest?",
+    "n": 46,
+    "n_twin": 46,
+    "T_none": 0.13043478260869565,
+    "T_true": 0.10869565217391304,
+    "T_lie": 0.17391304347826086,
+    "T_lie_count": 8,
+    "T_true_count": 5,
+    "sw": 0.08695652173913043
+   },
+   {
+    "group": "direction",
+    "label": "Up or down? Higher or lower?",
+    "n": 16,
+    "n_twin": 16,
+    "T_none": 0.25,
+    "T_true": 0.1875,
+    "T_lie": 0.25,
+    "T_lie_count": 4,
+    "T_true_count": 3,
+    "sw": 0.0625
+   },
+   {
+    "group": "yesno",
+    "label": "Yes / no",
+    "n": 56,
+    "n_twin": 52,
+    "T_none": 0.38461538461538464,
+    "T_true": 0.39285714285714285,
+    "T_lie": 0.44642857142857145,
+    "T_lie_count": 25,
+    "T_true_count": 22,
+    "sw": 0.05357142857142857
+   },
+   {
+    "group": "number",
+    "label": "How much is X?",
+    "n": 22,
+    "n_twin": 2,
+    "T_none": 0.0,
+    "T_true": 0.045454545454545456,
+    "T_lie": 0.5454545454545454,
+    "T_lie_count": 12,
+    "T_true_count": 1,
+    "sw": 0.5
+   },
+   {
+    "group": "twin",
+    "label": "Questions asked in all three versions",
+    "n": 114,
+    "n_twin": 114,
+    "T_none": 0.2631578947368421,
+    "T_true": 0.24561403508771928,
+    "T_lie": 0.2982456140350877,
+    "sw": 0.06140350877192982
+   }
+  ],
+  "448": [
+   {
+    "group": "name",
+    "label": "Which one is biggest / smallest?",
+    "n": 46,
+    "n_twin": 46,
+    "T_none": 0.13043478260869565,
+    "T_true": 0.08695652173913043,
+    "T_lie": 0.2608695652173913,
+    "T_lie_count": 12,
+    "T_true_count": 4,
+    "sw": 0.1956521739130435
+   },
+   {
+    "group": "direction",
+    "label": "Up or down? Higher or lower?",
+    "n": 16,
+    "n_twin": 16,
+    "T_none": 0.125,
+    "T_true": 0.0625,
+    "T_lie": 0.3125,
+    "T_lie_count": 5,
+    "T_true_count": 1,
+    "sw": 0.25
+   },
+   {
+    "group": "yesno",
+    "label": "Yes / no",
+    "n": 56,
+    "n_twin": 52,
+    "T_none": 0.46153846153846156,
+    "T_true": 0.42857142857142855,
+    "T_lie": 0.5714285714285714,
+    "T_lie_count": 32,
+    "T_true_count": 24,
+    "sw": 0.14285714285714285
+   },
+   {
+    "group": "number",
+    "label": "How much is X?",
+    "n": 22,
+    "n_twin": 2,
+    "T_none": 0.0,
+    "T_true": 0.0,
+    "T_lie": 0.9090909090909091,
+    "T_lie_count": 20,
+    "T_true_count": 0,
+    "sw": 0.9090909090909091
+   },
+   {
+    "group": "twin",
+    "label": "Questions asked in all three versions",
+    "n": 114,
+    "n_twin": 114,
+    "T_none": 0.2807017543859649,
+    "T_true": 0.23684210526315788,
+    "T_lie": 0.39473684210526316,
+    "sw": 0.16666666666666666
+   }
+  ]
+ },
+ "yes_lie": {
+  "224": {
+   "yes": {
+    "n": 10,
+    "sw": 2
+   },
+   "no": {
+    "n": 24,
+    "sw": 1
+   }
+  },
+  "448": {
+   "yes": {
+    "n": 9,
+    "sw": 4
+   },
+   "no": {
+    "n": 23,
+    "sw": 4
+   }
+  }
+ },
+ "charts": [
+  {
+   "id": "s01_newspaper_bars",
+   "short": "s01",
+   "title": "Loaves sold per month (newspaper)",
+   "style": "newspaper page",
+   "chart": "column bars",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 19,
+   "summary": "Bars rise Jan→Jun like a wifi icon; in conflict the printed values fall 640→120.",
+   "224": {
+    "n": 10,
+    "sw": 0.0,
+    "sw_count": 0,
+    "right_true": 0.4,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 4.75
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.3,
+    "sw_count": 3,
+    "right_true": 0.6,
+    "dn": 8,
+    "dsw": 0.125,
+    "dsw_count": 1,
+    "eff_px": 9.5
+   }
+  },
+  {
+   "id": "s02_magazine_line_inverted",
+   "short": "s02",
+   "title": "Bicycle thefts reported per year (news site, dark)",
+   "style": "news-site article page, dark theme",
+   "chart": "line with markers",
+   "mechanism": "axis",
+   "truth": true,
+   "cue_px": 22,
+   "summary": "Line rises 2018→2025 (180→520 on a normal 0–600 axis); in conflict the y tick labels are inverted (0 at top, 600 at bottom), so the same line encodes falling values 420→80. Years, not months: bicycle theft is seasonal, and a Jan→Aug axis would add a prior agreeing with the rising line.",
+   "224": {
+    "n": 10,
+    "sw": 0.0,
+    "sw_count": 0,
+    "right_true": 0.6,
+    "dn": 10,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 5.5
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.0,
+    "sw_count": 0,
+    "right_true": 0.6,
+    "dn": 10,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 11.0
+   }
+  },
+  {
+   "id": "s03_slide_donut",
+   "short": "s03",
+   "title": "Smartphone market share (presentation slide)",
+   "style": "corporate presentation slide",
+   "chart": "donut",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 33,
+   "summary": "Slices clockwise from 12 o'clock are Nimbus 46, Orca 27, Pixa 17, Zento 10; in conflict the callouts print the shares reversed (Nimbus 10%, Orca 17%, Pixa 27%, Zento 46%).",
+   "224": {
+    "n": 10,
+    "sw": 0.4,
+    "sw_count": 4,
+    "right_true": 0.8,
+    "dn": 8,
+    "dsw": 0.25,
+    "dsw_count": 2,
+    "eff_px": 8.25
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.4,
+    "sw_count": 4,
+    "right_true": 0.9,
+    "dn": 8,
+    "dsw": 0.25,
+    "dsw_count": 2,
+    "eff_px": 16.5
+   }
+  },
+  {
+   "id": "s04_app_screentime",
+   "short": "s04",
+   "title": "Screen time this week (phone app)",
+   "style": "phone app screenshot, dark UI",
+   "chart": "horizontal bars",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 22,
+   "summary": "Rows in A–Z order, stated by a 'Sort: A–Z' chip (Dorvi 2h 30m, Gisano 9h 40m, Kuvelo 7h 10m, Libezu 1h 5m, Tovra 4h 20m); in conflict the printed times are mirrored by rank (Dorvi 7h 10m, Gisano 1h 5m, Kuvelo 2h 30m, Libezu 9h 40m, Tovra 4h 20m). Weekly total 24h 45m is identical in both.",
+   "224": {
+    "n": 10,
+    "sw": 0.2,
+    "sw_count": 2,
+    "right_true": 0.6,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 5.5
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.2,
+    "sw_count": 2,
+    "right_true": 0.5,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 11.0
+   }
+  },
+  {
+   "id": "s05_poster_pictogram",
+   "short": "s05",
+   "title": "Trees planted by each school (school poster)",
+   "style": "school poster pinned to a cork board",
+   "chart": "pictogram (isotype)",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 27,
+   "summary": "Icon rows (top to bottom) show Aster 5, Mira 3, Nova 2, Lumen 8 trees (x10); in conflict the printed row totals read Aster 20, Mira 80, Nova 50, Lumen 30.",
+   "224": {
+    "n": 10,
+    "sw": 0.1,
+    "sw_count": 1,
+    "right_true": 0.4,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 6.75
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.3,
+    "sw_count": 3,
+    "right_true": 0.6,
+    "dn": 8,
+    "dsw": 0.125,
+    "dsw_count": 1,
+    "eff_px": 13.5
+   }
+  },
+  {
+   "id": "s06_tv_thermometers",
+   "short": "s06",
+   "title": "Noon temperatures (TV weather)",
+   "style": "TV weather broadcast graphic",
+   "chart": "thermometer fills",
+   "mechanism": "readout",
+   "truth": false,
+   "cue_px": 47,
+   "summary": "Mercury columns: Avlen highest, Dimel lowest (just under the 0 °C notch); in conflict the readouts are swapped 31°<->−3° (Avlen<->Dimel, three cards apart) and 12°<->24° (Berim<->Covra).",
+   "224": {
+    "n": 10,
+    "sw": 0.5,
+    "sw_count": 5,
+    "right_true": 0.6,
+    "dn": 8,
+    "dsw": 0.375,
+    "dsw_count": 3,
+    "eff_px": 11.75
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.8,
+    "sw_count": 8,
+    "right_true": 0.8,
+    "dn": 8,
+    "dsw": 0.75,
+    "dsw_count": 6,
+    "eff_px": 23.5
+   }
+  },
+  {
+   "id": "s07_dashboard_gauges",
+   "short": "s07",
+   "title": "CPU load per server (monitoring dashboard)",
+   "style": "server monitoring dashboard, dark UI, monospace type (Menlo)",
+   "chart": "semicircle gauges",
+   "mechanism": "readout",
+   "truth": false,
+   "cue_px": 48,
+   "summary": "Needles/fills show alpha-01 38, beta-02 15, gamma-03 92; in conflict the readouts under the gauges say alpha-01 15%, beta-02 92%, gamma-03 38%.",
+   "224": {
+    "n": 10,
+    "sw": 0.2,
+    "sw_count": 2,
+    "right_true": 0.3,
+    "dn": 8,
+    "dsw": 0.125,
+    "dsw_count": 1,
+    "eff_px": 12.0
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.4,
+    "sw_count": 4,
+    "right_true": 0.4,
+    "dn": 8,
+    "dsw": 0.25,
+    "dsw_count": 2,
+    "eff_px": 24.0
+   }
+  },
+  {
+   "id": "s08_paper_grouped_bars",
+   "short": "s08",
+   "title": "Accuracy of three methods on two benchmarks (photographed paper page)",
+   "style": "photographed page of an academic paper",
+   "chart": "grouped bars",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 23,
+   "summary": "Bars drawn Roan/Kerf/Ossel: Kerf (middle) is tallest and Ossel (right) shortest on both benchmarks; in conflict the printed labels are rotated by one within each benchmark (Quorlet 78/52/64, Harnwick 69/41/47), so the labels make Roan best and Kerf worst, and put Kerf below Ossel on Harnwick.",
+   "224": {
+    "n": 10,
+    "sw": 0.1,
+    "sw_count": 1,
+    "right_true": 0.3,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 5.75
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.2,
+    "sw_count": 2,
+    "right_true": 0.7,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 11.5
+   }
+  },
+  {
+   "id": "s09_notebook_sketch",
+   "short": "s09",
+   "title": "Daily users of our app (notebook sketch)",
+   "style": "squared notebook page with spiral binding",
+   "chart": "line (hand-drawn)",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 24,
+   "summary": "Hand-drawn ink line falls Mon 140 → Sun 50; in conflict the handwritten numbers rise 50, 70, 85, 110, 105, 140, 125 (text maximum on Saturday).",
+   "224": {
+    "n": 10,
+    "sw": 0.0,
+    "sw_count": 0,
+    "right_true": 0.7,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 6.0
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.2,
+    "sw_count": 2,
+    "right_true": 0.9,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 12.0
+   }
+  },
+  {
+   "id": "s10_report_tilemap",
+   "short": "s10",
+   "title": "Air quality by district (scanned municipal report, tile map)",
+   "style": "scanned municipal report page (PDF)",
+   "chart": "3x3 tile map with gradient colour legend",
+   "mechanism": "legend",
+   "truth": true,
+   "cue_px": 23,
+   "summary": "Tiles are shaded in one purple ramp, Glenrock darkest and Dunmore lightest. Consistent legend: light end = 10 Clean, dark end = 80 Polluted. In conflict only the legend labels are reversed (light = 80 Polluted, dark = 10 Clean), so every tile's true value becomes 90 - v and the darkest tile (Glenrock) has the cleanest air.",
+   "224": {
+    "n": 8,
+    "sw": 0.0,
+    "sw_count": 0,
+    "right_true": 0.25,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 5.75
+   },
+   "448": {
+    "n": 8,
+    "sw": 0.0,
+    "sw_count": 0,
+    "right_true": 0.375,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 11.5
+   }
+  },
+  {
+   "id": "s11_finance_watchlist",
+   "short": "s11",
+   "title": "Watchlist · 1 month (finance app)",
+   "style": "finance app watchlist (light web app)",
+   "chart": "sparklines",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 21,
+   "summary": "Rows A–Z: sparklines of KDNL, MXRA and VESK end above their dashed start line, TLWY below (shared % scale; MXRA rises most, TLWY moves most). Consistent changes: KDNL +4.8%, MXRA +12.7%, TLWY −18.4%, VESK +7.5%. In conflict every printed sign is flipped (KDNL −4.8%, MXRA −12.7%, TLWY +18.4%, VESK −7.5%), so the printed winner is TLWY; magnitudes and last prices are identical, and the largest magnitude is the text winner's. Nonumbers: same page with the 1-month change pills left empty (tickers, names, last prices and sparklines unchanged), so every question is answered from the sparklines.",
+   "224": {
+    "n": 12,
+    "sw": 0.16666666666666666,
+    "sw_count": 2,
+    "right_true": 0.3333333333333333,
+    "dn": 12,
+    "dsw": 0.16666666666666666,
+    "dsw_count": 2,
+    "eff_px": 5.25
+   },
+   "448": {
+    "n": 12,
+    "sw": 0.4166666666666667,
+    "sw_count": 5,
+    "right_true": 0.5,
+    "dn": 12,
+    "dsw": 0.4166666666666667,
+    "dsw_count": 5,
+    "eff_px": 10.5
+   }
+  },
+  {
+   "id": "s12_textbook_scatter",
+   "short": "s12",
+   "title": "Distance to school vs exam score (textbook exercise)",
+   "style": "textbook exercise page",
+   "chart": "scatter plot",
+   "mechanism": "axis",
+   "truth": true,
+   "cue_px": 21,
+   "summary": "20 dots fall from top-left to bottom-right on a 0–14 km axis (negative); in conflict the x tick labels run 14 → 0 left to right, so the same dots encode a positive relationship. Any everyday prior (long commute → lower score) sides with the visual answer, so text wins are conservative.",
+   "224": {
+    "n": 10,
+    "sw": 0.0,
+    "sw_count": 0,
+    "right_true": 0.6,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 5.25
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.0,
+    "sw_count": 0,
+    "right_true": 0.6,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 10.5
+   }
+  },
+  {
+   "id": "s13_widget_battery",
+   "short": "s13",
+   "title": "Batteries widget on a phone home screen",
+   "style": "phone home-screen widget (light, frosted card on soft wallpaper)",
+   "chart": "radial progress rings",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 27,
+   "summary": "Ring fills Phone 88 / Earbuds 9 / Watch 54 / Tablet 31; in conflict the centre percentages read Phone 9 / Earbuds 88 / Watch 31 / Tablet 54.",
+   "224": {
+    "n": 10,
+    "sw": 0.1,
+    "sw_count": 1,
+    "right_true": 0.6,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 6.75
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.5,
+    "sw_count": 5,
+    "right_true": 0.7,
+    "dn": 8,
+    "dsw": 0.375,
+    "dsw_count": 3,
+    "eff_px": 13.5
+   }
+  },
+  {
+   "id": "s14_spreadsheet_databars",
+   "short": "s14",
+   "title": "Q3 revenue by region (spreadsheet)",
+   "style": "generic spreadsheet screenshot",
+   "chart": "in-cell data bars",
+   "mechanism": "label",
+   "truth": false,
+   "cue_px": 20,
+   "summary": "Data bars: East longest, South shortest, North > West; in conflict the printed revenues are permuted (East 180, Central 610, West 420 > North 260). Total 1,800 identical. Bars orange in all versions.",
+   "224": {
+    "n": 10,
+    "sw": 0.1,
+    "sw_count": 1,
+    "right_true": 0.3,
+    "dn": 8,
+    "dsw": 0.0,
+    "dsw_count": 0,
+    "eff_px": 5.0
+   },
+   "448": {
+    "n": 10,
+    "sw": 0.3,
+    "sw_count": 3,
+    "right_true": 0.2,
+    "dn": 8,
+    "dsw": 0.125,
+    "dsw_count": 1,
+    "eff_px": 10.0
+   }
+  }
+ ],
+ "role": {
+  "224": {
+   "value": {
+    "n": 92,
+    "sw_count": 8,
+    "sw": 0.08695652173913043,
+    "charts": 11,
+    "charts_moved": 4
+   },
+   "scale": {
+    "n": 26,
+    "sw_count": 0,
+    "charts": 3,
+    "eligible": 19,
+    "already_T": 7
+   },
+   "scale_all": {
+    "n": 28,
+    "sw_count": 0,
+    "eligible": 21,
+    "already_T": 7,
+    "lie_V": 13,
+    "lie_T": 6,
+    "lie_T_same_as_true": 6
+   },
+   "perm_p": 0.32967032967032966,
+   "value_small": {
+    "n": 52,
+    "sw_count": 2,
+    "charts": 6,
+    "zero_charts": 5,
+    "s11": 2,
+    "px": [
+     19,
+     24
+    ]
+   },
+   "scale_px": [
+    21,
+    23
+   ],
+   "howmuch": {
+    "n": 22,
+    "lie": 12,
+    "true": 1
+   },
+   "tick_removed": {
+    "n": 18,
+    "unchanged": 17
+   },
+   "s10_right_true": 0.25
+  },
+  "448": {
+   "value": {
+    "n": 92,
+    "sw_count": 21,
+    "sw": 0.22826086956521738,
+    "charts": 11,
+    "charts_moved": 8
+   },
+   "scale": {
+    "n": 26,
+    "sw_count": 0,
+    "charts": 3,
+    "eligible": 18,
+    "already_T": 8
+   },
+   "scale_all": {
+    "n": 28,
+    "sw_count": 0,
+    "eligible": 20,
+    "already_T": 8,
+    "lie_V": 16,
+    "lie_T": 7,
+    "lie_T_same_as_true": 7
+   },
+   "perm_p": 0.054945054945054944,
+   "value_small": {
+    "n": 52,
+    "sw_count": 7,
+    "charts": 6,
+    "zero_charts": 3,
+    "s11": 5,
+    "px": [
+     19,
+     24
+    ]
+   },
+   "scale_px": [
+    21,
+    23
+   ],
+   "howmuch": {
+    "n": 22,
+    "lie": 20,
+    "true": 0
+   },
+   "tick_removed": {
+    "n": 18,
+    "unchanged": 17
+   },
+   "s10_right_true": 0.375
+  }
+ },
+ "s12_q5_true": [
+  "14",
+  "14",
+  "10",
+  "14"
+ ],
+ "resolution": {
+  "all": {
+   "only448": 22,
+   "only224": 0,
+   "both": 19,
+   "neither": 99,
+   "p": 4.76837158203125e-07
+  },
+  "nonum": {
+   "only448": 13,
+   "only224": 0,
+   "both": 8,
+   "neither": 97,
+   "p": 0.000244140625
+  },
+  "charts": {
+   "more": 9,
+   "less": 0,
+   "tie": 5,
+   "p": 0.00390625
+  },
+  "charts_nonum": {
+   "more": 7,
+   "less": 0,
+   "tie": 7,
+   "p": 0.015625
+  },
+  "diff_all": {
+   "diff": 0.15714285714285717,
+   "ci": [
+    0.08823529411764705,
+    0.22536899479066186
+   ]
+  },
+  "diff_nonum": {
+   "diff": 0.11016949152542373,
+   "ci": [
+    0.043859649122807015,
+    0.18333333333333332
+   ]
+  },
+  "size": {
+   "224": {
+    "rho": 0.580989067412121,
+    "p": 0.060875482237251,
+    "n": 11
+   },
+   "448": {
+    "rho": 0.4512408921486216,
+    "p": 0.1635905772105104,
+    "n": 11
+   },
+   "pooled_rho": 0.7519711661097629,
+   "pooled_n": 22
+  }
+ },
+ "language": {
+  "224": {
+   "en": {
+    "n": 59,
+    "count": 6,
+    "rate": 0.1016949152542373
+   },
+   "tr": {
+    "n": 59,
+    "count": 2,
+    "rate": 0.03389830508474576
+   },
+   "only_en": 5,
+   "only_tr": 1,
+   "p": 0.21875
+  },
+  "448": {
+   "en": {
+    "n": 59,
+    "count": 13,
+    "rate": 0.22033898305084745
+   },
+   "tr": {
+    "n": 59,
+    "count": 8,
+    "rate": 0.13559322033898305
+   },
+   "only_en": 9,
+   "only_tr": 4,
+   "p": 0.266845703125
+  }
+ },
+ "wrong_names": {
+  "total": 170,
+  "real_count": 24,
+  "real_world": [
+   {
+    "answer": "amsterdam",
+    "count": 1,
+    "chart": "s06",
+    "models": [
+     "224"
+    ],
+    "langs": [
+     "en"
+    ]
+   },
+   {
+    "answer": "amsterdam",
+    "count": 2,
+    "chart": "s10",
+    "models": [
+     "224"
+    ],
+    "langs": [
+     "tr"
+    ]
+   },
+   {
+    "answer": "berlin",
+    "count": 3,
+    "chart": "s06",
+    "models": [
+     "224"
+    ],
+    "langs": [
+     "tr"
+    ]
+   },
+   {
+    "answer": "instagram",
+    "count": 1,
+    "chart": "s04",
+    "models": [
+     "448"
+    ],
+    "langs": [
+     "tr"
+    ]
+   },
+   {
+    "answer": "istanbul",
+    "count": 3,
+    "chart": "s10",
+    "models": [
+     "224"
+    ],
+    "langs": [
+     "tr"
+    ]
+   },
+   {
+    "answer": "k-nearest neighbor",
+    "count": 5,
+    "chart": "s08",
+    "models": [
+     "224"
+    ],
+    "langs": [
+     "en"
+    ]
+   },
+   {
+    "answer": "konya",
+    "count": 3,
+    "chart": "s14",
+    "models": [
+     "448"
+    ],
+    "langs": [
+     "tr"
+    ]
+   },
+   {
+    "answer": "nokia",
+    "count": 3,
+    "chart": "s03",
+    "models": [
+     "224",
+     "448"
+    ],
+    "langs": [
+     "en"
+    ]
+   },
+   {
+    "answer": "samsung",
+    "count": 3,
+    "chart": "s03",
+    "models": [
+     "224"
+    ],
+    "langs": [
+     "tr"
+    ]
+   }
+  ],
+  "alpha": {
+   "n": 24,
+   "alpha": 21,
+   "right": 1
+  },
+  "o_same": {
+   "n": 61,
+   "same": 50
+  }
+ },
+ "explorer": [
+  {
+   "id": "s01_newspaper_bars",
+   "short": "s01",
+   "title": "Loaves sold per month (newspaper)",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Bars rise Jan→Jun like a wifi icon; in conflict the printed values fall 640→120.",
+   "questions": [
+    {
+     "qid": "s01_q1",
+     "group": "direction",
+     "pair": null,
+     "en": "did monthly sales go up or down from january to june?",
+     "tr": "ocaktan hazirana aylık satışlar arttı mı azaldı mı?",
+     "V": {
+      "en": "up",
+      "tr": "arttı"
+     },
+     "T": {
+      "en": "down",
+      "tr": "azaldı"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "down",
+        "T"
+       ],
+       "true": [
+        "down",
+        "T"
+       ],
+       "lie": [
+        "down",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "aylık satışlar arttı",
+        "V"
+       ],
+       "true": [
+        "aylık satışlar arttı",
+        "V"
+       ],
+       "lie": [
+        "aylık satışlar arttı",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "up",
+        "V"
+       ],
+       "true": [
+        "up",
+        "V"
+       ],
+       "lie": [
+        "up",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "azaldı",
+        "T"
+       ],
+       "true": [
+        "aylık satışlar arttı",
+        "V"
+       ],
+       "lie": [
+        "azaldı",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s01_q2",
+     "group": "name",
+     "pair": null,
+     "en": "in which month were the most loaves sold?",
+     "tr": "en çok ekmek hangi ayda satıldı?",
+     "V": {
+      "en": "june",
+      "tr": "haziran"
+     },
+     "T": {
+      "en": "january",
+      "tr": "ocak"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "may",
+        "O"
+       ],
+       "true": [
+        "may",
+        "O"
+       ],
+       "lie": [
+        "may",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "may",
+        "O"
+       ],
+       "true": [
+        "may",
+        "O"
+       ],
+       "lie": [
+        "may",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "jun",
+        "V"
+       ],
+       "true": [
+        "jun",
+        "V"
+       ],
+       "lie": [
+        "jun",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "may",
+        "O"
+       ],
+       "true": [
+        "may",
+        "O"
+       ],
+       "lie": [
+        "may",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s01_q3a",
+     "group": "yesno",
+     "pair": "s01_p1",
+     "en": "were more loaves sold in june than in january?",
+     "tr": "haziranda ocaktan daha fazla ekmek satıldı mı?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s01_q3b",
+     "group": "yesno",
+     "pair": "s01_p1",
+     "en": "were fewer loaves sold in june than in january?",
+     "tr": "haziranda ocaktan daha az ekmek satıldı mı?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s01_q4",
+     "group": "number",
+     "pair": null,
+     "en": "how many loaves were sold in june?",
+     "tr": "haziranda kaç ekmek satıldı?",
+     "V": {
+      "en": "640",
+      "tr": "640"
+     },
+     "T": {
+      "en": "120",
+      "tr": "120"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "330",
+        "O"
+       ],
+       "lie": [
+        "330",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "420",
+        "O"
+       ],
+       "lie": [
+        "420",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "640",
+        "V"
+       ],
+       "lie": [
+        "120",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "540",
+        "O"
+       ],
+       "lie": [
+        "120",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s02_magazine_line_inverted",
+   "short": "s02",
+   "title": "Bicycle thefts reported per year (news site, dark)",
+   "mechanism": "axis",
+   "truth": true,
+   "summary": "Line rises 2018→2025 (180→520 on a normal 0–600 axis); in conflict the y tick labels are inverted (0 at top, 600 at bottom), so the same line encodes falling values 420→80. Years, not months: bicycle theft is seasonal, and a Jan→Aug axis would add a prior agreeing with the rising line.",
+   "questions": [
+    {
+     "qid": "s02_q1",
+     "group": "direction",
+     "pair": null,
+     "en": "did the number of bicycle thefts increase or decrease from 2018 to 2025?",
+     "tr": "2018'den 2025'e bisiklet hırsızlığı sayısı arttı mı azaldı mı?",
+     "V": {
+      "en": "up",
+      "tr": "arttı"
+     },
+     "T": {
+      "en": "down",
+      "tr": "azaldı"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "increase",
+        "V"
+       ],
+       "true": [
+        "increase",
+        "V"
+       ],
+       "lie": [
+        "increase",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "arttı",
+        "V"
+       ],
+       "true": [
+        "arttı",
+        "V"
+       ],
+       "lie": [
+        "arttı",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "increase",
+        "V"
+       ],
+       "true": [
+        "increase",
+        "V"
+       ],
+       "lie": [
+        "increase",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "arttı",
+        "V"
+       ],
+       "true": [
+        "arttı",
+        "V"
+       ],
+       "lie": [
+        "arttı",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s02_q2",
+     "group": "name",
+     "pair": null,
+     "en": "in which year were the most bicycle thefts reported?",
+     "tr": "en çok bisiklet hırsızlığı hangi yıl bildirildi?",
+     "V": {
+      "en": "2025",
+      "tr": "2025"
+     },
+     "T": {
+      "en": "2018",
+      "tr": "2018"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "2021",
+        "O"
+       ],
+       "true": [
+        "2021",
+        "O"
+       ],
+       "lie": [
+        "2021",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "2018",
+        "T"
+       ],
+       "true": [
+        "2018",
+        "T"
+       ],
+       "lie": [
+        "2021",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "2025",
+        "V"
+       ],
+       "true": [
+        "2025",
+        "V"
+       ],
+       "lie": [
+        "2025",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "2025",
+        "V"
+       ],
+       "true": [
+        "2025",
+        "V"
+       ],
+       "lie": [
+        "2025",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s02_q3",
+     "group": "name",
+     "pair": null,
+     "en": "in which year were the fewest bicycle thefts reported?",
+     "tr": "en az bisiklet hırsızlığı hangi yıl bildirildi?",
+     "V": {
+      "en": "2018",
+      "tr": "2018"
+     },
+     "T": {
+      "en": "2025",
+      "tr": "2025"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "2021",
+        "O"
+       ],
+       "true": [
+        "2021",
+        "O"
+       ],
+       "lie": [
+        "2021",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "2018",
+        "V"
+       ],
+       "true": [
+        "2018",
+        "V"
+       ],
+       "lie": [
+        "2018",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "2022",
+        "O"
+       ],
+       "true": [
+        "2022",
+        "O"
+       ],
+       "lie": [
+        "2022",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "2021",
+        "O"
+       ],
+       "true": [
+        "2021",
+        "O"
+       ],
+       "lie": [
+        "2018",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s02_q4a",
+     "group": "yesno",
+     "pair": "s02_p1",
+     "en": "were more bicycle thefts reported in 2025 than in 2018?",
+     "tr": "2025'te 2018'den daha fazla bisiklet hırsızlığı bildirildi mi?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "2025'te 2018'den daha fazla bisiklet",
+        "O"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s02_q4b",
+     "group": "yesno",
+     "pair": "s02_p1",
+     "en": "were fewer bicycle thefts reported in 2025 than in 2018?",
+     "tr": "2025'te 2018'den daha az bisiklet hırsızlığı bildirildi mi?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s03_slide_donut",
+   "short": "s03",
+   "title": "Smartphone market share (presentation slide)",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Slices clockwise from 12 o'clock are Nimbus 46, Orca 27, Pixa 17, Zento 10; in conflict the callouts print the shares reversed (Nimbus 10%, Orca 17%, Pixa 27%, Zento 46%).",
+   "questions": [
+    {
+     "qid": "s03_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which brand has the largest market share?",
+     "tr": "en büyük pazar payına hangi marka sahip?",
+     "V": {
+      "en": "nimbus",
+      "tr": "nimbus"
+     },
+     "T": {
+      "en": "zento",
+      "tr": "zento"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "nimbus",
+        "V"
+       ],
+       "true": [
+        "nimbus",
+        "V"
+       ],
+       "lie": [
+        "nokia",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "samsung",
+        "O"
+       ],
+       "true": [
+        "samsung",
+        "O"
+       ],
+       "lie": [
+        "samsung",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "nokia",
+        "O"
+       ],
+       "true": [
+        "nimbus",
+        "V"
+       ],
+       "lie": [
+        "nokia",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "nimbus",
+        "V"
+       ],
+       "true": [
+        "nimbus",
+        "V"
+       ],
+       "lie": [
+        "nimbus",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s03_q2",
+     "group": "name",
+     "pair": null,
+     "en": "which brand has the smallest market share?",
+     "tr": "en küçük pazar payına hangi marka sahip?",
+     "V": {
+      "en": "zento",
+      "tr": "zento"
+     },
+     "T": {
+      "en": "nimbus",
+      "tr": "nimbus"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "orca",
+        "O"
+       ],
+       "true": [
+        "zento",
+        "V"
+       ],
+       "lie": [
+        "nimbus",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "orca",
+        "O"
+       ],
+       "true": [
+        "orca",
+        "O"
+       ],
+       "lie": [
+        "orca",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "nimbus",
+        "T"
+       ],
+       "true": [
+        "zento",
+        "V"
+       ],
+       "lie": [
+        "nimbus",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "orca",
+        "O"
+       ],
+       "true": [
+        "orca",
+        "O"
+       ],
+       "lie": [
+        "orca",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s03_q3a",
+     "group": "yesno",
+     "pair": "s03_p1",
+     "en": "does zento have more than a third of the market?",
+     "tr": "zento'nun pazar payı üçte birden fazla mı?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s03_q3b",
+     "group": "yesno",
+     "pair": "s03_p1",
+     "en": "does zento have less than a third of the market?",
+     "tr": "zento'nun pazar payı üçte birden az mı?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s03_q4",
+     "group": "number",
+     "pair": null,
+     "en": "what is orca's market share?",
+     "tr": "orca'nın pazar payı yüzde kaç?",
+     "V": {
+      "en": "27",
+      "tr": "27"
+     },
+     "T": {
+      "en": "17",
+      "tr": "17"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "27%",
+        "V"
+       ],
+       "lie": [
+        "17%",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "27%",
+        "V"
+       ],
+       "lie": [
+        "17%",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "27%",
+        "V"
+       ],
+       "lie": [
+        "17%",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "27",
+        "V"
+       ],
+       "lie": [
+        "17",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s04_app_screentime",
+   "short": "s04",
+   "title": "Screen time this week (phone app)",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Rows in A–Z order, stated by a 'Sort: A–Z' chip (Dorvi 2h 30m, Gisano 9h 40m, Kuvelo 7h 10m, Libezu 1h 5m, Tovra 4h 20m); in conflict the printed times are mirrored by rank (Dorvi 7h 10m, Gisano 1h 5m, Kuvelo 2h 30m, Libezu 9h 40m, Tovra 4h 20m). Weekly total 24h 45m is identical in both.",
+   "questions": [
+    {
+     "qid": "s04_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which app was used the most this week?",
+     "tr": "bu hafta en çok hangi uygulama kullanıldı?",
+     "V": {
+      "en": "gisano",
+      "tr": "gisano"
+     },
+     "T": {
+      "en": "libezu",
+      "tr": "libezu"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "don't",
+        "O"
+       ],
+       "true": [
+        "don't",
+        "O"
+       ],
+       "lie": [
+        "don't",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "davi",
+        "O"
+       ],
+       "true": [
+        "davi",
+        "O"
+       ],
+       "lie": [
+        "davi",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "dorvi",
+        "O"
+       ],
+       "true": [
+        "dorvi",
+        "O"
+       ],
+       "lie": [
+        "dorvi",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "instagram",
+        "O"
+       ],
+       "true": [
+        "unanswerable",
+        "O"
+       ],
+       "lie": [
+        "unanswerable",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s04_q2",
+     "group": "name",
+     "pair": null,
+     "en": "which app was used the least this week?",
+     "tr": "bu hafta en az hangi uygulama kullanıldı?",
+     "V": {
+      "en": "libezu",
+      "tr": "libezu"
+     },
+     "T": {
+      "en": "gisano",
+      "tr": "gisano"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "tova",
+        "O"
+       ],
+       "true": [
+        "tova",
+        "O"
+       ],
+       "lie": [
+        "tova",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "libezu",
+        "V"
+       ],
+       "true": [
+        "libezu",
+        "V"
+       ],
+       "lie": [
+        "libezu",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "tovra",
+        "O"
+       ],
+       "true": [
+        "tovra",
+        "O"
+       ],
+       "lie": [
+        "tovra",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "no",
+        "O"
+       ],
+       "true": [
+        "libezu",
+        "V"
+       ],
+       "lie": [
+        "Üzerinde soruya cevap vermeye çalışan bir grup insan.",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s04_q3a",
+     "group": "yesno",
+     "pair": "s04_p1",
+     "en": "was dorvi used more than kuvelo this week?",
+     "tr": "dorvi bu hafta kuvelo'dan daha fazla kullanıldı mı?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s04_q3b",
+     "group": "yesno",
+     "pair": "s04_p1",
+     "en": "was dorvi used less than kuvelo this week?",
+     "tr": "dorvi bu hafta kuvelo'dan daha az kullanıldı mı?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s04_q4",
+     "group": "number",
+     "pair": null,
+     "en": "how long was dorvi used this week?",
+     "tr": "dorvi bu hafta ne kadar süre kullanıldı?",
+     "V": {
+      "en": "2h 30m",
+      "tr": "2 sa 30 dk"
+     },
+     "T": {
+      "en": "7h 10m",
+      "tr": "7 sa 10 dk"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "2h 30m",
+        "V"
+       ],
+       "lie": [
+        "7h 10m",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "2 sa 30 dk",
+        "V"
+       ],
+       "lie": [
+        "7 sa 10 dk",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "2h 30m",
+        "V"
+       ],
+       "lie": [
+        "7h 10m",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "2 sa 30 dk",
+        "V"
+       ],
+       "lie": [
+        "7 sa 10 dk",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s05_poster_pictogram",
+   "short": "s05",
+   "title": "Trees planted by each school (school poster)",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Icon rows (top to bottom) show Aster 5, Mira 3, Nova 2, Lumen 8 trees (x10); in conflict the printed row totals read Aster 20, Mira 80, Nova 50, Lumen 30.",
+   "questions": [
+    {
+     "qid": "s05_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which school planted the most trees?",
+     "tr": "en çok ağacı hangi okul dikti?",
+     "V": {
+      "en": "lumen",
+      "tr": "lumen"
+     },
+     "T": {
+      "en": "mira",
+      "tr": "mira"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "asher",
+        "O"
+       ],
+       "true": [
+        "lumen primary school",
+        "V"
+       ],
+       "lie": [
+        "lumen primary school",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "afer",
+        "O"
+       ],
+       "true": [
+        "afer",
+        "O"
+       ],
+       "lie": [
+        "afer",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "aster primary school",
+        "O"
+       ],
+       "true": [
+        "aster primary school",
+        "O"
+       ],
+       "lie": [
+        "aster primary school",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "nova",
+        "O"
+       ],
+       "true": [
+        "aster",
+        "O"
+       ],
+       "lie": [
+        "nova",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s05_q2",
+     "group": "number",
+     "pair": null,
+     "en": "how many trees did aster school plant?",
+     "tr": "aster okulu kaç ağaç dikti?",
+     "V": {
+      "en": "50",
+      "tr": "50"
+     },
+     "T": {
+      "en": "20",
+      "tr": "20"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "2",
+        "O"
+       ],
+       "true": [
+        "8",
+        "O"
+       ],
+       "lie": [
+        "8",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "3",
+        "O"
+       ],
+       "true": [
+        "50",
+        "V"
+       ],
+       "lie": [
+        "20",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "6",
+        "O"
+       ],
+       "true": [
+        "50",
+        "V"
+       ],
+       "lie": [
+        "20",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "8",
+        "O"
+       ],
+       "true": [
+        "50",
+        "V"
+       ],
+       "lie": [
+        "20",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s05_q3a",
+     "group": "yesno",
+     "pair": "s05_p1",
+     "en": "did mira school plant more trees than lumen school?",
+     "tr": "mira okulu, lumen okulundan daha fazla ağaç dikti mi?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s05_q3b",
+     "group": "yesno",
+     "pair": "s05_p1",
+     "en": "did mira school plant fewer trees than lumen school?",
+     "tr": "mira okulu, lumen okulundan daha az ağaç dikti mi?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s05_q4",
+     "group": "name",
+     "pair": null,
+     "en": "which school planted the fewest trees?",
+     "tr": "en az ağacı hangi okul dikti?",
+     "V": {
+      "en": "nova",
+      "tr": "nova"
+     },
+     "T": {
+      "en": "aster",
+      "tr": "aster"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "lumen primary school",
+        "O"
+       ],
+       "true": [
+        "lumen primary school",
+        "O"
+       ],
+       "lie": [
+        "lumen primary school",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "afer",
+        "O"
+       ],
+       "true": [
+        "afer",
+        "O"
+       ],
+       "lie": [
+        "afer",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "nova primary school",
+        "V"
+       ],
+       "true": [
+        "nova primary school",
+        "V"
+       ],
+       "lie": [
+        "nova primary school",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "lumen",
+        "O"
+       ],
+       "true": [
+        "lumen",
+        "O"
+       ],
+       "lie": [
+        "lumen",
+        "O"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s06_tv_thermometers",
+   "short": "s06",
+   "title": "Noon temperatures (TV weather)",
+   "mechanism": "readout",
+   "truth": false,
+   "summary": "Mercury columns: Avlen highest, Dimel lowest (just under the 0 °C notch); in conflict the readouts are swapped 31°<->−3° (Avlen<->Dimel, three cards apart) and 12°<->24° (Berim<->Covra).",
+   "questions": [
+    {
+     "qid": "s06_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which city is the warmest?",
+     "tr": "en sıcak şehir hangisi?",
+     "V": {
+      "en": "avlen",
+      "tr": "avlen"
+     },
+     "T": {
+      "en": "dimel",
+      "tr": "dimel"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "cova",
+        "O"
+       ],
+       "true": [
+        "cova",
+        "O"
+       ],
+       "lie": [
+        "cova",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "berlin",
+        "O"
+       ],
+       "true": [
+        "berlin",
+        "O"
+       ],
+       "lie": [
+        "berlin",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "avlen",
+        "V"
+       ],
+       "true": [
+        "avlen",
+        "V"
+       ],
+       "lie": [
+        "dimel",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "avlen",
+        "V"
+       ],
+       "true": [
+        "avlen",
+        "V"
+       ],
+       "lie": [
+        "dimel",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s06_q2",
+     "group": "name",
+     "pair": null,
+     "en": "which city is the coldest?",
+     "tr": "en soğuk şehir hangisi?",
+     "V": {
+      "en": "dimel",
+      "tr": "dimel"
+     },
+     "T": {
+      "en": "avlen",
+      "tr": "avlen"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "amsterdam",
+        "O"
+       ],
+       "true": [
+        "dimel",
+        "V"
+       ],
+       "lie": [
+        "avlen",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "dimel",
+        "V"
+       ],
+       "true": [
+        "dimel",
+        "V"
+       ],
+       "lie": [
+        "avlen",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "avlen",
+        "T"
+       ],
+       "true": [
+        "dimel",
+        "V"
+       ],
+       "lie": [
+        "avlen",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "dimel",
+        "V"
+       ],
+       "true": [
+        "dimel",
+        "V"
+       ],
+       "lie": [
+        "avlen",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s06_q3a",
+     "group": "yesno",
+     "pair": "s06_p1",
+     "en": "is it below freezing in avlen?",
+     "tr": "avlen'de sıcaklık sıfırın altında mı?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s06_q3b",
+     "group": "yesno",
+     "pair": "s06_p1",
+     "en": "is it above freezing in avlen?",
+     "tr": "avlen'de sıcaklık sıfırın üstünde mi?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "-3°",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s06_q4",
+     "group": "number",
+     "pair": null,
+     "en": "what is the temperature in dimel?",
+     "tr": "dimel'de sıcaklık kaç derece?",
+     "V": {
+      "en": "-3",
+      "tr": "-3"
+     },
+     "T": {
+      "en": "31",
+      "tr": "31"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "-3°",
+        "V"
+       ],
+       "lie": [
+        "31°",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "-3°",
+        "V"
+       ],
+       "lie": [
+        "31",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "-3°",
+        "V"
+       ],
+       "lie": [
+        "31°",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "-3",
+        "V"
+       ],
+       "lie": [
+        "31",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s07_dashboard_gauges",
+   "short": "s07",
+   "title": "CPU load per server (monitoring dashboard)",
+   "mechanism": "readout",
+   "truth": false,
+   "summary": "Needles/fills show alpha-01 38, beta-02 15, gamma-03 92; in conflict the readouts under the gauges say alpha-01 15%, beta-02 92%, gamma-03 38%.",
+   "questions": [
+    {
+     "qid": "s07_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which server has the highest cpu load?",
+     "tr": "cpu yükü en yüksek olan sunucu hangisi?",
+     "V": {
+      "en": "gamma-03",
+      "tr": "gamma-03"
+     },
+     "T": {
+      "en": "beta-02",
+      "tr": "beta-02"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "alpha-01",
+        "O"
+       ],
+       "true": [
+        "alpha-01",
+        "O"
+       ],
+       "lie": [
+        "alpha-01",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "alpha-01",
+        "O"
+       ],
+       "true": [
+        "alpha-01",
+        "O"
+       ],
+       "lie": [
+        "alpha-01",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "alpha-01",
+        "O"
+       ],
+       "true": [
+        "alpha-01",
+        "O"
+       ],
+       "lie": [
+        "alpha-01",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "alpha-01",
+        "O"
+       ],
+       "true": [
+        "alpha-01",
+        "O"
+       ],
+       "lie": [
+        "alpha-01",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s07_q2",
+     "group": "name",
+     "pair": null,
+     "en": "which server has the lowest cpu load?",
+     "tr": "cpu yükü en düşük olan sunucu hangisi?",
+     "V": {
+      "en": "beta-02",
+      "tr": "beta-02"
+     },
+     "T": {
+      "en": "alpha-01",
+      "tr": "alpha-01"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "alpha-01",
+        "T"
+       ],
+       "true": [
+        "alpha-01",
+        "T"
+       ],
+       "lie": [
+        "alpha-01",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "alpha-01",
+        "T"
+       ],
+       "true": [
+        "alpha-01",
+        "T"
+       ],
+       "lie": [
+        "alpha-01",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "alpha-01",
+        "T"
+       ],
+       "true": [
+        "beta-02",
+        "V"
+       ],
+       "lie": [
+        "alpha-01",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "alpha-01",
+        "T"
+       ],
+       "true": [
+        "a1",
+        "O"
+       ],
+       "lie": [
+        "a1",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s07_q3a",
+     "group": "yesno",
+     "pair": "s07_p1",
+     "en": "is the cpu load of gamma-03 above 80 percent?",
+     "tr": "gamma-03'ün cpu yükü yüzde 80'in üzerinde mi?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s07_q3b",
+     "group": "yesno",
+     "pair": "s07_p1",
+     "en": "is the cpu load of gamma-03 below 80 percent?",
+     "tr": "gamma-03'ün cpu yükü yüzde 80'in altında mı?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s07_q4",
+     "group": "number",
+     "pair": null,
+     "en": "what is the cpu load of alpha-01?",
+     "tr": "alpha-01'in cpu yükü yüzde kaç?",
+     "V": {
+      "en": "38",
+      "tr": "38"
+     },
+     "T": {
+      "en": "15",
+      "tr": "15"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "38%",
+        "V"
+       ],
+       "lie": [
+        "15%",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "38",
+        "V"
+       ],
+       "lie": [
+        "31.5",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "38%",
+        "V"
+       ],
+       "lie": [
+        "15%",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "38",
+        "V"
+       ],
+       "lie": [
+        "15",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s08_paper_grouped_bars",
+   "short": "s08",
+   "title": "Accuracy of three methods on two benchmarks (photographed paper page)",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Bars drawn Roan/Kerf/Ossel: Kerf (middle) is tallest and Ossel (right) shortest on both benchmarks; in conflict the printed labels are rotated by one within each benchmark (Quorlet 78/52/64, Harnwick 69/41/47), so the labels make Roan best and Kerf worst, and put Kerf below Ossel on Harnwick.",
+   "questions": [
+    {
+     "qid": "s08_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which method has the highest accuracy on quorlet?",
+     "tr": "quorlet'te en yüksek doğruluğu hangi yöntem elde ediyor?",
+     "V": {
+      "en": "kerf",
+      "tr": "kerf"
+     },
+     "T": {
+      "en": "roan",
+      "tr": "roan"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "kerf",
+        "V"
+       ],
+       "true": [
+        "k-nearest neighbor",
+        "O"
+       ],
+       "lie": [
+        "k-nearest neighbor",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "harwick",
+        "O"
+       ],
+       "true": [
+        "rf",
+        "O"
+       ],
+       "lie": [
+        "rf",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "kerf",
+        "V"
+       ],
+       "true": [
+        "roan",
+        "T"
+       ],
+       "lie": [
+        "roan",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "kerf",
+        "V"
+       ],
+       "true": [
+        "kerf",
+        "V"
+       ],
+       "lie": [
+        "kerf",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s08_q2",
+     "group": "name",
+     "pair": null,
+     "en": "which method has the lowest accuracy on harnwick?",
+     "tr": "harnwick'te en düşük doğruluğu hangi yöntem elde ediyor?",
+     "V": {
+      "en": "ossel",
+      "tr": "ossel"
+     },
+     "T": {
+      "en": "kerf",
+      "tr": "kerf"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "k-nearest neighbor",
+        "O"
+       ],
+       "true": [
+        "k-nearest neighbor",
+        "O"
+       ],
+       "lie": [
+        "k-nearest neighbor",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "farklı boyutlarda kesitler",
+        "O"
+       ],
+       "true": [
+        "farklı boyutlarda kesitler",
+        "O"
+       ],
+       "lie": [
+        "farklı boyutlarda kesitler",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "ossel",
+        "V"
+       ],
+       "true": [
+        "ossel",
+        "V"
+       ],
+       "lie": [
+        "ossel",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "ossel",
+        "V"
+       ],
+       "true": [
+        "ossel",
+        "V"
+       ],
+       "lie": [
+        "ossel",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s08_q3a",
+     "group": "yesno",
+     "pair": "s08_p1",
+     "en": "does kerf score higher than ossel on harnwick?",
+     "tr": "harnwick'te kerf, ossel'den daha yüksek puan alıyor mu?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s08_q3b",
+     "group": "yesno",
+     "pair": "s08_p1",
+     "en": "does kerf score lower than ossel on harnwick?",
+     "tr": "harnwick'te kerf, ossel'den daha düşük puan alıyor mu?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s08_q4",
+     "group": "number",
+     "pair": null,
+     "en": "what is the accuracy of roan on quorlet?",
+     "tr": "quorlet'te roan yönteminin doğruluğu kaç?",
+     "V": {
+      "en": "64",
+      "tr": "64"
+     },
+     "T": {
+      "en": "78",
+      "tr": "78"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "78",
+        "T"
+       ],
+       "lie": [
+        "78",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "64",
+        "V"
+       ],
+       "lie": [
+        "78%",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "64",
+        "V"
+       ],
+       "lie": [
+        "78",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "64",
+        "V"
+       ],
+       "lie": [
+        "78",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s09_notebook_sketch",
+   "short": "s09",
+   "title": "Daily users of our app (notebook sketch)",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Hand-drawn ink line falls Mon 140 → Sun 50; in conflict the handwritten numbers rise 50, 70, 85, 110, 105, 140, 125 (text maximum on Saturday).",
+   "questions": [
+    {
+     "qid": "s09_q1",
+     "group": "direction",
+     "pair": null,
+     "en": "did the number of daily users go up or down from monday to sunday?",
+     "tr": "pazartesiden pazara günlük kullanıcı sayısı arttı mı azaldı mı?",
+     "V": {
+      "en": "down",
+      "tr": "azaldı"
+     },
+     "T": {
+      "en": "up",
+      "tr": "arttı"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "down",
+        "V"
+       ],
+       "true": [
+        "down",
+        "V"
+       ],
+       "lie": [
+        "down",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "azaldı",
+        "V"
+       ],
+       "true": [
+        "azaldı",
+        "V"
+       ],
+       "lie": [
+        "azaldı",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "down",
+        "V"
+       ],
+       "true": [
+        "down",
+        "V"
+       ],
+       "lie": [
+        "down",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "azaldı",
+        "V"
+       ],
+       "true": [
+        "azaldı",
+        "V"
+       ],
+       "lie": [
+        "azaldı",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s09_q2",
+     "group": "name",
+     "pair": null,
+     "en": "on which day did the app have the most users?",
+     "tr": "hangi gün en çok kullanıcı vardı?",
+     "V": {
+      "en": "monday",
+      "tr": "pazartesi"
+     },
+     "T": {
+      "en": "saturday",
+      "tr": "cumartesi"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "mon",
+        "V"
+       ],
+       "true": [
+        "mon",
+        "V"
+       ],
+       "lie": [
+        "mon",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "paz",
+        "O"
+       ],
+       "true": [
+        "14 oct",
+        "O"
+       ],
+       "lie": [
+        "125",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "mon",
+        "V"
+       ],
+       "true": [
+        "mon",
+        "V"
+       ],
+       "lie": [
+        "mon",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "paz",
+        "O"
+       ],
+       "true": [
+        "paz",
+        "O"
+       ],
+       "lie": [
+        "paz",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s09_q3a",
+     "group": "yesno",
+     "pair": "s09_p1",
+     "en": "were there more users on sunday than on monday?",
+     "tr": "pazar günü pazartesiden daha fazla kullanıcı var mıydı?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s09_q3b",
+     "group": "yesno",
+     "pair": "s09_p1",
+     "en": "were there fewer users on sunday than on monday?",
+     "tr": "pazar günü pazartesiden daha az kullanıcı var mıydı?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s09_q4",
+     "group": "number",
+     "pair": null,
+     "en": "how many users did the app have on friday?",
+     "tr": "cuma günü kaç kullanıcı vardı?",
+     "V": {
+      "en": "85",
+      "tr": "85"
+     },
+     "T": {
+      "en": "105",
+      "tr": "105"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "100",
+        "O"
+       ],
+       "lie": [
+        "140",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "140",
+        "O"
+       ],
+       "lie": [
+        "125",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "85",
+        "V"
+       ],
+       "lie": [
+        "105",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "85",
+        "V"
+       ],
+       "lie": [
+        "105",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s10_report_tilemap",
+   "short": "s10",
+   "title": "Air quality by district (scanned municipal report, tile map)",
+   "mechanism": "legend",
+   "truth": true,
+   "summary": "Tiles are shaded in one purple ramp, Glenrock darkest and Dunmore lightest. Consistent legend: light end = 10 Clean, dark end = 80 Polluted. In conflict only the legend labels are reversed (light = 80 Polluted, dark = 10 Clean), so every tile's true value becomes 90 - v and the darkest tile (Glenrock) has the cleanest air.",
+   "questions": [
+    {
+     "qid": "s10_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which district has the most polluted air?",
+     "tr": "havası en kirli olan ilçe hangisi?",
+     "V": {
+      "en": "glenrock",
+      "tr": "glenrock"
+     },
+     "T": {
+      "en": "dunmore",
+      "tr": "dunmore"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "air quality by district",
+        "O"
+       ],
+       "true": [
+        "amery",
+        "O"
+       ],
+       "lie": [
+        "air quality by district",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "istanbul",
+        "O"
+       ],
+       "true": [
+        "istanbul",
+        "O"
+       ],
+       "lie": [
+        "istanbul",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "cedarline",
+        "O"
+       ],
+       "true": [
+        "brookfield",
+        "O"
+       ],
+       "lie": [
+        "ivydale",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "glenrock",
+        "V"
+       ],
+       "true": [
+        "glenrock",
+        "V"
+       ],
+       "lie": [
+        "glenrock",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s10_q2",
+     "group": "name",
+     "pair": null,
+     "en": "which district has the cleanest air?",
+     "tr": "havası en temiz olan ilçe hangisi?",
+     "V": {
+      "en": "dunmore",
+      "tr": "dunmore"
+     },
+     "T": {
+      "en": "glenrock",
+      "tr": "glenrock"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "amery",
+        "O"
+       ],
+       "true": [
+        "dunsmore",
+        "V"
+       ],
+       "lie": [
+        "amery",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "amsterdam",
+        "O"
+       ],
+       "true": [
+        "havası en temiz olan ilçe İstanbul'dur.",
+        "O"
+       ],
+       "lie": [
+        "amsterdam",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "asterly",
+        "O"
+       ],
+       "true": [
+        "glenrock",
+        "T"
+       ],
+       "lie": [
+        "asterly",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "asterly",
+        "O"
+       ],
+       "true": [
+        "glenrock",
+        "T"
+       ],
+       "lie": [
+        "glenrock",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s10_q3a",
+     "group": "yesno",
+     "pair": "s10_p1",
+     "en": "is the air in dunmore more polluted than in glenrock?",
+     "tr": "dunmore'da hava glenrock'takinden daha mı kirli?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s10_q3b",
+     "group": "yesno",
+     "pair": "s10_p1",
+     "en": "is the air in dunmore cleaner than in glenrock?",
+     "tr": "dunmore'da hava glenrock'takinden daha mı temiz?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s11_finance_watchlist",
+   "short": "s11",
+   "title": "Watchlist · 1 month (finance app)",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Rows A–Z: sparklines of KDNL, MXRA and VESK end above their dashed start line, TLWY below (shared % scale; MXRA rises most, TLWY moves most). Consistent changes: KDNL +4.8%, MXRA +12.7%, TLWY −18.4%, VESK +7.5%. In conflict every printed sign is flipped (KDNL −4.8%, MXRA −12.7%, TLWY +18.4%, VESK −7.5%), so the printed winner is TLWY; magnitudes and last prices are identical, and the largest magnitude is the text winner's. Nonumbers: same page with the 1-month change pills left empty (tickers, names, last prices and sparklines unchanged), so every question is answered from the sparklines.",
+   "questions": [
+    {
+     "qid": "s11_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which stock gained the most over the past month?",
+     "tr": "son bir ayda en çok hangi hisse değer kazandı?",
+     "V": {
+      "en": "mxra",
+      "tr": "mxra"
+     },
+     "T": {
+      "en": "tlwy",
+      "tr": "tlwy"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "kdnl",
+        "O"
+       ],
+       "true": [
+        "kdnl",
+        "O"
+       ],
+       "lie": [
+        "t.l.wy",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "tltwy",
+        "T"
+       ],
+       "true": [
+        "tltwy",
+        "T"
+       ],
+       "lie": [
+        "tltwy",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "kdnl",
+        "O"
+       ],
+       "true": [
+        "kdnl",
+        "O"
+       ],
+       "lie": [
+        "tlwy",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "kdnl",
+        "O"
+       ],
+       "true": [
+        "kdnl",
+        "O"
+       ],
+       "lie": [
+        "kdnl",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s11_q2",
+     "group": "direction",
+     "pair": null,
+     "en": "did tlwy go up or down over the past month?",
+     "tr": "tlwy son bir ayda yükseldi mi düştü mü?",
+     "V": {
+      "en": "down",
+      "tr": "azaldı"
+     },
+     "T": {
+      "en": "up",
+      "tr": "arttı"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "down",
+        "V"
+       ],
+       "true": [
+        "down",
+        "V"
+       ],
+       "lie": [
+        "up",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yükseldi",
+        "T"
+       ],
+       "true": [
+        "düştü",
+        "V"
+       ],
+       "lie": [
+        "düştü",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "down",
+        "V"
+       ],
+       "true": [
+        "down",
+        "V"
+       ],
+       "lie": [
+        "up",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yükseldi",
+        "T"
+       ],
+       "true": [
+        "düştü",
+        "V"
+       ],
+       "lie": [
+        "yükseldi",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s11_q3a",
+     "group": "direction",
+     "pair": null,
+     "en": "how many of the four stocks went up over the past month?",
+     "tr": "son ayda dört hisseden kaçı yükseldi?",
+     "V": {
+      "en": "3",
+      "tr": "3"
+     },
+     "T": {
+      "en": "1",
+      "tr": "1"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "2",
+        "O"
+       ],
+       "true": [
+        "2",
+        "O"
+       ],
+       "lie": [
+        "2",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "m",
+        "O"
+       ],
+       "true": [
+        "t.lwy",
+        "O"
+       ],
+       "lie": [
+        "t.lwy",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "3",
+        "V"
+       ],
+       "true": [
+        "3",
+        "V"
+       ],
+       "lie": [
+        "3",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "three",
+        "V"
+       ],
+       "true": [
+        "three",
+        "V"
+       ],
+       "lie": [
+        "three",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s11_q3b",
+     "group": "direction",
+     "pair": null,
+     "en": "how many of the four stocks went down over the past month?",
+     "tr": "son ayda dört hisseden kaçı düştü?",
+     "V": {
+      "en": "1",
+      "tr": "1"
+     },
+     "T": {
+      "en": "3",
+      "tr": "3"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "3",
+        "T"
+       ],
+       "true": [
+        "3",
+        "T"
+       ],
+       "lie": [
+        "3",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "t.lwy",
+        "O"
+       ],
+       "true": [
+        "t.lwy",
+        "O"
+       ],
+       "lie": [
+        "t.lwy",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "2",
+        "O"
+       ],
+       "true": [
+        "2",
+        "O"
+       ],
+       "lie": [
+        "3",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "2",
+        "O"
+       ],
+       "true": [
+        "2",
+        "O"
+       ],
+       "lie": [
+        "2",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s11_q4a",
+     "group": "yesno",
+     "pair": "s11_p1",
+     "en": "did mxra go up over the past month?",
+     "tr": "mxra son bir ayda yükseldi mi?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s11_q4b",
+     "group": "yesno",
+     "pair": "s11_p1",
+     "en": "did mxra go down over the past month?",
+     "tr": "mxra son bir ayda düştü mü?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s12_textbook_scatter",
+   "short": "s12",
+   "title": "Distance to school vs exam score (textbook exercise)",
+   "mechanism": "axis",
+   "truth": true,
+   "summary": "20 dots fall from top-left to bottom-right on a 0–14 km axis (negative); in conflict the x tick labels run 14 → 0 left to right, so the same dots encode a positive relationship. Any everyday prior (long commute → lower score) sides with the visual answer, so text wins are conservative.",
+   "questions": [
+    {
+     "qid": "s12_q1",
+     "group": "yesno",
+     "pair": "s12_p1",
+     "en": "do students who live farther from school score higher?",
+     "tr": "okula daha uzak oturan öğrenciler daha yüksek puan alıyor mu?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "no",
+        "V"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s12_q2",
+     "group": "direction",
+     "pair": null,
+     "en": "is the correlation between distance and score positive or negative?",
+     "tr": "uzaklık ile puan arasındaki korelasyon pozitif mi negatif mi?",
+     "V": {
+      "en": "negative",
+      "tr": "negatif"
+     },
+     "T": {
+      "en": "positive",
+      "tr": "pozitif"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "negative",
+        "V"
+       ],
+       "true": [
+        "negative",
+        "V"
+       ],
+       "lie": [
+        "negative",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "Pozitif",
+        "T"
+       ],
+       "true": [
+        "Pozitif",
+        "T"
+       ],
+       "lie": [
+        "Pozitif",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "negative",
+        "V"
+       ],
+       "true": [
+        "negative",
+        "V"
+       ],
+       "lie": [
+        "negative",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "negative",
+        "V"
+       ],
+       "true": [
+        "Pozitif",
+        "T"
+       ],
+       "lie": [
+        "Pozitif",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s12_q3",
+     "group": "direction",
+     "pair": null,
+     "en": "is the score of the student farthest from school low or high?",
+     "tr": "okula en uzak oturan öğrencinin puanı düşük mü yüksek mi?",
+     "V": {
+      "en": "low",
+      "tr": "düşük"
+     },
+     "T": {
+      "en": "high",
+      "tr": "yüksek"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "low",
+        "V"
+       ],
+       "true": [
+        "low",
+        "V"
+       ],
+       "lie": [
+        "low",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "düşük",
+        "V"
+       ],
+       "true": [
+        "düşük",
+        "V"
+       ],
+       "lie": [
+        "düşük",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "low",
+        "V"
+       ],
+       "true": [
+        "low",
+        "V"
+       ],
+       "lie": [
+        "low",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "low",
+        "V"
+       ],
+       "true": [
+        "low",
+        "V"
+       ],
+       "lie": [
+        "low",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s12_q4",
+     "group": "yesno",
+     "pair": "s12_p1",
+     "en": "do students who live farther from school score lower?",
+     "tr": "okula daha uzak oturan öğrenciler daha düşük puan alıyor mu?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s12_q5",
+     "group": "number",
+     "pair": null,
+     "en": "how many km from school does the top scorer live?",
+     "tr": "en yüksek puanı alan öğrenci okula kaç km uzakta?",
+     "V": {
+      "en": "2",
+      "tr": "2"
+     },
+     "T": {
+      "en": "12",
+      "tr": "12"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "14",
+        "O"
+       ],
+       "lie": [
+        "14",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "14",
+        "O"
+       ],
+       "lie": [
+        "7.8",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "10",
+        "O"
+       ],
+       "lie": [
+        "8",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "14",
+        "O"
+       ],
+       "lie": [
+        "20",
+        "O"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s13_widget_battery",
+   "short": "s13",
+   "title": "Batteries widget on a phone home screen",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Ring fills Phone 88 / Earbuds 9 / Watch 54 / Tablet 31; in conflict the centre percentages read Phone 9 / Earbuds 88 / Watch 31 / Tablet 54.",
+   "questions": [
+    {
+     "qid": "s13_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which device has the least battery left?",
+     "tr": "hangi cihazın şarjı en az kaldı?",
+     "V": {
+      "en": "earbuds",
+      "tr": "kulaklık"
+     },
+     "T": {
+      "en": "phone",
+      "tr": "telefon"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "phone",
+        "T"
+       ],
+       "true": [
+        "earbuds",
+        "V"
+       ],
+       "lie": [
+        "earbuds",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "tablet",
+        "O"
+       ],
+       "true": [
+        "tablet",
+        "O"
+       ],
+       "lie": [
+        "tablet",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "tablet",
+        "O"
+       ],
+       "true": [
+        "tablet",
+        "O"
+       ],
+       "lie": [
+        "tablet",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "tablet",
+        "O"
+       ],
+       "true": [
+        "tablet",
+        "O"
+       ],
+       "lie": [
+        "telefon",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s13_q2",
+     "group": "name",
+     "pair": null,
+     "en": "which device has the most battery left?",
+     "tr": "hangi cihazın şarjı en çok kaldı?",
+     "V": {
+      "en": "phone",
+      "tr": "telefon"
+     },
+     "T": {
+      "en": "earbuds",
+      "tr": "kulaklık"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "phone",
+        "V"
+       ],
+       "true": [
+        "phone",
+        "V"
+       ],
+       "lie": [
+        "phone",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "telefon",
+        "V"
+       ],
+       "true": [
+        "tablet",
+        "O"
+       ],
+       "lie": [
+        "tablet",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "phone",
+        "V"
+       ],
+       "true": [
+        "phone",
+        "V"
+       ],
+       "lie": [
+        "phone",
+        "V"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "tablet",
+        "O"
+       ],
+       "true": [
+        "telefon",
+        "V"
+       ],
+       "lie": [
+        "tablet",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s13_q3a",
+     "group": "yesno",
+     "pair": "s13_p1",
+     "en": "is the phone battery almost empty?",
+     "tr": "telefonun şarjı bitmek üzere mi?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "no",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "unanswerable",
+        "O"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s13_q3b",
+     "group": "yesno",
+     "pair": "s13_p1",
+     "en": "is the phone battery almost full?",
+     "tr": "telefonun şarjı neredeyse dolu mu?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s13_q4",
+     "group": "number",
+     "pair": null,
+     "en": "what percentage of battery does the watch have?",
+     "tr": "saatin şarjı yüzde kaç?",
+     "V": {
+      "en": "54",
+      "tr": "54"
+     },
+     "T": {
+      "en": "31",
+      "tr": "31"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "54%",
+        "V"
+       ],
+       "lie": [
+        "31%",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "64",
+        "O"
+       ],
+       "lie": [
+        "63%",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "54%",
+        "V"
+       ],
+       "lie": [
+        "31%",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "54",
+        "V"
+       ],
+       "lie": [
+        "31",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "s14_spreadsheet_databars",
+   "short": "s14",
+   "title": "Q3 revenue by region (spreadsheet)",
+   "mechanism": "label",
+   "truth": false,
+   "summary": "Data bars: East longest, South shortest, North > West; in conflict the printed revenues are permuted (East 180, Central 610, West 420 > North 260). Total 1,800 identical. Bars orange in all versions.",
+   "questions": [
+    {
+     "qid": "s14_q1",
+     "group": "name",
+     "pair": null,
+     "en": "which region had the highest revenue in q3?",
+     "tr": "3. çeyrekte geliri en yüksek olan bölge hangisi?",
+     "V": {
+      "en": "east",
+      "tr": "doğu"
+     },
+     "T": {
+      "en": "central",
+      "tr": "merkez"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "north",
+        "O"
+       ],
+       "true": [
+        "north",
+        "O"
+       ],
+       "lie": [
+        "north",
+        "O"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "eğlence bölgesi",
+        "O"
+       ],
+       "true": [
+        "eğlence bölgesi",
+        "O"
+       ],
+       "lie": [
+        "eğlence bölgesi",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "central",
+        "T"
+       ],
+       "true": [
+        "central",
+        "T"
+       ],
+       "lie": [
+        "central",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "Konya",
+        "O"
+       ],
+       "true": [
+        "Konya",
+        "O"
+       ],
+       "lie": [
+        "Konya",
+        "O"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s14_q2",
+     "group": "name",
+     "pair": null,
+     "en": "which region had the lowest revenue in q3?",
+     "tr": "3. çeyrekte geliri en düşük olan bölge hangisi?",
+     "V": {
+      "en": "south",
+      "tr": "güney"
+     },
+     "T": {
+      "en": "east",
+      "tr": "doğu"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "east",
+        "T"
+       ],
+       "true": [
+        "east",
+        "T"
+       ],
+       "lie": [
+        "east",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "eğlence bölgesi",
+        "O"
+       ],
+       "true": [
+        "eğlence bölgesi",
+        "O"
+       ],
+       "lie": [
+        "eğlence bölgesi",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "central",
+        "O"
+       ],
+       "true": [
+        "central",
+        "O"
+       ],
+       "lie": [
+        "central",
+        "O"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "Doğu",
+        "T"
+       ],
+       "true": [
+        "Derin",
+        "O"
+       ],
+       "lie": [
+        "Doğu",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s14_q3a",
+     "group": "yesno",
+     "pair": "s14_p1",
+     "en": "did the west region earn more than the north region?",
+     "tr": "batı bölgesi, kuzey bölgesinden daha fazla gelir elde etti mi?",
+     "V": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "T": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "yes",
+        "T"
+       ],
+       "true": [
+        "yes",
+        "T"
+       ],
+       "lie": [
+        "yes",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s14_q3b",
+     "group": "yesno",
+     "pair": "s14_p1",
+     "en": "did the west region earn less than the north region?",
+     "tr": "batı bölgesi, kuzey bölgesinden daha az gelir elde etti mi?",
+     "V": {
+      "en": "yes",
+      "tr": "evet"
+     },
+     "T": {
+      "en": "no",
+      "tr": "hayır"
+     },
+     "cells": {
+      "224_en": {
+       "none": [
+        "yes",
+        "V"
+       ],
+       "true": [
+        "yes",
+        "V"
+       ],
+       "lie": [
+        "yes",
+        "V"
+       ]
+      },
+      "224_tr": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "448_en": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": [
+        "no",
+        "T"
+       ],
+       "true": [
+        "no",
+        "T"
+       ],
+       "lie": [
+        "no",
+        "T"
+       ]
+      }
+     }
+    },
+    {
+     "qid": "s14_q4",
+     "group": "number",
+     "pair": null,
+     "en": "what was the revenue of the east region?",
+     "tr": "doğu bölgesinin geliri ne kadardı?",
+     "V": {
+      "en": "610",
+      "tr": "610"
+     },
+     "T": {
+      "en": "180",
+      "tr": "180"
+     },
+     "cells": {
+      "224_en": {
+       "none": null,
+       "true": [
+        "610",
+        "V"
+       ],
+       "lie": [
+        "180",
+        "T"
+       ]
+      },
+      "224_tr": {
+       "none": null,
+       "true": [
+        "$610",
+        "V"
+       ],
+       "lie": [
+        "150",
+        "O"
+       ]
+      },
+      "448_en": {
+       "none": null,
+       "true": [
+        "610",
+        "V"
+       ],
+       "lie": [
+        "180",
+        "T"
+       ]
+      },
+      "448_tr": {
+       "none": null,
+       "true": [
+        "610",
+        "V"
+       ],
+       "lie": [
+        "180 bin euro",
+        "T"
+       ]
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "judging": {
+  "distinct": 98,
+  "rows": 212
+ },
+ "run2": {
+  "e2c": {
+   "n": 140,
+   "same": 140
+  },
+  "e3_repeat": {
+   "n": 80,
+   "same": 80
+  },
+  "n_answers": 820,
+  "missing": 0,
+  "e2": {
+   "448": {
+    "draw_count": 21,
+    "draw_n": 118,
+    "draw": 0.17796610169491525,
+    "draw_ci": [
+     0.07496926229508198,
+     0.3015907224958949
+    ],
+    "hm_lie": 0.9090909090909091,
+    "hm_n": 22,
+    "hm_lie_ci": [
+     0.7272727272727273,
+     1.0
+    ],
+    "acc_right": 65,
+    "acc_n": 118,
+    "acc_ci": [
+     0.43074561403508776,
+     0.663864942528736
+    ],
+    "hm_right": 19,
+    "hm_acc_ci": [
+     0.6363636363636364,
+     1.0
+    ]
+   },
+   "448d": {
+    "draw_count": 18,
+    "draw_n": 118,
+    "draw": 0.15254237288135594,
+    "draw_ci": [
+     0.052608892921960075,
+     0.27586206896551724
+    ],
+    "hm_lie": 0.9090909090909091,
+    "hm_n": 22,
+    "hm_lie_ci": [
+     0.7272727272727273,
+     1.0
+    ],
+    "acc_right": 55,
+    "acc_n": 118,
+    "acc_ci": [
+     0.3728813559322034,
+     0.5689655172413793
+    ],
+    "hm_right": 17,
+    "hm_acc_ci": [
+     0.5909090909090909,
+     0.9545454545454546
+    ]
+   },
+   "224": {
+    "draw_count": 8,
+    "draw_n": 118,
+    "draw": 0.06779661016949153,
+    "draw_ci": [
+     0.016666666666666666,
+     0.13559322033898305
+    ],
+    "hm_lie": 0.5454545454545454,
+    "hm_n": 22,
+    "hm_lie_ci": [
+     0.3181818181818182,
+     0.7727272727272727
+    ],
+    "acc_right": 55,
+    "acc_n": 118,
+    "acc_ci": [
+     0.35344827586206895,
+     0.5862068965517241
+    ],
+    "hm_right": 13,
+    "hm_acc_ci": [
+     0.36363636363636365,
+     0.8181818181818182
+    ]
+   }
+  },
+  "e2_diff": {
+   "sw_vs224": {
+    "est": 0.0847457627118644,
+    "ci": [
+     0.025423728813559324,
+     0.15833333333333333
+    ]
+   },
+   "sw_vs448": {
+    "est": 0.025423728813559324,
+    "ci": [
+     -0.008771929824561403,
+     0.05934760374050273
+    ]
+   },
+   "acc_vs448": {
+    "est": 0.0847457627118644,
+    "ci": [
+     0.02586206896551724,
+     0.14166666666666666
+    ]
+   },
+   "acc_vs224": {
+    "est": 0.0,
+    "ci": [
+     -0.09649122807017543,
+     0.09821428571428571
+    ]
+   }
+  },
+  "e2_charts": {
+   "vs448_draw": {
+    "more": 1,
+    "less": 4,
+    "tie": 9,
+    "p": 0.375
+   },
+   "vs224_draw": {
+    "more": 5,
+    "less": 0,
+    "tie": 9,
+    "p": 0.0625
+   },
+   "vs448_all": {
+    "more": 1,
+    "less": 4,
+    "tie": 9,
+    "p": 0.375
+   },
+   "vs224_all": {
+    "more": 9,
+    "less": 0,
+    "tie": 5,
+    "p": 0.00390625
+   }
+  },
+  "e2_gap": {
+   "draw": 0.23076923076923067,
+   "draw_raw": 0.1999999999999999,
+   "howmuch": 0.0
+  },
+  "e2_agree": {
+   "n": 280,
+   "differ": 118,
+   "like448": 75,
+   "like224": 7,
+   "neither": 36,
+   "same448_all": 209,
+   "same224_all": 141
+  },
+  "e2_agree_outcome": {
+   "n": 280,
+   "differ": 83,
+   "like448": 63,
+   "like224": 16,
+   "neither": 4
+  },
+  "e2_gap_ci": [
+   -0.1111111111111111,
+   0.6000000000000001
+  ],
+  "e2_habits": {
+   "448d": {
+    "n": 280,
+    "yes": 101,
+    "no": 12,
+    "unanswerable": 11
+   },
+   "448": {
+    "n": 280,
+    "yes": 84,
+    "no": 28,
+    "unanswerable": 2
+   },
+   "224": {
+    "n": 280,
+    "yes": 85,
+    "no": 26,
+    "unanswerable": 0
+   }
+  },
+  "e1_axes": {
+   "consistent": [
+    6,
+    8
+   ],
+   "conflict": [
+    1,
+    8
+   ]
+  },
+  "e1_changed": [
+   10,
+   20
+  ],
+  "e3_kinds": {
+   "224": {
+    "threshold": 1,
+    "rank": 6,
+    "rank_s01_s14": 0,
+    "all": 7
+   },
+   "448": {
+    "threshold": 12,
+    "rank": 11,
+    "rank_s01_s14": 0,
+    "all": 23
+   }
+  },
+  "e1_versions": {
+   "224": {
+    "consistent": [
+     3,
+     6
+    ],
+    "conflict": [
+     0,
+     6
+    ]
+   },
+   "448": {
+    "consistent": [
+     5,
+     6
+    ],
+    "conflict": [
+     1,
+     6
+    ]
+   },
+   "both": {
+    "consistent": [
+     8,
+     12
+    ],
+    "conflict": [
+     1,
+     12
+    ]
+   },
+   "mcnemar": {
+    "normal_only": 7,
+    "flipped_only": 0,
+    "p": 0.015625
+   }
+  },
+  "e1_grid": [
+   {
+    "qid": "s02_p1",
+    "chart": "s02",
+    "name": "top of the y-axis",
+    "printed": {
+     "consistent": "600",
+     "conflict": "0"
+    },
+    "cells": {
+     "consistent_224_en": [
+      "600",
+      "P"
+     ],
+     "consistent_224_tr": [
+      "600",
+      "P"
+     ],
+     "conflict_224_en": [
+      "600",
+      "U"
+     ],
+     "conflict_224_tr": [
+      "500",
+      "O"
+     ],
+     "consistent_448_en": [
+      "600",
+      "P"
+     ],
+     "consistent_448_tr": [
+      "600",
+      "P"
+     ],
+     "conflict_448_en": [
+      "500",
+      "O"
+     ],
+     "conflict_448_tr": [
+      "500",
+      "O"
+     ]
+    }
+   },
+   {
+    "qid": "s02_p2",
+    "chart": "s02",
+    "name": "bottom of the y-axis",
+    "printed": {
+     "consistent": "0",
+     "conflict": "600"
+    },
+    "cells": {
+     "consistent_224_en": [
+      "100",
+      "O"
+     ],
+     "consistent_224_tr": [
+      "0",
+      "P"
+     ],
+     "conflict_224_en": [
+      "500",
+      "O"
+     ],
+     "conflict_224_tr": [
+      "0",
+      "U"
+     ],
+     "consistent_448_en": [
+      "0",
+      "P"
+     ],
+     "consistent_448_tr": [
+      "2018",
+      "O"
+     ],
+     "conflict_448_en": [
+      "500",
+      "O"
+     ],
+     "conflict_448_tr": [
+      "2018",
+      "O"
+     ]
+    }
+   },
+   {
+    "qid": "s12_p1",
+    "chart": "s12",
+    "name": "left end of the x-axis",
+    "printed": {
+     "consistent": "0",
+     "conflict": "14"
+    },
+    "cells": {
+     "consistent_224_en": [
+      "0",
+      "P"
+     ],
+     "consistent_224_tr": [
+      "0",
+      "P"
+     ],
+     "conflict_224_en": [
+      "0",
+      "U"
+     ],
+     "conflict_224_tr": [
+      "0",
+      "U"
+     ],
+     "consistent_448_en": [
+      "0",
+      "P"
+     ],
+     "consistent_448_tr": [
+      "0",
+      "P"
+     ],
+     "conflict_448_en": [
+      "0",
+      "U"
+     ],
+     "conflict_448_tr": [
+      "14",
+      "P"
+     ]
+    }
+   },
+   {
+    "qid": "s12_p2",
+    "chart": "s12",
+    "name": "right end of the x-axis",
+    "printed": {
+     "consistent": "14",
+     "conflict": "0"
+    },
+    "cells": {
+     "consistent_224_en": [
+      "14",
+      "P"
+     ],
+     "consistent_224_tr": [
+      "14",
+      "P"
+     ],
+     "conflict_224_en": [
+      "0",
+      "P"
+     ],
+     "conflict_224_tr": [
+      "0",
+      "P"
+     ],
+     "consistent_448_en": [
+      "14",
+      "P"
+     ],
+     "consistent_448_tr": [
+      "14",
+      "P"
+     ],
+     "conflict_448_en": [
+      "0",
+      "P"
+     ],
+     "conflict_448_tr": [
+      "0",
+      "P"
+     ]
+    }
+   },
+   {
+    "qid": "s10_p1",
+    "chart": "s10",
+    "name": "top of the legend",
+    "printed": {
+     "consistent": "80",
+     "conflict": "10"
+    },
+    "cells": {
+     "consistent_224_en": [
+      "50",
+      "O"
+     ],
+     "consistent_224_tr": [
+      "5",
+      "O"
+     ],
+     "conflict_224_en": [
+      "50",
+      "O"
+     ],
+     "conflict_224_tr": [
+      "5",
+      "O"
+     ],
+     "consistent_448_en": [
+      "80",
+      "P"
+     ],
+     "consistent_448_tr": [
+      "80",
+      "P"
+     ],
+     "conflict_448_en": [
+      "80",
+      "U"
+     ],
+     "conflict_448_tr": [
+      "80",
+      "U"
+     ]
+    }
+   }
+  ],
+  "e1_through": {
+   "224": {
+    "consistent": {
+     "other": 6,
+     "right": 2
+    },
+    "conflict": {
+     "other": 4,
+     "shape": 2,
+     "axis": 2
+    }
+   },
+   "448": {
+    "consistent": {
+     "other": 6,
+     "right": 2
+    },
+    "conflict": {
+     "other": 5,
+     "axis": 3
+    }
+   }
+  },
+  "e1_word": [
+   "air quality by district",
+   "calderford",
+   "calderford city council",
+   "galatasaray"
+  ],
+  "e3": [
+   {
+    "model": "224",
+    "stimulus": "s01_newspaper_bars",
+    "k": 1,
+    "cue_px": 12,
+    "eff_px": 3.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 0,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s01_newspaper_bars",
+    "k": 2,
+    "cue_px": 19,
+    "eff_px": 4.75,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 0,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s01_newspaper_bars",
+    "k": 3,
+    "cue_px": 29,
+    "eff_px": 7.25,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 0,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s01_newspaper_bars",
+    "k": 4,
+    "cue_px": 38,
+    "eff_px": 9.5,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 0,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s06_tv_thermometers",
+    "k": 1,
+    "cue_px": 19,
+    "eff_px": 4.75,
+    "draw_sw": 1,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s06_tv_thermometers",
+    "k": 2,
+    "cue_px": 28,
+    "eff_px": 7.0,
+    "draw_sw": 1,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s06_tv_thermometers",
+    "k": 3,
+    "cue_px": 38,
+    "eff_px": 9.5,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s06_tv_thermometers",
+    "k": 4,
+    "cue_px": 47,
+    "eff_px": 11.75,
+    "draw_sw": 1,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s13_widget_battery",
+    "k": 1,
+    "cue_px": 17,
+    "eff_px": 4.25,
+    "draw_sw": 2,
+    "draw_n": 4,
+    "hm_lie": 0,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s13_widget_battery",
+    "k": 2,
+    "cue_px": 27,
+    "eff_px": 6.75,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s13_widget_battery",
+    "k": 3,
+    "cue_px": 33,
+    "eff_px": 8.25,
+    "draw_sw": 1,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s13_widget_battery",
+    "k": 4,
+    "cue_px": 37,
+    "eff_px": 9.25,
+    "draw_sw": 1,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s14_spreadsheet_databars",
+    "k": 1,
+    "cue_px": 12,
+    "eff_px": 3.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 0,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s14_spreadsheet_databars",
+    "k": 2,
+    "cue_px": 20,
+    "eff_px": 5.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s14_spreadsheet_databars",
+    "k": 3,
+    "cue_px": 28,
+    "eff_px": 7.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "224",
+    "stimulus": "s14_spreadsheet_databars",
+    "k": 4,
+    "cue_px": 36,
+    "eff_px": 9.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s01_newspaper_bars",
+    "k": 1,
+    "cue_px": 12,
+    "eff_px": 6.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s01_newspaper_bars",
+    "k": 2,
+    "cue_px": 19,
+    "eff_px": 9.5,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s01_newspaper_bars",
+    "k": 3,
+    "cue_px": 29,
+    "eff_px": 14.5,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s01_newspaper_bars",
+    "k": 4,
+    "cue_px": 38,
+    "eff_px": 19.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s06_tv_thermometers",
+    "k": 1,
+    "cue_px": 19,
+    "eff_px": 9.5,
+    "draw_sw": 3,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s06_tv_thermometers",
+    "k": 2,
+    "cue_px": 28,
+    "eff_px": 14.0,
+    "draw_sw": 3,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s06_tv_thermometers",
+    "k": 3,
+    "cue_px": 38,
+    "eff_px": 19.0,
+    "draw_sw": 3,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s06_tv_thermometers",
+    "k": 4,
+    "cue_px": 47,
+    "eff_px": 23.5,
+    "draw_sw": 3,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s13_widget_battery",
+    "k": 1,
+    "cue_px": 17,
+    "eff_px": 8.5,
+    "draw_sw": 3,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s13_widget_battery",
+    "k": 2,
+    "cue_px": 27,
+    "eff_px": 13.5,
+    "draw_sw": 2,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s13_widget_battery",
+    "k": 3,
+    "cue_px": 33,
+    "eff_px": 16.5,
+    "draw_sw": 3,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s13_widget_battery",
+    "k": 4,
+    "cue_px": 37,
+    "eff_px": 18.5,
+    "draw_sw": 3,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s14_spreadsheet_databars",
+    "k": 1,
+    "cue_px": 12,
+    "eff_px": 6.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s14_spreadsheet_databars",
+    "k": 2,
+    "cue_px": 20,
+    "eff_px": 10.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s14_spreadsheet_databars",
+    "k": 3,
+    "cue_px": 28,
+    "eff_px": 14.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   },
+   {
+    "model": "448",
+    "stimulus": "s14_spreadsheet_databars",
+    "k": 4,
+    "cue_px": 36,
+    "eff_px": 18.0,
+    "draw_sw": 0,
+    "draw_n": 4,
+    "hm_lie": 1,
+    "hm_n": 1
+   }
+  ],
+  "e3_original_k": {
+   "s01_newspaper_bars": 2,
+   "s06_tv_thermometers": 4,
+   "s14_spreadsheet_databars": 2,
+   "s13_widget_battery": 2
+  },
+  "e3_pooled": {
+   "224": {
+    "1": {
+     "draw_sw": 3,
+     "draw_n": 16,
+     "hm_lie": 1,
+     "hm_n": 4
+    },
+    "2": {
+     "draw_sw": 1,
+     "draw_n": 16,
+     "hm_lie": 3,
+     "hm_n": 4
+    },
+    "3": {
+     "draw_sw": 1,
+     "draw_n": 16,
+     "hm_lie": 3,
+     "hm_n": 4
+    },
+    "4": {
+     "draw_sw": 2,
+     "draw_n": 16,
+     "hm_lie": 3,
+     "hm_n": 4
+    }
+   },
+   "448": {
+    "1": {
+     "draw_sw": 6,
+     "draw_n": 16,
+     "hm_lie": 4,
+     "hm_n": 4
+    },
+    "2": {
+     "draw_sw": 5,
+     "draw_n": 16,
+     "hm_lie": 4,
+     "hm_n": 4
+    },
+    "3": {
+     "draw_sw": 6,
+     "draw_n": 16,
+     "hm_lie": 4,
+     "hm_n": 4
+    },
+    "4": {
+     "draw_sw": 6,
+     "draw_n": 16,
+     "hm_lie": 4,
+     "hm_n": 4
+    }
+   }
+  },
+  "judging": {
+   "new": 30,
+   "changed": 2,
+   "agree": 30
+  }
+ }
+}

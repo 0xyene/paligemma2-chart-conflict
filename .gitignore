@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.zip
+build/
+check/
+run2/build/
+run2/bundle/
+run2/size_sweep/check/

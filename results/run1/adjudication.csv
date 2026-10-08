@@ -1,0 +1,5 @@
+model,image,prompt,outcome,reason
+224,s06_tv_thermometers_conflict_tr.png,answer tr avlen'de sıcaklık sıfırın üstünde mi?,text,"both judges: '-3°' denotes the text answer — -3 is printed only on Avlen's conflict readout, so it clearly means 'no' (not above zero)"
+224,s10_report_tilemap_consistent_en.png,answer en which district has the cleanest air?,correct,"both judges: 'dunsmore' denotes the drawing answer — 'dunsmore' is Dunmore with one extra letter, and no other district is close"
+224,s11_finance_watchlist_conflict_en.png,answer en which stock gained the most over the past month?,text,both judges: 't.l.wy' denotes the text answer — 't.l.wy' is TLWY with dots added
+224,s11_finance_watchlist_conflict_tr.png,answer tr son bir ayda en çok hangi hisse değer kazandı?,text,"both judges: 'tltwy' denotes the text answer — 'tltwy' is TLWY with one extra letter, and no other ticker is close"

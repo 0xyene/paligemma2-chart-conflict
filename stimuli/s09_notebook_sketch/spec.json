@@ -1,0 +1,245 @@
+{
+  "id": "s09_notebook_sketch",
+  "title": {
+    "en": "Daily users of our app (notebook sketch)",
+    "tr": "Uygulamanın günlük kullanıcıları (defter çizimi)"
+  },
+  "chart": "line (hand-drawn)",
+  "style": "squared notebook page with spiral binding",
+  "tech": "inline SVG + feTurbulence/feDisplacementMap + handwriting font (Bradley Hand), headless Chrome",
+  "mechanism": "label",
+  "conflict_summary": "Hand-drawn ink line falls Mon 140 → Sun 50; in conflict the handwritten numbers rise 50, 70, 85, 110, 105, 140, 125 (text maximum on Saturday).",
+  "data": {
+    "days": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "visual": [
+      140,
+      125,
+      105,
+      110,
+      85,
+      70,
+      50
+    ],
+    "conflict_labels": [
+      50,
+      70,
+      85,
+      110,
+      105,
+      140,
+      125
+    ],
+    "note": "conflict = reversal with Sat/Sun swapped so the TR argmax answers are not Pazartesi vs Pazar"
+  },
+  "questions": [
+    {
+      "qid": "s09_q1",
+      "kind": "trend",
+      "pair": null,
+      "prompt": {
+        "en": "answer en did the number of daily users go up or down from monday to sunday?",
+        "tr": "answer tr pazartesiden pazara günlük kullanıcı sayısı arttı mı azaldı mı?"
+      },
+      "visual": {
+        "en": [
+          "down",
+          "went down",
+          "decreased",
+          "decrease",
+          "decreases",
+          "decreasing",
+          "fell",
+          "fall",
+          "fallen",
+          "falling",
+          "dropped",
+          "drop",
+          "declined",
+          "decline",
+          "declining",
+          "downward",
+          "lower"
+        ],
+        "tr": [
+          "azaldı",
+          "azalış",
+          "azalmış",
+          "azalıyor",
+          "azalan",
+          "düştü",
+          "düşmüş",
+          "düşüyor",
+          "düşüş",
+          "geriledi",
+          "aşağı"
+        ]
+      },
+      "text": {
+        "en": [
+          "up",
+          "went up",
+          "increased",
+          "increase",
+          "increases",
+          "increasing",
+          "rose",
+          "rise",
+          "risen",
+          "rising",
+          "grew",
+          "grown",
+          "growing",
+          "upward",
+          "higher"
+        ],
+        "tr": [
+          "arttı",
+          "artış",
+          "artmış",
+          "artıyor",
+          "artan",
+          "çoğaldı",
+          "yükseldi",
+          "yükselmiş",
+          "yükseliyor",
+          "yükseliş",
+          "yukarı"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s09_q2",
+      "kind": "argmax",
+      "pair": null,
+      "prompt": {
+        "en": "answer en on which day did the app have the most users?",
+        "tr": "answer tr hangi gün en çok kullanıcı vardı?"
+      },
+      "visual": {
+        "en": [
+          "monday",
+          "mon"
+        ],
+        "tr": [
+          "pazartesi",
+          "pzt",
+          "pts"
+        ]
+      },
+      "text": {
+        "en": [
+          "saturday",
+          "sat"
+        ],
+        "tr": [
+          "cumartesi",
+          "cmt",
+          "cts"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s09_q3a",
+      "kind": "compare",
+      "pair": "s09_p1",
+      "prompt": {
+        "en": "answer en were there more users on sunday than on monday?",
+        "tr": "answer tr pazar günü pazartesiden daha fazla kullanıcı var mıydı?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil",
+          "^yoktu"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet",
+          "^vardı"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s09_q3b",
+      "kind": "compare",
+      "pair": "s09_p1",
+      "prompt": {
+        "en": "answer en were there fewer users on sunday than on monday?",
+        "tr": "answer tr pazar günü pazartesiden daha az kullanıcı var mıydı?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet",
+          "^vardı"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil",
+          "^yoktu"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s09_q4",
+      "kind": "read_value",
+      "pair": null,
+      "prompt": {
+        "en": "answer en how many users did the app have on friday?",
+        "tr": "answer tr cuma günü kaç kullanıcı vardı?"
+      },
+      "visual": {
+        "en": [
+          "85",
+          "^eighty-five",
+          "^eighty five"
+        ],
+        "tr": [
+          "85",
+          "^seksen beş",
+          "^seksenbeş"
+        ]
+      },
+      "text": {
+        "en": [
+          "105",
+          "^one hundred five",
+          "^one hundred and five"
+        ],
+        "tr": [
+          "105",
+          "^yüz beş",
+          "^yüzbeş"
+        ]
+      },
+      "nonumbers": false
+    }
+  ],
+  "conflict_has_truth": false
+}

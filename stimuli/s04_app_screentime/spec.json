@@ -1,0 +1,353 @@
+{
+  "id": "s04_app_screentime",
+  "title": {
+    "en": "Screen time this week (phone app)",
+    "tr": "Bu haftaki ekran süresi (telefon uygulaması)"
+  },
+  "chart": "horizontal bars",
+  "style": "phone app screenshot, dark UI",
+  "tech": "HTML/CSS flex (headless Chrome)",
+  "mechanism": "label",
+  "conflict_summary": "Rows in A–Z order, stated by a 'Sort: A–Z' chip (Dorvi 2h 30m, Gisano 9h 40m, Kuvelo 7h 10m, Libezu 1h 5m, Tovra 4h 20m); in conflict the printed times are mirrored by rank (Dorvi 7h 10m, Gisano 1h 5m, Kuvelo 2h 30m, Libezu 9h 40m, Tovra 4h 20m). Weekly total 24h 45m is identical in both.",
+  "data": {
+    "apps": [
+      "Dorvi",
+      "Gisano",
+      "Kuvelo",
+      "Libezu",
+      "Tovra"
+    ],
+    "visual_minutes": [
+      150,
+      580,
+      430,
+      65,
+      260
+    ],
+    "conflict_label_minutes": [
+      430,
+      65,
+      150,
+      580,
+      260
+    ],
+    "visual_labels": {
+      "en": [
+        "2h 30m",
+        "9h 40m",
+        "7h 10m",
+        "1h 5m",
+        "4h 20m"
+      ],
+      "tr": [
+        "2 sa 30 dk",
+        "9 sa 40 dk",
+        "7 sa 10 dk",
+        "1 sa 5 dk",
+        "4 sa 20 dk"
+      ]
+    },
+    "conflict_labels": {
+      "en": [
+        "7h 10m",
+        "1h 5m",
+        "2h 30m",
+        "9h 40m",
+        "4h 20m"
+      ],
+      "tr": [
+        "7 sa 10 dk",
+        "1 sa 5 dk",
+        "2 sa 30 dk",
+        "9 sa 40 dk",
+        "4 sa 20 dk"
+      ]
+    },
+    "total_minutes": 1485,
+    "daily_average_minutes": 212,
+    "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+    "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+    "position_checks": {
+      "rows_alphabetical": true,
+      "every_question_differs": true,
+      "extremes_not_first_or_last_row": true,
+      "q1_q2_cues_two_rows_apart": true,
+      "q3_visually_larger_is_lower_row": true,
+      "q4_visual_time_printed_two_rows_away": true,
+      "q4_visual_time_row_not_first_or_last": true,
+      "hour_digits_distinct": true,
+      "columns_not_monotone": true,
+      "conflict_is_not_row_reversal": true,
+      "names_no_prefix_clash": true
+    },
+    "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+    "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+    "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+    "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+    "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  },
+  "questions": [
+    {
+      "qid": "s04_q1",
+      "kind": "argmax",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which app was used the most this week?",
+        "tr": "answer tr bu hafta en çok hangi uygulama kullanıldı?"
+      },
+      "visual": {
+        "en": [
+          "gisano"
+        ],
+        "tr": [
+          "gisano"
+        ]
+      },
+      "text": {
+        "en": [
+          "libezu"
+        ],
+        "tr": [
+          "libezu"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s04_q2",
+      "kind": "argmin",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which app was used the least this week?",
+        "tr": "answer tr bu hafta en az hangi uygulama kullanıldı?"
+      },
+      "visual": {
+        "en": [
+          "libezu"
+        ],
+        "tr": [
+          "libezu"
+        ]
+      },
+      "text": {
+        "en": [
+          "gisano"
+        ],
+        "tr": [
+          "gisano"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s04_q3a",
+      "kind": "compare",
+      "pair": "s04_p1",
+      "prompt": {
+        "en": "answer en was dorvi used more than kuvelo this week?",
+        "tr": "answer tr dorvi bu hafta kuvelo'dan daha fazla kullanıldı mı?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s04_q3b",
+      "kind": "compare",
+      "pair": "s04_p1",
+      "prompt": {
+        "en": "answer en was dorvi used less than kuvelo this week?",
+        "tr": "answer tr dorvi bu hafta kuvelo'dan daha az kullanıldı mı?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s04_q4",
+      "kind": "read_value",
+      "pair": null,
+      "prompt": {
+        "en": "answer en how long was dorvi used this week?",
+        "tr": "answer tr dorvi bu hafta ne kadar süre kullanıldı?"
+      },
+      "visual": {
+        "en": [
+          "2h 30m",
+          "2 h 30 min",
+          "2 h 30 mins",
+          "2 h 30 minutes",
+          "2 h and 30 m",
+          "2 h and 30 min",
+          "2 h and 30 mins",
+          "2 h and 30 minutes",
+          "2 hr 30 m",
+          "2 hr 30 min",
+          "2 hr 30 mins",
+          "2 hr 30 minutes",
+          "2 hr and 30 m",
+          "2 hr and 30 min",
+          "2 hr and 30 mins",
+          "2 hr and 30 minutes",
+          "2 hrs 30 m",
+          "2 hrs 30 min",
+          "2 hrs 30 mins",
+          "2 hrs 30 minutes",
+          "2 hrs and 30 m",
+          "2 hrs and 30 min",
+          "2 hrs and 30 mins",
+          "2 hrs and 30 minutes",
+          "2 hours 30 m",
+          "2 hours 30 min",
+          "2 hours 30 mins",
+          "2 hours 30 minutes",
+          "2 hours and 30 m",
+          "2 hours and 30 min",
+          "2 hours and 30 mins",
+          "2 hours and 30 minutes",
+          "two hours thirty minutes",
+          "two hours and thirty minutes",
+          "2:30",
+          "150 minutes",
+          "150 mins",
+          "150 min",
+          "2.5 hours",
+          "2.5 hrs",
+          "2.5 h",
+          "2 and a half hours",
+          "2 and a half",
+          "two and a half hours",
+          "two and a half",
+          "2 h",
+          "2 hr",
+          "2 hrs",
+          "2 hours",
+          "two hours"
+        ],
+        "tr": [
+          "2 sa 30 dk",
+          "2 sa 30 dakika",
+          "2 sa ve 30 dk",
+          "2 sa ve 30 dakika",
+          "2 saat 30 dk",
+          "2 saat 30 dakika",
+          "2 saat ve 30 dk",
+          "2 saat ve 30 dakika",
+          "iki saat otuz dakika",
+          "iki saat ve otuz dakika",
+          "2:30",
+          "2.30",
+          "150 dakika",
+          "150 dk",
+          "2 sa",
+          "2 saat",
+          "iki saat",
+          "2,5 saat",
+          "2,5 sa",
+          "2 buçuk saat",
+          "iki buçuk saat",
+          "2 buçuk",
+          "iki buçuk"
+        ]
+      },
+      "text": {
+        "en": [
+          "7h 10m",
+          "7 h 10 min",
+          "7 h 10 mins",
+          "7 h 10 minutes",
+          "7 h and 10 m",
+          "7 h and 10 min",
+          "7 h and 10 mins",
+          "7 h and 10 minutes",
+          "7 hr 10 m",
+          "7 hr 10 min",
+          "7 hr 10 mins",
+          "7 hr 10 minutes",
+          "7 hr and 10 m",
+          "7 hr and 10 min",
+          "7 hr and 10 mins",
+          "7 hr and 10 minutes",
+          "7 hrs 10 m",
+          "7 hrs 10 min",
+          "7 hrs 10 mins",
+          "7 hrs 10 minutes",
+          "7 hrs and 10 m",
+          "7 hrs and 10 min",
+          "7 hrs and 10 mins",
+          "7 hrs and 10 minutes",
+          "7 hours 10 m",
+          "7 hours 10 min",
+          "7 hours 10 mins",
+          "7 hours 10 minutes",
+          "7 hours and 10 m",
+          "7 hours and 10 min",
+          "7 hours and 10 mins",
+          "7 hours and 10 minutes",
+          "seven hours ten minutes",
+          "seven hours and ten minutes",
+          "7:10",
+          "430 minutes",
+          "430 mins",
+          "430 min",
+          "7 h",
+          "7 hr",
+          "7 hrs",
+          "7 hours",
+          "seven hours"
+        ],
+        "tr": [
+          "7 sa 10 dk",
+          "7 sa 10 dakika",
+          "7 sa ve 10 dk",
+          "7 sa ve 10 dakika",
+          "7 saat 10 dk",
+          "7 saat 10 dakika",
+          "7 saat ve 10 dk",
+          "7 saat ve 10 dakika",
+          "yedi saat on dakika",
+          "yedi saat ve on dakika",
+          "7:10",
+          "7.10",
+          "430 dakika",
+          "430 dk",
+          "7 sa",
+          "7 saat",
+          "yedi saat"
+        ]
+      },
+      "nonumbers": false
+    }
+  ],
+  "conflict_has_truth": false
+}

@@ -1,0 +1,209 @@
+{
+  "id": "s08_paper_grouped_bars",
+  "title": {
+    "en": "Accuracy of three methods on two benchmarks (photographed paper page)",
+    "tr": "Üç yöntemin iki veri kümesindeki doğruluğu (fotoğraflanmış makale sayfası)"
+  },
+  "chart": "grouped bars",
+  "style": "photographed page of an academic paper",
+  "tech": "matplotlib SVG figure inlined in an HTML page (headless Chrome) + PIL photo effect",
+  "mechanism": "label",
+  "conflict_summary": "Bars drawn Roan/Kerf/Ossel: Kerf (middle) is tallest and Ossel (right) shortest on both benchmarks; in conflict the printed labels are rotated by one within each benchmark (Quorlet 78/52/64, Harnwick 69/41/47), so the labels make Roan best and Kerf worst, and put Kerf below Ossel on Harnwick.",
+  "data": {
+    "methods": [
+      "Roan",
+      "Kerf",
+      "Ossel"
+    ],
+    "benchmarks": [
+      "Quorlet",
+      "Harnwick"
+    ],
+    "visual": {
+      "Quorlet": [
+        64,
+        78,
+        52
+      ],
+      "Harnwick": [
+        47,
+        69,
+        41
+      ]
+    },
+    "conflict_labels": {
+      "Quorlet": [
+        78,
+        52,
+        64
+      ],
+      "Harnwick": [
+        69,
+        41,
+        47
+      ]
+    },
+    "photo_quad_tl_tr_br_bl": [
+      [
+        30,
+        -12
+      ],
+      [
+        912,
+        -2
+      ],
+      [
+        902,
+        910
+      ],
+      [
+        44,
+        902
+      ]
+    ],
+    "noise_seed": 8
+  },
+  "questions": [
+    {
+      "qid": "s08_q1",
+      "kind": "argmax",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which method has the highest accuracy on quorlet?",
+        "tr": "answer tr quorlet'te en yüksek doğruluğu hangi yöntem elde ediyor?"
+      },
+      "visual": {
+        "en": [
+          "kerf"
+        ],
+        "tr": [
+          "kerf"
+        ]
+      },
+      "text": {
+        "en": [
+          "roan"
+        ],
+        "tr": [
+          "roan"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s08_q2",
+      "kind": "argmin",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which method has the lowest accuracy on harnwick?",
+        "tr": "answer tr harnwick'te en düşük doğruluğu hangi yöntem elde ediyor?"
+      },
+      "visual": {
+        "en": [
+          "ossel"
+        ],
+        "tr": [
+          "ossel"
+        ]
+      },
+      "text": {
+        "en": [
+          "kerf"
+        ],
+        "tr": [
+          "kerf"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s08_q3a",
+      "kind": "compare",
+      "pair": "s08_p1",
+      "prompt": {
+        "en": "answer en does kerf score higher than ossel on harnwick?",
+        "tr": "answer tr harnwick'te kerf, ossel'den daha yüksek puan alıyor mu?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s08_q3b",
+      "kind": "compare",
+      "pair": "s08_p1",
+      "prompt": {
+        "en": "answer en does kerf score lower than ossel on harnwick?",
+        "tr": "answer tr harnwick'te kerf, ossel'den daha düşük puan alıyor mu?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s08_q4",
+      "kind": "read_value",
+      "pair": null,
+      "prompt": {
+        "en": "answer en what is the accuracy of roan on quorlet?",
+        "tr": "answer tr quorlet'te roan yönteminin doğruluğu kaç?"
+      },
+      "visual": {
+        "en": [
+          "64",
+          "^sixty-four",
+          "^sixty four"
+        ],
+        "tr": [
+          "64",
+          "^altmış dört",
+          "^altmışdört"
+        ]
+      },
+      "text": {
+        "en": [
+          "78",
+          "^seventy-eight",
+          "^seventy eight"
+        ],
+        "tr": [
+          "78",
+          "^yetmiş sekiz",
+          "^yetmişsekiz"
+        ]
+      },
+      "nonumbers": false
+    }
+  ],
+  "conflict_has_truth": false
+}

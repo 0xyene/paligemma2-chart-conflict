@@ -1,0 +1,248 @@
+{
+  "id": "s02_magazine_line_inverted",
+  "title": {
+    "en": "Bicycle thefts reported per year (news site, dark)",
+    "tr": "Yıllara göre bildirilen bisiklet hırsızlıkları (haber sitesi, koyu tema)"
+  },
+  "chart": "line with markers",
+  "style": "news-site article page, dark theme",
+  "tech": "matplotlib (whole page, Agg)",
+  "mechanism": "axis",
+  "conflict_summary": "Line rises 2018→2025 (180→520 on a normal 0–600 axis); in conflict the y tick labels are inverted (0 at top, 600 at bottom), so the same line encodes falling values 420→80. Years, not months: bicycle theft is seasonal, and a Jan→Aug axis would add a prior agreeing with the rising line.",
+  "data": {
+    "years": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "visual": [
+      180,
+      260,
+      240,
+      330,
+      380,
+      360,
+      450,
+      520
+    ],
+    "conflict_truth": [
+      420,
+      340,
+      360,
+      270,
+      220,
+      240,
+      150,
+      80
+    ],
+    "y_tick_positions": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600
+    ],
+    "conflict_tick_labels_bottom_to_top": [
+      600,
+      500,
+      400,
+      300,
+      200,
+      100,
+      0
+    ],
+    "nonumbers": "y tick labels hidden; gridlines, year labels and all other text unchanged"
+  },
+  "questions": [
+    {
+      "qid": "s02_q1",
+      "kind": "trend",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en did the number of bicycle thefts increase or decrease from 2018 to 2025?",
+        "tr": "answer tr 2018'den 2025'e bisiklet hırsızlığı sayısı arttı mı azaldı mı?"
+      },
+      "visual": {
+        "en": [
+          "up",
+          "went up",
+          "increased",
+          "increase",
+          "increases",
+          "increasing",
+          "rose",
+          "rise",
+          "risen",
+          "rising",
+          "grew",
+          "grown",
+          "growing",
+          "upward",
+          "higher"
+        ],
+        "tr": [
+          "arttı",
+          "artış",
+          "artmış",
+          "artıyor",
+          "artan",
+          "çoğaldı",
+          "yükseldi",
+          "yükselmiş",
+          "yükseliyor",
+          "yükseliş",
+          "yukarı"
+        ]
+      },
+      "text": {
+        "en": [
+          "down",
+          "went down",
+          "decreased",
+          "decrease",
+          "decreases",
+          "decreasing",
+          "fell",
+          "fall",
+          "fallen",
+          "falling",
+          "dropped",
+          "drop",
+          "declined",
+          "decline",
+          "declining",
+          "downward",
+          "lower"
+        ],
+        "tr": [
+          "azaldı",
+          "azalış",
+          "azalmış",
+          "azalıyor",
+          "azalan",
+          "düştü",
+          "düşmüş",
+          "düşüyor",
+          "düşüş",
+          "geriledi",
+          "aşağı"
+        ]
+      }
+    },
+    {
+      "qid": "s02_q2",
+      "kind": "argmax",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en in which year were the most bicycle thefts reported?",
+        "tr": "answer tr en çok bisiklet hırsızlığı hangi yıl bildirildi?"
+      },
+      "visual": {
+        "en": [
+          "2025"
+        ],
+        "tr": [
+          "2025"
+        ]
+      },
+      "text": {
+        "en": [
+          "2018"
+        ],
+        "tr": [
+          "2018"
+        ]
+      }
+    },
+    {
+      "qid": "s02_q3",
+      "kind": "argmin",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en in which year were the fewest bicycle thefts reported?",
+        "tr": "answer tr en az bisiklet hırsızlığı hangi yıl bildirildi?"
+      },
+      "visual": {
+        "en": [
+          "2018"
+        ],
+        "tr": [
+          "2018"
+        ]
+      },
+      "text": {
+        "en": [
+          "2025"
+        ],
+        "tr": [
+          "2025"
+        ]
+      }
+    },
+    {
+      "qid": "s02_q4a",
+      "kind": "compare",
+      "pair": "s02_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en were more bicycle thefts reported in 2025 than in 2018?",
+        "tr": "answer tr 2025'te 2018'den daha fazla bisiklet hırsızlığı bildirildi mi?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      }
+    },
+    {
+      "qid": "s02_q4b",
+      "kind": "compare",
+      "pair": "s02_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en were fewer bicycle thefts reported in 2025 than in 2018?",
+        "tr": "answer tr 2025'te 2018'den daha az bisiklet hırsızlığı bildirildi mi?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      }
+    }
+  ],
+  "conflict_has_truth": true
+}

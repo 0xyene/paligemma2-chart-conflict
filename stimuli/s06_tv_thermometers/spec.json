@@ -1,0 +1,186 @@
+{
+  "id": "s06_tv_thermometers",
+  "title": {
+    "en": "Noon temperatures (TV weather)",
+    "tr": "Öğle sıcaklıkları (TV hava durumu)"
+  },
+  "chart": "thermometer fills",
+  "style": "TV weather broadcast graphic",
+  "tech": "Canvas 2D (inline JS, headless Chrome)",
+  "mechanism": "readout",
+  "conflict_summary": "Mercury columns: Avlen highest, Dimel lowest (just under the 0 °C notch); in conflict the readouts are swapped 31°<->−3° (Avlen<->Dimel, three cards apart) and 12°<->24° (Berim<->Covra).",
+  "data": {
+    "cities": [
+      "Avlen",
+      "Berim",
+      "Covra",
+      "Dimel"
+    ],
+    "visual": [
+      31,
+      12,
+      24,
+      -3
+    ],
+    "conflict_readouts": [
+      -3,
+      24,
+      12,
+      31
+    ],
+    "tube_scale_c": [
+      -10,
+      40
+    ],
+    "zero_notch_c": 0,
+    "note": "column height = (t - tmin)/(tmax - tmin) of the tube; no ticks or numbers on the tubes, only one unlabeled notch at 0 °C on every tube (identical in all images)",
+    "nonumbers": "readout strings not drawn, empty readout boxes kept; tubes/notches unchanged",
+    "deviation_from_design_md": "names Ardena/Belmora/Castelo/Dunmere -> Avlen/Berim/Covra/Dimel (no regional cold/warm morphology); q4 reads Dimel instead of Castelo (Castelo's 12<->24 swap was with the adjacent card, and 12 collided with the 12:00 clock)"
+  },
+  "questions": [
+    {
+      "qid": "s06_q1",
+      "kind": "argmax",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which city is the warmest?",
+        "tr": "answer tr en sıcak şehir hangisi?"
+      },
+      "visual": {
+        "en": [
+          "avlen"
+        ],
+        "tr": [
+          "avlen"
+        ]
+      },
+      "text": {
+        "en": [
+          "dimel"
+        ],
+        "tr": [
+          "dimel"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s06_q2",
+      "kind": "argmin",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which city is the coldest?",
+        "tr": "answer tr en soğuk şehir hangisi?"
+      },
+      "visual": {
+        "en": [
+          "dimel"
+        ],
+        "tr": [
+          "dimel"
+        ]
+      },
+      "text": {
+        "en": [
+          "avlen"
+        ],
+        "tr": [
+          "avlen"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s06_q3a",
+      "kind": "threshold",
+      "pair": "s06_p1",
+      "prompt": {
+        "en": "answer en is it below freezing in avlen?",
+        "tr": "answer tr avlen'de sıcaklık sıfırın altında mı?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "nonumbers": false
+    },
+    {
+      "qid": "s06_q3b",
+      "kind": "threshold",
+      "pair": "s06_p1",
+      "prompt": {
+        "en": "answer en is it above freezing in avlen?",
+        "tr": "answer tr avlen'de sıcaklık sıfırın üstünde mi?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "nonumbers": false
+    },
+    {
+      "qid": "s06_q4",
+      "kind": "read_value",
+      "pair": null,
+      "prompt": {
+        "en": "answer en what is the temperature in dimel?",
+        "tr": "answer tr dimel'de sıcaklık kaç derece?"
+      },
+      "visual": {
+        "en": [
+          "-3",
+          "^minus three",
+          "minus 3",
+          "3 below zero",
+          "three below zero"
+        ],
+        "tr": [
+          "-3",
+          "^eksi üç",
+          "eksi 3",
+          "sıfırın altında 3"
+        ]
+      },
+      "text": {
+        "en": [
+          "31",
+          "^thirty-one",
+          "^thirty one"
+        ],
+        "tr": [
+          "31",
+          "^otuz bir",
+          "^otuzbir"
+        ]
+      },
+      "nonumbers": false
+    }
+  ],
+  "conflict_has_truth": false
+}

@@ -1,0 +1,42 @@
+{
+ "sid": "s14_spreadsheet_databars",
+ "ok": true,
+ "script": "run2/size_sweep/s14_spreadsheet_databars.py",
+ "sizes": [
+  {
+   "k": 1,
+   "param": "font-size 15px (.val in region rows 4-8 only)",
+   "cue_px": 12,
+   "original": false,
+   "consistent": "run2/images/size/s14_spreadsheet_databars_consistent_en_s1.png",
+   "conflict": "run2/images/size/s14_spreadsheet_databars_conflict_en_s1.png"
+  },
+  {
+   "k": 2,
+   "param": "font-size 26px (.val in region rows 4-8 only; original, unpatched HTML)",
+   "cue_px": 20,
+   "original": true,
+   "consistent": "run2/images/size/s14_spreadsheet_databars_consistent_en_s2.png",
+   "conflict": "run2/images/size/s14_spreadsheet_databars_conflict_en_s2.png"
+  },
+  {
+   "k": 3,
+   "param": "font-size 36.4px (.val in region rows 4-8 only)",
+   "cue_px": 28,
+   "original": false,
+   "consistent": "run2/images/size/s14_spreadsheet_databars_consistent_en_s3.png",
+   "conflict": "run2/images/size/s14_spreadsheet_databars_conflict_en_s3.png"
+  },
+  {
+   "k": 4,
+   "param": "font-size 46.8px (.val in region rows 4-8 only)",
+   "cue_px": 36,
+   "original": false,
+   "consistent": "run2/images/size/s14_spreadsheet_databars_consistent_en_s4.png",
+   "conflict": "run2/images/size/s14_spreadsheet_databars_conflict_en_s4.png"
+  }
+ ],
+ "identical_to_run1": true,
+ "outside_text_share": 0.0,
+ "notes": "Cue size = make.py page() CSS '.val { ... font-size: 26px }'; .val is shared with the Total cell (1,800), so the sweep appends one override 'td.db:not(.totv) .val { font-size: Npx }' that reaches only the 5 region values (Total, bars, row heights, right:18px alignment and vertical centring untouched; no position nudge needed). k=2 is the unpatched HTML: identical to run 1 (max abs diff {'consistent': 0, 'conflict': 0}); unpatched HTML also equals build/*.html. cue_px [12, 20, 28, 36]. Changed px vs s2 all inside the dilated text mask (3 px). Closest label-to-bar gap 42 px, closest label-to-row-border 10 px. Conflict permutation unchanged at every size (N260 S330 E180 W420 C610). At 224 px the s1 labels are ~3 px tall and no longer legible (expected at the small end); s2-s4 readable at 224."
+}

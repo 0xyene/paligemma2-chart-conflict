@@ -1,0 +1,1304 @@
+<title>Bars or Labels?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: lab-report column with a sticky contents rail. One colour code everywhere:
+   blue = the drawing's answer, orange = the lying text's answer, grey = something else, aqua = "yes" to both halves of a pair. */
+:root {
+  --bg: #f4f5f3; --surface: #ffffff; --ink: #16191d; --ink-2: #474d56; --muted: #757c86; --rule: #dcdfdc; --soft: #eceeeb;
+  --accent: #27406b;
+  --visual: #2a78d6; --text: #eb6834; --same: #1baf7a; --other: #c3c7c2; --other-ink: #8d929a;
+  --vi-bg: #e1ecfa; --vi-fg: #1c4f8f; --tx-bg: #fbe6dc; --tx-fg: #8a3414; --no-bg: #eceeeb; --no-fg: #555b63; --sa-bg: #dcf2e8; --sa-fg: #145c40;
+  --shade: rgba(10, 12, 14, .72);
+  --f-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --f-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+  --r: 6px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121417; --surface: #1a1d21; --ink: #eceef1; --ink-2: #b8bdc5; --muted: #8b919a; --rule: #2c3036; --soft: #22262b;
+  --accent: #9fb6e0;
+  --visual: #3f8ce8; --text: #e8622d; --same: #22a878; --other: #4a4f57; --other-ink: #7d838c;
+  --vi-bg: #152a45; --vi-fg: #a9c8f2; --tx-bg: #3d1e12; --tx-fg: #f3b49a; --no-bg: #24282d; --no-fg: #b8bdc5; --sa-bg: #12332a; --sa-fg: #9edcc2;
+  --shade: rgba(0, 0, 0, .78);
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121417; --surface: #1a1d21; --ink: #eceef1; --ink-2: #b8bdc5; --muted: #8b919a; --rule: #2c3036; --soft: #22262b;
+  --accent: #9fb6e0;
+  --visual: #3f8ce8; --text: #e8622d; --same: #22a878; --other: #4a4f57; --other-ink: #7d838c;
+  --vi-bg: #152a45; --vi-fg: #a9c8f2; --tx-bg: #3d1e12; --tx-fg: #f3b49a; --no-bg: #24282d; --no-fg: #b8bdc5; --sa-bg: #12332a; --sa-fg: #9edcc2;
+  --shade: rgba(0, 0, 0, .78);
+  color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--f-body); -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.wrap { display: grid; grid-template-columns: 210px minmax(0, 800px); gap: 52px; justify-content: center; padding-inline: 24px; padding-block: 40px 80px; }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 28px); align-self: start; font-size: 13.5px; max-height: calc(100vh - 56px); overflow-y: auto; }
+nav.toc .k { font: 500 11px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+nav.toc ol { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 1px; }
+nav.toc a { display: block; padding: 4px 10px; border-left: 2px solid var(--rule); color: var(--ink-2); text-decoration: none; transition: color .3s, border-color .3s, background .3s; }
+nav.toc a:hover { color: var(--ink); }
+nav.toc a.on { color: var(--ink); border-color: var(--accent); background: var(--soft); }
+main { min-width: 0; }
+section { padding-block: 38px; border-top: 1px solid var(--rule); }
+section:first-of-type { border-top: 0; padding-top: 0; }
+.eyebrow { font: 500 12px/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 600 clamp(42px, 7vw, 66px)/1.02 var(--f-display); letter-spacing: -.01em; margin: 10px 0 12px; text-wrap: balance; }
+h2 { font: 600 31px/1.15 var(--f-display); margin: 4px 0 14px; text-wrap: balance; }
+h3 { font: 600 16px/1.35 var(--f-body); margin: 28px 0 10px; }
+p, li { max-width: 68ch; }
+p { margin: 0 0 12px; }
+ul.tight { margin: 0 0 12px; padding-left: 20px; display: grid; gap: 7px; }
+.lede { font-size: 19px; color: var(--ink-2); margin-bottom: 22px; }
+.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+.small { font-size: 13.5px; }
+code { font-family: var(--f-mono); font-size: .88em; background: var(--soft); padding: 1px 5px; border-radius: 4px; }
+pre { font-family: var(--f-mono); font-size: 13px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: 12px 14px; overflow-x: auto; }
+
+.answer { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: 18px 20px; margin: 4px 0 20px; font-size: 16.5px; }
+.answer b { font-weight: 600; }
+.finds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 28px; margin: 6px 0 16px; }
+.find { border-top: 2px solid var(--ink); padding-top: 10px; display: grid; gap: 6px; }
+.find .v { font: 500 36px/1 var(--f-display); font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.find .l { font-size: 14px; color: var(--ink-2); line-height: 1.45; }
+.find .l b { color: var(--ink); font-weight: 600; }
+.box { border-left: 3px solid var(--accent); background: var(--surface); padding: 12px 16px; border-radius: 0 var(--r) var(--r) 0; margin: 16px 0; }
+.box b { font-weight: 600; }
+.note { color: var(--ink-2); font-size: 14px; }
+
+/* charts */
+.chart { position: relative; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: 16px 18px 14px; margin: 14px 0 18px; }
+.chart .ttl { font-weight: 600; font-size: 14.5px; margin-bottom: 2px; }
+.chart .sub { font-size: 13px; color: var(--muted); margin-bottom: 10px; max-width: 70ch; }
+.plot { width: 100%; min-width: 0; }
+.plot svg { display: block; overflow: visible; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--ink-2); margin: 2px 0 10px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw-sq { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
+.sw-ring { width: 11px; height: 11px; border-radius: 50%; display: inline-block; border: 2px solid var(--ink-2); }
+.sw-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 0 0 10px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: var(--bg); gap: 2px; flex-wrap: wrap; }
+.seg button { font: 500 13px/1 var(--f-body); border: 0; background: transparent; color: var(--ink-2); padding: 7px 12px; border-radius: 999px; cursor: pointer; transition: background .3s, color .3s; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.readout { font-size: 14px; color: var(--ink-2); margin-top: 10px; display: grid; gap: 6px; }
+.readout b { color: var(--ink); font-weight: 600; }
+
+svg text { font-family: var(--f-body); font-size: 12px; fill: var(--ink-2); }
+svg .t-ink { fill: var(--ink); font-weight: 600; }
+svg .t-mut { fill: var(--muted); font-size: 11px; }
+svg .t-mono { font-family: var(--f-mono); font-size: 11.5px; }
+svg .t-head { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; fill: var(--muted); }
+svg .t-txt { fill: var(--tx-fg); font-weight: 600; }
+.f-vis { fill: var(--visual); } .f-txt { fill: var(--text); } .f-oth { fill: var(--other); } .f-same { fill: var(--same); }
+.f-ink { fill: var(--ink); } .f-ink2 { fill: var(--ink-2); } .f-surf { fill: var(--surface); }
+.s-rule { stroke: var(--rule); } .s-ink2 { stroke: var(--ink-2); } .s-txt { stroke: var(--text); } .s-oth { stroke: var(--other-ink); } .s-vis { stroke: var(--visual); } .s-acc { stroke: var(--accent); }
+.link { transition: opacity .25s; }
+.hl-dim .ln { opacity: .15; transition: opacity .2s; }
+.hl-dim .ln.on { opacity: 1; }
+.gtip { position: fixed; left: 0; top: 0; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12.5px; line-height: 1.4; padding: 7px 9px; border-radius: 5px; opacity: 0; transition: opacity .15s; max-width: 280px; z-index: 50; }
+.gtip b { font-weight: 600; }
+
+/* gap illustration */
+.routes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 14px 0; }
+.route { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: 14px 14px 12px; display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 12px; align-items: center; }
+.route .h { grid-column: 1 / -1; font-weight: 600; font-size: 14px; }
+.route .ways { display: grid; gap: 8px; font-size: 13px; color: var(--ink-2); min-width: 0; }
+.route .cap { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+
+/* hypothesis */
+.htbl { border: 1px solid var(--rule); border-radius: var(--r); background: var(--surface); overflow: hidden; margin: 12px 0 16px; }
+.htbl > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 14px; padding: 10px 14px; border-top: 1px solid var(--rule); font-size: 14px; }
+.htbl > div:first-child { border-top: 0; background: var(--soft); font: 500 11.5px/1.3 var(--f-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.qs { display: grid; gap: 10px; margin: 10px 0; }
+.q { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: 12px 14px; }
+.q .k { font: 600 16px/1.3 var(--f-display); color: var(--accent); }
+.q .t { font-weight: 600; font-size: 14.5px; }
+.q p { font-size: 14px; color: var(--ink-2); margin: 3px 0 7px; }
+.tag { display: inline-block; font: 500 11px/1 var(--f-mono); padding: 4px 7px; border-radius: 4px; letter-spacing: .02em; }
+.tag.after { background: var(--tx-bg); color: var(--tx-fg); }
+.tag.plan { background: var(--vi-bg); color: var(--vi-fg); }
+.tag.r2 { background: var(--sa-bg); color: var(--sa-fg); }
+h3 .tag { margin-left: 8px; vertical-align: 2px; }
+
+/* design */
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 14px 0; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: 13px 15px; min-width: 0; }
+.card .h { font-weight: 600; font-size: 14.5px; margin-bottom: 4px; }
+.card p { font-size: 13.5px; color: var(--ink-2); margin: 0; }
+figure { margin: 16px 0; }
+figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--r); background: #fff; }
+figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.zoom { all: unset; cursor: zoom-in; display: block; border-radius: var(--r); }
+.zoom:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.said { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 8px; }
+.said .q2 { color: var(--muted); font: 500 11px/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+.said div { font-size: 13.5px; min-width: 0; }
+.chip { display: inline-block; font: 500 12px/1.1 var(--f-mono); padding: 4px 7px; border-radius: 4px; max-width: 100%; overflow-wrap: anywhere; }
+.c-V { background: var(--vi-bg); color: var(--vi-fg); }
+.c-T { background: var(--tx-bg); color: var(--tx-fg); }
+.c-O { background: var(--no-bg); color: var(--no-fg); }
+.kinds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+.kinds .n { font: 500 12px/1.4 var(--f-mono); color: var(--muted); margin-bottom: 4px; }
+.gallery { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px 8px; margin: 12px 0; }
+.gallery button { all: unset; cursor: zoom-in; display: grid; gap: 4px; align-content: start; border-radius: var(--r); }
+.gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid var(--rule); border-radius: 5px; display: block; transition: transform .25s, box-shadow .25s; background: #fff; }
+.gallery button:hover img { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,.12); }
+.gallery button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.gallery .id { font: 500 11.5px/1.2 var(--f-mono); color: var(--ink); }
+.gallery .mk { font-size: 11px; color: var(--muted); line-height: 1.25; }
+.tbl { overflow-x: auto; margin: 12px 0 16px; border: 1px solid var(--rule); border-radius: var(--r); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 500 11.5px/1.3 var(--f-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: var(--soft); white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.n { font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* waffle */
+.waffle { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.waffle .h { font: 500 11px/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 8px; }
+.waffle .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; max-width: 220px; }
+.waffle .grid div { aspect-ratio: 1; border-radius: 2px; transition: background-color .5s ease; }
+.waffle .cnt { font-size: 12.5px; color: var(--ink-2); margin-top: 8px; line-height: 1.5; }
+.p-drawing { background: var(--visual); } .p-text { background: var(--text); } .p-yes-yes { background: var(--same); }
+.p-no-no { background: var(--ink-2); } .p-unclear { background: var(--other); }
+
+/* failure modes */
+.fails { display: grid; gap: 12px; }
+.fails .card .h { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chips .chip small { opacity: .75; margin-left: 4px; font-size: 11px; }
+
+/* explorer */
+.xpick { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+.xpick button { font: 500 12.5px/1 var(--f-mono); border: 1px solid var(--rule); background: var(--surface); color: var(--ink-2); padding: 7px 9px; border-radius: 999px; cursor: pointer; transition: background .3s, color .3s, border-color .3s; }
+.xpick button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.xhead { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 14px; align-items: start; margin-bottom: 10px; }
+.xhead img { width: 96px; height: 96px; border-radius: 5px; border: 1px solid var(--rule); display: block; background: #fff; }
+.xhead .nm { font-weight: 600; font-size: 15px; }
+.xhead .meta { font-size: 13px; color: var(--ink-2); }
+.xt td, .xt th { padding: 8px 10px; }
+.xt td.qq { min-width: 190px; }
+.xt td.qq small { display: block; color: var(--muted); font-size: 12px; }
+.xt .exp { font-size: 12px; margin-top: 5px; display: flex; gap: 6px; flex-wrap: wrap; }
+.cellb { all: unset; cursor: pointer; display: inline-flex; gap: 3px; padding: 5px; border-radius: 5px; border: 1px solid transparent; transition: border-color .2s, background .2s; }
+.cellb:hover { background: var(--soft); }
+.cellb[aria-pressed="true"] { border-color: var(--ink); }
+.cellb:focus-visible { outline: 2px solid var(--accent); }
+.cellb i { width: 12px; height: 12px; border-radius: 2px; display: block; }
+.sq-V { background: var(--visual); } .sq-T { background: var(--text); } .sq-O { background: var(--other); } .sq-n { background: transparent; box-shadow: inset 0 0 0 1px var(--other-ink); }
+.xdetail { background: var(--soft); border-radius: var(--r); padding: 12px 14px; margin-top: 10px; }
+.xdetail .qline { font-size: 14px; margin-bottom: 8px; }
+.xdetail .qline b { font-weight: 600; }
+
+/* run 2 */
+.e1t td { vertical-align: middle; }
+.e1t th.g { text-align: center; border-left: 1px solid var(--rule); }
+.e1t td.pr { border-left: 1px solid var(--rule); font-family: var(--f-mono); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+.e1t .ans { display: flex; gap: 4px; flex-wrap: nowrap; }
+.e1t .chip { white-space: nowrap; overflow-wrap: normal; }
+.e1t td.qn { min-width: 170px; }
+.e1t td.qn small { display: block; color: var(--muted); font-size: 12px; }
+.e3grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px 16px; margin-top: 4px; }
+.e3grid .pn { min-width: 0; display: flex; flex-direction: column; }
+.e3grid .pn .plot { margin-top: auto; }
+.e3grid .pn .h { font-weight: 600; font-size: 13.5px; line-height: 1.3; }
+.e3grid .pn .s { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.score td { font-size: 13.5px; }
+.score td:first-child { font-weight: 600; min-width: 130px; }
+.score td:nth-child(2) { color: var(--ink-2); min-width: 200px; }
+.score td:nth-child(3) { min-width: 180px; }
+.verdict { display: inline-block; font: 500 11.5px/1.25 var(--f-mono); padding: 4px 7px; border-radius: 4px; }
+.verdict.ok { background: var(--sa-bg); color: var(--sa-fg); } .verdict.mid { background: var(--no-bg); color: var(--no-fg); } .verdict.no { background: var(--tx-bg); color: var(--tx-fg); }
+
+/* lightbox */
+.lb[hidden] { display: none; }
+.lb { position: fixed; inset: 0; background: var(--shade); display: grid; place-items: center; padding: 20px 16px; z-index: 60; }
+.lb .in { background: var(--surface); border-radius: var(--r); width: min(980px, 100%); max-height: calc(100vh - 40px); overflow: auto; padding: 14px 16px 16px; }
+.lb .bar { display: flex; justify-content: space-between; gap: 12px; align-items: start; margin-bottom: 10px; }
+.lb .bar b { font-size: 15px; }
+.lb .x { font: 500 13px/1 var(--f-body); border: 1px solid var(--rule); background: var(--bg); color: var(--ink); padding: 7px 11px; border-radius: 999px; cursor: pointer; flex: none; }
+.lb p { font-size: 13.5px; color: var(--ink-2); margin: 10px 0 0; }
+
+@media (max-width: 980px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 0; padding-inline: 16px; padding-block: 20px 60px; }
+  nav.toc { position: static; margin-bottom: 18px; max-height: none; overflow-x: auto; }
+  nav.toc .k { display: none; }
+  nav.toc ol { display: flex; gap: 6px; margin: 0; }
+  nav.toc a { border: 1px solid var(--rule); border-radius: 999px; padding: 6px 10px; white-space: nowrap; }
+  nav.toc a.on { border-color: var(--accent); }
+}
+@media (max-width: 680px) {
+  .finds, .routes, .trio, .said, .kinds { grid-template-columns: minmax(0, 1fr); }
+  .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .route { grid-template-columns: 110px minmax(0, 1fr); }
+  .htbl > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .waffle { grid-template-columns: minmax(0, 1fr); }
+  .e3grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .e1t thead { display: none; }
+  .e1t, .e1t tbody { display: block; }
+  .e1t tr { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 10px; padding: 10px 12px; border-bottom: 1px solid var(--rule); align-items: center; }
+  .e1t tr:last-child { border-bottom: 0; }
+  .e1t td { display: block; border: 0 !important; padding: 0; }
+  .e1t td.qn { grid-column: 1 / -1; min-width: 0; }
+  .e1t td.pr::before { content: attr(data-l); font-family: var(--f-body); font-size: 12px; color: var(--muted); margin-right: 6px; }
+  h2 { font-size: 27px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Contents">
+    <div class="k">Contents</div>
+    <ol>
+      <li><a href="#answer">The answer</a></li>
+      <li><a href="#gap">1 · The gap</a></li>
+      <li><a href="#hypothesis">2 · Hypothesis</a></li>
+      <li><a href="#design">3 · Design</a></li>
+      <li><a href="#read">4 · Can it read?</a></li>
+      <li><a href="#flow">5 · Where answers go</a></li>
+      <li><a href="#pull">6 · Pull by question</a></li>
+      <li><a href="#scale">7 · Values vs scales</a></li>
+      <li><a href="#resolution">8 · Resolution</a></li>
+      <li><a href="#language">9 · Language</a></li>
+      <li><a href="#fallbacks">10 · Fallbacks</a></li>
+      <li><a href="#explorer">11 · Every answer</a></li>
+      <li><a href="#supports">12 · What it supports</a></li>
+      <li><a href="#limits">13 · Limits</a></li>
+      <li><a href="#files">Files</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="answer">
+      <div class="eyebrow">PaliGemma 2 mix · chart cue conflict · run 1 + follow-up run 2</div>
+      <h1>Bars or labels?</h1>
+      <p class="lede">When a chart's printed numbers say one thing and its bars, slices and needles say another, which one does PaliGemma 2 answer from?</p>
+      <div class="answer">
+        <b>Short answer.</b> Mostly the drawing, and that is less reassuring than it sounds. The model can read numbers printed <b>on the marks</b>: asked for a value, it quotes them. On questions about the drawing it mostly ignores them, and mix-448 follows them about twice as often as mix-224. A follow-up run shows the gap is <b>mostly not about image detail</b>: given images cut to mix-224's detail, mix-448 still followed the text nearly as often as before. What's left is the model, and these runs can't separate its weights from its larger 448 px input. On the 3 charts where the text <b>sets the scale</b> (axis ticks, a legend), it never used that text, not even when the text was the truth, and asked directly which number sits at the end of a flipped axis, it rarely got it right.
+      </div>
+      <div class="finds" id="finds"></div>
+      <p class="note" id="findsNote"></p>
+    </section>
+
+    <section id="gap">
+      <div class="eyebrow">1 · The gap</div>
+      <h2>What the PaliGemma 2 paper measured, and what accuracy can't show</h2>
+      <p>Steiner et al. (2024, arXiv 2412.03555) report accuracy on chart, document and diagram benchmarks. Each benchmark gets its own fine-tuned model, and results are reported per input resolution.</p>
+      <div class="chart">
+        <div class="ttl">PaliGemma 2 3B, fine-tuned per task: accuracy (%) at 224 px and 448 px</div>
+        <div class="sub">Numbers from the paper's tables. Text-heavy tasks gain the most from resolution; AI2D, the diagram task, barely moves.</div>
+        <div class="plot" id="paperPlot" role="img" aria-label="Slope chart of five benchmark scores from 224 to 448 pixels"></div>
+      </div>
+      <p>The paper's own reading: text, document, screen and chart tasks improve mainly with resolution, more than with a bigger language model.</p>
+
+      <h3>Why accuracy can't tell you how the model read the chart</h3>
+      <p>A chart question can be answered two ways: from the marks or from the printed numbers. On a normal chart both ways give the same answer.</p>
+      <div class="routes">
+        <div class="route">
+          <div class="h">Normal chart</div>
+          <svg viewBox="0 0 128 118" width="128" height="118" aria-hidden="true">
+            <line x1="6" y1="100" x2="122" y2="100" class="s-rule" stroke-width="1.5"/>
+            <rect x="18" y="72" width="34" height="28" class="f-ink2"/><rect x="74" y="20" width="34" height="80" class="f-ink2"/>
+            <text x="35" y="64" text-anchor="middle" class="t-mono t-ink">120</text><text x="91" y="12" text-anchor="middle" class="t-mono t-ink">640</text>
+            <text x="35" y="114" text-anchor="middle" class="t-mut">Jan</text><text x="91" y="114" text-anchor="middle" class="t-mut">Jun</text>
+          </svg>
+          <div class="ways"><div>"Which month sold more?"</div><div>Bar heights say <span class="chip c-V">June</span></div><div>Printed numbers say <span class="chip c-V">June</span></div></div>
+          <div class="cap">Same answer either way, so a right answer hides which way the model went.</div>
+        </div>
+        <div class="route">
+          <div class="h">Same chart, lying numbers</div>
+          <svg viewBox="0 0 128 118" width="128" height="118" aria-hidden="true">
+            <line x1="6" y1="100" x2="122" y2="100" class="s-rule" stroke-width="1.5"/>
+            <rect x="18" y="72" width="34" height="28" class="f-ink2"/><rect x="74" y="20" width="34" height="80" class="f-ink2"/>
+            <text x="35" y="64" text-anchor="middle" class="t-mono t-txt">640</text><text x="91" y="12" text-anchor="middle" class="t-mono t-txt">120</text>
+            <text x="35" y="114" text-anchor="middle" class="t-mut">Jan</text><text x="91" y="114" text-anchor="middle" class="t-mut">Jun</text>
+          </svg>
+          <div class="ways"><div>"Which month sold more?"</div><div>Bar heights say <span class="chip c-V">June</span></div><div>Printed numbers say <span class="chip c-T">January</span></div></div>
+          <div class="cap">Make the two ways disagree and the answer shows which one the model used.</div>
+        </div>
+      </div>
+      <h3>What the paper doesn't test</h3>
+      <ul class="tight">
+        <li>Nothing separates reading the marks from reading the printed numbers.</li>
+        <li>No robustness tests: no conflicting text, edited charts, misleading axes or typographic attacks.</li>
+        <li>The <code>mix</code> checkpoints most people download were released after the paper and aren't evaluated in it. Every chart number there comes from a task-specific fine-tune.</li>
+      </ul>
+      <p class="note">Closest prior work: <a href="https://arxiv.org/abs/2503.02199" target="_blank" rel="noopener">Deng et al. (CVPR 2025)</a> find that VLMs side with the text when conflicting text is given in the prompt next to the image. <a href="https://arxiv.org/abs/2508.09716" target="_blank" rel="noopener">Mahbub et al. (IEEE VIS 2025)</a> change a chart's geometry and keep its text truthful, the mirror image of this design. Here the conflicting text sits inside the chart's pixels.</p>
+      <div class="box"><b>The gap.</b> We know PaliGemma 2 answers chart questions better at higher resolution. We don't know whether it gets there by reading the chart or by reading the numbers printed on it.</div>
+    </section>
+
+    <section id="hypothesis">
+      <div class="eyebrow">2 · Hypothesis</div>
+      <h2>What we expected</h2>
+      <div class="box"><b>H1.</b> On charts that print their values, PaliGemma 2 answers from the printed text more than from the marks. <span class="tag after">direction stated after the run</span></div>
+      <p>The plan asked the question both ways: marks or text? This direction was written down after the run, from the paper's resolution result. Why it was plausible: the paper's chart scores rise mostly with resolution, and resolution mostly helps with small text. If the gain comes from reading printed numbers, the model may lean on them and skip the marks.</p>
+      <div class="htbl">
+        <div><span>If the model mainly…</span><span>…then on the lying chart its answers…</span></div>
+        <div><span>reads the marks</span><span>stay with the drawing <span class="chip c-V">drawing</span></span></div>
+        <div><span>reads the printed text (H1)</span><span>move to the text's answer <span class="chip c-T">text</span></span></div>
+        <div><span>reads neither reliably</span><span>scatter, or fall back on habits such as "yes" or the first item <span class="chip c-O">other</span></span></div>
+      </div>
+      <h3>Four follow-up questions</h3>
+      <div class="qs">
+        <div class="q"><div class="k">Q1</div><div><div class="t">Does it depend on the question?</div><p>"Which is biggest?", "up or down?", yes/no and "how much is X?" need different amounts of reading.</p><span class="tag plan">in the design</span></div></div>
+        <div class="q"><div class="k">Q2</div><div><div class="t">What if the text is the truth?</div><p>On three charts the axis is flipped or the legend is reversed, so the shape misleads and the text is right. If the model ignores the text there too, its preference for the drawing can't be caution about text.</p><span class="tag plan">in the design</span> <span class="tag r2">why it ignores it: tested in run 2</span></div></div>
+        <div class="q"><div class="k">Q3</div><div><div class="t">Does resolution matter?</div><p>mix-224 and mix-448 were both run from the start. The prediction that 448 follows text more, because the digits are twice as tall in its input, came after reading the paper with the results in hand.</p><span class="tag after">added after the run</span> <span class="tag r2">pixels vs checkpoint: tested in run 2</span></div></div>
+        <div class="q"><div class="k">Q4</div><div><div class="t">English vs Turkish?</div><p>Same charts, same questions, translated. Names stay identical so answers compare directly.</p><span class="tag plan">in the design</span></div></div>
+      </div>
+    </section>
+
+    <section id="design">
+      <div class="eyebrow">3 · Design</div>
+      <h2>One drawing, three captions</h2>
+      <p>Each chart is drawn once and rendered three times. The marks are pixel-identical in all three. Only the printed text changes, and a pixel diff confirms the changed pixels sit on those strings and nowhere else.</p>
+      <div class="trio">
+        <div class="card"><div class="h">True numbers</div><p>The text agrees with the drawing. This is the control: can the model answer at all?</p></div>
+        <div class="card"><div class="h">Lying numbers</div><p>Only the text changes, so it contradicts the drawing. Any change in the answer was caused by the text.</p></div>
+        <div class="card"><div class="h">No numbers</div><p>The text is removed. A baseline for how well it reads the drawing alone.</p></div>
+      </div>
+      <figure>
+        <button type="button" class="zoom" id="s06fig" aria-label="Open the thermometer sheet"><img src="img/s06_tv_thermometers.jpg" alt="TV weather thermometers in six versions: true numbers, lying numbers and no numbers, in English and Turkish" loading="lazy" width="1368" height="970"></button>
+        <figcaption>s06, TV weather thermometers. Columns: true numbers, lying numbers, no numbers. Rows: English, Turkish. The mercury columns are identical in all six.</figcaption>
+      </figure>
+      <div class="card" id="s06said"></div>
+
+      <h3>Two kinds of lie</h3>
+      <div class="kinds">
+        <div class="card"><div class="n">11 charts · the text lies</div><div class="h">Text on the marks</div><p>Value labels (9 charts) and big digital readouts (2) are swapped, reversed or sign-flipped. There is no right answer on these, only a preference for the drawing or the text.</p></div>
+        <div class="card"><div class="n">3 charts · the text is right</div><div class="h">Text that sets the scale</div><p>A flipped or reversed axis (2 charts) or a reversed colour legend (1). Reading the shape naively gives the wrong answer; reading the ticks or the legend gives the truth.</p></div>
+      </div>
+
+      <h3>14 charts, 14 settings</h3>
+      <p class="small">Five renderers (HTML/CSS, SVG, Canvas, matplotlib, PIL) and everyday settings, from a newspaper page to a photographed journal article. Every name is invented, so the answer can't come from memory. Click a chart to see its six versions.</p>
+      <div class="gallery" id="gallery"></div>
+
+      <h3>Questions</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>Question type</th><th>Example</th><th>Questions</th></tr></thead>
+        <tbody id="qtypes"></tbody>
+      </table></div>
+
+      <h3>Guards built in</h3>
+      <ul class="tight">
+        <li><b>Yes/no questions come in opposite pairs</b> ("more?" and "fewer?"), so saying yes to everything shows up as yes to both and can't pass as reading.</li>
+        <li><b>Every lie changes every answer.</b> The text's answer always differs from the drawing's.</li>
+        <li><b>Readable digits.</b> Cue text is 19–48 px tall in the 896 px image and was checked by eye at 448 px.</li>
+        <li><b>Checked scoring.</b> Two independent LLM judges (separate Claude agents) reviewed the <span id="judgeN">98</span> distinct answers (<span id="judgeRows">212</span> of the 792 rows) the matcher couldn't place and agreed on every one. 4 outcomes were overridden, such as <code>tltwy</code> → TLWY, and each override applies to every image where that answer appears.</li>
+      </ul>
+      <h3>The run</h3>
+      <ul class="tight" id="runList"></ul>
+    </section>
+
+    <section id="read">
+      <div class="eyebrow">4 · Result 1 · Controls</div>
+      <h2>Can it read these charts at all?</h2>
+      <p>Before asking which cue wins, check that the plain chart gets a right answer.</p>
+      <div class="chart">
+        <div class="ttl">Share right, with true numbers and with no numbers</div>
+        <div class="sub">The 58 questions that can be answered from the drawing alone, so both dots cover the same questions.</div>
+        <div class="legend"><span><i class="sw-dot" style="background:var(--ink)"></i>true numbers</span><span><i class="sw-ring"></i>no numbers</span></div>
+        <div class="plot" id="accPlot" role="img" aria-label="Accuracy with and without numbers per model and language"></div>
+      </div>
+      <ul class="tight" id="accNotes"></ul>
+
+      <h3>A strong "yes" habit</h3>
+      <p>Each yes/no pair asks one fact both ways, so a model that reads the chart says yes once and no once. Every square below is one pair (14 charts × 2 languages).</p>
+      <div class="chart">
+        <div class="controls"><div class="seg" data-model></div></div>
+        <div class="legend">
+          <span><i class="sw-sq p-drawing"></i>right both ways</span><span><i class="sw-sq p-text"></i>both match the lie's answers</span>
+          <span><i class="sw-sq p-yes-yes"></i>yes to both</span><span><i class="sw-sq p-no-no"></i>no to both</span><span><i class="sw-sq p-unclear"></i>unclear</span>
+        </div>
+        <div class="waffle" id="waffle"></div>
+      </div>
+      <p id="yesNote"></p>
+    </section>
+
+    <section id="flow">
+      <div class="eyebrow">5 · Result 2 · Main test</div>
+      <h2>Where the answers go when the numbers lie</h2>
+      <p>Follow each question from the true chart on the left to the lying chart on the right. Same drawing, same question; only the printed text changed.</p>
+      <div class="chart">
+        <div class="controls"><div class="seg" data-model></div><div class="seg" id="flowSet"></div></div>
+        <div class="plot" id="flowPlot" role="img" aria-label="Flow of answers from the true chart to the lying chart"></div>
+        <div class="readout" id="flowRead"></div>
+      </div>
+      <div class="box" id="flowBox"></div>
+    </section>
+
+    <section id="pull">
+      <div class="eyebrow">6 · Result 3 · By question type</div>
+      <h2>How hard the text pulls, by question</h2>
+      <p>Each row shows how often the model gives <b>the lie's answer</b> on each version. On the true and no-numbers charts that answer is simply a wrong answer, so those dots are the background rate. The arrow is what the lying text adds.</p>
+      <div class="chart">
+        <div class="controls"><div class="seg" data-model></div></div>
+        <div class="legend"><span><i class="sw-ring"></i>no numbers</span><span><i class="sw-dot" style="background:var(--ink-2)"></i>true numbers</span><span><i class="sw-dot" style="background:var(--text)"></i>lying numbers</span></div>
+        <div class="plot" id="pullPlot" role="img" aria-label="How often the lie's answer is given on each version, per question type"></div>
+      </div>
+      <ul class="tight" id="pullNotes"></ul>
+    </section>
+
+    <section id="scale">
+      <div class="eyebrow">7 · Result 4 · What the text does</div>
+      <h2>Value text pulls; scale text didn't (3 charts)</h2>
+      <p>Split the 14 charts by the job the text does, using questions about the drawing only. Each dot is one chart: the share of its drawing questions that switched to the text's answer.</p>
+      <div class="chart">
+        <div class="controls"><div class="seg" data-model></div></div>
+        <div class="legend"><span><i class="sw-dot" style="background:var(--text)"></i>digits 19–24 px tall, the same range as the scale charts</span><span><i class="sw-ring" style="border-color:var(--text)"></i>bigger digits</span></div>
+        <div class="plot" id="rolePlot" role="img" aria-label="Per-chart switching for value text versus scale text"></div>
+      </div>
+      <ul class="tight" id="roleNotes"></ul>
+      <figure>
+        <button type="button" class="zoom" id="s02fig" aria-label="Open the bicycle theft sheet"><img src="img/s02_magazine_line_inverted.jpg" alt="Bicycle theft line chart: true, flipped-axis and no-number versions" loading="lazy" width="1368" height="970"></button>
+        <figcaption id="s02cap"></figcaption>
+      </figure>
+      <h3>Run 2: asked directly, it rarely places a flipped scale's numbers <span class="tag r2">predicted before the run</span></h3>
+      <p>Run 1 left two explanations open: it can't read flipped ticks, or it reads them and doesn't apply them to the marks. Run 2 asked plain reading questions ("what number is at the top of the y-axis?") on the normal and the flipped version of each scale chart, both models, both languages. On a normal chart the printed number and the usual one are the same, so only the flipped column can tell reading from habit.</p>
+      <div class="chart">
+        <div class="ttl">What it says is printed at the ends of the scale</div>
+        <div class="sub">For each version: the number actually printed there, then the four answers: mix-224 then mix-448, English then Turkish.</div>
+        <div class="legend"><span><i class="sw-sq" style="background:var(--text)"></i>what is printed (right)</span><span><i class="sw-sq" style="background:var(--visual)"></i>the usual order instead (what a normal scale would say)</span><span><i class="sw-sq" style="background:var(--other)"></i>another number</span></div>
+        <div class="tbl" style="margin:4px 0 0"><table class="e1t" id="e1Table"></table></div>
+      </div>
+      <ul class="tight" id="e1Notes"></ul>
+      <div class="box">On these charts the model doesn't connect scale text to the marks. Asked directly, it sees the numbers on a flipped axis (its answers change) but rarely says which one sits where. Text sitting on a mark it can read as that mark's value, but it mostly uses that text only when asked for the value itself. All of this rests on 3 charts.</div>
+    </section>
+
+    <section id="resolution">
+      <div class="eyebrow">8 · Result 5 · 224 vs 448 px</div>
+      <h2>mix-448 follows the text more, and less detail barely changes that</h2>
+      <p id="resIntro"></p>
+      <div class="chart">
+        <div class="ttl">Share of each chart's questions that switched to the text</div>
+        <div class="sub">All questions, "how much" included. One line per chart; hover a line to name it.</div>
+        <div class="legend"><span><i class="sw-sq" style="background:var(--text)"></i>higher at 448</span><span><i class="sw-sq" style="background:var(--other-ink)"></i>tied</span></div>
+        <div class="plot" id="slopePlot" role="img" aria-label="Slope chart of per-chart switching from mix-224 to mix-448"></div>
+      </div>
+      <p>mix-224 shrinks the 896 px image to a quarter of its width and mix-448 to half, so the same digits are 5–12 px tall for 224 and 10–24 px for 448. Run 1 couldn't tell whether 448 follows the text more because it sees the digits better or because it is a different checkpoint. Run 2 split the two.</p>
+      <h3>Run 2: same weights, mix-224's level of detail <span class="tag r2">predicted before the run</span></h3>
+      <p id="e2Intro"></p>
+      <div class="chart">
+        <div class="ttl">Less detail lowers accuracy but barely changes text-following</div>
+        <div class="sub" id="e2Sub"></div>
+        <div class="controls"><div class="seg" id="e2Seg" role="group" aria-label="Question set"></div></div>
+        <div class="legend"><span><i class="sw-ring" style="border-color:var(--ink-2)"></i>mix-224 (run 1)</span><span><i class="sw-dot" style="background:var(--same)"></i>mix-448 on mix-224's detail, enlarged back (run 2)</span><span><i class="sw-dot" style="background:var(--ink)"></i>mix-448 (run 1)</span></div>
+        <div class="plot" id="e2Plot" role="img" aria-label="Accuracy and text-following for mix-224, degraded mix-448 and mix-448"></div>
+      </div>
+      <ul class="tight" id="e2Notes"></ul>
+      <h3>Run 2: label size alone, within one chart <span class="tag r2">predicted before the run</span></h3>
+      <p>In run 1 digit size was tangled with chart type: the two biggest-digit charts were both readouts. Run 2 re-rendered four charts with only the cue text at four sizes, marks pixel-identical, and asked every question again in English.</p>
+      <div class="chart">
+        <div class="ttl">Drawing questions that switched to the lying text, by label size</div>
+        <div class="sub">4 drawing questions per chart and size. Label height is measured at 896 px; mix-448 sees it at half that, mix-224 at a quarter. The dashed line marks the chart's original size.</div>
+        <div class="legend"><span><i class="sw-ring" style="border-color:var(--ink-2)"></i>mix-224</span><span><i class="sw-dot" style="background:var(--ink)"></i>mix-448</span></div>
+        <div class="e3grid" id="e3Plot" role="img" aria-label="Switching by label size for four charts"></div>
+      </div>
+      <ul class="tight" id="e3Notes"></ul>
+    </section>
+
+    <section id="language">
+      <div class="eyebrow">9 · Result 6 · English vs Turkish</div>
+      <h2>Turkish follows the same pattern, a little weaker</h2>
+      <div class="chart">
+        <div class="legend"><span><i class="sw-dot" style="background:var(--ink)"></i>English</span><span><i class="sw-ring" style="border-color:var(--accent)"></i>Turkish</span></div>
+        <div class="plot" id="langPlot" role="img" aria-label="English versus Turkish switching and accuracy"></div>
+      </div>
+      <ul class="tight" id="langNotes"></ul>
+    </section>
+
+    <section id="fallbacks">
+      <div class="eyebrow">10 · Failure modes</div>
+      <h2>What it says when it can't read the chart</h2>
+      <p id="fallIntro"></p>
+      <div class="fails" id="fails"></div>
+    </section>
+
+    <section id="explorer">
+      <div class="eyebrow">11 · Every answer</div>
+      <h2>Explore every answer</h2>
+      <p class="small">Pick a chart. Each cell is one model and language; its three squares are the answers on the <b>no-numbers</b>, <b>true</b> and <b>lying</b> versions, in that order. Click a cell to read the answers.</p>
+      <div class="legend"><span><i class="sw-sq sq-V"></i>drawing's answer</span><span><i class="sw-sq sq-T"></i>lying text's answer</span><span><i class="sw-sq sq-O"></i>something else</span><span><i class="sw-sq sq-n"></i>not asked</span></div>
+      <div class="xpick" id="xpick" role="group" aria-label="Chart"></div>
+      <div class="chart" id="xbody"></div>
+    </section>
+
+    <section id="supports">
+      <div class="eyebrow">12 · Reading the results</div>
+      <h2>What the data supports</h2>
+      <h3>H1, text over marks: partly</h3>
+      <ul class="tight" id="h1List"></ul>
+      <h3>The four questions</h3>
+      <ul class="tight" id="qList"></ul>
+      <h3>Run 2: what was predicted, what happened</h3>
+      <p>By the file timestamps, the predictions were written about two and a half hours before run 2 started (<code>run2/PREDICTIONS.md</code>: created 07:16, last edited 10:53 on 2026-10-07, before a date-correction note added after the run; its header says 10-08, a typo). There is no external record such as a commit. <span id="r2Meta"></span></p>
+      <div class="tbl"><table class="score" id="scoreTable"></table></div>
+      <h3>Still open</h3>
+      <ul class="tight">
+        <li><b>Why some charts pull and others don't.</b> Chart identity, more than label size, carries the switching: at mix-448 the TV thermometer readouts (s06) and the battery widget (s13) pull at every label size, the newspaper bars (s01) and the spreadsheet (s14) at none. What these charts share, or which questions they were asked, is untested.</li>
+        <li><b>More scale charts, and a positive control.</b> The scale result rests on 3 charts (2 once the legend probe is set aside) and 20 single answers per version. A wider set of flipped and log axes, plus normal axes whose ends aren't the usual numbers, would test whether "sees the numbers but doesn't place them" holds.</li>
+        <li><b>What in the model.</b> mix-448 and mix-224 differ in training and in input grid (1024 vs 256 patches). Run 2 rules out image detail; which of those two makes 448 trust printed numbers more is not something these runs can see.</li>
+      </ul>
+      <p class="small muted">Not covered by either run: the fine-tuned ChartQA checkpoints the paper reports, and mix-10B at 448 px (4- or 8-bit on a T4), the next model to try. 896 px exists only as a pretrained checkpoint, not as a mix one.</p>
+    </section>
+
+    <section id="limits">
+      <div class="eyebrow">13 · Read before quoting</div>
+      <h2>Decisions and limits</h2>
+      <h3>Decided after seeing the data</h3>
+      <ul class="tight">
+        <li><b>Turkish answers count in either language.</b> Turkish yes/no questions came back in English almost every time; otherwise nearly all of them would be lost.</li>
+        <li><b>4 outcomes overridden</b> after two independent LLM judges agreed: e.g. <code>tltwy</code> → TLWY, and <code>-3°</code> given to "is it above freezing in Avlen?" read as the text's "no". Each override applies to every image where that answer appears. The notebook's own <code>report.txt</code> scores with the raw matcher, before these overrides, so its mix-224 figures are slightly lower.</li>
+        <li><b>H1's direction</b> (text over marks) was written down after the run. The planned question was two-sided.</li>
+        <li><b>Grouping by what the question asks.</b> s02's "in which year were the most thefts?" counts as "which one", and s11's "how many stocks went up?" counts as direction.</li>
+        <li><b>Run 2, after seeing the answers:</b> the word question on the legend ("what word is at the top of the legend?") was dropped, because on both versions the answers named the page title or a football club, not the legend; a scale version counts as "read" only when every number question on it is right; the comparison of degraded mix-448's answers with each model's (scored outcomes, after an exact-string version overstated it), its accuracy and answer habits on true charts, the interval on the share of the gap closed, and counting axes only were not in the predictions. <span id="r2Judge"></span></li>
+        <li><b>The headline uses every answer.</b> A stricter count uses only questions answered right on the true chart, with yes/no scored per pair (mix-448: 62% drawing, 25% text). The headline shows the background rates next to it.</li>
+      </ul>
+      <h3>Limits</h3>
+      <ul class="tight">
+        <li><b>Small.</b> 14 charts, so the 95% intervals are wide. Answers from one chart move together, which is why intervals resample whole charts.</li>
+        <li><b>Only 3 scale-text charts, effectively 2.</b> On the legend chart (s10) it is right only <span id="s10acc">25–38%</span> of the time even with true numbers. The values-vs-scales lead rests on them.</li>
+        <li><b>Items aren't independent</b>: 2 languages × 14 charts. The intervals and the chart-level sign test account for this; item-level counts such as 22 vs 0 are descriptive.</li>
+        <li><b>One run</b>, greedy decoding, 3B mix checkpoints only, synthetic charts.</li>
+        <li><b>The no-numbers baseline</b> removes text, a bigger change than swapping digits, so it is only a rough background rate.</li>
+        <li><b>mix-224 and mix-448 are different checkpoints.</b> Run 2 shows image detail explains little of the text-following gap. The degraded images still reach mix-448 at 448 px, so its digits stay twice as tall and cover four times as many patches as in mix-224's input: "checkpoint" here means weights plus input grid.</li>
+        <li><b>Run 2 is small too.</b> The scale probe is 3 charts, 12 versions per condition; the size sweep is 4 charts with 4 drawing questions per size. Read-through questions ("how many thefts in 2025?") were mostly answered wrong even on normal charts (4 of 16 right), so they couldn't show which reading it used. The reading probe has no positive control.</li>
+        <li><b>One way of removing detail.</b> Run 2 shrank images with bicubic resampling. The control repeated run 1's mix-448 answers exactly with the same resampler, so it matches the model's own resize, but other ways of blurring weren't tried.</li>
+      </ul>
+    </section>
+
+    <section id="files">
+      <div class="eyebrow">Reproduce</div>
+      <h2>Files</h2>
+      <ul class="tight small">
+        <li><code>~/claude/paligemma2-experiment/chart-conflict/</code> is the project. <code>QUESTIONS.md</code> lists every sheet with its questions and expected answers.</li>
+        <li><code>results/run1/</code> holds the raw answers (<code>answers.csv</code>), the scored and adjudicated results (<code>results.csv</code>) and the notebook's text report.</li>
+        <li><code>report/make_data.py</code> computes the run-1 numbers on this page from <code>results.csv</code> (checking the overlapping ones against the notebook's report) and takes the run-2 numbers from <code>run2/results/results2.json</code>, written by <code>run2/analyze2.py</code>.</li>
+        <li><code>run2/</code> holds the follow-up: <code>PREDICTIONS.md</code> (written before the run), the notebook and bundle builder, the size-sweep renderers, <code>results/answers_run2.csv</code> (raw answers), <code>results/adjudication2.json</code> (judge verdicts) and <code>analyze2.py</code>, which writes <code>results/report2.txt</code>.</li>
+      </ul>
+      <pre>python3.12 run2/analyze2.py &amp;&amp; python3.12 report/make_data.py &amp;&amp; python3.12 report/build.py</pre>
+    </section>
+  </main>
+</div>
+
+<div class="lb" id="lb" hidden>
+  <div class="in" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+    <div class="bar"><div><b id="lbTitle"></b><div class="small muted" id="lbMeta"></div></div><button type="button" class="x" id="lbClose">Close</button></div>
+    <img id="lbImg" alt="" width="1368" height="970" style="width:100%;height:auto;display:block;border-radius:5px;background:#fff">
+    <p id="lbSum"></p>
+  </div>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(() => {
+const D = JSON.parse(document.getElementById("data").textContent);
+const $ = id => document.getElementById(id);
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const NS = "http://www.w3.org/2000/svg";
+function S(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function H(tag, cls, html, parent) { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; if (parent) parent.appendChild(e); return e; }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+// Python's "{:.0%}" rounds exact halves to the even percent; match it so the page agrees with the notebook
+const round0 = x => { const r = Math.round(x); return (Math.abs(Math.abs(x % 1) - 0.5) < 1e-9 && r % 2 !== 0) ? r - Math.sign(x) : r; };
+const pct = v => round0(v * 100) + "%";
+const pts = v => { const r = round0(v * 100); return (r > 0 ? "+" : r < 0 ? "−" : "±") + Math.abs(r) + " pts"; };
+const pval = p => p < 0.0001 ? "p < 0.0001" : p < 0.001 ? "p < 0.001" : "p = " + (p < 0.01 ? p.toFixed(3) : p.toFixed(2));
+const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+const M = { "224": "mix-224", "448": "mix-448" };
+const LBL = { V: "the drawing's answer", T: "the lying text's answer", O: "something else" };
+const byId = Object.fromEntries(D.charts.map(c => [c.id, c]));
+const MECH = { label: "value labels", readout: "digital readout", axis: "flipped axis", legend: "reversed legend" };
+const short = c => c.title.replace(/ \(.*\)/, "");
+const R2 = D.run2;
+const ci = (a, b) => `${round0(a * 100)}–${round0(b * 100)}%`;
+const sgn = v => { const r = round0(v * 100); return (r < 0 ? "−" : "") + Math.abs(r); };
+const ptsci = d => `${Math.abs(round0(d.est * 100))} points (95% interval ${sgn(d.ci[0])} to ${sgn(d.ci[1])})`;
+
+// one tooltip for the whole page
+const tip = H("div", "gtip", "", document.body);
+function showTip(html, e) {
+  if (!html) return hideTip();
+  tip.innerHTML = html; tip.style.opacity = 1;
+  const r = tip.getBoundingClientRect(); let x = e.clientX + 14, y = e.clientY - r.height - 12;
+  if (x + r.width > innerWidth - 8) x = e.clientX - r.width - 14; if (y < 8) y = e.clientY + 18;
+  tip.style.transform = `translate(${Math.max(8, x)}px, ${y}px)`;
+}
+const hideTip = () => { tip.style.opacity = 0; };
+function hover(node, html) { node.addEventListener("mousemove", e => showTip(typeof html === "function" ? html() : html, e)); node.addEventListener("mouseleave", hideTip); }
+
+// tween an array of numbers and redraw each frame
+function animator(render, initial) {
+  let cur = initial.slice(), raf = 0;
+  return { get cur() { return cur; }, redraw() { render(cur); },
+    to(target, animate = true) {
+      cancelAnimationFrame(raf);
+      if (reduce || !animate) { cur = target.slice(); render(cur); return; }
+      const from = cur.slice(), t0 = performance.now(), dur = 700;
+      const step = t => { const k = Math.min(1, (t - t0) / dur), e = ease(k);
+        cur = from.map((v, i) => v + (target[i] - v) * e); render(cur); if (k < 1) raf = requestAnimationFrame(step); };
+      raf = requestAnimationFrame(step);
+    } };
+}
+// keep stacked labels at least `gap` apart inside [lo, hi]
+function spread(ys, gap, lo, hi) {
+  const idx = ys.map((_, i) => i).sort((a, b) => ys[a] - ys[b]), out = ys.slice();
+  for (let k = 1; k < idx.length; k++) out[idx[k]] = Math.max(out[idx[k]], out[idx[k - 1]] + gap);
+  if (idx.length) out[idx[idx.length - 1]] = Math.min(out[idx[idx.length - 1]], hi);
+  for (let k = idx.length - 2; k >= 0; k--) out[idx[k]] = Math.min(out[idx[k]], out[idx[k + 1]] - gap);
+  return out.map(v => Math.max(v, lo));
+}
+function textLines(parent, x, y, lines, attrs, lh = 14) {
+  const { firstClass, ...rest } = attrs || {};
+  const t = S("text", Object.assign({ x, y }, rest), parent);
+  lines.forEach((l, i) => { const s = S("tspan", { x, dy: i ? lh : 0 }, t); s.textContent = l; if (i === 0 && firstClass) s.setAttribute("class", firstClass); });
+  return t;
+}
+function xAxis(svg, x, y0, y1, ticks, fmt) {
+  ticks.forEach(v => { S("line", { x1: x(v), x2: x(v), y1: y0, y2: y1, class: "s-rule", "stroke-width": 1 }, svg);
+    const t = S("text", { x: x(v), y: y1 + 15, "text-anchor": "middle", class: "t-mut t-mono" }, svg); t.textContent = fmt(v); });
+}
+// charts rebuild at their real width, so chart text stays 12 px on a phone
+const rebuilders = [];
+let lastW = innerWidth, rz = 0;
+addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { if (innerWidth !== lastW) { lastW = innerWidth; rebuilders.forEach(f => f()); } }, 160); });
+
+// model switches stay in sync across the page
+let MODEL = "448";
+const modelFns = [], segs = [];
+document.querySelectorAll("[data-model]").forEach(seg => {
+  seg.setAttribute("role", "group"); seg.setAttribute("aria-label", "Model");
+  ["448", "224"].forEach(m => { const b = H("button", null, M[m], seg); b.type = "button"; b.dataset.m = m; b.setAttribute("aria-pressed", m === MODEL); b.onclick = () => setModel(m); });
+  segs.push(seg);
+});
+function setModel(m) { if (m === MODEL) return; MODEL = m; segs.forEach(s => s.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.m === m))); modelFns.forEach(f => f(true)); }
+
+// ---------------- hero findings
+{
+  const h = D.head, sc = D.role, num = D.pull["448"].find(r => r.group === "number"), RC = D.resolution.charts;
+  const F = [
+    [pct(h["448"].nonum.sw), `of questions about the drawing switched to the lying text at <b>mix-448</b> (${pct(h["224"].nonum.sw)} at mix-224). The drawing usually wins.`],
+    [pct(num.T_lie), `of <b>"how much is X?"</b> answers quote the lying label on that mark at mix-448. Asked which is bigger, it mostly ignores the same labels.`],
+    [`${sc["448"].scale_all.sw_count + sc["224"].scale_all.sw_count} of ${sc["448"].scale_all.eligible + sc["224"].scale_all.eligible}`, `answers that could switch moved to a true <b>axis or legend</b>, across both models (3 charts; the other ${sc["448"].scale_all.already_T + sc["224"].scale_all.already_T} of ${sc["448"].scale_all.n + sc["224"].scale_all.n} already gave that answer on the normal chart).`],
+    [`${RC.more} : ${RC.less}`, `charts where <b>mix-448</b> followed the text more than mix-224, vs less (${RC.tie} tied, sign test ${pval(RC.p)}).`],
+    [`${pct(R2.e2["448d"].draw)}`, `of drawing questions switched to the lying text when mix-448 got images cut to <b>mix-224's detail</b> (run 2), against ${pct(R2.e2["448"].draw)} normally and ${pct(R2.e2["224"].draw)} for mix-224. Less detail barely changed it.`],
+    [`${R2.e1_axes.conflict[0]} of ${R2.e1_axes.conflict[1]}`, `<b>flipped axes</b> reported right at both ends when asked directly (run 2), against ${R2.e1_axes.consistent[0]} of ${R2.e1_axes.consistent[1]} normal ones, where the usual answer is also right. It sees the axis numbers but doesn't place them.`],
+  ];
+  F.forEach(([v, l]) => { const d = H("div", "find", null, $("finds")); H("div", "v", v, d); H("div", "l", l, d); });
+  const a = D.accuracy;
+  $("findsNote").textContent = `Keep the controls in mind: on charts with true numbers it answers ${pct(a["224_tr"].true_all)}–${pct(a["448_en"].true_all)} of questions right, and says "yes" to ${pct(D.yes_rate["448"].consistent)} of yes/no questions.`;
+}
+
+// ---------------- small numbers set inside static text
+$("judgeN").textContent = D.judging.distinct; $("judgeRows").textContent = D.judging.rows;
+$("s10acc").textContent = `${pct(D.role["224"].s10_right_true)} (mix-224) and ${pct(D.role["448"].s10_right_true)} (mix-448)`;
+$("r2Meta").textContent = `Run 2 asked ${R2.n_answers} questions on a free T4 GPU, ${R2.missing === 0 ? "none missing" : R2.missing + " missing"}.`;
+$("r2Judge").textContent = `As in run 1, answers the matcher couldn't place went to two independent LLM judges: ${R2.judging.new} new distinct answers, agreed on all ${R2.judging.agree}. ${R2.judging.changed} were read as the text's answer ("gerrock" and "germrock" for Glenrock, degraded mix-448 on the normal legend chart), which changes no number on this page; the rest stay "something else".`;
+
+// ---------------- paper slope chart
+function paperChart() {
+  const host = $("paperPlot"); host.innerHTML = "";
+  const W = host.clientWidth, Hh = 250, top = 14, bot = 30, wide = W > 520;
+  const x0 = 50, x1 = W - (wide ? 190 : 120), y = v => top + (100 - v) / 100 * (Hh - top - bot);
+  const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, host);
+  [0, 25, 50, 75, 100].forEach(v => S("line", { x1: x0, x2: x1, y1: y(v), y2: y(v), class: "s-rule" }, svg));
+  [[x0, "224 px"], [x1, "448 px"]].forEach(([x, s]) => { const t = S("text", { x, y: Hh - 8, "text-anchor": "middle", class: "t-head" }, svg); t.textContent = s; });
+  const L = spread(D.paper.map(r => y(r[1]) + 4), 14, top, Hh - bot), R = spread(D.paper.map(r => y(r[2]) + 4), 14, top, Hh - bot);
+  const lines = S("g", {}, svg);
+  D.paper.forEach(([n, a, b], i) => {
+    const g = S("g", { class: "ln" }, lines), big = b - a > 5;
+    S("line", { x1: x0, y1: y(a), x2: x1, y2: y(b), class: big ? "s-txt" : "s-oth", "stroke-width": 2.2 }, g);
+    S("circle", { cx: x0, cy: y(a), r: 4, class: big ? "f-txt" : "f-ink2" }, g); S("circle", { cx: x1, cy: y(b), r: 4, class: big ? "f-txt" : "f-ink2" }, g);
+    const tl = S("text", { x: x0 - 8, y: L[i], "text-anchor": "end", class: "t-mono" }, g); tl.textContent = a.toFixed(1);
+    const tr = S("text", { x: x1 + 8, y: R[i], class: "t-mono" }, g); tr.textContent = b.toFixed(1) + "  ";
+    const tn = S("tspan", { class: "t-ink" }, tr); tn.textContent = wide ? n : n.replace(" (augmented)", " aug.").replace(" (human)", " human");
+    S("line", { x1: x0, y1: y(a), x2: x1, y2: y(b), stroke: "transparent", "stroke-width": 12 }, g);
+    hover(g, `<b>${n}</b><br>${a.toFixed(1)} → ${b.toFixed(1)} (+${(b - a).toFixed(1)})`);
+    g.addEventListener("mouseenter", () => { lines.classList.add("hl-dim"); g.classList.add("on"); });
+    g.addEventListener("mouseleave", () => { lines.classList.remove("hl-dim"); g.classList.remove("on"); });
+  });
+}
+paperChart(); rebuilders.push(paperChart);
+
+// ---------------- design: s06 example, gallery, question table, run
+const EXQ = (sid, qid) => D.explorer.find(c => c.id === sid).questions.find(q => q.qid === qid);
+const chip = s => `<span class="chip c-${s[1]}">${esc(s[0] === "" ? "(empty)" : s[0])}</span>`;
+{
+  const q = EXQ("s06_tv_thermometers", "s06_q1"), c = q.cells["448_en"];
+  $("s06said").innerHTML = `<div class="h">"${esc(q.en)}" · mix-448, English</div>
+    <div class="said"><div><div class="q2">True numbers</div>${chip(c.true)} <span class="small muted">right</span></div>
+    <div><div class="q2">Lying numbers</div>${chip(c.lie)} <span class="small muted">the city whose readout now says 31°</span></div>
+    <div><div class="q2">No numbers</div>${chip(c.none)} <span class="small muted">reads the tubes</span></div></div>`;
+}
+const lb = $("lb");
+let lbReturn = null;
+function openSheet(id, from) {
+  const c = byId[id]; $("lbTitle").textContent = `${c.short} · ${c.title}`;
+  $("lbMeta").textContent = `${c.style} · ${c.chart} · ${MECH[c.mechanism]} · cue digits ${c.cue_px} px`;
+  $("lbImg").src = `img/${id}.jpg`; $("lbImg").alt = `${c.title}: six versions`; $("lbSum").textContent = c.summary;
+  lbReturn = from || null; lb.hidden = false; $("lbClose").focus();
+}
+const closeSheet = () => { if (lb.hidden) return; lb.hidden = true; if (lbReturn) lbReturn.focus(); };
+$("lbClose").onclick = closeSheet;
+lb.addEventListener("click", e => { if (e.target === lb) closeSheet(); });
+addEventListener("keydown", e => { if (e.key === "Escape") closeSheet(); });
+$("s06fig").onclick = e => openSheet("s06_tv_thermometers", e.currentTarget);
+$("s02fig").onclick = e => openSheet("s02_magazine_line_inverted", e.currentTarget);
+D.charts.forEach(c => {
+  const b = H("button", null, `<img src="thumb/${c.id}.jpg" alt="" loading="lazy" width="240" height="240"><span class="id">${c.short}</span><span class="mk">${esc(short(c))}</span>`, $("gallery"));
+  b.type = "button"; b.setAttribute("aria-label", `Open ${c.short}, ${c.title}`); b.onclick = () => openSheet(c.id, b);
+});
+{
+  const all = D.explorer.flatMap(c => c.questions), cnt = g => all.filter(q => q.group === g).length, ex = (sid, qid) => esc(EXQ(sid, qid).en);
+  const rows = [["Which one is biggest / smallest?", ex("s06_tv_thermometers", "s06_q1"), cnt("name")],
+    ["Up or down? Higher or lower?", ex("s01_newspaper_bars", "s01_q1"), cnt("direction")],
+    ["Yes / no, in opposite pairs", `${ex("s01_newspaper_bars", "s01_q3a")} / …fewer…?`, cnt("yesno")],
+    [`How much is X?<br><small class="muted">not asked without numbers, except s05's icon count</small>`, ex("s01_newspaper_bars", "s01_q4"), cnt("number")]];
+  $("qtypes").innerHTML = rows.map(([t, e, n]) => `<tr><td>${t}</td><td>"${e}"</td><td class="n">${n}</td></tr>`).join("");
+  const m = D.meta;
+  $("runList").innerHTML = [
+    `<b>${m.charts} charts</b> × 3 versions × 2 languages = <b>${m.images} images</b> at 896 px, <b>${m.questions} questions</b>.`,
+    `<b>${m.answers} answers</b>: ${m.rows_per_model} image–question pairs for each of <code>paligemma2-3b-mix-224</code> and <code>mix-448</code>.`,
+    `Prompt format <code>answer en …</code> / <code>answer tr …</code>, greedy decoding, up to 16 new tokens. About ${Math.round(m.minutes["224"] + m.minutes["448"])} minutes on a free Colab T4 (${m.sec_per_answer["224"]} s and ${m.sec_per_answer["448"]} s per answer).`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+
+// ---------------- result 1: accuracy dumbbells
+function accChart() {
+  const host = $("accPlot"); host.innerHTML = "";
+  const W = host.clientWidth, rows = [["448", "en"], ["448", "tr"], ["224", "en"], ["224", "tr"]], rh = 38, top = 6, Hh = top + rows.length * rh + 24;
+  const lab = W > 480 ? 130 : 96, x = v => lab + 30 + v * (W - lab - 74);
+  const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, host);
+  xAxis(svg, x, top, top + rows.length * rh, [0, .25, .5, .75, 1], pct);
+  rows.forEach(([m, l], i) => {
+    const a = D.accuracy[`${m}_${l}`], cy = top + i * rh + rh / 2, g = S("g", {}, svg);
+    const t = S("text", { x: 0, y: cy + 4, class: "t-ink" }, g); t.textContent = `${M[m]} · ${l.toUpperCase()}`;
+    S("line", { x1: x(a.none), x2: x(a.true), y1: cy, y2: cy, class: "s-ink2", "stroke-width": 2 }, g);
+    S("circle", { cx: x(a.none), cy, r: 6, class: "f-surf s-ink2", "stroke-width": 2 }, g);
+    S("circle", { cx: x(a.true), cy, r: 6.5, class: "f-ink" }, g);
+    const v1 = S("text", { x: x(a.none) - 11, y: cy + 4, "text-anchor": "end", class: "t-mono" }, g); v1.textContent = pct(a.none);
+    const v2 = S("text", { x: x(a.true) + 11, y: cy + 4, class: "t-mono t-ink" }, g); v2.textContent = pct(a.true);
+    hover(g, `<b>${M[m]}, ${l === "en" ? "English" : "Turkish"}</b><br>true numbers ${pct(a.true)} · no numbers ${pct(a.none)}<br>${a.n} questions`);
+  });
+}
+accChart(); rebuilders.push(accChart);
+{
+  const a = D.accuracy, ie = D.in_english;
+  $("accNotes").innerHTML = [
+    `<b>Right a bit over half the time.</b> Over all ${a["448_en"].n_all} questions on true charts: mix-448 ${pct(a["448_en"].true_all)} English, ${pct(a["448_tr"].true_all)} Turkish; mix-224 ${pct(a["224_en"].true_all)} and ${pct(a["224_tr"].true_all)}. Many conflict answers therefore come from charts it couldn't read in the first place.`,
+    `<b>True numbers help.</b> Taking them away costs mix-448 ${round0((a["448_en"].true - a["448_en"].none) * 100)} points in English and ${round0((a["448_tr"].true - a["448_tr"].none) * 100)} in Turkish.`,
+    `<b>Turkish yes/no questions get English answers.</b> ${pct(ie["448"].yesno)} of them at mix-448 (${pct(ie["224"].yesno)} at 224) came back as "yes"/"no" instead of "evet"/"hayır". Other Turkish questions were answered in English ${pct(ie["448"].other)} of the time at 448.`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+// waffle of yes/no pairs
+const PORDER = ["drawing", "text", "yes-yes", "no-no", "unclear"], PNAME = { drawing: "right both ways", text: "both match the lie's answers", "yes-yes": "yes to both", "no-no": "no to both", unclear: "unclear" };
+const waffleCols = [];
+[["nonumbers", "No numbers"], ["consistent", "True numbers"], ["conflict", "Lying numbers"]].forEach(([k, name]) => {
+  const col = H("div", "col", null, $("waffle")); H("div", "h", name, col);
+  const grid = H("div", "grid", null, col), cells = [];
+  for (let i = 0; i < 28; i++) { const d = H("div", null, null, grid); cells.push(d); hover(d, () => d.dataset.tip || ""); }
+  waffleCols.push({ k, cells, cnt: H("div", "cnt", null, col) });
+});
+function drawWaffle() {
+  waffleCols.forEach(({ k, cells, cnt }) => {
+    const list = D.pairs[MODEL][k].slice().sort((a, b) => PORDER.indexOf(a.pattern) - PORDER.indexOf(b.pattern) || a.stimulus.localeCompare(b.stimulus));
+    cells.forEach((d, i) => { const p = list[i]; d.className = p ? "p-" + p.pattern : ""; d.dataset.tip = p ? `<b>${byId[p.stimulus].short} · ${p.lang.toUpperCase()}</b><br>${PNAME[p.pattern]}` : ""; });
+    const c = Object.fromEntries(PORDER.map(p => [p, list.filter(x => x.pattern === p).length]));
+    cnt.innerHTML = `<b>${c.drawing}</b> right · <b>${c.text}</b> lie's answers · <b>${c["yes-yes"]}</b> yes to both` + (c["no-no"] ? ` · ${c["no-no"]} no to both` : "") + (c.unclear ? ` · ${c.unclear} unclear` : "");
+  });
+  const yr = D.yes_rate[MODEL], cons = D.pairs[MODEL].consistent;
+  $("yesNote").innerHTML = `${M[MODEL]} says "yes" to <b>${pct(yr.consistent)}</b> of yes/no questions on true charts, where half would be right. Only <b>${cons.filter(p => p.pattern === "drawing").length} of ${cons.length}</b> pairs come out right both ways; <b>${cons.filter(p => p.pattern === "yes-yes").length}</b> are yes to both. A single yes/no answer says little on its own, which is why the next sections always compare against the background rate.`;
+}
+drawWaffle(); modelFns.push(drawWaffle);
+
+// ---------------- result 2: flow (Sankey) from true to lying chart
+const FSETS = [["nonum", "About the drawing"], ["all", "All questions"], ["name", "Which one"], ["direction", "Direction"], ["yesno", "Yes / no"], ["number", "How much"]];
+let FSET = "nonum";
+FSETS.forEach(([k, n]) => { const b = H("button", null, n, $("flowSet")); b.type = "button"; b.dataset.k = k; b.setAttribute("aria-pressed", k === FSET);
+  b.onclick = () => { if (k === FSET) return; FSET = k; $("flowSet").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.k === k)); flowTo(true); }; });
+$("flowSet").setAttribute("role", "group"); $("flowSet").setAttribute("aria-label", "Questions");
+const K3 = ["V", "T", "O"], FILL = { V: "f-vis", T: "f-txt", O: "f-oth" };
+const LEFT = { V: ["Right", "read the drawing"], T: ["Wrong: already", "the lie's answer"], O: ["Wrong:", "something else"] },
+  RIGHT = { V: ["Drawing's", "answer"], T: ["Lying text's", "answer"], O: ["Something", "else"] };
+const flowVec = () => { const F = D.flows[`${MODEL}_${FSET}`]; return K3.flatMap(a => K3.map(b => F[a][b])); };
+let flowEls = null;
+function flowBuild() {
+  const host = $("flowPlot"); host.innerHTML = "";
+  const W = host.clientWidth, narrow = W < 520, Hh = narrow ? 330 : 360, lab = narrow ? 96 : 132, nw = 12;
+  const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, host);
+  const xL = lab + 6, xR = W - lab - 6 - nw;
+  [[xL + nw / 2, "True numbers"], [xR + nw / 2, "Lying numbers"]].forEach(([x, s]) => { const t = S("text", { x, y: 12, "text-anchor": "middle", class: "t-head" }, svg); t.textContent = s; });
+  const links = [], nodesL = {}, nodesR = {}, labsL = {}, labsR = {}, gl = S("g", {}, svg);
+  K3.forEach((a, i) => K3.forEach((b, j) => {
+    const key = a === "V" && b === "T", base = key ? .85 : .38;
+    const p = S("path", { class: "link " + FILL[b], opacity: base }, gl);
+    hover(p, () => { const cur = flowEls.anim.cur, n = Math.round(cur[i * 3 + j]), tot = K3.reduce((s, _, jj) => s + Math.round(cur[i * 3 + jj]), 0);
+      return `<b>${LEFT[a].join(" ")} → ${RIGHT[b].join(" ").toLowerCase()}</b><br>${n} answers${tot ? ` · ${pct(n / tot)} of the ${tot} on the left` : ""}`; });
+    p.addEventListener("mouseenter", () => p.setAttribute("opacity", .95)); p.addEventListener("mouseleave", () => p.setAttribute("opacity", base));
+    links.push(p);
+  }));
+  K3.forEach(k => {
+    nodesL[k] = S("rect", { x: xL, width: nw, rx: 2, class: FILL[k] }, svg);
+    nodesR[k] = S("rect", { x: xR, width: nw, rx: 2, class: FILL[k] }, svg);
+    labsL[k] = textLines(svg, xL - 8, 0, [...LEFT[k], ""], { "text-anchor": "end", firstClass: "t-ink" }, 13.5);
+    labsR[k] = textLines(svg, xR + nw + 8, 0, [...RIGHT[k], ""], { firstClass: "t-ink" }, 13.5);
+  });
+  const anim = flowEls ? flowEls.anim : null;
+  flowEls = { Hh, xL, xR, nw, links, nodesL, nodesR, labsL, labsR, anim };
+  if (!flowEls.anim) flowEls.anim = animator(flowRender, flowVec());
+  flowRender(flowEls.anim.cur);
+}
+function flowRender(s) {
+  const { Hh, xL, xR, nw, links, nodesL, nodesR, labsL, labsR } = flowEls;
+  const F = {}; K3.forEach((a, i) => { F[a] = {}; K3.forEach((b, j) => F[a][b] = Math.max(0, s[i * 3 + j])); });
+  const outT = a => K3.reduce((t, b) => t + F[a][b], 0), inT = b => K3.reduce((t, a) => t + F[a][b], 0);
+  const N = K3.reduce((t, a) => t + outT(a), 0) || 1, gap = 18, top = 26, bot = Hh - 6, k = (bot - top - 2 * gap) / N;
+  const Ly = {}, Ry = {}; let y = top; K3.forEach(a => { Ly[a] = y; y += outT(a) * k + gap; }); y = top; K3.forEach(b => { Ry[b] = y; y += inT(b) * k + gap; });
+  const lo = { ...Ly }, ro = { ...Ry }, x0 = xL + nw, x1 = xR, xm = (x0 + x1) / 2;
+  K3.forEach((a, i) => K3.forEach((b, j) => {
+    const w = F[a][b] * k, y0 = lo[a], y1 = ro[b]; lo[a] += w; ro[b] += w;
+    links[i * 3 + j].setAttribute("d", w < 0.05 ? "M0,0" : `M${x0},${y0} C${xm},${y0} ${xm},${y1} ${x1},${y1} L${x1},${y1 + w} C${xm},${y1 + w} ${xm},${y0 + w} ${x0},${y0 + w} Z`);
+  }));
+  const placeL = spread(K3.map(a => Ly[a] + outT(a) * k / 2 - 10), 42, 24, Hh - 34), placeR = spread(K3.map(b => Ry[b] + inT(b) * k / 2 - 10), 42, 24, Hh - 34);
+  K3.forEach((a, i) => {
+    nodesL[a].setAttribute("y", Ly[a]); nodesL[a].setAttribute("height", Math.max(0, outT(a) * k));
+    nodesR[a].setAttribute("y", Ry[a]); nodesR[a].setAttribute("height", Math.max(0, inT(a) * k));
+    labsL[a].setAttribute("y", placeL[i]); labsR[a].setAttribute("y", placeR[i]);
+    labsL[a].lastChild.textContent = `n = ${Math.round(outT(a))}`; labsR[a].lastChild.textContent = `n = ${Math.round(inT(a))}`;
+    labsL[a].style.opacity = outT(a) < .5 ? .35 : 1; labsR[a].style.opacity = inT(a) < .5 ? .35 : 1;
+  });
+}
+function flowText() {
+  const F = D.flows[`${MODEL}_${FSET}`], fromV = F.V.V + F.V.T + F.V.O, into = F.V.T + F.O.T, out = F.T.V + F.T.O, head = D.head[MODEL][FSET];
+  $("flowRead").innerHTML = `<div>Of <b>${fromV}</b> answers that were right on the true chart, <b>${F.V.T}${fromV ? ` (${pct(F.V.T / fromV)})` : ""}</b> switched to the lying text's answer, <b>${F.V.O}</b> changed to something else and <b>${F.V.V}</b> stayed with the drawing.</div>
+    <div>Answers moved <b>into</b> the text's answer <b>${into}</b> times and <b>out of</b> it <b>${out}</b> time${out === 1 ? "" : "s"}. The text pulls in one direction only.</div>
+    <div class="small muted">${F.T.V + F.T.T + F.T.O} answers were already the lie's answer on the true chart (${F.T.T} stayed there)${FSET === "number" ? "" : ", mostly from the yes habit"}, so they say nothing about the text.${head ? ` Share of all ${head.n} questions that switched: <b>${pct(head.sw)}</b>, 95% interval ${pct(head.sw_ci[0])}–${pct(head.sw_ci[1])} (resampling charts).` : ""}</div>`;
+}
+function flowTo(animate) { flowEls.anim.to(flowVec(), animate); flowText(); }
+flowBuild(); flowText(); rebuilders.push(flowBuild); modelFns.push(flowTo);
+{
+  const a = D.head["448"], b = D.head["224"];
+  const pa = D.planned["448"], pb = D.planned["224"];
+  $("flowBox").innerHTML = `<p><b>The main result.</b> On questions about the drawing, mix-448 switched to the lying text on <b>${pct(a.nonum.sw)}</b> of questions (95% interval ${pct(a.nonum.sw_ci[0])}–${pct(a.nonum.sw_ci[1])}) and mix-224 on <b>${pct(b.nonum.sw)}</b> (${pct(b.nonum.sw_ci[0])}–${pct(b.nonum.sw_ci[1])}). Counting only answers that were right on the true chart: ${a.nonum.fromV_T} of ${a.nonum.fromV_n} (${pct(a.nonum.fromV_rate)}) and ${b.nonum.fromV_T} of ${b.nonum.fromV_n} (${pct(b.nonum.fromV_rate)}). With the "how much" questions included: ${pct(a.all.sw)} and ${pct(b.all.sw)} of all questions (${pct(a.all.fromV_rate)} and ${pct(b.all.fromV_rate)} of answers right on the true chart).</p>
+    <p style="margin:0"><b>The test planned before the run agrees.</b> On questions it answered right from the drawing alone (yes/no scored per pair), the lying text won ${pa.text} of ${pa.units} at mix-448 (${pct(pa.text / pa.units)}) and ${pb.text} of ${pb.units} at mix-224 (${pct(pb.text / pb.units)}). Stricter still, leaving out switches to the answer it also gives with no numbers (often the first item or "yes"): ${a.nonum.strict_count} of ${a.nonum.n} (${pct(a.nonum.strict)}) and ${b.nonum.strict_count} of ${b.nonum.n} (${pct(b.nonum.strict)}). Leaving out s06's two freezing questions, which need the readout: ${pct(a.nonum_no_s06freeze.sw)} and ${pct(b.nonum_no_s06freeze.sw)}.</p>`;
+}
+
+// ---------------- result 3: pull by question type (dot plot)
+const PROWS = ["twin", "name", "direction", "yesno", "number"];
+const PNAMES = { twin: ["Drawing questions", "in all 3 versions"], name: ["Which one is", "biggest / smallest?"], direction: ["Up or down?", "Higher or lower?"], yesno: ["Yes / no"], number: ['"How much is X?"', "(true and lying only)"] };
+const hasNone = r => r.n_twin >= .9 * r.n;
+const pullVec = m => PROWS.flatMap(g => { const r = D.pull[m].find(x => x.group === g); return [hasNone(r) ? r.T_none : -1, r.T_true, r.T_lie]; });
+let pullEls = null;
+function pullBuild() {
+  const host = $("pullPlot"); host.innerHTML = "";
+  const W = host.clientWidth, narrow = W < 520, lab = narrow ? 116 : 160, rgt = 70, rh = 50, top = 6, Hh = top + PROWS.length * rh + 26;
+  const x = v => lab + v * (W - lab - rgt);
+  const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, host);
+  xAxis(svg, x, top, top + PROWS.length * rh, [0, .25, .5, .75, 1], pct);
+  S("line", { x1: 0, x2: W, y1: top + rh, y2: top + rh, class: "s-rule", "stroke-width": 1.5 }, svg);
+  const rows = PROWS.map((g, i) => {
+    const cy = top + i * rh + rh / 2, gg = S("g", {}, svg);
+    S("rect", { x: 0, y: cy - rh / 2, width: W, height: rh, fill: "transparent" }, gg);
+    textLines(gg, 0, cy - (PNAMES[g].length - 1) * 7 + 4, PNAMES[g], { firstClass: "t-ink" }, 14);
+    const line = S("line", { y1: cy, y2: cy, class: "s-txt", "stroke-width": 2.5 }, gg);
+    const head = S("path", { class: "f-txt" }, gg);
+    const none = S("circle", { cy, r: 6, class: "f-surf s-ink2", "stroke-width": 2 }, gg);
+    const tru = S("circle", { cy, r: 6.5, class: "f-ink2" }, gg);
+    const lie = S("circle", { cy, r: 7, class: "f-txt" }, gg);
+    const d = S("text", { x: W - 2, y: cy + 4, "text-anchor": "end", class: "t-mono t-txt" }, gg);
+    hover(gg, () => { const r = D.pull[MODEL].find(z => z.group === g);
+      return `<b>${PNAMES[g].join(" ")}</b> · ${M[MODEL]}<br>gives the lie's answer:<br>${hasNone(r) ? `no numbers ${pct(r.T_none)} · ` : ""}true ${pct(r.T_true)} · lying <b>${pct(r.T_lie)}</b><br>${r.n} questions`; });
+    return { cy, line, head, none, tru, lie, d };
+  });
+  const anim = pullEls ? pullEls.anim : null;
+  pullEls = { x, rows, anim };
+  if (!pullEls.anim) pullEls.anim = animator(pullRender, pullVec(MODEL));
+  pullRender(pullEls.anim.cur);
+}
+function pullRender(s) {
+  const { x, rows } = pullEls;
+  rows.forEach((r, i) => {
+    const n = s[i * 3], t = s[i * 3 + 1], l = s[i * 3 + 2], xt = x(t), xl = x(l), dir = xl >= xt ? 1 : -1, long = Math.abs(xl - xt) > 16;
+    r.none.setAttribute("cx", x(Math.max(0, n))); r.none.style.opacity = n < 0 ? 0 : 1;
+    r.tru.setAttribute("cx", xt); r.lie.setAttribute("cx", xl);
+    r.line.setAttribute("x1", xt); r.line.setAttribute("x2", long ? xl - dir * 12 : xt);
+    r.head.setAttribute("d", long ? `M${xl - dir * 7},${r.cy} l${-dir * 8},-5 l0,10 Z` : "M0,0");
+    r.d.textContent = pts(l - t);
+  });
+}
+function pullNotes() {
+  const P = Object.fromEntries(D.pull[MODEL].map(r => [r.group, r])), other = MODEL === "448" ? "224" : "448", Q = Object.fromEntries(D.pull[other].map(r => [r.group, r]));
+  const yl = D.yes_lie[MODEL];
+  $("pullNotes").innerHTML = [
+    `<b>"How much is X?" goes to the label.</b> ${M[MODEL]} quoted the lying label on ${pct(P.number.T_lie)} of these, up from ${pct(P.number.T_true)} on true charts. That is plain reading, since most of these charts have no axis to measure a mark against. It also shows the model can read these digits.`,
+    `<b>Questions about the drawing move less.</b> Which-one ${pts(P.name.T_lie - P.name.T_true)}, direction ${pts(P.direction.T_lie - P.direction.T_true)}, yes/no ${pts(P.yesno.T_lie - P.yesno.T_true)} at ${M[MODEL]} (${M[other]}: ${pts(Q.name.T_lie - Q.name.T_true)}, ${pts(Q.direction.T_lie - Q.direction.T_true)}, ${pts(Q.yesno.T_lie - Q.yesno.T_true)}).`,
+    `<b>Lying numbers are worse than no numbers.</b> On the ${P.twin.n} drawing questions asked in all three versions, the lie's answer comes up ${pct(P.twin.T_none)} of the time with no numbers, ${pct(P.twin.T_true)} with true numbers and ${pct(P.twin.T_lie)} with lying ones. True numbers help a little; lying numbers hurt more than having none.`,
+    `<b>A lie that says "yes" wins more easily.</b> Of yes/no questions answered right on the true chart, ${yl.yes.sw} of ${yl.yes.n} switched when the lie's answer was "yes", and ${yl.no.sw} of ${yl.no.n} when it was "no". The yes habit and the text push the same way. Small numbers.`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+function pullTo(animate) { pullEls.anim.to(pullVec(MODEL), animate); pullNotes(); }
+pullBuild(); pullNotes(); rebuilders.push(pullBuild); modelFns.push(pullTo);
+
+// ---------------- result 4: values vs scales (dots stacked in two lanes)
+const LANES = [["value", "Text on the marks", "value labels, readouts · the text lies"], ["scale", "Text that sets the scale", "axis ticks, legend · the text is right"]];
+const laneOf = c => (c.mechanism === "axis" || c.mechanism === "legend") ? "scale" : "value";
+let roleEls = null;
+function roleLayout(m, x) {
+  const pos = {};
+  LANES.forEach(([ln]) => {
+    const placed = [];
+    D.charts.filter(c => laneOf(c) === ln).sort((a, b) => a[m].dsw - b[m].dsw || a.short.localeCompare(b.short)).forEach(c => {
+      const px = x(c[m].dsw); let lvl = 0; while (placed.some(p => p.l === lvl && Math.abs(p.x - px) < 34)) lvl++;
+      placed.push({ x: px, l: lvl }); pos[c.id] = [c[m].dsw, lvl];
+    });
+  });
+  return pos;
+}
+function roleBuild() {
+  const host = $("rolePlot"); host.innerHTML = "";
+  const W = host.clientWidth, lh = 19, top = 4, x = v => 12 + v * (W - 60);
+  // each lane is as tall as its highest stack (either model) plus room for its title
+  const lv = { "224": roleLayout("224", x), "448": roleLayout("448", x) };
+  const maxL = ln => Math.max(0, ...D.charts.filter(c => laneOf(c) === ln).flatMap(c => [lv["224"][c.id][1], lv["448"][c.id][1]]));
+  const laneH = LANES.map(([ln]) => 44 + (maxL(ln) + 1) * lh), Hh = top + laneH[0] + laneH[1] + 26;
+  const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, host);
+  const y0 = [top, top + laneH[0]];
+  xAxis(svg, x, top, top + laneH[0] + laneH[1], [0, .25, .5, .75, 1], pct);
+  LANES.forEach(([, name, sub], i) => {
+    if (i) S("line", { x1: 0, x2: W, y1: y0[i], y2: y0[i], class: "s-rule", "stroke-width": 1.5 }, svg);
+    const t = S("text", { x: W - 2, y: y0[i] + 16, "text-anchor": "end", class: "t-ink" }, svg); t.textContent = name;
+    const s2 = S("text", { x: W - 2, y: y0[i] + 30, "text-anchor": "end", class: "t-mut" }, svg); s2.textContent = sub;
+  });
+  const dots = D.charts.map(c => {
+    const li = laneOf(c) === "value" ? 0 : 1, g = S("g", {}, svg), solid = c.cue_px <= 24;
+    S("circle", { r: 7, cx: 0, cy: 0, class: solid ? "f-txt" : "f-surf s-txt", "stroke-width": 2.2 }, g);
+    const t = S("text", { x: 11, y: 4, class: "t-mono" }, g); t.textContent = c.short;
+    hover(g, () => `<b>${c.short} · ${esc(c.title)}</b><br>${MECH[c.mechanism]}, digits ${c.cue_px} px<br>${M[MODEL]}: ${c[MODEL].dsw_count} of ${c[MODEL].dn} drawing questions switched (${pct(c[MODEL].dsw)})`);
+    return { g, base: y0[li] + laneH[li] - 14 };
+  });
+  const vec = m => { const p = roleLayout(m, x); return D.charts.flatMap(c => p[c.id]); };
+  roleEls = { vec, anim: animator(s => dots.forEach((d, i) => d.g.setAttribute("transform", `translate(${x(s[i * 2])},${d.base - s[i * 2 + 1] * lh})`)), vec(MODEL)) };
+  roleEls.anim.redraw();
+}
+function roleNotes() {
+  const r = D.role[MODEL], o = D.role[MODEL === "448" ? "224" : "448"], other = MODEL === "448" ? "224" : "448", vs = r.value_small;
+  const s12 = D.s12_q5_true.join(", ").replace(/, ([^,]*)$/, " and $1");
+  $("roleNotes").innerHTML = [
+    `<b>Text on the marks pulls.</b> At ${M[MODEL]}, ${r.value.charts_moved} of ${r.value.charts} value-text charts had a drawing question switch to the text (${r.value.sw_count} of ${r.value.n}, ${pct(r.value.sw)}). At ${M[other]}: ${o.value.charts_moved} of ${o.value.charts} charts, ${o.value.sw_count} of ${o.value.n}.`,
+    `<b>Scale text didn't.</b> ${r.scale.sw_count} of ${r.scale.n} drawing questions on the axis and legend charts switched, at either resolution. Counting every question there, ${D.role["448"].scale_all.sw_count + D.role["224"].scale_all.sw_count} of the ${D.role["448"].scale_all.eligible + D.role["224"].scale_all.eligible} answers that could switch did; the other ${D.role["448"].scale_all.already_T + D.role["224"].scale_all.already_T} already gave the text's answer on the normal chart, mostly "yes". On these charts the text was the truth, so following the drawing meant being wrong. With 3 charts against 11, the chart-level test is weak: exact permutation p = ${D.role["448"].perm_p.toFixed(3)} at mix-448, ${D.role["224"].perm_p.toFixed(2)} at mix-224.`,
+    `<b>It doesn't use the ticks on normal charts either.</b> Removing the tick labels from s02 and s12 changed ${r.tick_removed.n - r.tick_removed.unchanged} of ${r.tick_removed.n} answers. Asked on the true chart how far the top scorer lives from school (2 km), the four answers were ${s12}.`,
+    `<b>Digit size isn't the difference.</b> Value-text charts with ${vs.px[0]}–${vs.px[1]} px digits (solid dots), the same range as the scale charts (${r.scale_px[0]}–${r.scale_px[1]} px), switched on ${vs.sw_count} of ${vs.n} drawing questions at ${M[MODEL]}. Run 2 changed only the label size within four charts and switching stayed flat (section 8).`,
+    `<b>It can read labels it doesn't use.</b> On "how much is X?" it quoted the lying label ${r.howmuch.lie} of ${r.howmuch.n} times at ${M[MODEL]}, yet on drawing questions the same kind of label moved ${r.value.sw_count} of ${r.value.n} answers.`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+{
+  const s02 = EXQ("s02_magazine_line_inverted", "s02_q1"), c4 = s02.cells["448_en"], c2 = s02.cells["224_en"];
+  $("s02cap").innerHTML = `s02, bicycle thefts. In the middle column the axis runs from 600 at the bottom to 0 at the top, so the same rising line means thefts <b>fell</b>. Asked in English "${esc(s02.en)}", mix-448 said ${chip(c4.true)} ${chip(c4.lie)} ${chip(c4.none)} on the true, flipped and no-number versions, and mix-224 the same (${chip(c2.lie)} on the flipped one). On the flipped chart that answer is wrong.`;
+}
+function roleTo(animate) { roleEls.anim.to(roleEls.vec(MODEL), animate); roleNotes(); }
+roleBuild(); roleNotes(); rebuilders.push(roleBuild); modelFns.push(roleTo);
+
+// ---------------- run 2 · E1: what it says is printed at the ends of the scale
+{
+  const ORDER = [["224", "en"], ["224", "tr"], ["448", "en"], ["448", "tr"]];
+  const CLS = { P: "c-T", U: "c-V", O: "c-O" }, WHAT = { P: "what is printed", U: "the usual order", O: "another number" };
+  const chartOf = sh => D.charts.find(c => c.short === sh);
+  const ans = (row, cond) => `<div class="ans">${ORDER.map(([m, l]) => { const c = row.cells[`${cond}_${m}_${l}`];
+    return `<span class="chip ${CLS[c[1]]}" title="${M[m]} · ${l === "en" ? "English" : "Turkish"} · ${WHAT[c[1]]}">${esc(c[0])}</span>`; }).join("")}</div>`;
+  $("e1Table").innerHTML = `<thead><tr><th>Asked</th><th class="g" colspan="2">Normal chart</th><th class="g" colspan="2">Flipped chart</th></tr>
+    <tr><th></th><th class="g">printed</th><th>answers</th><th class="g">printed</th><th>answers</th></tr></thead><tbody>
+    ${R2.e1_grid.map(r => `<tr><td class="qn">What number is at the ${esc(r.name)}?<small>${r.chart} · ${esc(short(chartOf(r.chart)).toLowerCase())}</small></td>
+      <td class="pr" data-l="normal">${r.printed.consistent}</td><td>${ans(r, "consistent")}</td><td class="pr" data-l="flipped">${r.printed.conflict}</td><td>${ans(r, "conflict")}</td></tr>`).join("")}</tbody>`;
+  const flip = R2.e1_grid.flatMap(r => ORDER.map(([m, l]) => ({ r, m, l, c: r.cells[`conflict_${m}_${l}`] })));
+  const n = k => flip.filter(f => f.c[1] === k).length;
+  const zeros = flip.filter(f => f.c[1] === "P" && f.c[0].trim() === "0").length;
+  const s02 = flip.filter(f => f.r.chart === "s02"), s02P = s02.filter(f => f.c[1] === "P").length;
+  // a two-ended scale read right at both ends on the flipped version
+  const clean = [];
+  ["s02", "s12"].forEach(ch => ORDER.forEach(([m, l]) => { const rows = R2.e1_grid.filter(r => r.chart === ch);
+    if (rows.every(r => r.cells[`conflict_${m}_${l}`][1] === "P")) clean.push(`${ch} at ${M[m]} in ${l === "en" ? "English" : "Turkish"}`); }));
+  const V = R2.e1_versions, th = R2.e1_through, thR = m => th[m].consistent.right || 0, thN = m => Object.values(th[m].consistent).reduce((a, b) => a + b, 0);
+  $("e1Notes").innerHTML = [
+    `<b>It rarely places a flipped axis's numbers.</b> Counting an axis as read when both of its ends are right, the flipped axes were read ${R2.e1_axes.conflict[0]} of ${R2.e1_axes.conflict[1]} times, the normal ones ${R2.e1_axes.consistent[0]} of ${R2.e1_axes.consistent[1]}; on a normal axis the usual answer is also the right one, so only the flipped count shows reading. Of the ${flip.length} single answers on flipped scales, ${n("P")} were what is printed, ${n("U")} the usual order and ${n("O")} another number, mostly one printed on the same chart. <span class="tag after">count chosen after the run</span>`,
+    `<b>But it does see the scale text.</b> Flipping only the tick labels changed ${R2.e1_changed[0]} of the ${R2.e1_changed[1]} answers, mostly to another printed number (500 on the bicycle axis, the year 2018). So "can't read the ticks" is too strong: it registers them without knowing which one sits where.`,
+    `<b>The 0s at the right end are real changes, but not reading.</b> ${zeros} of the ${n("P")} right answers are "0" for the right end of the reversed x-axis; the same cells said 14 on the normal chart. The models also said "0" for the left end on both versions, so they put 0 at both ends rather than reading the order. The only flipped axis read right at both ends was ${clean.length ? clean.join(", ") : "none"}.`,
+    `<b>The legend number question failed the same way as the word question.</b> On s10 each model gave the same number on both versions (mix-224 50 and 5, mix-448 80), so it doesn't show legend reading either way; the axis count above leaves it out.`,
+    `<b>Legible digits didn't help.</b> s02's tick labels are ${byId.s02_magazine_line_inverted.cue_px} px tall at 896 px, the size of value labels it quotes readily (${D.role["448"].value_small.px[0]}–${D.role["448"].value_small.px[1]} px), and its flipped axis got ${s02P} right answers out of ${s02.length}.`,
+    `<b>Questions that need the scale didn't separate anything.</b> Asked "how many thefts in 2025?" or "what is Glenrock's PM2.5?", both models were mostly wrong even on the normal charts (${thR("224")} and ${thR("448")} of ${thN("448")} right) and often gave the same number on both versions. The predictions said these would follow the shape; they couldn't test it.`,
+    `<b>No positive control.</b> The reading question was never asked where the right answer differs from the usual one on a normal chart (an axis from 200 to 800, say), so failing it could partly be failing to find "top" or "end".`,
+    `<b>The legend word question failed</b> and is left out: asked for the word at the top of the legend, the models answered ${R2.e1_word.map(w => `<code>${esc(w)}</code>`).join(", ")}, the page title, the council's name or a football club.`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+
+// ---------------- result 5: resolution slope + size scatter
+{
+  const R = D.resolution;
+  $("resIntro").innerHTML = `Same questions, both models. Chart by chart, mix-448 switched to the text more often than mix-224 on <b>${R.charts.more}</b> charts, less on <b>${R.charts.less}</b> and tied on ${R.charts.tie} (sign test ${pval(R.charts.p)}; drawing questions only: ${R.charts_nonum.more} / ${R.charts_nonum.less} / ${R.charts_nonum.tie}, ${pval(R.charts_nonum.p)}). Averaged over charts, 448 switches ${round0(R.diff_all.diff * 100)} points more (95% interval ${round0(R.diff_all.ci[0] * 100)}–${round0(R.diff_all.ci[1] * 100)}), or ${round0(R.diff_nonum.diff * 100)} points more on drawing questions (${round0(R.diff_nonum.ci[0] * 100)}–${round0(R.diff_nonum.ci[1] * 100)}). Item by item, ${R.all.only448} questions switched only at 448 and ${R.all.only224 === 0 ? "none" : R.all.only224} only at 224 (${R.nonum.only448} vs ${R.nonum.only224} on drawing questions). Items from one chart move together, so the chart-level numbers are the ones to quote.`;
+}
+function slopeChart() {
+  const host = $("slopePlot"); host.innerHTML = "";
+  const W = host.clientWidth, narrow = W < 560, Hh = 320, top = 16, bot = 30, labw = narrow ? 86 : 160;
+  const x0 = labw, x1 = W - labw, y = v => top + (1 - v) * (Hh - top - bot);
+  const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, host), lines = S("g", {}, svg);
+  [0, .25, .5, .75, 1].forEach(v => { S("line", { x1: x0, x2: x1, y1: y(v), y2: y(v), class: "s-rule" }, svg); const t = S("text", { x: (x0 + x1) / 2, y: y(v) - 4, "text-anchor": "middle", class: "t-mut t-mono" }, svg); t.textContent = pct(v); });
+  [[x0, "mix-224"], [x1, "mix-448"]].forEach(([x, s]) => { const t = S("text", { x, y: Hh - 8, "text-anchor": "middle", class: "t-head" }, svg); t.textContent = s; });
+  const groups = side => { const m = {}; D.charts.forEach(c => { const k = c[side].sw.toFixed(3); (m[k] = m[k] || []).push(c); }); return Object.entries(m).map(([k, cs]) => ({ v: +k, cs })); };
+  const label = g => { const ids = g.cs.map(c => c.short); return narrow && ids.length > 2 ? `${ids.length} charts` : ids.join(" "); };
+  [["224", x0 - 8, "end"], ["448", x1 + 8, "start"]].forEach(([side, xx, anc]) => {
+    const gs = groups(side), ys = spread(gs.map(g => y(g.v) + 4), 14, top, Hh - bot);
+    gs.forEach((g, i) => {
+      const t = S("text", { x: xx, y: ys[i], "text-anchor": anc }, svg);
+      const parts = side === "224" ? [[label(g) + "  ", "t-mut"], [pct(g.v), "t-mono t-ink"]] : [[pct(g.v) + "  ", "t-mono t-ink"], [label(g), "t-mut"]];
+      parts.forEach(([s, cls]) => { const sp = S("tspan", { class: cls }, t); sp.textContent = s; });
+    });
+  });
+  D.charts.forEach(c => {
+    const up = c["448"].sw > c["224"].sw + 1e-9, g = S("g", { class: "ln" }, lines);
+    S("line", { x1: x0, y1: y(c["224"].sw), x2: x1, y2: y(c["448"].sw), class: up ? "s-txt" : "s-oth", "stroke-width": 2.2, opacity: .85 }, g);
+    S("circle", { cx: x0, cy: y(c["224"].sw), r: 4, class: up ? "f-txt" : "f-ink2" }, g); S("circle", { cx: x1, cy: y(c["448"].sw), r: 4, class: up ? "f-txt" : "f-ink2" }, g);
+    S("line", { x1: x0, y1: y(c["224"].sw), x2: x1, y2: y(c["448"].sw), stroke: "transparent", "stroke-width": 12 }, g);
+    hover(g, `<b>${c.short} · ${esc(c.title)}</b><br>${MECH[c.mechanism]}, digits ${c.cue_px} px<br>mix-224 ${pct(c["224"].sw)} → mix-448 ${pct(c["448"].sw)}`);
+    g.addEventListener("mouseenter", () => { lines.classList.add("hl-dim"); g.classList.add("on"); });
+    g.addEventListener("mouseleave", () => { lines.classList.remove("hl-dim"); g.classList.remove("on"); });
+  });
+}
+slopeChart(); rebuilders.push(slopeChart);
+// ---------------- run 2 · E2: same weights, mix-224's pixels
+const E2ROWS = [["224", "mix-224", "run 1"], ["448d", "mix-448 on mix-224's detail", "run 2"], ["448", "mix-448", "run 1"]];
+const E2SETS = { draw: ["Questions about the drawing", "Right on the true chart", "Switched to the lying text"], hm: ['"How much is X?"', "Right on the true chart", "Quoted the lying label"] };
+let E2SET = "draw", e2 = null;
+const e2vec = set => E2ROWS.flatMap(([k]) => { const r = R2.e2[k];
+  return set === "draw" ? [r.acc_right / r.acc_n, ...r.acc_ci, r.draw, ...r.draw_ci] : [r.hm_right / r.hm_n, ...r.hm_acc_ci, r.hm_lie, ...r.hm_lie_ci]; });
+function e2Build() {
+  const host = $("e2Plot"); host.innerHTML = "";
+  const W = host.clientWidth, two = W >= 640, rh = 40, top = 30, gapX = 28;
+  const pw = two ? (W - gapX) / 2 : W, panels = [0, 1].map(i => ({ x0: two ? i * (pw + gapX) : 0, y0: two ? 0 : i * (top + 3 * rh + 40) }));
+  const Hh = two ? top + 3 * rh + 30 : 2 * (top + 3 * rh + 40) - 10;
+  const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, host);
+  const titles = [], rows = [];
+  panels.forEach((P, pi) => {
+    const x = v => P.x0 + 6 + v * (pw - 52);
+    const g = S("g", {}, svg);
+    const t = S("text", { x: P.x0, y: P.y0 + 14, class: "t-ink" }, g); titles.push(t);
+    [0, .25, .5, .75, 1].forEach(v => { S("line", { x1: x(v), x2: x(v), y1: P.y0 + top - 6, y2: P.y0 + top + 3 * rh, class: "s-rule" }, g);
+      const tt = S("text", { x: x(v), y: P.y0 + top + 3 * rh + 15, "text-anchor": "middle", class: "t-mut t-mono" }, g); tt.textContent = pct(v); });
+    E2ROWS.forEach(([k, name, run], ri) => {
+      const cy = P.y0 + top + ri * rh + rh / 2, rg = S("g", {}, g);
+      const nm = S("text", { x: x(0), y: cy - 9, class: "t-mut" }, rg); nm.textContent = `${name} · ${run}`;
+      const wl = S("line", { y1: cy + 5, y2: cy + 5, class: "s-ink2", "stroke-width": 1.6 }, rg);
+      const dot = S("circle", { cy: cy + 5, r: 6, "stroke-width": 2.2, class: k === "224" ? "f-surf s-ink2" : k === "448" ? "f-ink" : "" }, rg);
+      if (k === "448d") dot.setAttribute("class", "f-same");
+      const val = S("text", { y: cy + 9, class: "t-mono" + (k === "448d" ? " t-ink" : "") }, rg);
+      S("rect", { x: P.x0, y: cy - rh / 2, width: pw, height: rh, fill: "transparent" }, rg);
+      hover(rg, () => { const r = R2.e2[k], d = E2SET === "draw";
+        const [a, n] = pi === 0 ? (d ? [r.acc_right, r.acc_n] : [r.hm_right, r.hm_n]) : (d ? [r.draw_count, r.draw_n] : [Math.round(r.hm_lie * r.hm_n), r.hm_n]);
+        return `<b>${name}</b> · ${run}<br>${E2SETS[E2SET][pi + 1]}: ${a} of ${n}`; });
+      rows.push({ pi, ri, x, wl, dot, val });
+    });
+  });
+  const render = v => rows.forEach(({ pi, ri, x, wl, dot, val }) => {
+    const o = ri * 6 + pi * 3, c = v[o], lo = v[o + 1], hi = v[o + 2];
+    wl.setAttribute("x1", x(lo)); wl.setAttribute("x2", x(hi)); dot.setAttribute("cx", x(c));
+    val.setAttribute("x", x(hi) + 8); val.textContent = pct(c);
+  });
+  e2 = { titles, anim: animator(render, e2vec(E2SET)) };
+  e2.anim.redraw(); e2Text();
+}
+function e2Text() {
+  e2.titles.forEach((t, i) => { t.textContent = E2SETS[E2SET][i + 1]; });
+  $("e2Sub").textContent = E2SET === "draw" ? `${R2.e2["448"].draw_n} questions about the drawing per model (both languages). Bars are 95% intervals that resample whole charts.`
+    : `${R2.e2["448"].hm_n} "how much is X?" questions per model (11 charts, both languages). Bars are 95% intervals that resample whole charts.`;
+}
+{
+  const seg = $("e2Seg");
+  Object.entries(E2SETS).forEach(([k, v]) => { const b = H("button", null, v[0], seg); b.type = "button"; b.dataset.k = k; b.setAttribute("aria-pressed", k === E2SET);
+    b.onclick = () => { if (k === E2SET) return; E2SET = k; seg.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.k === k)); e2Text(); e2.anim.to(e2vec(k)); }; });
+}
+e2Build(); rebuilders.push(e2Build);
+{
+  const e = R2.e2, d = R2.e2_diff, C = R2.e2_charts, A = R2.e2_agree;
+  $("e2Intro").innerHTML = `mix-448 was run again on every true and lying image after throwing detail away: 896 → 224 → 448 px, so it gets the information mix-224 got, enlarged back to its own input size (its digits stay twice as tall, but blurred). A control resized 896 → 448 the same way and repeated run 1's mix-448 answers on all ${R2.e2c.n} English true and lying image–question pairs (${R2.e2c.same} of ${R2.e2c.n}), so the resizing itself changes nothing. The prediction: if detail drives the effect, switching drops to mix-224's level; if the checkpoint does, it stays near mix-448's.`;
+  $("e2Notes").innerHTML = [
+    `<b>Text-following mostly stays.</b> ${e["448d"].draw_count} of ${e["448d"].draw_n} drawing questions switched to the lying text, against ${e["448"].draw_count} for mix-448 and ${e["224"].draw_count} for mix-224: ${ptsci(d.sw_vs224)} more than mix-224 and ${ptsci(d.sw_vs448)} fewer than mix-448. Taking the detail away closed ${pct(R2.e2_gap.draw)} of the gap (95% interval ${sgn(R2.e2_gap_ci[0])} to ${sgn(R2.e2_gap_ci[1])}%, resampling charts), so the result lands nearer the "checkpoint" prediction, with a wide interval. Chart by chart it switched more than mix-224 on ${C.vs224_draw.more} charts and less on ${C.vs224_draw.less} (${pval(C.vs224_draw.p)}; all questions ${C.vs224_all.more} : ${C.vs224_all.less}, ${pval(C.vs224_all.p)}), and against mix-448 ${C.vs448_draw.more} more, ${C.vs448_draw.less} less (${pval(C.vs448_draw.p)}).`,
+    `<b>On "how much is X?" it lands exactly on the checkpoint prediction.</b> It quoted the lying label ${pct(e["448d"].hm_lie)} of the time, like mix-448 (${pct(e["448"].hm_lie)}) and unlike mix-224 (${pct(e["224"].hm_lie)}). So the information survives in a 224 px image; mix-224's misses there are misreads (330 or 420 for the newspaper chart's 640), which points at the model, its weights or its coarser 256-patch view, not at missing detail.`,
+    `<b>What "the model" means here.</b> The degraded images still reach mix-448 at 448 px, so its digits stay twice as tall (blurred) and cover four times as many patches as in mix-224's input. These runs rule out image detail, not that input grid: "checkpoint" means weights plus input size.`,
+    `<b>Accuracy drops.</b> On the true charts it answered ${e["448d"].acc_right} of ${e["448d"].acc_n} drawing questions right, the same count as mix-224 and ${ptsci(d.acc_vs448)} below mix-448. It didn't get there by answering like mix-224: it kept most of mix-448's right answers and lost others to new "yes" and "unanswerable" answers on the blurred images ("yes" ${R2.e2_habits["448d"].yes} of ${R2.e2_habits["448d"].n} vs ${R2.e2_habits["448"].yes}; "unanswerable" ${R2.e2_habits["448d"].unanswerable} vs ${R2.e2_habits["448"].unanswerable}). <span class="tag after">not in the predictions</span>`,
+    `<b>Answer by answer it stays closer to itself.</b> On the ${R2.e2_agree_outcome.differ} of ${R2.e2_agree_outcome.n} image–question pairs where run 1's two models got different scored outcomes, it matched mix-448 ${R2.e2_agree_outcome.like448} times and mix-224 ${R2.e2_agree_outcome.like224} times (${R2.e2_agree_outcome.neither} neither). Comparing exact answer strings instead gives ${A.like448} : ${A.like224}, inflated by formatting ("27" vs "27%"). <span class="tag after">not in the predictions</span>`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+
+// ---------------- run 2 · E3: label size alone
+const E3NAME = { s06_tv_thermometers: "TV thermometers", s13_widget_battery: "battery widget", s01_newspaper_bars: "newspaper bars", s14_spreadsheet_databars: "spreadsheet" };
+function e3Build() {
+  const host = $("e3Plot"); host.innerHTML = "";
+  const ORDER = ["s06_tv_thermometers", "s13_widget_battery", "s01_newspaper_bars", "s14_spreadsheet_databars"];
+  ORDER.forEach(sid => {
+    const c = byId[sid], rows = R2.e3.filter(r => r.stimulus === sid), pn = H("div", "pn", null, host);
+    H("div", "h", `${c.short} · ${E3NAME[sid]}`, pn); H("div", "s", MECH[c.mechanism], pn);
+    const plot = H("div", "plot", null, pn), W = plot.clientWidth || 160, Hh = 158, left = 22, right = 8, top = 8, bot = 40;
+    const xs = [...new Set(rows.map(r => r.cue_px))].sort((a, b) => a - b), X0 = 8, X1 = 50;
+    const x = v => left + (v - X0) / (X1 - X0) * (W - left - right), y = v => top + (1 - v / 4) * (Hh - top - bot);
+    const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, plot);
+    [0, 2, 4].forEach(v => { S("line", { x1: left, x2: W - right, y1: y(v), y2: y(v), class: "s-rule" }, svg);
+      const t = S("text", { x: left - 6, y: y(v) + 4, "text-anchor": "end", class: "t-mut t-mono" }, svg); t.textContent = v; });
+    const ok = R2.e3_original_k[sid], orig = rows.find(r => r.k === ok).cue_px;
+    S("line", { x1: x(orig), x2: x(orig), y1: top, y2: Hh - bot, class: "s-ink2", "stroke-width": 1, "stroke-dasharray": "3 3" }, svg);
+    const lx = spread(xs.map(x), 17, left, W - right);
+    xs.forEach((v, i) => { const t = S("text", { x: lx[i], y: Hh - bot + 20, "text-anchor": "middle", class: "t-mut t-mono" }, svg); t.textContent = v; });
+    const xl = S("text", { x: (left + W - right) / 2, y: Hh - 4, "text-anchor": "middle", class: "t-mut" }, svg); xl.textContent = "label height, px";
+    [["224", "s-ink2", "f-surf s-ink2"], ["448", "s-ink2", "f-ink"]].forEach(([m, lc, dc]) => {
+      const rs = rows.filter(r => r.model === m).sort((a, b) => a.k - b.k), off = m === "224" ? 3 : -3;
+      S("polyline", { points: rs.map(r => `${x(r.cue_px)},${y(r.draw_sw) + (rs.every(q => q.draw_sw === rs[0].draw_sw) ? off : 0)}`).join(" "), fill: "none", class: lc, "stroke-width": m === "448" ? 2 : 1.4, opacity: m === "448" ? .9 : .6 }, svg);
+      rs.forEach(r => { const g = S("g", {}, svg), flat = rs.every(q => q.draw_sw === rs[0].draw_sw);
+        S("circle", { cx: x(r.cue_px), cy: y(r.draw_sw) + (flat ? off : 0), r: 4.5, class: dc, "stroke-width": 2 }, g);
+        S("circle", { cx: x(r.cue_px), cy: y(r.draw_sw), r: 10, fill: "transparent" }, g);
+        hover(g, `<b>${c.short} · ${M[m]}</b>${r.k === ok ? " · original size" : ""}<br>labels ${r.cue_px} px (${r.eff_px.toFixed(1)} px in its input)<br>drawing questions switched: ${r.draw_sw} of ${r.draw_n}<br>"how much": ${r.hm_lie ? "quoted the lying label" : "didn't quote it"}`); });
+    });
+  });
+}
+e3Build(); rebuilders.push(e3Build);
+{
+  const P = R2.e3_pooled, ks = ["1", "2", "3", "4"], E = R2.e3;
+  const seq = m => ks.map(k => `${P[m][k].draw_sw}`).join(", ") + ` of ${P[m]["1"].draw_n}`;
+  const at = (m, sid) => E.filter(r => r.model === m && r.stimulus === sid).sort((a, b) => a.k - b.k);
+  const s06 = at("448", "s06_tv_thermometers"), s01 = at("448", "s01_newspaper_bars"), s14 = at("448", "s14_spreadsheet_databars");
+  const s06same = s06.every(r => r.draw_sw === s06[0].draw_sw), zero = [...s01, ...s14].every(r => r.draw_sw === 0);
+  const hm448 = ks.reduce((a, k) => a + P["448"][k].hm_lie, 0), hmN = ks.reduce((a, k) => a + P["448"][k].hm_n, 0);
+  const hm224rest = ["2", "3", "4"].reduce((a, k) => a + P["224"][k].hm_lie, 0), hm224restN = ["2", "3", "4"].reduce((a, k) => a + P["224"][k].hm_n, 0);
+  const small224 = Math.max(...E.filter(r => r.model === "224" && r.k === 1).map(r => r.eff_px));
+  const rs = D.resolution.size;
+  $("e3Notes").innerHTML = [
+    `<b>No chart switched more with bigger labels.</b> From the smallest labels to the largest, the four charts together switched on ${seq("448")} drawing questions at mix-448 and ${seq("224")} at mix-224. Each point is the same 4 questions asked again; at mix-224 two charts dipped by 1–2. mix-448 could read every size (it quoted the lying label ${hm448} of ${hmN} times), so this covers readable sizes only.`,
+    `<b>The chart decides, more than the label size.</b> At mix-448 the thermometer readouts (s06) switched ${s06same ? `${s06[0].draw_sw} of ${s06[0].draw_n} at every size` : s06.map(r => r.draw_sw).join(", ")}, even shrunk to ${s06[0].cue_px} px; the newspaper bars (s01) and the spreadsheet (s14) switched ${zero ? "on none" : "rarely"}, even at their largest labels (${s01[3].cue_px} and ${s14[3].cue_px} px). One catch: s06 and s13 are the only swept charts with threshold questions ("above freezing?", "almost full?"), which gave ${R2.e3_kinds["448"].threshold} of the ${R2.e3_kinds["448"].all} switches at mix-448. On the "which is highest / lowest?" questions all four share, s06 and s13 still switched ${R2.e3_kinds["448"].rank} times and s01 and s14 ${R2.e3_kinds["448"].rank_s01_s14 === 0 ? "never" : R2.e3_kinds["448"].rank_s01_s14 + " times"}. Run 1's weak link between digit size and switching across charts (ρ = ${rs["448"].rho.toFixed(2)} at mix-448, ${rs["448"].n} charts, p = ${rs["448"].p.toFixed(2)}) most likely came from which charts have big digits.`,
+    `<b>Size mattered only at the reading floor.</b> On the one "how much" question per chart, mix-224 quoted the lying label ${P["224"]["1"].hm_lie} of ${P["224"]["1"].hm_n} times at the smallest size, where the digits are at most ${small224.toFixed(1)} px tall in its input, and ${hm224rest} of ${hm224restN} above it. All three misses above it are the newspaper chart, where mix-224 never quoted the lie: it misread the label at the smaller sizes and gave the drawing's value at the largest. Past about 5 px, the chart still matters.`,
+    `<b>Repeat check.</b> The original-size images are pixel-identical to run 1 and gave the same answer ${R2.e3_repeat.same} of ${R2.e3_repeat.n} times, at both resolutions.`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+
+// ---------------- result 6: language
+function langChart() {
+  const host = $("langPlot"); host.innerHTML = "";
+  const W = host.clientWidth, wide = W > 480, rows = [["sw", "448"], ["sw", "224"], ["acc", "448"], ["acc", "224"]];
+  const lab = wide ? 236 : 132, rh = 36, top = 6, Hh = top + rows.length * rh + 26, x = v => lab + v * (W - lab - 16);
+  const svg = S("svg", { width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` }, host);
+  xAxis(svg, x, top, top + rows.length * rh, [0, .25, .5, .75, 1], pct);
+  S("line", { x1: 0, x2: W, y1: top + 2 * rh, y2: top + 2 * rh, class: "s-rule", "stroke-width": 1.5 }, svg);
+  rows.forEach(([k, m], i) => {
+    const cy = top + i * rh + rh / 2, name = k === "sw" ? "Drawing questions switched" : "Right on true charts";
+    const en = k === "sw" ? D.language[m].en.rate : D.accuracy[`${m}_en`].true_all, tr = k === "sw" ? D.language[m].tr.rate : D.accuracy[`${m}_tr`].true_all;
+    const g = S("g", {}, svg);
+    S("rect", { x: 0, y: cy - rh / 2, width: W, height: rh, fill: "transparent" }, g);
+    textLines(g, 0, cy + (wide ? 4 : -3), wide ? [`${name} · ${M[m]}`] : [name, M[m]], { firstClass: "t-ink" }, 13);
+    S("line", { x1: x(tr), x2: x(en), y1: cy, y2: cy, class: "s-ink2", "stroke-width": 2 }, g);
+    S("circle", { cx: x(tr), cy, r: 6, class: "f-surf s-acc", "stroke-width": 2.2 }, g);
+    S("circle", { cx: x(en), cy, r: 6.5, class: "f-ink" }, g);
+    const lo = Math.min(en, tr), hi = Math.max(en, tr);
+    const tl = S("text", { x: x(lo) - 11, y: cy + 4, "text-anchor": "end", class: "t-mono" + (lo === en ? " t-ink" : "") }, g); tl.textContent = pct(lo);
+    const th = S("text", { x: x(hi) + 11, y: cy + 4, class: "t-mono" + (hi === en ? " t-ink" : "") }, g); th.textContent = pct(hi);
+    hover(g, `<b>${name} · ${M[m]}</b><br>English ${pct(en)} · Turkish ${pct(tr)}`);
+  });
+}
+langChart(); rebuilders.push(langChart);
+{
+  const L = D.language, a = D.accuracy;
+  $("langNotes").innerHTML = [
+    `<b>Turkish switched a little less</b>: ${L["448"].tr.count} of ${L["448"].tr.n} drawing questions (${pct(L["448"].tr.rate)}) vs ${L["448"].en.count} of ${L["448"].en.n} (${pct(L["448"].en.rate)}) at mix-448, ${pct(L["224"].tr.rate)} vs ${pct(L["224"].en.rate)} at mix-224. Paired by question, the gap isn't significant (${L["448"].only_en} questions switched only in English, ${L["448"].only_tr} only in Turkish, ${pval(L["448"].p)}).`,
+    `<b>It is also right less often in Turkish</b> (${pct(a["448_tr"].true_all)} vs ${pct(a["448_en"].true_all)} at 448), so part of the gap is simply reading less of the chart.`,
+    `<b>Values vs scales holds in both languages.</b> No scale-text question moved to the text in either.`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+
+// ---------------- failure modes
+{
+  const w = D.wrong_names, al = w.alpha, real = w.real_world.slice().sort((a, b) => b.count - a.count);
+  const chartOf = s => D.charts.find(c => c.short === s);
+  const same = w.o_same.same, both = w.o_same.n;
+  $("fallIntro").textContent = `The grey answers in the flow chart aren't random. When an answer was "something else" on both the true and the lying chart, it was the very same answer ${same} times out of ${both}. Three habits explain most of them.`;
+  $("fails").innerHTML = `
+    <div class="card"><div class="h"><span>Answer with the first item</span><span class="chip c-O">${al.alpha} of ${al.n}</span></div>
+      <p>On the server dashboard (s07), ${al.alpha} of ${al.n} "which server…?" answers were <code>alpha-01</code>, the first gauge, whether the question asked for the highest or the lowest load. Only ${al.right} was right.</p></div>
+    <div class="card"><div class="h"><span>Answer from world knowledge</span><span class="chip c-O">${w.real_count} of ${w.total}</span></div>
+      <p>${w.real_count} of the ${w.total} wrong "which one?" answers name something real that isn't on the chart. The guess fits the topic: phone brands for a smartphone slide, European cities for a weather graphic, a real machine-learning method for a chart of invented methods, Turkish place names when the question is in Turkish.</p>
+      <div class="chips">${real.map(r => `<span class="chip c-O">${esc(r.answer)}<small>×${r.count} · ${r.chart} ${esc(short(chartOf(r.chart)).toLowerCase())} · ${r.models.map(m => M[m]).join(", ")} · ${r.langs.join("+").toUpperCase()}</small></span>`).join("")}</div></div>
+    <div class="card"><div class="h"><span>Don't answer</span></div>
+      <p>A few answers aren't answers: <code>unanswerable</code>, <code>don't</code>, the chart's title (<code>air quality by district</code>), or a sentence describing some other picture. All of them count as "something else".</p></div>`;
+}
+
+// ---------------- explorer
+const COLS = [["224", "en"], ["224", "tr"], ["448", "en"], ["448", "tr"]];
+let XCH = "s06_tv_thermometers", XSEL = null;
+D.explorer.forEach(ch => { const b = H("button", null, ch.short, $("xpick")); b.type = "button"; b.dataset.id = ch.id; b.title = ch.title; b.setAttribute("aria-pressed", ch.id === XCH);
+  b.onclick = () => { if (XCH === ch.id) return; XCH = ch.id; XSEL = null; $("xpick").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.id === XCH)); drawExplorer(); }; });
+function drawExplorer() {
+  const ch = D.explorer.find(c => c.id === XCH), info = byId[ch.id], body = $("xbody");
+  if (!XSEL) XSEL = [ch.questions[0].qid, "448_en"];
+  const sq = s => `<i class="${s ? "sq-" + s[1] : "sq-n"}"></i>`;
+  body.innerHTML = `<div class="xhead"><button type="button" class="zoom" id="xopen" aria-label="Open the six versions of ${ch.short}"><img src="thumb/${ch.id}.jpg" alt="" width="96" height="96"></button>
+    <div><div class="nm">${ch.short} · ${esc(ch.title)}</div><div class="meta">${esc(info.style)} · ${MECH[ch.mechanism]} · ${ch.truth ? "the text is the truth" : "the text lies"} · digits ${info.cue_px} px</div><div class="meta" style="margin-top:4px">${esc(ch.summary)}</div></div></div>
+    <div class="tbl" style="margin:8px 0 0"><table class="xt"><thead><tr><th>Question</th>${COLS.map(([m, l]) => `<th>${m} ${l.toUpperCase()}</th>`).join("")}</tr></thead><tbody>
+    ${ch.questions.map(q => `<tr><td class="qq">${esc(q.en)}<small>${esc(q.tr)}</small><div class="exp"><span class="chip c-V">${esc(q.V.en)}</span><span class="chip c-T">${esc(q.T.en)}</span></div></td>
+      ${COLS.map(([m, l]) => { const c = q.cells[`${m}_${l}`], on = XSEL[0] === q.qid && XSEL[1] === `${m}_${l}`;
+        return `<td><button type="button" class="cellb" data-q="${q.qid}" data-c="${m}_${l}" aria-pressed="${on}" aria-label="${M[m]} ${l}: ${esc([c.none, c.true, c.lie].map(s => s ? s[0] : "not asked").join(", "))}">${sq(c.none)}${sq(c.true)}${sq(c.lie)}</button></td>`; }).join("")}</tr>`).join("")}
+    </tbody></table></div><div class="xdetail" id="xdetail"></div>`;
+  $("xopen").onclick = e => openSheet(ch.id, e.currentTarget);
+  body.querySelectorAll(".cellb").forEach(b => b.onclick = () => { XSEL = [b.dataset.q, b.dataset.c]; body.querySelectorAll(".cellb").forEach(x => x.setAttribute("aria-pressed", x === b)); detail(); });
+  detail();
+}
+function detail() {
+  const ch = D.explorer.find(c => c.id === XCH), q = ch.questions.find(x => x.qid === XSEL[0]), [m, l] = XSEL[1].split("_"), c = q.cells[XSEL[1]];
+  const cell = (name, s) => `<div><div class="q2">${name}</div>${s ? `${chip(s)} <span class="small muted">${LBL[s[1]]}</span>` : `<span class="small muted">not asked: needs the numbers</span>`}</div>`;
+  $("xdetail").innerHTML = `<div class="qline"><b>${M[m]} · ${l === "en" ? "English" : "Turkish"}</b> · "${esc(l === "en" ? q.en : q.tr)}" · the drawing says <span class="chip c-V">${esc(q.V[l])}</span>, the lie says <span class="chip c-T">${esc(q.T[l])}</span></div>
+    <div class="said">${cell("No numbers", c.none)}${cell("True numbers", c.true)}${cell("Lying numbers", c.lie)}</div>`;
+}
+drawExplorer();
+
+// ---------------- what it supports
+{
+  const h = D.head, num = D.pull["448"].find(r => r.group === "number"), num224 = D.pull["224"].find(r => r.group === "number"), sc = D.role, R = D.resolution, L = D.language, s06 = byId.s06_tv_thermometers["448"];
+  $("h1List").innerHTML = [
+    `<b>"How much is X?" doesn't test H1.</b> Asked for a value, it quotes the label on that mark (${pct(num.T_lie)} at mix-448, ${pct(num224.T_lie)} at mix-224), so it can read the digits. Most of these charts give no way to read a value from the marks, so this says nothing about which cue it prefers.`,
+    `<b>Mostly false for questions the drawing can answer.</b> They switched to the text ${pct(h["448"].nonum.sw)} of the time at mix-448 and ${pct(h["224"].nonum.sw)} at mix-224. The exception is the TV thermometer readouts: ${s06.dsw_count} of ${s06.dn} drawing questions at mix-448.`,
+    `<b>Where the pull appears, the text causes it.</b> On drawing questions, answers moved into the text's answer ${h["448"].nonum.into_T} times and out of it ${h["448"].nonum.out_of_T === 1 ? "once" : h["448"].nonum.out_of_T + " times"} at mix-448 (${h["448"].all.into_T} vs ${h["448"].all.out_of_T} with "how much" questions). Noise would move both ways.`,
+  ].map(x => `<li>${x}</li>`).join("");
+  $("qList").innerHTML = [
+    `<b>Q1 · question type matters.</b> Value questions follow the label; trends, rankings and yes/no mostly follow the drawing.`,
+    `<b>Q2 · scale text wasn't used, on 3 charts.</b> ${sc["448"].scale_all.sw_count + sc["224"].scale_all.sw_count} of ${sc["448"].scale_all.eligible + sc["224"].scale_all.eligible} answers that could switch moved to a true axis or legend. Run 2: asked for the number at a named end of a flipped axis, it got both ends right ${R2.e1_axes.conflict[0]} of ${R2.e1_axes.conflict[1]} times, yet flipping the labels changed ${R2.e1_changed[0]} of ${R2.e1_changed[1]} answers, mostly to another printed number: it registers the scale text without placing it. On label charts it can read the labels, so its drawing preference there isn't about legibility.`,
+    `<b>Q3 · mix-448 follows the text more, and it's mostly not image detail.</b> ${R.charts.more} : ${R.charts.less} charts (${R.charts.tie} tied, ${pval(R.charts.p)}). Run 2 (predicted): with mix-224's level of detail, mix-448 kept most of its text-following (${R2.e2["448d"].draw_count} vs ${R2.e2["448"].draw_count} and ${R2.e2["224"].draw_count} of ${R2.e2["448"].draw_n} drawing questions), and label size within a chart didn't raise switching. What remains is the model: its weights and its larger input, which these runs can't separate. Not predicted: its accuracy fell to mix-224's count, partly through more "yes" and "unanswerable" answers on the blurred images.`,
+    `<b>Q4 · language barely matters.</b> Turkish switched slightly less (${pct(L["448"].tr.rate)} vs ${pct(L["448"].en.rate)} of drawing questions at mix-448), not significantly. Turkish yes/no answers come back in English.`,
+  ].map(x => `<li>${x}</li>`).join("");
+}
+{
+  const e = R2.e2, V = R2.e1_versions.both, P = R2.e3_pooled;
+  const flip = R2.e1_grid.flatMap(r => ["224_en", "224_tr", "448_en", "448_tr"].map(k => r.cells[`conflict_${k}`][1]));
+  const nU = flip.filter(c => c === "U").length, nO = flip.filter(c => c === "O").length;
+  const s02 = R2.e1_grid.filter(r => r.chart === "s02").flatMap(r => Object.entries(r.cells).filter(([k]) => k.startsWith("conflict")).map(([, c]) => c[1]));
+  const s06 = R2.e3.filter(r => r.model === "448" && r.stimulus === "s06_tv_thermometers").sort((a, b) => a.k - b.k);
+  const v = (cls, t) => `<span class="verdict ${cls}">${t}</span>`;
+  const T = R2.e1_through, sum = (m, c, k) => (T[m][c][k] || 0);
+  const shapeN = sum("224", "conflict", "shape") + sum("448", "conflict", "shape"), axisN = sum("224", "conflict", "axis") + sum("448", "conflict", "axis");
+  const thTot = ["224", "448"].reduce((a, m) => a + Object.values(T[m].conflict).reduce((x, y) => x + y, 0), 0), otherN = thTot - shapeN - axisN;
+  const normRight = sum("224", "consistent", "right") + sum("448", "consistent", "right");
+  const rows = [
+    ["Control: does the resize repeat run 1?", "At least 95% of answers identical.", `${R2.e2c.same} of ${R2.e2c.n} identical.`, v("ok", "as predicted")],
+    ["Pixels or checkpoint?", "Detail: drawing questions switch about 7%, \"how much\" quotes the lie about 55%. Checkpoint: about 18% and 91%. In between: both matter.", `${pct(e["448d"].draw)} and ${pct(e["448d"].hm_lie)}. Closes ${pct(R2.e2_gap.draw)} of the drawing gap (95% interval ${sgn(R2.e2_gap_ci[0])} to ${sgn(R2.e2_gap_ci[1])}%).`, v("ok", "checkpoint on \"how much\"; nearer checkpoint on drawing questions")],
+    ["Can it read a flipped scale?", "Reads but doesn't apply: reading questions right on both versions. Can't read: the usual order on the flipped one.", `Flipped axes read at both ends ${R2.e1_axes.conflict[0]} of ${R2.e1_axes.conflict[1]}, normal ${R2.e1_axes.consistent[0]} of ${R2.e1_axes.consistent[1]}. Of 20 flipped answers: ${nU} the usual order, ${nO} another number; flipping changed ${R2.e1_changed[0]} of ${R2.e1_changed[1]} answers.`, v("mid", "neither: sees the numbers, doesn't place them")],
+    ["Read-through questions", "Both branches: answers follow the shape (about 520 thefts in 2025 on the flipped chart).", `Flipped: shape ${shapeN}, printed scale ${axisN}, other ${otherN} of ${thTot}. Normal charts right only ${normRight} of ${thTot}.`, v("mid", "untestable: wrong on normal charts too")],
+    ["Which scale reads better?", "s12 weak at both resolutions; s02 better at 448 than at 224.", `s02's flipped axis: ${s02.filter(c => c === "P").length} right of ${s02.length}. The only flipped scale read at both ends was s12.`, v("no", "wrong")],
+    ["Does label size alone change switching?", "Size: switching rises with label size within a chart, most at mix-224 and on \"how much\"; shrinking s06's readouts lowers it. Chart type: flat.", `No chart rose with size; s06 ${s06.map(r => r.draw_sw).join(", ")} of 4 at mix-448 from smallest to largest. "How much" at mix-224: ${P["224"]["1"].hm_lie} of ${P["224"]["1"].hm_n} at the smallest size, ${["2", "3", "4"].reduce((a, k) => a + P["224"][k].hm_lie, 0)} of 12 above it.`, v("ok", "chart (or its questions); size only as a reading floor")],
+  ];
+  $("scoreTable").innerHTML = `<thead><tr><th>Test</th><th>Predicted before the run</th><th>Result</th><th>Verdict</th></tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody>`;
+}
+
+// ---------------- contents highlight
+{
+  const links = [...document.querySelectorAll("nav.toc a")], secs = links.map(a => document.querySelector(a.getAttribute("href")));
+  let ticking = false;
+  const on = () => { ticking = false; const y = scrollY + innerHeight * .3; let i = 0; secs.forEach((s, k) => { if (s && s.offsetTop <= y) i = k; }); links.forEach((a, k) => a.classList.toggle("on", k === i)); };
+  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(on); } }, { passive: true }); on();
+}
+})();
+</script>

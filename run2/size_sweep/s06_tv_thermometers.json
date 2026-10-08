@@ -1,0 +1,42 @@
+{
+  "sid": "s06_tv_thermometers",
+  "ok": true,
+  "script": "run2/size_sweep/s06_tv_thermometers.py",
+  "sizes": [
+    {
+      "k": 1,
+      "param": "readout font-size 26px (canvas '700 26px DIN Condensed'), baseline y=731",
+      "cue_px": 19,
+      "original": false,
+      "consistent": "run2/images/size/s06_tv_thermometers_consistent_en_s1.png",
+      "conflict": "run2/images/size/s06_tv_thermometers_conflict_en_s1.png"
+    },
+    {
+      "k": 2,
+      "param": "readout font-size 38px (canvas '700 38px DIN Condensed'), baseline y=736",
+      "cue_px": 28,
+      "original": false,
+      "consistent": "run2/images/size/s06_tv_thermometers_consistent_en_s2.png",
+      "conflict": "run2/images/size/s06_tv_thermometers_conflict_en_s2.png"
+    },
+    {
+      "k": 3,
+      "param": "readout font-size 51px (canvas '700 51px DIN Condensed'), baseline y=740",
+      "cue_px": 38,
+      "original": false,
+      "consistent": "run2/images/size/s06_tv_thermometers_consistent_en_s3.png",
+      "conflict": "run2/images/size/s06_tv_thermometers_conflict_en_s3.png"
+    },
+    {
+      "k": 4,
+      "param": "readout font-size 64px (canvas '700 64px DIN Condensed'), baseline y=745",
+      "cue_px": 47,
+      "original": true,
+      "consistent": "run2/images/size/s06_tv_thermometers_consistent_en_s4.png",
+      "conflict": "run2/images/size/s06_tv_thermometers_conflict_en_s4.png"
+    }
+  ],
+  "identical_to_run1": true,
+  "outside_text_share": 0.0,
+  "notes": "cue_px by k: [19, 28, 38, 47] (run-1 cue_px 47); targets 0.4/0.6/0.8/1.0 x 47 = [18.8, 28.2, 37.6, 47.0]; ratios [0.404, 0.596, 0.809, 1.0] | run-1 max abs diff at original size: {'consistent': 0, 'conflict': 0}; k=4 HTML is byte-identical to make.page() | changed-pixel share outside dilated (3 px) text masks: {'s1_consistent': 0.0, 's1_conflict': 0.0, 's2_consistent': 0.0, 's2_conflict': 0.0, 's3_consistent': 0.0, 's3_conflict': 0.0, 's4_consistent': 0.0, 's4_conflict': 0.0}; max abs diff outside the 4 readout boxes: {'s1_consistent': 0, 's1_conflict': 0, 's2_consistent': 0, 's2_conflict': 0, 's3_consistent': 0, 's3_conflict': 0, 's4_consistent': 0, 's4_conflict': 0}; changed pixel counts {'s1_consistent': 5279, 's1_conflict': 5279, 's2_consistent': 5212, 's2_conflict': 5212, 's3_consistent': 4349, 's3_conflict': 4349, 's4_consistent': 0, 's4_conflict': 0} | conflict box i == consistent box of value CONFLICT[i] (max abs diff) per k: {1: 0, 2: 0, 3: 0, 4: 0}, run 1: 0 | baseline re-centred per size with make.py's own rule (722 + 0.356*fs) so the smaller numbers stay centred in the unchanged readout boxes | text bboxes (y0,y1,x0,x1) per card: {'s1_consistent': [(712, 730, 123, 148), (712, 730, 332, 356), (712, 730, 539, 564), (712, 730, 745, 775)], 's1_conflict': [(712, 730, 121, 151), (712, 730, 331, 356), (712, 730, 540, 564), (712, 730, 747, 772)], 's2_consistent': [(708, 736, 118, 154), (708, 735, 326, 362), (708, 735, 534, 570), (708, 736, 738, 782)], 's2_conflict': [(708, 736, 114, 158), (708, 735, 326, 362), (708, 735, 534, 570), (708, 736, 742, 778)], 's3_consistent': [(702, 740, 112, 160), (702, 739, 321, 368), (702, 739, 528, 576), (702, 740, 730, 790)], 's3_conflict': [(702, 740, 106, 166), (702, 739, 320, 368), (702, 739, 529, 576), (702, 740, 736, 784)], 's4_consistent': [(698, 745, 105, 167), (698, 744, 314, 375), (698, 744, 521, 583), (698, 745, 723, 798)], 's4_conflict': [(698, 745, 99, 174), (698, 744, 313, 375), (698, 744, 522, 583), (698, 745, 729, 791)]} | visual check: all readouts sit centred inside their own unchanged white box under their own tube at every size, no clipping or overlap (largest text 76 px wide in a 152 px box); conflict shows -3,24,12,31 under Avlen,Berim,Covra,Dimel at every k = run 1's lie; at 448 all sizes legible; at 224 s1 digits are ~5 px tall and the minus of -3 is faint but present, s2+ clearly legible"
+}

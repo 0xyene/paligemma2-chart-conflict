@@ -1,0 +1,39 @@
+STEP 1 — control: share right when text and drawing agree
+model  224  448
+lang           
+en      54   64
+tr      43   56
+→ about half to two thirds. Conflict answers on charts it can't read are partly noise; keep that in mind.
+
+STEP 2 — main: consistent vs conflict image, same question (% of answers)
+                         stayed  switched to text  switched to other   n
+group             model                                                 
+a number          224        40                37                 23  30
+                  448        20                70                 10  30
+which one / trend 224        81                 7                 11  54
+                  448        67                22                 11  54
+yes / no          224        95                 4                  2  56
+                  448        86                14                  0  56
+→ 'a number': it reads the printed label (any reader would; you can't get 120 from a bar's height).
+→ 'which one / trend': the text mostly doesn't move the answer, but 448 switches to it about 1 time in 5.
+→ 'yes / no': says yes ~75% of the time no matter what, so it rarely switches. Low switching here is a yes-habit, not evidence.
+
+STEP 3 — resolution: share of answers that switched to the text, per chart
+model                       224  448
+stimulus                            
+s06_tv_thermometers          40   80
+s13_widget_battery           10   50
+s11_finance_watchlist         8   42
+s03_slide_donut              40   40
+s07_dashboard_gauges         20   40
+s01_newspaper_bars            0   30
+s05_poster_pictogram         10   30
+s14_spreadsheet_databars     10   30
+s04_app_screentime           20   20
+s08_paper_grouped_bars       10   20
+s09_notebook_sketch           0   20
+s02_magazine_line_inverted    0    0
+s10_report_tilemap            0    0
+s12_textbook_scatter          0    0
+→ mix-448 switched to the text more on 9 charts, less on 0, tied on 5  (sign test p = 0.004).
+→ Higher resolution = reads the printed numbers more. The most solid result in the run.

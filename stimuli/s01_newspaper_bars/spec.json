@@ -1,0 +1,236 @@
+{
+  "id": "s01_newspaper_bars",
+  "title": {
+    "en": "Loaves sold per month (newspaper)",
+    "tr": "Aylık satılan ekmek (gazete)"
+  },
+  "chart": "column bars",
+  "style": "newspaper page",
+  "tech": "HTML/CSS + inline SVG (headless Chrome)",
+  "mechanism": "label",
+  "conflict_summary": "Bars rise Jan→Jun like a wifi icon; in conflict the printed values fall 640→120.",
+  "data": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "visual": [
+      120,
+      210,
+      330,
+      420,
+      540,
+      640
+    ],
+    "conflict_labels": [
+      640,
+      540,
+      420,
+      330,
+      210,
+      120
+    ]
+  },
+  "questions": [
+    {
+      "qid": "s01_q1",
+      "kind": "trend",
+      "pair": null,
+      "prompt": {
+        "en": "answer en did monthly sales go up or down from january to june?",
+        "tr": "answer tr ocaktan hazirana aylık satışlar arttı mı azaldı mı?"
+      },
+      "visual": {
+        "en": [
+          "up",
+          "went up",
+          "increased",
+          "increase",
+          "increases",
+          "increasing",
+          "rose",
+          "rise",
+          "risen",
+          "rising",
+          "grew",
+          "grown",
+          "growing",
+          "upward",
+          "higher"
+        ],
+        "tr": [
+          "arttı",
+          "artış",
+          "artmış",
+          "artıyor",
+          "artan",
+          "çoğaldı",
+          "yükseldi",
+          "yükselmiş",
+          "yükseliyor",
+          "yükseliş",
+          "yukarı"
+        ]
+      },
+      "text": {
+        "en": [
+          "down",
+          "went down",
+          "decreased",
+          "decrease",
+          "decreases",
+          "decreasing",
+          "fell",
+          "fall",
+          "fallen",
+          "falling",
+          "dropped",
+          "drop",
+          "declined",
+          "decline",
+          "declining",
+          "downward",
+          "lower"
+        ],
+        "tr": [
+          "azaldı",
+          "azalış",
+          "azalmış",
+          "azalıyor",
+          "azalan",
+          "düştü",
+          "düşmüş",
+          "düşüyor",
+          "düşüş",
+          "geriledi",
+          "aşağı"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s01_q2",
+      "kind": "argmax",
+      "pair": null,
+      "prompt": {
+        "en": "answer en in which month were the most loaves sold?",
+        "tr": "answer tr en çok ekmek hangi ayda satıldı?"
+      },
+      "visual": {
+        "en": [
+          "june",
+          "jun"
+        ],
+        "tr": [
+          "haziran",
+          "=haz"
+        ]
+      },
+      "text": {
+        "en": [
+          "january",
+          "jan"
+        ],
+        "tr": [
+          "ocak",
+          "=oca"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s01_q3a",
+      "kind": "compare",
+      "pair": "s01_p1",
+      "prompt": {
+        "en": "answer en were more loaves sold in june than in january?",
+        "tr": "answer tr haziranda ocaktan daha fazla ekmek satıldı mı?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s01_q3b",
+      "kind": "compare",
+      "pair": "s01_p1",
+      "prompt": {
+        "en": "answer en were fewer loaves sold in june than in january?",
+        "tr": "answer tr haziranda ocaktan daha az ekmek satıldı mı?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s01_q4",
+      "kind": "read_value",
+      "pair": null,
+      "prompt": {
+        "en": "answer en how many loaves were sold in june?",
+        "tr": "answer tr haziranda kaç ekmek satıldı?"
+      },
+      "visual": {
+        "en": [
+          "640",
+          "^six hundred forty",
+          "^six hundred and forty"
+        ],
+        "tr": [
+          "640",
+          "^altı yüz kırk",
+          "^altıyüz kırk",
+          "^altıyüzkırk"
+        ]
+      },
+      "text": {
+        "en": [
+          "120",
+          "^one hundred twenty",
+          "^one hundred and twenty"
+        ],
+        "tr": [
+          "120",
+          "^yüz yirmi",
+          "^yüzyirmi"
+        ]
+      },
+      "nonumbers": false
+    }
+  ],
+  "conflict_has_truth": false
+}

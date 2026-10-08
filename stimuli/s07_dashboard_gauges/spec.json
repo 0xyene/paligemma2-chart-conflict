@@ -1,0 +1,218 @@
+{
+  "id": "s07_dashboard_gauges",
+  "title": {
+    "en": "CPU load per server (monitoring dashboard)",
+    "tr": "Sunucu başına CPU yükü (izleme panosu)"
+  },
+  "chart": "semicircle gauges",
+  "style": "server monitoring dashboard, dark UI, monospace type (Menlo)",
+  "tech": "inline SVG (single 896x896 SVG page, headless Chrome)",
+  "mechanism": "readout",
+  "conflict_summary": "Needles/fills show alpha-01 38, beta-02 15, gamma-03 92; in conflict the readouts under the gauges say alpha-01 15%, beta-02 92%, gamma-03 38%.",
+  "data": {
+    "servers": [
+      "alpha-01",
+      "beta-02",
+      "gamma-03"
+    ],
+    "visual": [
+      38,
+      15,
+      92
+    ],
+    "conflict_readouts": [
+      15,
+      92,
+      38
+    ],
+    "threshold": 80,
+    "threshold_server": "gamma-03",
+    "read_server": "alpha-01",
+    "scale": "arc 0-100, end labels '0' and '100' only, unlabeled ticks every 10",
+    "position_check": "argmax is never the first card and argmin never the last card, for either cue",
+    "hosts_table": [
+      {
+        "server": "alpha-01",
+        "address": "10.0.4.21",
+        "rack": "B4",
+        "uptime": "63 d 19 h"
+      },
+      {
+        "server": "beta-02",
+        "address": "10.0.4.17",
+        "rack": "B2",
+        "uptime": "41 d 6 h"
+      },
+      {
+        "server": "gamma-03",
+        "address": "10.0.4.12",
+        "rack": "A1",
+        "uptime": "27 d 2 h"
+      }
+    ],
+    "hosts_table_check": "every number in the hosts table has argmax alpha-01 / argmin gamma-03; needles give gamma-03/beta-02, readouts beta-02/alpha-01, so name->row-number binding hits neither cue",
+    "design_deviation": "DESIGN.md plan: visual alpha 92 / beta 38 / gamma 15, q3 on alpha-01, q4 on gamma-03. Built: 38/15/92, q3 on gamma-03, q4 on alpha-01, so card position is not a cue (see make.py docstring).",
+    "read_value_note": "q4 conflict: the visual answer 38 is printed as the readout of gamma-03; a 'visual' hit can be a misbind to that card. A needle-only estimate (~40) scores 'neither'. Analysis: report conflict-q4 'visual' hits separately as 'possible misbind' and keep them out of the visual-vs-text headline (unavoidable with a 3-value permutation)."
+  },
+  "questions": [
+    {
+      "qid": "s07_q1",
+      "nonumbers": true,
+      "kind": "argmax",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which server has the highest cpu load?",
+        "tr": "answer tr cpu yükü en yüksek olan sunucu hangisi?"
+      },
+      "visual": {
+        "en": [
+          "gamma-03",
+          "gamma"
+        ],
+        "tr": [
+          "gamma-03",
+          "gamma",
+          "gama-03",
+          "gama"
+        ]
+      },
+      "text": {
+        "en": [
+          "beta-02",
+          "beta"
+        ],
+        "tr": [
+          "beta-02",
+          "beta"
+        ]
+      }
+    },
+    {
+      "qid": "s07_q2",
+      "nonumbers": true,
+      "kind": "argmin",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which server has the lowest cpu load?",
+        "tr": "answer tr cpu yükü en düşük olan sunucu hangisi?"
+      },
+      "visual": {
+        "en": [
+          "beta-02",
+          "beta"
+        ],
+        "tr": [
+          "beta-02",
+          "beta"
+        ]
+      },
+      "text": {
+        "en": [
+          "alpha-01",
+          "alpha"
+        ],
+        "tr": [
+          "alpha-01",
+          "alpha",
+          "alfa-01",
+          "alfa"
+        ]
+      }
+    },
+    {
+      "qid": "s07_q3a",
+      "nonumbers": true,
+      "kind": "threshold",
+      "pair": "s07_p1",
+      "prompt": {
+        "en": "answer en is the cpu load of gamma-03 above 80 percent?",
+        "tr": "answer tr gamma-03'ün cpu yükü yüzde 80'in üzerinde mi?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      }
+    },
+    {
+      "qid": "s07_q3b",
+      "nonumbers": true,
+      "kind": "threshold",
+      "pair": "s07_p1",
+      "prompt": {
+        "en": "answer en is the cpu load of gamma-03 below 80 percent?",
+        "tr": "answer tr gamma-03'ün cpu yükü yüzde 80'in altında mı?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      }
+    },
+    {
+      "qid": "s07_q4",
+      "nonumbers": false,
+      "kind": "read_value",
+      "pair": null,
+      "prompt": {
+        "en": "answer en what is the cpu load of alpha-01?",
+        "tr": "answer tr alpha-01'in cpu yükü yüzde kaç?"
+      },
+      "visual": {
+        "en": [
+          "38",
+          "^thirty-eight",
+          "^thirty eight",
+          "^thirty-eight percent",
+          "^thirty eight percent"
+        ],
+        "tr": [
+          "38",
+          "^otuz sekiz",
+          "^otuzsekiz",
+          "^yüzde otuz sekiz",
+          "^yüzde otuzsekiz"
+        ]
+      },
+      "text": {
+        "en": [
+          "15",
+          "^fifteen",
+          "^fifteen percent"
+        ],
+        "tr": [
+          "15",
+          "^on beş",
+          "^onbeş",
+          "^yüzde on beş",
+          "^yüzde onbeş"
+        ]
+      }
+    }
+  ],
+  "conflict_has_truth": false
+}

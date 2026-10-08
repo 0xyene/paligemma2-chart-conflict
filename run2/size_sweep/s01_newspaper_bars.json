@@ -1,0 +1,42 @@
+{
+  "sid": "s01_newspaper_bars",
+  "ok": false,
+  "script": "run2/size_sweep/s01_newspaper_bars.py",
+  "sizes": [
+    {
+      "k": 1,
+      "param": ".val font-size 15px",
+      "cue_px": 12,
+      "original": false,
+      "consistent": "run2/images/size/s01_newspaper_bars_consistent_en_s1.png",
+      "conflict": "run2/images/size/s01_newspaper_bars_conflict_en_s1.png"
+    },
+    {
+      "k": 2,
+      "param": ".val font-size 25px",
+      "cue_px": 19,
+      "original": true,
+      "consistent": "run2/images/size/s01_newspaper_bars_consistent_en_s2.png",
+      "conflict": "run2/images/size/s01_newspaper_bars_conflict_en_s2.png"
+    },
+    {
+      "k": 3,
+      "param": ".val font-size 37.5px",
+      "cue_px": 29,
+      "original": false,
+      "consistent": "run2/images/size/s01_newspaper_bars_consistent_en_s3.png",
+      "conflict": "run2/images/size/s01_newspaper_bars_conflict_en_s3.png"
+    },
+    {
+      "k": 4,
+      "param": ".val font-size 50px; Jan/Jun label x nudged 6 px inward",
+      "cue_px": 38,
+      "original": false,
+      "consistent": "run2/images/size/s01_newspaper_bars_consistent_en_s4.png",
+      "conflict": "run2/images/size/s01_newspaper_bars_conflict_en_s4.png"
+    }
+  ],
+  "identical_to_run1": true,
+  "outside_text_share": 0.0,
+  "notes": "s1: conflict labels look like consistent labels [4, 4, 3, 2, 1, 0], expected [5, 4, 3, 2, 1, 0] | cue_px by k: [12, 19, 29, 38] (run-1 cue_px 19); targets 0.6/1/1.5/2 x 19 = [11.4, 19, 28.5, 38]; ratios [0.632, 1.0, 1.526, 2.0] | run-1 max abs diff at original size: {'consistent': 0, 'conflict': 0}; k=2 HTML is byte-identical to make.page() and to run 1's build HTML | changed-pixel share outside the analytic label boxes dilated 3 px: {'s1_consistent': 0.0, 's1_conflict': 0.0, 's2_consistent': 0.0, 's2_conflict': 0.0, 's3_consistent': 0.0, 's3_conflict': 0.0, 's4_consistent': 0.0, 's4_conflict': 0.0}; changed pixel counts {'s1_consistent': 2967, 's1_conflict': 2987, 's2_consistent': 0, 's2_conflict': 0, 's3_consistent': 6453, 's3_conflict': 6458, 's4_consistent': 10903, 's4_conflict': 10806}; max abs diff vs run-1 nonumbers image outside each size's own label boxes: {'s1_consistent': 0, 's1_conflict': 0, 's2_consistent': 0, 's2_conflict': 0, 's3_consistent': 0, 's3_conflict': 0, 's4_consistent': 0, 's4_conflict': 0} | conflict label i best matches consistent label j (pixel template match) per k: {'s1': [4, 4, 3, 2, 1, 0], 's2': [5, 4, 3, 2, 1, 0], 's3': [5, 4, 3, 2, 1, 0], 's4': [5, 4, 3, 2, 1, 0]}; expected [5, 4, 3, 2, 1, 0] (values reversed, same as run 1) | placement (px, ink incl. anti-aliasing): {'s1_consistent': {'min_margin_svg': 26, 'min_gap_other_label': 65.2, 'min_gap_bar': 12.0, 'gap_own_bar': [11]}, 's1_conflict': {'min_margin_svg': 26, 'min_gap_other_label': 65.7, 'min_gap_bar': 12.0, 'gap_own_bar': [11]}, 's2_consistent': {'min_margin_svg': 18, 'min_gap_other_label': 48.6, 'min_gap_bar': 12.0, 'gap_own_bar': [11]}, 's2_conflict': {'min_margin_svg': 18, 'min_gap_other_label': 49.8, 'min_gap_bar': 12.0, 'gap_own_bar': [11]}, 's3_consistent': {'min_margin_svg': 8, 'min_gap_other_label': 28.3, 'min_gap_bar': 12.0, 'gap_own_bar': [11]}, 's3_conflict': {'min_margin_svg': 8, 'min_gap_other_label': 31.1, 'min_gap_bar': 12.0, 'gap_own_bar': [11]}, 's4_consistent': {'min_margin_svg': 3, 'min_gap_other_label': 8.1, 'min_gap_bar': 10.0, 'gap_own_bar': [11]}, 's4_conflict': {'min_margin_svg': 3, 'min_gap_other_label': 9.8, 'min_gap_bar': 10.0, 'gap_own_bar': [11]}}"
+}

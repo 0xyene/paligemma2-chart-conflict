@@ -1,0 +1,448 @@
+{
+  "id": "s11_finance_watchlist",
+  "title": {
+    "en": "Watchlist · 1 month (finance app)",
+    "tr": "İzleme listesi · 1 ay (finans uygulaması)"
+  },
+  "chart": "sparklines",
+  "style": "finance app watchlist (light web app)",
+  "tech": "HTML/CSS + inline SVG (headless Chrome)",
+  "mechanism": "label",
+  "conflict_summary": "Rows A–Z: sparklines of KDNL, MXRA and VESK end above their dashed start line, TLWY below (shared % scale; MXRA rises most, TLWY moves most). Consistent changes: KDNL +4.8%, MXRA +12.7%, TLWY −18.4%, VESK +7.5%. In conflict every printed sign is flipped (KDNL −4.8%, MXRA −12.7%, TLWY +18.4%, VESK −7.5%), so the printed winner is TLWY; magnitudes and last prices are identical, and the largest magnitude is the text winner's. Nonumbers: same page with the 1-month change pills left empty (tickers, names, last prices and sparklines unchanged), so every question is answered from the sparklines.",
+  "data": {
+    "tickers": [
+      "KDNL",
+      "MXRA",
+      "TLWY",
+      "VESK"
+    ],
+    "companies": [
+      "Korandel Metals",
+      "Mirexa Labs",
+      "Talnway Freight",
+      "Vesker Energy"
+    ],
+    "visual_change_pct": [
+      4.8,
+      12.7,
+      -18.4,
+      7.5
+    ],
+    "conflict_change_pct": [
+      -4.8,
+      -12.7,
+      18.4,
+      -7.5
+    ],
+    "last_price": [
+      132.4,
+      64.85,
+      88.05,
+      27.16
+    ],
+    "series_pct_from_start": {
+      "KDNL": [
+        0.0,
+        -0.57,
+        0.08,
+        -0.54,
+        0.88,
+        2.69,
+        3.33,
+        3.3,
+        3.89,
+        3.99,
+        3.64,
+        3.56,
+        4.12,
+        5.51,
+        6.41,
+        5.9,
+        4.2,
+        3.45,
+        3.21,
+        4.68,
+        4.8
+      ],
+      "MXRA": [
+        0.0,
+        0.12,
+        -1.91,
+        -2.25,
+        0.27,
+        2.1,
+        1.89,
+        2.95,
+        2.28,
+        6.0,
+        4.04,
+        2.4,
+        5.43,
+        6.84,
+        8.68,
+        10.2,
+        9.81,
+        11.49,
+        13.73,
+        13.67,
+        12.7
+      ],
+      "TLWY": [
+        0.0,
+        0.17,
+        2.2,
+        0.28,
+        -1.86,
+        -2.41,
+        -3.98,
+        -7.57,
+        -10.18,
+        -12.26,
+        -14.31,
+        -14.03,
+        -16.49,
+        -15.04,
+        -15.56,
+        -15.92,
+        -14.35,
+        -15.2,
+        -18.68,
+        -19.19,
+        -18.4
+      ],
+      "VESK": [
+        0.0,
+        0.85,
+        -1.02,
+        -0.68,
+        1.84,
+        0.43,
+        1.54,
+        1.22,
+        3.52,
+        3.38,
+        3.05,
+        5.49,
+        7.46,
+        7.45,
+        5.45,
+        3.85,
+        4.82,
+        5.81,
+        4.48,
+        6.43,
+        7.5
+      ]
+    },
+    "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+    "px_per_pct_shared": 4.913,
+    "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+    "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+    "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+    "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  },
+  "questions": [
+    {
+      "qid": "s11_q1",
+      "kind": "argmax",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en which stock gained the most over the past month?",
+        "tr": "answer tr son bir ayda en çok hangi hisse değer kazandı?"
+      },
+      "visual": {
+        "en": [
+          "mxra",
+          "mirexa"
+        ],
+        "tr": [
+          "mxra",
+          "mirexa"
+        ]
+      },
+      "text": {
+        "en": [
+          "tlwy",
+          "talnway"
+        ],
+        "tr": [
+          "tlwy",
+          "talnway"
+        ]
+      }
+    },
+    {
+      "qid": "s11_q2",
+      "kind": "trend",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en did tlwy go up or down over the past month?",
+        "tr": "answer tr tlwy son bir ayda yükseldi mi düştü mü?"
+      },
+      "visual": {
+        "en": [
+          "down",
+          "went down",
+          "decreased",
+          "decrease",
+          "decreases",
+          "decreasing",
+          "fell",
+          "fall",
+          "fallen",
+          "falling",
+          "dropped",
+          "drop",
+          "declined",
+          "decline",
+          "declining",
+          "downward",
+          "lower",
+          "lost",
+          "loss",
+          "negative"
+        ],
+        "tr": [
+          "azaldı",
+          "azalış",
+          "azalmış",
+          "azalıyor",
+          "azalan",
+          "düştü",
+          "düşmüş",
+          "düşüyor",
+          "düşüş",
+          "geriledi",
+          "aşağı",
+          "gerilemiş",
+          "kaybetti",
+          "kaybetmiş",
+          "kayıp",
+          "negatif",
+          "yükselmedi",
+          "yükselmemiş"
+        ]
+      },
+      "text": {
+        "en": [
+          "up",
+          "went up",
+          "increased",
+          "increase",
+          "increases",
+          "increasing",
+          "rose",
+          "rise",
+          "risen",
+          "rising",
+          "grew",
+          "grown",
+          "growing",
+          "upward",
+          "higher",
+          "gained",
+          "gain",
+          "climbed",
+          "positive"
+        ],
+        "tr": [
+          "arttı",
+          "artış",
+          "artmış",
+          "artıyor",
+          "artan",
+          "çoğaldı",
+          "yükseldi",
+          "yükselmiş",
+          "yükseliyor",
+          "yükseliş",
+          "yukarı",
+          "kazandı",
+          "kazanmış",
+          "pozitif",
+          "düşmedi",
+          "düşmemiş"
+        ]
+      }
+    },
+    {
+      "qid": "s11_q3a",
+      "kind": "count",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en how many of the four stocks went up over the past month?",
+        "tr": "answer tr son ayda dört hisseden kaçı yükseldi?"
+      },
+      "visual": {
+        "en": [
+          "3",
+          "^three",
+          "three stocks",
+          "three of them"
+        ],
+        "tr": [
+          "3",
+          "^üç",
+          "üçü",
+          "üç tane",
+          "üç hisse"
+        ]
+      },
+      "text": {
+        "en": [
+          "1",
+          "^one",
+          "only one",
+          "just one",
+          "one stock",
+          "one of them"
+        ],
+        "tr": [
+          "1",
+          "^bir",
+          "=bir",
+          "=tek",
+          "biri",
+          "=bir tane",
+          "=bir tanesi",
+          "=yalnızca bir",
+          "=sadece bir",
+          "yalnızca biri",
+          "sadece biri",
+          "=bir hisse"
+        ]
+      }
+    },
+    {
+      "qid": "s11_q3b",
+      "kind": "count",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en how many of the four stocks went down over the past month?",
+        "tr": "answer tr son ayda dört hisseden kaçı düştü?"
+      },
+      "visual": {
+        "en": [
+          "1",
+          "^one",
+          "only one",
+          "just one",
+          "one stock",
+          "one of them"
+        ],
+        "tr": [
+          "1",
+          "^bir",
+          "=bir",
+          "=tek",
+          "biri",
+          "=bir tane",
+          "=bir tanesi",
+          "=yalnızca bir",
+          "=sadece bir",
+          "yalnızca biri",
+          "sadece biri",
+          "=bir hisse"
+        ]
+      },
+      "text": {
+        "en": [
+          "3",
+          "^three",
+          "three stocks",
+          "three of them"
+        ],
+        "tr": [
+          "3",
+          "^üç",
+          "üçü",
+          "üç tane",
+          "üç hisse"
+        ]
+      }
+    },
+    {
+      "qid": "s11_q4a",
+      "kind": "compare",
+      "pair": "s11_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en did mxra go up over the past month?",
+        "tr": "answer tr mxra son bir ayda yükseldi mi?"
+      },
+      "visual": {
+        "en": [
+          "yes",
+          "up",
+          "rose"
+        ],
+        "tr": [
+          "evet",
+          "yükseldi",
+          "yükselmiş",
+          "düşmedi",
+          "düşmemiş"
+        ]
+      },
+      "text": {
+        "en": [
+          "no",
+          "down",
+          "fell"
+        ],
+        "tr": [
+          "hayır",
+          "^değil",
+          "düştü",
+          "düşmüş",
+          "yükselmedi",
+          "yükselmemiş"
+        ]
+      }
+    },
+    {
+      "qid": "s11_q4b",
+      "kind": "compare",
+      "pair": "s11_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en did mxra go down over the past month?",
+        "tr": "answer tr mxra son bir ayda düştü mü?"
+      },
+      "visual": {
+        "en": [
+          "no",
+          "up",
+          "rose"
+        ],
+        "tr": [
+          "hayır",
+          "^değil",
+          "yükseldi",
+          "yükselmiş",
+          "düşmedi",
+          "düşmemiş"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes",
+          "down",
+          "fell"
+        ],
+        "tr": [
+          "evet",
+          "düştü",
+          "düşmüş",
+          "yükselmedi",
+          "yükselmemiş"
+        ]
+      }
+    }
+  ],
+  "conflict_has_truth": false
+}

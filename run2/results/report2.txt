@@ -1,0 +1,107 @@
+run 2: 820 answers (0 missing of 820) · by test {('E1', '224'): 40, ('E1', '448'): 40, ('E2', '448'): 280, ('E2c', '448'): 140, ('E3', '224'): 160, ('E3', '448'): 160}
+
+E2c control (mix-448, 896→448 bicubic, en): 140 of 140 answers identical to run 1 (100%); prediction ≥ 95%
+
+E2 · same weights, less detail. Share of items that switched to the lying text (raw matcher for all three main rows,
+so they compare like for like; the adjudicated rows, run 2 included after its judge pass, are the report's numbers)
+                                                drawing q   how much      all  right on true
+mix-448 (run 1)                                      18%        91%      29%           60%   (drawing 21/118, 95% 7%–30%)
+mix-448 on 224-detail (run 2)                        15%        91%      27%           51%   (drawing 18/118, 95% 5%–28%)
+mix-224 (run 1)                                       5%        55%      12%           48%   (drawing 6/118, 95% 1%–10%)
+mix-448 (run 1, adjudicated)                         18%        91%      29%           60%   (drawing 21/118, 95% 7%–30%)
+mix-448 on 224-detail (run 2, adjudicated)           15%        91%      27%           51%   (drawing 18/118, 95% 5%–28%)
+mix-224 (run 1, adjudicated)                          7%        55%      14%           49%   (drawing 8/118, 95% 2%–14%)
+  charts, degraded-448 vs mix-448 (run 1) (all q): more 1, less 4, tied 9, sign test p = 0.375
+  charts, degraded-448 vs mix-448 (run 1) (drawing q): more 1, less 4, tied 9, sign test p = 0.375
+  charts, degraded-448 vs mix-224 (run 1) (all q): more 9, less 0, tied 5, sign test p = 0.004
+  charts, degraded-448 vs mix-224 (run 1) (drawing q): more 5, less 0, tied 9, sign test p = 0.062
+  degrading closes 20% of the 448–224 gap on drawing questions (0% = checkpoint explains it, 100% = detail does)
+  on 'how much' lie-quoting it closes 0% of the gap
+  adjudicated rows: degrading closes 23% of the gap on drawing questions
+  drawing q, degraded − mix-224: +8.5% (chart bootstrap 95% +2.5% to +15.8%)
+  drawing q, mix-448 − degraded: +2.5% (chart bootstrap 95% -0.9% to +5.9%)
+
+E1 · scale-reading probe (s02 flipped y axis, s12 reversed x axis, s10 reversed legend)
+model                                                             224                                                                         448                                                                           
+cond                                                         conflict                            consistent                              conflict                           consistent                                      
+lang                                                               en           tr                       en           tr                       en          tr                       en                                    tr
+stimulus                   qid    probe_kind                                                                                                                                                                                
+s02_magazine_line_inverted s02_p1 read                            600          500                      600          600                      500         500                      600                                   600
+                           s02_p2 read                            500            0                      100            0                      500        2018                        0                                  2018
+                           s02_p3 through                         800          500                      800         2000                      300         200                      500  2021'de 25 bisiklet hırsızlığı bildi
+                           s02_p4 through                         180        1,540                      180          140                      450          25                      450                                   258
+s10_report_tilemap         s10_p1 read                             50            5                       50            5                       80          80                       80                                    80
+                           s10_p2 read_word   air quality by district  galatasaray  air quality by district  galatasaray  calderford city council  calderford  calderford city council                            calderford
+                           s10_p3 through                          10           10                       20           20                       10          50                       10                                    40
+s12_textbook_scatter       s12_p1 read                              0            0                        0            0                        0          14                        0                                     0
+                           s12_p2 read                              0            0                       14           14                        0           0                       14                                    14
+                           s12_p3 through                           6            4                        6         2 km                        4           2                        4                                     0
+
+classified: reading questions (right / habit = the normal-axis label / other)
+e1                habit  other  right
+model cond                           
+224   conflict        4      6      2
+      consistent      0      5      7
+448   conflict        3      6      3
+      consistent      0      3      9
+read-through questions on the flipped version (axis = used the printed scale, shape = read the mark on a normal scale)
+e1                axis  other  right  shape
+model cond                                 
+224   conflict       2      4      0      2
+      consistent     0      6      2      0
+448   conflict       3      5      0      0
+      consistent     0      6      2      0
+
+E3 · digit-size sweep (en). Per chart and size: drawing questions switched / how-much lie quoted
+model                 stimulus  k  cue_px  eff_px  draw_sw  draw_n  hm_lie  hm_n  right_true
+  224       s01_newspaper_bars  1      12    3.00        0       4       0     1         0.4
+  224       s01_newspaper_bars  2      19    4.75        0       4       0     1         0.4
+  224       s01_newspaper_bars  3      29    7.25        0       4       0     1         0.4
+  224       s01_newspaper_bars  4      38    9.50        0       4       0     1         0.6
+  224      s06_tv_thermometers  1      19    4.75        1       4       1     1         0.2
+  224      s06_tv_thermometers  2      28    7.00        1       4       1     1         0.4
+  224      s06_tv_thermometers  3      38    9.50        0       4       1     1         0.2
+  224      s06_tv_thermometers  4      47   11.75        1       4       1     1         0.6
+  224       s13_widget_battery  1      17    4.25        2       4       0     1         1.0
+  224       s13_widget_battery  2      27    6.75        0       4       1     1         1.0
+  224       s13_widget_battery  3      33    8.25        1       4       1     1         0.8
+  224       s13_widget_battery  4      37    9.25        1       4       1     1         0.6
+  224 s14_spreadsheet_databars  1      12    3.00        0       4       0     1         0.4
+  224 s14_spreadsheet_databars  2      20    5.00        0       4       1     1         0.4
+  224 s14_spreadsheet_databars  3      28    7.00        0       4       1     1         0.4
+  224 s14_spreadsheet_databars  4      36    9.00        0       4       1     1         0.4
+  448       s01_newspaper_bars  1      12    6.00        0       4       1     1         0.8
+  448       s01_newspaper_bars  2      19    9.50        0       4       1     1         0.8
+  448       s01_newspaper_bars  3      29   14.50        0       4       1     1         0.8
+  448       s01_newspaper_bars  4      38   19.00        0       4       1     1         0.8
+  448      s06_tv_thermometers  1      19    9.50        3       4       1     1         0.8
+  448      s06_tv_thermometers  2      28   14.00        3       4       1     1         0.8
+  448      s06_tv_thermometers  3      38   19.00        3       4       1     1         0.8
+  448      s06_tv_thermometers  4      47   23.50        3       4       1     1         0.8
+  448       s13_widget_battery  1      17    8.50        3       4       1     1         0.8
+  448       s13_widget_battery  2      27   13.50        2       4       1     1         0.8
+  448       s13_widget_battery  3      33   16.50        3       4       1     1         0.8
+  448       s13_widget_battery  4      37   18.50        3       4       1     1         0.8
+  448 s14_spreadsheet_databars  1      12    6.00        0       4       1     1         0.2
+  448 s14_spreadsheet_databars  2      20   10.00        0       4       1     1         0.2
+  448 s14_spreadsheet_databars  3      28   14.00        0       4       1     1         0.2
+  448 s14_spreadsheet_databars  4      36   18.00        0       4       1     1         0.2
+  224: pooled over charts by size level k: drawing k1 3/16, k2 1/16, k3 1/16, k4 2/16 · how-much k1 1/4, k2 3/4, k3 3/4, k4 3/4
+  224: within-chart trend of drawing switches with size: 0 charts up, 2 down, 2 flat; mean ρ = -0.14
+  448: pooled over charts by size level k: drawing k1 6/16, k2 5/16, k3 6/16, k4 6/16 · how-much k1 4/4, k2 4/4, k3 4/4, k4 4/4
+  448: within-chart trend of drawing switches with size: 1 charts up, 0 down, 3 flat; mean ρ = 0.06
+
+119 answers scored 'something else' → unmatched2.csv (check for near-misses before quoting)
+
+ADDED AFTER SEEING THE ANSWERS (not pre-registered)
+E2: on scored outcomes the run-1 models differed on 83 of 280 pairs; degraded mix-448 matched mix-448 63, mix-224 16, neither 4
+E2: share of the drawing-question gap closed 95% chart-bootstrap interval -11% to 60%
+E2: answer habits (all 280 E2 image-question pairs): 448d yes 101 no 12 unanswerable 11 · 448 yes 84 no 28 unanswerable 2 · 224 yes 85 no 26 unanswerable 0
+E2: run-1 mix-448 and mix-224 answered differently on 118 of 280 (image, question) pairs; there degraded mix-448 gave mix-448's answer 75 times, mix-224's 7, something else 36
+E2: right on the true chart, drawing questions: 448 65/118 (55%) · 448d 55/118 (47%) · 224 55/118 (47%) | how much: 448 19/22 · 448d 17/22 · 224 13/22
+   accuracy, drawing q, mix-448 − degraded: +8.5% (chart bootstrap 95% +2.6% to +14.2%)
+   accuracy, drawing q, degraded − mix-224: +0.0% (chart bootstrap 95% -9.6% to +9.8%)
+E1: scale versions read right end to end (all numeric reading probes right): normal 8/12, flipped 1/12 (pairs: normal only 7, flipped only 0; exact McNemar p = 0.016, descriptive, 3 charts)
+E1: axes only (s02, s12): read end to end normal [6, 8], flipped [1, 8]; answers that changed when the labels flipped 10 of 20
+E1: the word probe (s10, 'what word is at the top of the legend?') failed on both versions: answers name the page title or a club, so it is left out
+E3: original-size images (pixel-identical to run 1): 80 of 80 answers identical to run 1 (both models)

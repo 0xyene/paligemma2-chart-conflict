@@ -1,0 +1,331 @@
+{
+  "id": "s12_textbook_scatter",
+  "title": {
+    "en": "Distance to school vs exam score (textbook exercise)",
+    "tr": "Okula uzaklık ve sınav puanı (ders kitabı alıştırması)"
+  },
+  "chart": "scatter plot",
+  "style": "textbook exercise page",
+  "tech": "Canvas 2D (inline JS, headless Chrome)",
+  "mechanism": "axis",
+  "conflict_summary": "20 dots fall from top-left to bottom-right on a 0–14 km axis (negative); in conflict the x tick labels run 14 → 0 left to right, so the same dots encode a positive relationship. Any everyday prior (long commute → lower score) sides with the visual answer, so text wins are conservative.",
+  "data": {
+    "x_variable": "distance from home to school (km)",
+    "y_variable": "final exam score (0–100)",
+    "n_students": 20,
+    "dot_x_km_on_consistent_axis": [
+      2.0,
+      1.5,
+      2.5,
+      3.0,
+      3.5,
+      4.5,
+      5.0,
+      5.5,
+      6.5,
+      7.0,
+      7.5,
+      8.0,
+      9.0,
+      9.5,
+      10.0,
+      11.0,
+      11.5,
+      12.0,
+      12.5,
+      13.5
+    ],
+    "score": [
+      91,
+      84,
+      88,
+      77,
+      85,
+      74,
+      82,
+      69,
+      75,
+      64,
+      73,
+      61,
+      68,
+      56,
+      64,
+      54,
+      60,
+      49,
+      55,
+      46
+    ],
+    "conflict_truth_km": [
+      12.0,
+      12.5,
+      11.5,
+      11.0,
+      10.5,
+      9.5,
+      9.0,
+      8.5,
+      7.5,
+      7.0,
+      6.5,
+      6.0,
+      5.0,
+      4.5,
+      4.0,
+      3.0,
+      2.5,
+      2.0,
+      1.5,
+      0.5
+    ],
+    "x_tick_positions": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "x_tick_labels": {
+      "consistent": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14
+      ],
+      "conflict": [
+        14,
+        12,
+        10,
+        8,
+        6,
+        4,
+        2,
+        0
+      ],
+      "nonumbers": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "y_axis": [
+      35,
+      100
+    ],
+    "slope_points_per_km": {
+      "consistent": -3.3,
+      "conflict": 3.3
+    },
+    "r": {
+      "consistent": -0.936,
+      "conflict": 0.936
+    },
+    "farthest_student_score": {
+      "consistent": 46,
+      "conflict": 84
+    },
+    "top_scorer_km": {
+      "consistent": 2,
+      "conflict": 12
+    }
+  },
+  "questions": [
+    {
+      "qid": "s12_q1",
+      "kind": "compare",
+      "pair": "s12_p1",
+      "prompt": {
+        "en": "answer en do students who live farther from school score higher?",
+        "tr": "answer tr okula daha uzak oturan öğrenciler daha yüksek puan alıyor mu?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s12_q2",
+      "kind": "relation",
+      "pair": null,
+      "prompt": {
+        "en": "answer en is the correlation between distance and score positive or negative?",
+        "tr": "answer tr uzaklık ile puan arasındaki korelasyon pozitif mi negatif mi?"
+      },
+      "visual": {
+        "en": [
+          "negative",
+          "negatively",
+          "inverse",
+          "inversely",
+          "decreasing",
+          "decreases",
+          "decrease",
+          "downward",
+          "down"
+        ],
+        "tr": [
+          "negatif",
+          "olumsuz",
+          "ters orantı",
+          "ters",
+          "azalan",
+          "azal",
+          "düş",
+          "aşağı"
+        ]
+      },
+      "text": {
+        "en": [
+          "positive",
+          "positively",
+          "direct",
+          "directly",
+          "increasing",
+          "increases",
+          "increase",
+          "upward",
+          "up"
+        ],
+        "tr": [
+          "pozitif",
+          "olumlu",
+          "doğru orantı",
+          "artan",
+          "artı",
+          "artm",
+          "artar",
+          "yüksel",
+          "yukarı"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s12_q3",
+      "kind": "relation",
+      "pair": null,
+      "prompt": {
+        "en": "answer en is the score of the student farthest from school low or high?",
+        "tr": "answer tr okula en uzak oturan öğrencinin puanı düşük mü yüksek mi?"
+      },
+      "visual": {
+        "en": [
+          "low",
+          "lower",
+          "lowest",
+          "poor",
+          "bad",
+          "46"
+        ],
+        "tr": [
+          "düşük",
+          "az",
+          "kötü",
+          "46"
+        ]
+      },
+      "text": {
+        "en": [
+          "high",
+          "higher",
+          "highest",
+          "good",
+          "84"
+        ],
+        "tr": [
+          "yüksek",
+          "fazla",
+          "iyi",
+          "84"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s12_q4",
+      "kind": "compare",
+      "pair": "s12_p1",
+      "prompt": {
+        "en": "answer en do students who live farther from school score lower?",
+        "tr": "answer tr okula daha uzak oturan öğrenciler daha düşük puan alıyor mu?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s12_q5",
+      "kind": "read_value",
+      "pair": null,
+      "prompt": {
+        "en": "answer en how many km from school does the top scorer live?",
+        "tr": "answer tr en yüksek puanı alan öğrenci okula kaç km uzakta?"
+      },
+      "visual": {
+        "en": [
+          "2",
+          "^two"
+        ],
+        "tr": [
+          "2",
+          "^iki"
+        ]
+      },
+      "text": {
+        "en": [
+          "12",
+          "^twelve"
+        ],
+        "tr": [
+          "12",
+          "^on iki",
+          "^oniki"
+        ]
+      },
+      "nonumbers": false
+    }
+  ],
+  "conflict_has_truth": true
+}

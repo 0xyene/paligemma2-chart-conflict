@@ -1,0 +1,193 @@
+{
+  "id": "s05_poster_pictogram",
+  "title": {
+    "en": "Trees planted by each school (school poster)",
+    "tr": "Okulların diktiği ağaçlar (okul afişi)"
+  },
+  "chart": "pictogram (isotype)",
+  "style": "school poster pinned to a cork board",
+  "tech": "HTML/CSS + inline SVG icons (<symbol>/<use>) + SVG feTurbulence textures (headless Chrome)",
+  "mechanism": "label",
+  "conflict_summary": "Icon rows (top to bottom) show Aster 5, Mira 3, Nova 2, Lumen 8 trees (x10); in conflict the printed row totals read Aster 20, Mira 80, Nova 50, Lumen 30.",
+  "data": {
+    "schools": [
+      "Aster",
+      "Mira",
+      "Nova",
+      "Lumen"
+    ],
+    "icons": [
+      5,
+      3,
+      2,
+      8
+    ],
+    "per_icon": 10,
+    "visual": [
+      50,
+      30,
+      20,
+      80
+    ],
+    "conflict_labels": [
+      20,
+      80,
+      50,
+      30
+    ],
+    "q2_icon_count": {
+      "en": [
+        "5",
+        "^five"
+      ],
+      "tr": [
+        "5",
+        "^beş"
+      ]
+    },
+    "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  },
+  "questions": [
+    {
+      "qid": "s05_q1",
+      "kind": "argmax",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en which school planted the most trees?",
+        "tr": "answer tr en çok ağacı hangi okul dikti?"
+      },
+      "visual": {
+        "en": [
+          "lumen"
+        ],
+        "tr": [
+          "lumen"
+        ]
+      },
+      "text": {
+        "en": [
+          "mira"
+        ],
+        "tr": [
+          "mira"
+        ]
+      }
+    },
+    {
+      "qid": "s05_q2",
+      "kind": "read_value",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en how many trees did aster school plant?",
+        "tr": "answer tr aster okulu kaç ağaç dikti?"
+      },
+      "visual": {
+        "en": [
+          "50",
+          "^fifty"
+        ],
+        "tr": [
+          "50",
+          "^elli"
+        ]
+      },
+      "text": {
+        "en": [
+          "20",
+          "^twenty"
+        ],
+        "tr": [
+          "20",
+          "^yirmi"
+        ]
+      }
+    },
+    {
+      "qid": "s05_q3a",
+      "kind": "compare",
+      "pair": "s05_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en did mira school plant more trees than lumen school?",
+        "tr": "answer tr mira okulu, lumen okulundan daha fazla ağaç dikti mi?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil",
+          "^dikmedi"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet",
+          "^dikti"
+        ]
+      }
+    },
+    {
+      "qid": "s05_q3b",
+      "kind": "compare",
+      "pair": "s05_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en did mira school plant fewer trees than lumen school?",
+        "tr": "answer tr mira okulu, lumen okulundan daha az ağaç dikti mi?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet",
+          "^dikti"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil",
+          "^dikmedi"
+        ]
+      }
+    },
+    {
+      "qid": "s05_q4",
+      "kind": "argmin",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en which school planted the fewest trees?",
+        "tr": "answer tr en az ağacı hangi okul dikti?"
+      },
+      "visual": {
+        "en": [
+          "nova"
+        ],
+        "tr": [
+          "nova"
+        ]
+      },
+      "text": {
+        "en": [
+          "aster"
+        ],
+        "tr": [
+          "aster"
+        ]
+      }
+    }
+  ],
+  "conflict_has_truth": false
+}

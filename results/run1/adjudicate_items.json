@@ -1,0 +1,8893 @@
+[
+ {
+  "item": 1,
+  "qid": "s01_q2",
+  "lang": "en",
+  "prompt": "answer en in which month were the most loaves sold?",
+  "answer": "may",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "june",
+   "jun"
+  ],
+  "text_answer": [
+   "january",
+   "jan"
+  ],
+  "chart": "newspaper page · column bars",
+  "names_in_chart": {
+   "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun"
+   ],
+   "visual": [
+    120,
+    210,
+    330,
+    420,
+    540,
+    640
+   ],
+   "conflict_labels": [
+    640,
+    540,
+    420,
+    330,
+    210,
+    120
+   ]
+  }
+ },
+ {
+  "item": 2,
+  "qid": "s01_q2",
+  "lang": "tr",
+  "prompt": "answer tr en çok ekmek hangi ayda satıldı?",
+  "answer": "may",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 6,
+  "drawing_answer": [
+   "june",
+   "jun",
+   "haziran",
+   "=haz"
+  ],
+  "text_answer": [
+   "january",
+   "jan",
+   "ocak",
+   "=oca"
+  ],
+  "chart": "newspaper page · column bars",
+  "names_in_chart": {
+   "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun"
+   ],
+   "visual": [
+    120,
+    210,
+    330,
+    420,
+    540,
+    640
+   ],
+   "conflict_labels": [
+    640,
+    540,
+    420,
+    330,
+    210,
+    120
+   ]
+  }
+ },
+ {
+  "item": 3,
+  "qid": "s01_q4",
+  "lang": "en",
+  "prompt": "answer en how many loaves were sold in june?",
+  "answer": "330",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "640",
+   "^six hundred forty",
+   "^six hundred and forty"
+  ],
+  "text_answer": [
+   "120",
+   "^one hundred twenty",
+   "^one hundred and twenty"
+  ],
+  "chart": "newspaper page · column bars",
+  "names_in_chart": {
+   "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun"
+   ],
+   "visual": [
+    120,
+    210,
+    330,
+    420,
+    540,
+    640
+   ],
+   "conflict_labels": [
+    640,
+    540,
+    420,
+    330,
+    210,
+    120
+   ]
+  }
+ },
+ {
+  "item": 4,
+  "qid": "s01_q4",
+  "lang": "tr",
+  "prompt": "answer tr haziranda kaç ekmek satıldı?",
+  "answer": "420",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "640",
+   "^six hundred forty",
+   "^six hundred and forty",
+   "640",
+   "^altı yüz kırk",
+   "^altıyüz kırk",
+   "^altıyüzkırk"
+  ],
+  "text_answer": [
+   "120",
+   "^one hundred twenty",
+   "^one hundred and twenty",
+   "120",
+   "^yüz yirmi",
+   "^yüzyirmi"
+  ],
+  "chart": "newspaper page · column bars",
+  "names_in_chart": {
+   "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun"
+   ],
+   "visual": [
+    120,
+    210,
+    330,
+    420,
+    540,
+    640
+   ],
+   "conflict_labels": [
+    640,
+    540,
+    420,
+    330,
+    210,
+    120
+   ]
+  }
+ },
+ {
+  "item": 5,
+  "qid": "s01_q4",
+  "lang": "tr",
+  "prompt": "answer tr haziranda kaç ekmek satıldı?",
+  "answer": "540",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "640",
+   "^six hundred forty",
+   "^six hundred and forty",
+   "640",
+   "^altı yüz kırk",
+   "^altıyüz kırk",
+   "^altıyüzkırk"
+  ],
+  "text_answer": [
+   "120",
+   "^one hundred twenty",
+   "^one hundred and twenty",
+   "120",
+   "^yüz yirmi",
+   "^yüzyirmi"
+  ],
+  "chart": "newspaper page · column bars",
+  "names_in_chart": {
+   "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun"
+   ],
+   "visual": [
+    120,
+    210,
+    330,
+    420,
+    540,
+    640
+   ],
+   "conflict_labels": [
+    640,
+    540,
+    420,
+    330,
+    210,
+    120
+   ]
+  }
+ },
+ {
+  "item": 6,
+  "qid": "s02_q2",
+  "lang": "en",
+  "prompt": "answer en in which year were the most bicycle thefts reported?",
+  "answer": "2021",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "2025"
+  ],
+  "text_answer": [
+   "2018"
+  ],
+  "chart": "news-site article page, dark theme · line with markers",
+  "names_in_chart": {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "visual": [
+    180,
+    260,
+    240,
+    330,
+    380,
+    360,
+    450,
+    520
+   ],
+   "conflict_truth": [
+    420,
+    340,
+    360,
+    270,
+    220,
+    240,
+    150,
+    80
+   ],
+   "y_tick_positions": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600
+   ],
+   "conflict_tick_labels_bottom_to_top": [
+    600,
+    500,
+    400,
+    300,
+    200,
+    100,
+    0
+   ],
+   "nonumbers": "y tick labels hidden; gridlines, year labels and all other text unchanged"
+  }
+ },
+ {
+  "item": 7,
+  "qid": "s02_q2",
+  "lang": "tr",
+  "prompt": "answer tr en çok bisiklet hırsızlığı hangi yıl bildirildi?",
+  "answer": "2021",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "2025",
+   "2025"
+  ],
+  "text_answer": [
+   "2018",
+   "2018"
+  ],
+  "chart": "news-site article page, dark theme · line with markers",
+  "names_in_chart": {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "visual": [
+    180,
+    260,
+    240,
+    330,
+    380,
+    360,
+    450,
+    520
+   ],
+   "conflict_truth": [
+    420,
+    340,
+    360,
+    270,
+    220,
+    240,
+    150,
+    80
+   ],
+   "y_tick_positions": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600
+   ],
+   "conflict_tick_labels_bottom_to_top": [
+    600,
+    500,
+    400,
+    300,
+    200,
+    100,
+    0
+   ],
+   "nonumbers": "y tick labels hidden; gridlines, year labels and all other text unchanged"
+  }
+ },
+ {
+  "item": 8,
+  "qid": "s02_q3",
+  "lang": "en",
+  "prompt": "answer en in which year were the fewest bicycle thefts reported?",
+  "answer": "2021",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "2018"
+  ],
+  "text_answer": [
+   "2025"
+  ],
+  "chart": "news-site article page, dark theme · line with markers",
+  "names_in_chart": {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "visual": [
+    180,
+    260,
+    240,
+    330,
+    380,
+    360,
+    450,
+    520
+   ],
+   "conflict_truth": [
+    420,
+    340,
+    360,
+    270,
+    220,
+    240,
+    150,
+    80
+   ],
+   "y_tick_positions": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600
+   ],
+   "conflict_tick_labels_bottom_to_top": [
+    600,
+    500,
+    400,
+    300,
+    200,
+    100,
+    0
+   ],
+   "nonumbers": "y tick labels hidden; gridlines, year labels and all other text unchanged"
+  }
+ },
+ {
+  "item": 9,
+  "qid": "s02_q3",
+  "lang": "en",
+  "prompt": "answer en in which year were the fewest bicycle thefts reported?",
+  "answer": "2022",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "2018"
+  ],
+  "text_answer": [
+   "2025"
+  ],
+  "chart": "news-site article page, dark theme · line with markers",
+  "names_in_chart": {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "visual": [
+    180,
+    260,
+    240,
+    330,
+    380,
+    360,
+    450,
+    520
+   ],
+   "conflict_truth": [
+    420,
+    340,
+    360,
+    270,
+    220,
+    240,
+    150,
+    80
+   ],
+   "y_tick_positions": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600
+   ],
+   "conflict_tick_labels_bottom_to_top": [
+    600,
+    500,
+    400,
+    300,
+    200,
+    100,
+    0
+   ],
+   "nonumbers": "y tick labels hidden; gridlines, year labels and all other text unchanged"
+  }
+ },
+ {
+  "item": 10,
+  "qid": "s02_q3",
+  "lang": "tr",
+  "prompt": "answer tr en az bisiklet hırsızlığı hangi yıl bildirildi?",
+  "answer": "2021",
+  "conds": [
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "2018",
+   "2018"
+  ],
+  "text_answer": [
+   "2025",
+   "2025"
+  ],
+  "chart": "news-site article page, dark theme · line with markers",
+  "names_in_chart": {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "visual": [
+    180,
+    260,
+    240,
+    330,
+    380,
+    360,
+    450,
+    520
+   ],
+   "conflict_truth": [
+    420,
+    340,
+    360,
+    270,
+    220,
+    240,
+    150,
+    80
+   ],
+   "y_tick_positions": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600
+   ],
+   "conflict_tick_labels_bottom_to_top": [
+    600,
+    500,
+    400,
+    300,
+    200,
+    100,
+    0
+   ],
+   "nonumbers": "y tick labels hidden; gridlines, year labels and all other text unchanged"
+  }
+ },
+ {
+  "item": 11,
+  "qid": "s02_q4a",
+  "lang": "tr",
+  "prompt": "answer tr 2025'te 2018'den daha fazla bisiklet hırsızlığı bildirildi mi?",
+  "answer": "2025'te 2018'den daha fazla bisiklet",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "yes",
+   "evet"
+  ],
+  "text_answer": [
+   "no",
+   "hayır",
+   "^değil"
+  ],
+  "chart": "news-site article page, dark theme · line with markers",
+  "names_in_chart": {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "visual": [
+    180,
+    260,
+    240,
+    330,
+    380,
+    360,
+    450,
+    520
+   ],
+   "conflict_truth": [
+    420,
+    340,
+    360,
+    270,
+    220,
+    240,
+    150,
+    80
+   ],
+   "y_tick_positions": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600
+   ],
+   "conflict_tick_labels_bottom_to_top": [
+    600,
+    500,
+    400,
+    300,
+    200,
+    100,
+    0
+   ],
+   "nonumbers": "y tick labels hidden; gridlines, year labels and all other text unchanged"
+  }
+ },
+ {
+  "item": 12,
+  "qid": "s03_q1",
+  "lang": "en",
+  "prompt": "answer en which brand has the largest market share?",
+  "answer": "nokia",
+  "conds": [
+   "conflict",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "nimbus"
+  ],
+  "text_answer": [
+   "zento"
+  ],
+  "chart": "corporate presentation slide · donut",
+  "names_in_chart": {
+   "brands": [
+    "Nimbus",
+    "Orca",
+    "Pixa",
+    "Zento"
+   ],
+   "visual": [
+    46,
+    27,
+    17,
+    10
+   ],
+   "conflict_labels": [
+    10,
+    17,
+    27,
+    46
+   ],
+   "slice_order": "clockwise from 12 o'clock",
+   "colors": {
+    "Nimbus": "#4a86ad",
+    "Orca": "#2c3a86",
+    "Pixa": "#c2bba9",
+    "Zento": "#8f88c6"
+   }
+  }
+ },
+ {
+  "item": 13,
+  "qid": "s03_q1",
+  "lang": "tr",
+  "prompt": "answer tr en büyük pazar payına hangi marka sahip?",
+  "answer": "samsung",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "nimbus",
+   "nimbus"
+  ],
+  "text_answer": [
+   "zento",
+   "zento"
+  ],
+  "chart": "corporate presentation slide · donut",
+  "names_in_chart": {
+   "brands": [
+    "Nimbus",
+    "Orca",
+    "Pixa",
+    "Zento"
+   ],
+   "visual": [
+    46,
+    27,
+    17,
+    10
+   ],
+   "conflict_labels": [
+    10,
+    17,
+    27,
+    46
+   ],
+   "slice_order": "clockwise from 12 o'clock",
+   "colors": {
+    "Nimbus": "#4a86ad",
+    "Orca": "#2c3a86",
+    "Pixa": "#c2bba9",
+    "Zento": "#8f88c6"
+   }
+  }
+ },
+ {
+  "item": 14,
+  "qid": "s03_q2",
+  "lang": "en",
+  "prompt": "answer en which brand has the smallest market share?",
+  "answer": "orca",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "zento"
+  ],
+  "text_answer": [
+   "nimbus"
+  ],
+  "chart": "corporate presentation slide · donut",
+  "names_in_chart": {
+   "brands": [
+    "Nimbus",
+    "Orca",
+    "Pixa",
+    "Zento"
+   ],
+   "visual": [
+    46,
+    27,
+    17,
+    10
+   ],
+   "conflict_labels": [
+    10,
+    17,
+    27,
+    46
+   ],
+   "slice_order": "clockwise from 12 o'clock",
+   "colors": {
+    "Nimbus": "#4a86ad",
+    "Orca": "#2c3a86",
+    "Pixa": "#c2bba9",
+    "Zento": "#8f88c6"
+   }
+  }
+ },
+ {
+  "item": 15,
+  "qid": "s03_q2",
+  "lang": "tr",
+  "prompt": "answer tr en küçük pazar payına hangi marka sahip?",
+  "answer": "orca",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 6,
+  "drawing_answer": [
+   "zento",
+   "zento"
+  ],
+  "text_answer": [
+   "nimbus",
+   "nimbus"
+  ],
+  "chart": "corporate presentation slide · donut",
+  "names_in_chart": {
+   "brands": [
+    "Nimbus",
+    "Orca",
+    "Pixa",
+    "Zento"
+   ],
+   "visual": [
+    46,
+    27,
+    17,
+    10
+   ],
+   "conflict_labels": [
+    10,
+    17,
+    27,
+    46
+   ],
+   "slice_order": "clockwise from 12 o'clock",
+   "colors": {
+    "Nimbus": "#4a86ad",
+    "Orca": "#2c3a86",
+    "Pixa": "#c2bba9",
+    "Zento": "#8f88c6"
+   }
+  }
+ },
+ {
+  "item": 16,
+  "qid": "s04_q1",
+  "lang": "en",
+  "prompt": "answer en which app was used the most this week?",
+  "answer": "don't",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "gisano"
+  ],
+  "text_answer": [
+   "libezu"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 17,
+  "qid": "s04_q1",
+  "lang": "en",
+  "prompt": "answer en which app was used the most this week?",
+  "answer": "dorvi",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "gisano"
+  ],
+  "text_answer": [
+   "libezu"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 18,
+  "qid": "s04_q1",
+  "lang": "tr",
+  "prompt": "answer tr bu hafta en çok hangi uygulama kullanıldı?",
+  "answer": "davi",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "gisano",
+   "gisano"
+  ],
+  "text_answer": [
+   "libezu",
+   "libezu"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 19,
+  "qid": "s04_q1",
+  "lang": "tr",
+  "prompt": "answer tr bu hafta en çok hangi uygulama kullanıldı?",
+  "answer": "instagram",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "gisano",
+   "gisano"
+  ],
+  "text_answer": [
+   "libezu",
+   "libezu"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 20,
+  "qid": "s04_q1",
+  "lang": "tr",
+  "prompt": "answer tr bu hafta en çok hangi uygulama kullanıldı?",
+  "answer": "unanswerable",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "gisano",
+   "gisano"
+  ],
+  "text_answer": [
+   "libezu",
+   "libezu"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 21,
+  "qid": "s04_q2",
+  "lang": "en",
+  "prompt": "answer en which app was used the least this week?",
+  "answer": "tova",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "libezu"
+  ],
+  "text_answer": [
+   "gisano"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 22,
+  "qid": "s04_q2",
+  "lang": "en",
+  "prompt": "answer en which app was used the least this week?",
+  "answer": "tovra",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "libezu"
+  ],
+  "text_answer": [
+   "gisano"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 23,
+  "qid": "s04_q2",
+  "lang": "tr",
+  "prompt": "answer tr bu hafta en az hangi uygulama kullanıldı?",
+  "answer": "no",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "libezu",
+   "libezu"
+  ],
+  "text_answer": [
+   "gisano",
+   "gisano"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 24,
+  "qid": "s04_q2",
+  "lang": "tr",
+  "prompt": "answer tr bu hafta en az hangi uygulama kullanıldı?",
+  "answer": "Üzerinde soruya cevap vermeye çalışan bir grup insan.",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "libezu",
+   "libezu"
+  ],
+  "text_answer": [
+   "gisano",
+   "gisano"
+  ],
+  "chart": "phone app screenshot, dark UI · horizontal bars",
+  "names_in_chart": {
+   "apps": [
+    "Dorvi",
+    "Gisano",
+    "Kuvelo",
+    "Libezu",
+    "Tovra"
+   ],
+   "visual_minutes": [
+    150,
+    580,
+    430,
+    65,
+    260
+   ],
+   "conflict_label_minutes": [
+    430,
+    65,
+    150,
+    580,
+    260
+   ],
+   "visual_labels": {
+    "en": [
+     "2h 30m",
+     "9h 40m",
+     "7h 10m",
+     "1h 5m",
+     "4h 20m"
+    ],
+    "tr": [
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "conflict_labels": {
+    "en": [
+     "7h 10m",
+     "1h 5m",
+     "2h 30m",
+     "9h 40m",
+     "4h 20m"
+    ],
+    "tr": [
+     "7 sa 10 dk",
+     "1 sa 5 dk",
+     "2 sa 30 dk",
+     "9 sa 40 dk",
+     "4 sa 20 dk"
+    ]
+   },
+   "total_minutes": 1485,
+   "daily_average_minutes": 212,
+   "icons": "neutral monograms (white first letter on a coloured squircle); no category glyphs",
+   "row_order": "A–Z, stated on the page by a 'Sort: A–Z' / 'Sırala: A–Z' chip",
+   "position_checks": {
+    "rows_alphabetical": true,
+    "every_question_differs": true,
+    "extremes_not_first_or_last_row": true,
+    "q1_q2_cues_two_rows_apart": true,
+    "q3_visually_larger_is_lower_row": true,
+    "q4_visual_time_printed_two_rows_away": true,
+    "q4_visual_time_row_not_first_or_last": true,
+    "hour_digits_distinct": true,
+    "columns_not_monotone": true,
+    "conflict_is_not_row_reversal": true,
+    "names_no_prefix_clash": true
+   },
+   "position_note": "Extremes (Gisano/Libezu) sit in rows 2 and 4; top and bottom rows are mid-usage apps. In the q3 pair the visually larger app (Kuvelo) is the lower row, so a residual 'higher row = more' habit points to the text answer on q3a/q3b and to the visual answer on q1/q2 (row 2 vs row 4): 2 questions each way.",
+   "names_note": "coined names, identical in en/tr, no English/Turkish meaning or category root. Row 4 was 'Rimso' in an earlier version; RIMSO is a registered mark (RIMSO-50, a DMSO drug), so it was replaced by 'Libezu'. Search 2026-10-05 for the bare word 'libezu': Google Play search -> 'No results'; App Store (web search on apps.apple.com) -> no Libezu app (closest 'Libanezu', a different word); USPTO via Trademarkia -> 0 results (Justia returned HTTP 403 to automated fetches); general web -> no exact match.",
+   "design_deviation": "DESIGN.md plan: Chirp/Tubeo/Mapster/Notely/Bankly sorted longest first, q3 Chirp vs Tubeo, q4 Tubeo (visual 7h 10m, text 2h 30m). Built: coined names in A–Z rows with a sort chip, q3 Dorvi vs Kuvelo, q4 Dorvi (visual 2h 30m, text 7h 10m), so names and row position carry no cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 2h 30m is printed in the image, on Kuvelo's row, 2 rows below Dorvi. Bars have no scale, so geometry alone cannot give that exact value: a 'visual' hit means a value reached by rank re-mapping or a misread row, not a bar measurement.",
+   "nonumbers_note": "per-app time labels blanked (span kept at its fixed width, holding one no-break space); weekly total and daily average kept (identical in all versions). q1-q3 answerable from bar lengths; q4 not (bars have no scale)."
+  }
+ },
+ {
+  "item": 25,
+  "qid": "s05_q1",
+  "lang": "en",
+  "prompt": "answer en which school planted the most trees?",
+  "answer": "asher",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "lumen"
+  ],
+  "text_answer": [
+   "mira"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 26,
+  "qid": "s05_q1",
+  "lang": "en",
+  "prompt": "answer en which school planted the most trees?",
+  "answer": "aster primary school",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "lumen"
+  ],
+  "text_answer": [
+   "mira"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 27,
+  "qid": "s05_q1",
+  "lang": "tr",
+  "prompt": "answer tr en çok ağacı hangi okul dikti?",
+  "answer": "afer",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "lumen",
+   "lumen"
+  ],
+  "text_answer": [
+   "mira",
+   "mira"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 28,
+  "qid": "s05_q1",
+  "lang": "tr",
+  "prompt": "answer tr en çok ağacı hangi okul dikti?",
+  "answer": "aster",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "lumen",
+   "lumen"
+  ],
+  "text_answer": [
+   "mira",
+   "mira"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 29,
+  "qid": "s05_q1",
+  "lang": "tr",
+  "prompt": "answer tr en çok ağacı hangi okul dikti?",
+  "answer": "nova",
+  "conds": [
+   "conflict",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "lumen",
+   "lumen"
+  ],
+  "text_answer": [
+   "mira",
+   "mira"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 30,
+  "qid": "s05_q2",
+  "lang": "en",
+  "prompt": "answer en how many trees did aster school plant?",
+  "answer": "2",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "50",
+   "^fifty"
+  ],
+  "text_answer": [
+   "20",
+   "^twenty"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 31,
+  "qid": "s05_q2",
+  "lang": "en",
+  "prompt": "answer en how many trees did aster school plant?",
+  "answer": "6",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "50",
+   "^fifty"
+  ],
+  "text_answer": [
+   "20",
+   "^twenty"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 32,
+  "qid": "s05_q2",
+  "lang": "en",
+  "prompt": "answer en how many trees did aster school plant?",
+  "answer": "8",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "50",
+   "^fifty"
+  ],
+  "text_answer": [
+   "20",
+   "^twenty"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 33,
+  "qid": "s05_q2",
+  "lang": "tr",
+  "prompt": "answer tr aster okulu kaç ağaç dikti?",
+  "answer": "3",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "50",
+   "^fifty",
+   "50",
+   "^elli"
+  ],
+  "text_answer": [
+   "20",
+   "^twenty",
+   "20",
+   "^yirmi"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 34,
+  "qid": "s05_q2",
+  "lang": "tr",
+  "prompt": "answer tr aster okulu kaç ağaç dikti?",
+  "answer": "8",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "50",
+   "^fifty",
+   "50",
+   "^elli"
+  ],
+  "text_answer": [
+   "20",
+   "^twenty",
+   "20",
+   "^yirmi"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 35,
+  "qid": "s05_q4",
+  "lang": "en",
+  "prompt": "answer en which school planted the fewest trees?",
+  "answer": "lumen primary school",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "nova"
+  ],
+  "text_answer": [
+   "aster"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 36,
+  "qid": "s05_q4",
+  "lang": "tr",
+  "prompt": "answer tr en az ağacı hangi okul dikti?",
+  "answer": "afer",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "nova",
+   "nova"
+  ],
+  "text_answer": [
+   "aster",
+   "aster"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 37,
+  "qid": "s05_q4",
+  "lang": "tr",
+  "prompt": "answer tr en az ağacı hangi okul dikti?",
+  "answer": "lumen",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "nova",
+   "nova"
+  ],
+  "text_answer": [
+   "aster",
+   "aster"
+  ],
+  "chart": "school poster pinned to a cork board · pictogram (isotype)",
+  "names_in_chart": {
+   "schools": [
+    "Aster",
+    "Mira",
+    "Nova",
+    "Lumen"
+   ],
+   "icons": [
+    5,
+    3,
+    2,
+    8
+   ],
+   "per_icon": 10,
+   "visual": [
+    50,
+    30,
+    20,
+    80
+   ],
+   "conflict_labels": [
+    20,
+    80,
+    50,
+    30
+   ],
+   "q2_icon_count": {
+    "en": [
+     "5",
+     "^five"
+    ],
+    "tr": [
+     "5",
+     "^beş"
+    ]
+   },
+   "read_value_note": "q2 is not geometry-only: the visual answer 50 = 5 icons x the printed key '= 10 trees', and the key is text too. Report q2 apart from the geometry-only questions, as 'icon count x key vs printed total', with the bare '5' answers (data.q2_icon_count) listed separately. In conflict, 50 is also printed on Nova's row, 2 rows below Aster, so a 'visual' hit may also be a misread row."
+  }
+ },
+ {
+  "item": 38,
+  "qid": "s06_q1",
+  "lang": "en",
+  "prompt": "answer en which city is the warmest?",
+  "answer": "cova",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "avlen"
+  ],
+  "text_answer": [
+   "dimel"
+  ],
+  "chart": "TV weather broadcast graphic · thermometer fills",
+  "names_in_chart": {
+   "cities": [
+    "Avlen",
+    "Berim",
+    "Covra",
+    "Dimel"
+   ],
+   "visual": [
+    31,
+    12,
+    24,
+    -3
+   ],
+   "conflict_readouts": [
+    -3,
+    24,
+    12,
+    31
+   ],
+   "tube_scale_c": [
+    -10,
+    40
+   ],
+   "zero_notch_c": 0,
+   "note": "column height = (t - tmin)/(tmax - tmin) of the tube; no ticks or numbers on the tubes, only one unlabeled notch at 0 °C on every tube (identical in all images)",
+   "nonumbers": "readout strings not drawn, empty readout boxes kept; tubes/notches unchanged",
+   "deviation_from_design_md": "names Ardena/Belmora/Castelo/Dunmere -> Avlen/Berim/Covra/Dimel (no regional cold/warm morphology); q4 reads Dimel instead of Castelo (Castelo's 12<->24 swap was with the adjacent card, and 12 collided with the 12:00 clock)"
+  }
+ },
+ {
+  "item": 39,
+  "qid": "s06_q1",
+  "lang": "tr",
+  "prompt": "answer tr en sıcak şehir hangisi?",
+  "answer": "berlin",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "avlen",
+   "avlen"
+  ],
+  "text_answer": [
+   "dimel",
+   "dimel"
+  ],
+  "chart": "TV weather broadcast graphic · thermometer fills",
+  "names_in_chart": {
+   "cities": [
+    "Avlen",
+    "Berim",
+    "Covra",
+    "Dimel"
+   ],
+   "visual": [
+    31,
+    12,
+    24,
+    -3
+   ],
+   "conflict_readouts": [
+    -3,
+    24,
+    12,
+    31
+   ],
+   "tube_scale_c": [
+    -10,
+    40
+   ],
+   "zero_notch_c": 0,
+   "note": "column height = (t - tmin)/(tmax - tmin) of the tube; no ticks or numbers on the tubes, only one unlabeled notch at 0 °C on every tube (identical in all images)",
+   "nonumbers": "readout strings not drawn, empty readout boxes kept; tubes/notches unchanged",
+   "deviation_from_design_md": "names Ardena/Belmora/Castelo/Dunmere -> Avlen/Berim/Covra/Dimel (no regional cold/warm morphology); q4 reads Dimel instead of Castelo (Castelo's 12<->24 swap was with the adjacent card, and 12 collided with the 12:00 clock)"
+  }
+ },
+ {
+  "item": 40,
+  "qid": "s06_q2",
+  "lang": "en",
+  "prompt": "answer en which city is the coldest?",
+  "answer": "amsterdam",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "dimel"
+  ],
+  "text_answer": [
+   "avlen"
+  ],
+  "chart": "TV weather broadcast graphic · thermometer fills",
+  "names_in_chart": {
+   "cities": [
+    "Avlen",
+    "Berim",
+    "Covra",
+    "Dimel"
+   ],
+   "visual": [
+    31,
+    12,
+    24,
+    -3
+   ],
+   "conflict_readouts": [
+    -3,
+    24,
+    12,
+    31
+   ],
+   "tube_scale_c": [
+    -10,
+    40
+   ],
+   "zero_notch_c": 0,
+   "note": "column height = (t - tmin)/(tmax - tmin) of the tube; no ticks or numbers on the tubes, only one unlabeled notch at 0 °C on every tube (identical in all images)",
+   "nonumbers": "readout strings not drawn, empty readout boxes kept; tubes/notches unchanged",
+   "deviation_from_design_md": "names Ardena/Belmora/Castelo/Dunmere -> Avlen/Berim/Covra/Dimel (no regional cold/warm morphology); q4 reads Dimel instead of Castelo (Castelo's 12<->24 swap was with the adjacent card, and 12 collided with the 12:00 clock)"
+  }
+ },
+ {
+  "item": 41,
+  "qid": "s06_q3b",
+  "lang": "tr",
+  "prompt": "answer tr avlen'de sıcaklık sıfırın üstünde mi?",
+  "answer": "-3°",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "yes",
+   "evet"
+  ],
+  "text_answer": [
+   "no",
+   "hayır",
+   "^değil"
+  ],
+  "chart": "TV weather broadcast graphic · thermometer fills",
+  "names_in_chart": {
+   "cities": [
+    "Avlen",
+    "Berim",
+    "Covra",
+    "Dimel"
+   ],
+   "visual": [
+    31,
+    12,
+    24,
+    -3
+   ],
+   "conflict_readouts": [
+    -3,
+    24,
+    12,
+    31
+   ],
+   "tube_scale_c": [
+    -10,
+    40
+   ],
+   "zero_notch_c": 0,
+   "note": "column height = (t - tmin)/(tmax - tmin) of the tube; no ticks or numbers on the tubes, only one unlabeled notch at 0 °C on every tube (identical in all images)",
+   "nonumbers": "readout strings not drawn, empty readout boxes kept; tubes/notches unchanged",
+   "deviation_from_design_md": "names Ardena/Belmora/Castelo/Dunmere -> Avlen/Berim/Covra/Dimel (no regional cold/warm morphology); q4 reads Dimel instead of Castelo (Castelo's 12<->24 swap was with the adjacent card, and 12 collided with the 12:00 clock)"
+  }
+ },
+ {
+  "item": 42,
+  "qid": "s07_q1",
+  "lang": "en",
+  "prompt": "answer en which server has the highest cpu load?",
+  "answer": "alpha-01",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 6,
+  "drawing_answer": [
+   "gamma-03",
+   "gamma"
+  ],
+  "text_answer": [
+   "beta-02",
+   "beta"
+  ],
+  "chart": "server monitoring dashboard, dark UI, monospace type (Menlo) · semicircle gauges",
+  "names_in_chart": {
+   "servers": [
+    "alpha-01",
+    "beta-02",
+    "gamma-03"
+   ],
+   "visual": [
+    38,
+    15,
+    92
+   ],
+   "conflict_readouts": [
+    15,
+    92,
+    38
+   ],
+   "threshold": 80,
+   "threshold_server": "gamma-03",
+   "read_server": "alpha-01",
+   "scale": "arc 0-100, end labels '0' and '100' only, unlabeled ticks every 10",
+   "position_check": "argmax is never the first card and argmin never the last card, for either cue",
+   "hosts_table": [
+    {
+     "server": "alpha-01",
+     "address": "10.0.4.21",
+     "rack": "B4",
+     "uptime": "63 d 19 h"
+    },
+    {
+     "server": "beta-02",
+     "address": "10.0.4.17",
+     "rack": "B2",
+     "uptime": "41 d 6 h"
+    },
+    {
+     "server": "gamma-03",
+     "address": "10.0.4.12",
+     "rack": "A1",
+     "uptime": "27 d 2 h"
+    }
+   ],
+   "hosts_table_check": "every number in the hosts table has argmax alpha-01 / argmin gamma-03; needles give gamma-03/beta-02, readouts beta-02/alpha-01, so name->row-number binding hits neither cue",
+   "design_deviation": "DESIGN.md plan: visual alpha 92 / beta 38 / gamma 15, q3 on alpha-01, q4 on gamma-03. Built: 38/15/92, q3 on gamma-03, q4 on alpha-01, so card position is not a cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 38 is printed as the readout of gamma-03; a 'visual' hit can be a misbind to that card. A needle-only estimate (~40) scores 'neither'. Analysis: report conflict-q4 'visual' hits separately as 'possible misbind' and keep them out of the visual-vs-text headline (unavoidable with a 3-value permutation)."
+  }
+ },
+ {
+  "item": 43,
+  "qid": "s07_q1",
+  "lang": "tr",
+  "prompt": "answer tr cpu yükü en yüksek olan sunucu hangisi?",
+  "answer": "alpha-01",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 6,
+  "drawing_answer": [
+   "gamma-03",
+   "gamma",
+   "gamma-03",
+   "gamma",
+   "gama-03",
+   "gama"
+  ],
+  "text_answer": [
+   "beta-02",
+   "beta",
+   "beta-02",
+   "beta"
+  ],
+  "chart": "server monitoring dashboard, dark UI, monospace type (Menlo) · semicircle gauges",
+  "names_in_chart": {
+   "servers": [
+    "alpha-01",
+    "beta-02",
+    "gamma-03"
+   ],
+   "visual": [
+    38,
+    15,
+    92
+   ],
+   "conflict_readouts": [
+    15,
+    92,
+    38
+   ],
+   "threshold": 80,
+   "threshold_server": "gamma-03",
+   "read_server": "alpha-01",
+   "scale": "arc 0-100, end labels '0' and '100' only, unlabeled ticks every 10",
+   "position_check": "argmax is never the first card and argmin never the last card, for either cue",
+   "hosts_table": [
+    {
+     "server": "alpha-01",
+     "address": "10.0.4.21",
+     "rack": "B4",
+     "uptime": "63 d 19 h"
+    },
+    {
+     "server": "beta-02",
+     "address": "10.0.4.17",
+     "rack": "B2",
+     "uptime": "41 d 6 h"
+    },
+    {
+     "server": "gamma-03",
+     "address": "10.0.4.12",
+     "rack": "A1",
+     "uptime": "27 d 2 h"
+    }
+   ],
+   "hosts_table_check": "every number in the hosts table has argmax alpha-01 / argmin gamma-03; needles give gamma-03/beta-02, readouts beta-02/alpha-01, so name->row-number binding hits neither cue",
+   "design_deviation": "DESIGN.md plan: visual alpha 92 / beta 38 / gamma 15, q3 on alpha-01, q4 on gamma-03. Built: 38/15/92, q3 on gamma-03, q4 on alpha-01, so card position is not a cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 38 is printed as the readout of gamma-03; a 'visual' hit can be a misbind to that card. A needle-only estimate (~40) scores 'neither'. Analysis: report conflict-q4 'visual' hits separately as 'possible misbind' and keep them out of the visual-vs-text headline (unavoidable with a 3-value permutation)."
+  }
+ },
+ {
+  "item": 44,
+  "qid": "s07_q2",
+  "lang": "tr",
+  "prompt": "answer tr cpu yükü en düşük olan sunucu hangisi?",
+  "answer": "a1",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "beta-02",
+   "beta",
+   "beta-02",
+   "beta"
+  ],
+  "text_answer": [
+   "alpha-01",
+   "alpha",
+   "alpha-01",
+   "alpha",
+   "alfa-01",
+   "alfa"
+  ],
+  "chart": "server monitoring dashboard, dark UI, monospace type (Menlo) · semicircle gauges",
+  "names_in_chart": {
+   "servers": [
+    "alpha-01",
+    "beta-02",
+    "gamma-03"
+   ],
+   "visual": [
+    38,
+    15,
+    92
+   ],
+   "conflict_readouts": [
+    15,
+    92,
+    38
+   ],
+   "threshold": 80,
+   "threshold_server": "gamma-03",
+   "read_server": "alpha-01",
+   "scale": "arc 0-100, end labels '0' and '100' only, unlabeled ticks every 10",
+   "position_check": "argmax is never the first card and argmin never the last card, for either cue",
+   "hosts_table": [
+    {
+     "server": "alpha-01",
+     "address": "10.0.4.21",
+     "rack": "B4",
+     "uptime": "63 d 19 h"
+    },
+    {
+     "server": "beta-02",
+     "address": "10.0.4.17",
+     "rack": "B2",
+     "uptime": "41 d 6 h"
+    },
+    {
+     "server": "gamma-03",
+     "address": "10.0.4.12",
+     "rack": "A1",
+     "uptime": "27 d 2 h"
+    }
+   ],
+   "hosts_table_check": "every number in the hosts table has argmax alpha-01 / argmin gamma-03; needles give gamma-03/beta-02, readouts beta-02/alpha-01, so name->row-number binding hits neither cue",
+   "design_deviation": "DESIGN.md plan: visual alpha 92 / beta 38 / gamma 15, q3 on alpha-01, q4 on gamma-03. Built: 38/15/92, q3 on gamma-03, q4 on alpha-01, so card position is not a cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 38 is printed as the readout of gamma-03; a 'visual' hit can be a misbind to that card. A needle-only estimate (~40) scores 'neither'. Analysis: report conflict-q4 'visual' hits separately as 'possible misbind' and keep them out of the visual-vs-text headline (unavoidable with a 3-value permutation)."
+  }
+ },
+ {
+  "item": 45,
+  "qid": "s07_q4",
+  "lang": "tr",
+  "prompt": "answer tr alpha-01'in cpu yükü yüzde kaç?",
+  "answer": "31.5",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "38",
+   "^thirty-eight",
+   "^thirty eight",
+   "^thirty-eight percent",
+   "^thirty eight percent",
+   "38",
+   "^otuz sekiz",
+   "^otuzsekiz",
+   "^yüzde otuz sekiz",
+   "^yüzde otuzsekiz"
+  ],
+  "text_answer": [
+   "15",
+   "^fifteen",
+   "^fifteen percent",
+   "15",
+   "^on beş",
+   "^onbeş",
+   "^yüzde on beş",
+   "^yüzde onbeş"
+  ],
+  "chart": "server monitoring dashboard, dark UI, monospace type (Menlo) · semicircle gauges",
+  "names_in_chart": {
+   "servers": [
+    "alpha-01",
+    "beta-02",
+    "gamma-03"
+   ],
+   "visual": [
+    38,
+    15,
+    92
+   ],
+   "conflict_readouts": [
+    15,
+    92,
+    38
+   ],
+   "threshold": 80,
+   "threshold_server": "gamma-03",
+   "read_server": "alpha-01",
+   "scale": "arc 0-100, end labels '0' and '100' only, unlabeled ticks every 10",
+   "position_check": "argmax is never the first card and argmin never the last card, for either cue",
+   "hosts_table": [
+    {
+     "server": "alpha-01",
+     "address": "10.0.4.21",
+     "rack": "B4",
+     "uptime": "63 d 19 h"
+    },
+    {
+     "server": "beta-02",
+     "address": "10.0.4.17",
+     "rack": "B2",
+     "uptime": "41 d 6 h"
+    },
+    {
+     "server": "gamma-03",
+     "address": "10.0.4.12",
+     "rack": "A1",
+     "uptime": "27 d 2 h"
+    }
+   ],
+   "hosts_table_check": "every number in the hosts table has argmax alpha-01 / argmin gamma-03; needles give gamma-03/beta-02, readouts beta-02/alpha-01, so name->row-number binding hits neither cue",
+   "design_deviation": "DESIGN.md plan: visual alpha 92 / beta 38 / gamma 15, q3 on alpha-01, q4 on gamma-03. Built: 38/15/92, q3 on gamma-03, q4 on alpha-01, so card position is not a cue (see make.py docstring).",
+   "read_value_note": "q4 conflict: the visual answer 38 is printed as the readout of gamma-03; a 'visual' hit can be a misbind to that card. A needle-only estimate (~40) scores 'neither'. Analysis: report conflict-q4 'visual' hits separately as 'possible misbind' and keep them out of the visual-vs-text headline (unavoidable with a 3-value permutation)."
+  }
+ },
+ {
+  "item": 46,
+  "qid": "s08_q1",
+  "lang": "en",
+  "prompt": "answer en which method has the highest accuracy on quorlet?",
+  "answer": "k-nearest neighbor",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "kerf"
+  ],
+  "text_answer": [
+   "roan"
+  ],
+  "chart": "photographed page of an academic paper · grouped bars",
+  "names_in_chart": {
+   "methods": [
+    "Roan",
+    "Kerf",
+    "Ossel"
+   ],
+   "benchmarks": [
+    "Quorlet",
+    "Harnwick"
+   ],
+   "visual": {
+    "Quorlet": [
+     64,
+     78,
+     52
+    ],
+    "Harnwick": [
+     47,
+     69,
+     41
+    ]
+   },
+   "conflict_labels": {
+    "Quorlet": [
+     78,
+     52,
+     64
+    ],
+    "Harnwick": [
+     69,
+     41,
+     47
+    ]
+   },
+   "photo_quad_tl_tr_br_bl": [
+    [
+     30,
+     -12
+    ],
+    [
+     912,
+     -2
+    ],
+    [
+     902,
+     910
+    ],
+    [
+     44,
+     902
+    ]
+   ],
+   "noise_seed": 8
+  }
+ },
+ {
+  "item": 47,
+  "qid": "s08_q1",
+  "lang": "tr",
+  "prompt": "answer tr quorlet'te en yüksek doğruluğu hangi yöntem elde ediyor?",
+  "answer": "harwick",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "kerf",
+   "kerf"
+  ],
+  "text_answer": [
+   "roan",
+   "roan"
+  ],
+  "chart": "photographed page of an academic paper · grouped bars",
+  "names_in_chart": {
+   "methods": [
+    "Roan",
+    "Kerf",
+    "Ossel"
+   ],
+   "benchmarks": [
+    "Quorlet",
+    "Harnwick"
+   ],
+   "visual": {
+    "Quorlet": [
+     64,
+     78,
+     52
+    ],
+    "Harnwick": [
+     47,
+     69,
+     41
+    ]
+   },
+   "conflict_labels": {
+    "Quorlet": [
+     78,
+     52,
+     64
+    ],
+    "Harnwick": [
+     69,
+     41,
+     47
+    ]
+   },
+   "photo_quad_tl_tr_br_bl": [
+    [
+     30,
+     -12
+    ],
+    [
+     912,
+     -2
+    ],
+    [
+     902,
+     910
+    ],
+    [
+     44,
+     902
+    ]
+   ],
+   "noise_seed": 8
+  }
+ },
+ {
+  "item": 48,
+  "qid": "s08_q1",
+  "lang": "tr",
+  "prompt": "answer tr quorlet'te en yüksek doğruluğu hangi yöntem elde ediyor?",
+  "answer": "rf",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "kerf",
+   "kerf"
+  ],
+  "text_answer": [
+   "roan",
+   "roan"
+  ],
+  "chart": "photographed page of an academic paper · grouped bars",
+  "names_in_chart": {
+   "methods": [
+    "Roan",
+    "Kerf",
+    "Ossel"
+   ],
+   "benchmarks": [
+    "Quorlet",
+    "Harnwick"
+   ],
+   "visual": {
+    "Quorlet": [
+     64,
+     78,
+     52
+    ],
+    "Harnwick": [
+     47,
+     69,
+     41
+    ]
+   },
+   "conflict_labels": {
+    "Quorlet": [
+     78,
+     52,
+     64
+    ],
+    "Harnwick": [
+     69,
+     41,
+     47
+    ]
+   },
+   "photo_quad_tl_tr_br_bl": [
+    [
+     30,
+     -12
+    ],
+    [
+     912,
+     -2
+    ],
+    [
+     902,
+     910
+    ],
+    [
+     44,
+     902
+    ]
+   ],
+   "noise_seed": 8
+  }
+ },
+ {
+  "item": 49,
+  "qid": "s08_q2",
+  "lang": "en",
+  "prompt": "answer en which method has the lowest accuracy on harnwick?",
+  "answer": "k-nearest neighbor",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "ossel"
+  ],
+  "text_answer": [
+   "kerf"
+  ],
+  "chart": "photographed page of an academic paper · grouped bars",
+  "names_in_chart": {
+   "methods": [
+    "Roan",
+    "Kerf",
+    "Ossel"
+   ],
+   "benchmarks": [
+    "Quorlet",
+    "Harnwick"
+   ],
+   "visual": {
+    "Quorlet": [
+     64,
+     78,
+     52
+    ],
+    "Harnwick": [
+     47,
+     69,
+     41
+    ]
+   },
+   "conflict_labels": {
+    "Quorlet": [
+     78,
+     52,
+     64
+    ],
+    "Harnwick": [
+     69,
+     41,
+     47
+    ]
+   },
+   "photo_quad_tl_tr_br_bl": [
+    [
+     30,
+     -12
+    ],
+    [
+     912,
+     -2
+    ],
+    [
+     902,
+     910
+    ],
+    [
+     44,
+     902
+    ]
+   ],
+   "noise_seed": 8
+  }
+ },
+ {
+  "item": 50,
+  "qid": "s08_q2",
+  "lang": "tr",
+  "prompt": "answer tr harnwick'te en düşük doğruluğu hangi yöntem elde ediyor?",
+  "answer": "farklı boyutlarda kesitler",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "ossel",
+   "ossel"
+  ],
+  "text_answer": [
+   "kerf",
+   "kerf"
+  ],
+  "chart": "photographed page of an academic paper · grouped bars",
+  "names_in_chart": {
+   "methods": [
+    "Roan",
+    "Kerf",
+    "Ossel"
+   ],
+   "benchmarks": [
+    "Quorlet",
+    "Harnwick"
+   ],
+   "visual": {
+    "Quorlet": [
+     64,
+     78,
+     52
+    ],
+    "Harnwick": [
+     47,
+     69,
+     41
+    ]
+   },
+   "conflict_labels": {
+    "Quorlet": [
+     78,
+     52,
+     64
+    ],
+    "Harnwick": [
+     69,
+     41,
+     47
+    ]
+   },
+   "photo_quad_tl_tr_br_bl": [
+    [
+     30,
+     -12
+    ],
+    [
+     912,
+     -2
+    ],
+    [
+     902,
+     910
+    ],
+    [
+     44,
+     902
+    ]
+   ],
+   "noise_seed": 8
+  }
+ },
+ {
+  "item": 51,
+  "qid": "s09_q2",
+  "lang": "tr",
+  "prompt": "answer tr hangi gün en çok kullanıcı vardı?",
+  "answer": "125",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "monday",
+   "mon",
+   "pazartesi",
+   "pzt",
+   "pts"
+  ],
+  "text_answer": [
+   "saturday",
+   "sat",
+   "cumartesi",
+   "cmt",
+   "cts"
+  ],
+  "chart": "squared notebook page with spiral binding · line (hand-drawn)",
+  "names_in_chart": {
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "visual": [
+    140,
+    125,
+    105,
+    110,
+    85,
+    70,
+    50
+   ],
+   "conflict_labels": [
+    50,
+    70,
+    85,
+    110,
+    105,
+    140,
+    125
+   ],
+   "note": "conflict = reversal with Sat/Sun swapped so the TR argmax answers are not Pazartesi vs Pazar"
+  }
+ },
+ {
+  "item": 52,
+  "qid": "s09_q2",
+  "lang": "tr",
+  "prompt": "answer tr hangi gün en çok kullanıcı vardı?",
+  "answer": "14 oct",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "monday",
+   "mon",
+   "pazartesi",
+   "pzt",
+   "pts"
+  ],
+  "text_answer": [
+   "saturday",
+   "sat",
+   "cumartesi",
+   "cmt",
+   "cts"
+  ],
+  "chart": "squared notebook page with spiral binding · line (hand-drawn)",
+  "names_in_chart": {
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "visual": [
+    140,
+    125,
+    105,
+    110,
+    85,
+    70,
+    50
+   ],
+   "conflict_labels": [
+    50,
+    70,
+    85,
+    110,
+    105,
+    140,
+    125
+   ],
+   "note": "conflict = reversal with Sat/Sun swapped so the TR argmax answers are not Pazartesi vs Pazar"
+  }
+ },
+ {
+  "item": 53,
+  "qid": "s09_q2",
+  "lang": "tr",
+  "prompt": "answer tr hangi gün en çok kullanıcı vardı?",
+  "answer": "paz",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 4,
+  "drawing_answer": [
+   "monday",
+   "mon",
+   "pazartesi",
+   "pzt",
+   "pts"
+  ],
+  "text_answer": [
+   "saturday",
+   "sat",
+   "cumartesi",
+   "cmt",
+   "cts"
+  ],
+  "chart": "squared notebook page with spiral binding · line (hand-drawn)",
+  "names_in_chart": {
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "visual": [
+    140,
+    125,
+    105,
+    110,
+    85,
+    70,
+    50
+   ],
+   "conflict_labels": [
+    50,
+    70,
+    85,
+    110,
+    105,
+    140,
+    125
+   ],
+   "note": "conflict = reversal with Sat/Sun swapped so the TR argmax answers are not Pazartesi vs Pazar"
+  }
+ },
+ {
+  "item": 54,
+  "qid": "s09_q4",
+  "lang": "en",
+  "prompt": "answer en how many users did the app have on friday?",
+  "answer": "100",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "85",
+   "^eighty-five",
+   "^eighty five"
+  ],
+  "text_answer": [
+   "105",
+   "^one hundred five",
+   "^one hundred and five"
+  ],
+  "chart": "squared notebook page with spiral binding · line (hand-drawn)",
+  "names_in_chart": {
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "visual": [
+    140,
+    125,
+    105,
+    110,
+    85,
+    70,
+    50
+   ],
+   "conflict_labels": [
+    50,
+    70,
+    85,
+    110,
+    105,
+    140,
+    125
+   ],
+   "note": "conflict = reversal with Sat/Sun swapped so the TR argmax answers are not Pazartesi vs Pazar"
+  }
+ },
+ {
+  "item": 55,
+  "qid": "s09_q4",
+  "lang": "en",
+  "prompt": "answer en how many users did the app have on friday?",
+  "answer": "140",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "85",
+   "^eighty-five",
+   "^eighty five"
+  ],
+  "text_answer": [
+   "105",
+   "^one hundred five",
+   "^one hundred and five"
+  ],
+  "chart": "squared notebook page with spiral binding · line (hand-drawn)",
+  "names_in_chart": {
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "visual": [
+    140,
+    125,
+    105,
+    110,
+    85,
+    70,
+    50
+   ],
+   "conflict_labels": [
+    50,
+    70,
+    85,
+    110,
+    105,
+    140,
+    125
+   ],
+   "note": "conflict = reversal with Sat/Sun swapped so the TR argmax answers are not Pazartesi vs Pazar"
+  }
+ },
+ {
+  "item": 56,
+  "qid": "s09_q4",
+  "lang": "tr",
+  "prompt": "answer tr cuma günü kaç kullanıcı vardı?",
+  "answer": "125",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "85",
+   "^eighty-five",
+   "^eighty five",
+   "85",
+   "^seksen beş",
+   "^seksenbeş"
+  ],
+  "text_answer": [
+   "105",
+   "^one hundred five",
+   "^one hundred and five",
+   "105",
+   "^yüz beş",
+   "^yüzbeş"
+  ],
+  "chart": "squared notebook page with spiral binding · line (hand-drawn)",
+  "names_in_chart": {
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "visual": [
+    140,
+    125,
+    105,
+    110,
+    85,
+    70,
+    50
+   ],
+   "conflict_labels": [
+    50,
+    70,
+    85,
+    110,
+    105,
+    140,
+    125
+   ],
+   "note": "conflict = reversal with Sat/Sun swapped so the TR argmax answers are not Pazartesi vs Pazar"
+  }
+ },
+ {
+  "item": 57,
+  "qid": "s09_q4",
+  "lang": "tr",
+  "prompt": "answer tr cuma günü kaç kullanıcı vardı?",
+  "answer": "140",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "85",
+   "^eighty-five",
+   "^eighty five",
+   "85",
+   "^seksen beş",
+   "^seksenbeş"
+  ],
+  "text_answer": [
+   "105",
+   "^one hundred five",
+   "^one hundred and five",
+   "105",
+   "^yüz beş",
+   "^yüzbeş"
+  ],
+  "chart": "squared notebook page with spiral binding · line (hand-drawn)",
+  "names_in_chart": {
+   "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+   ],
+   "visual": [
+    140,
+    125,
+    105,
+    110,
+    85,
+    70,
+    50
+   ],
+   "conflict_labels": [
+    50,
+    70,
+    85,
+    110,
+    105,
+    140,
+    125
+   ],
+   "note": "conflict = reversal with Sat/Sun swapped so the TR argmax answers are not Pazartesi vs Pazar"
+  }
+ },
+ {
+  "item": 58,
+  "qid": "s10_q1",
+  "lang": "en",
+  "prompt": "answer en which district has the most polluted air?",
+  "answer": "air quality by district",
+  "conds": [
+   "conflict",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "glenrock",
+   "glen rock"
+  ],
+  "text_answer": [
+   "dunmore",
+   "dun more"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 59,
+  "qid": "s10_q1",
+  "lang": "en",
+  "prompt": "answer en which district has the most polluted air?",
+  "answer": "amery",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "glenrock",
+   "glen rock"
+  ],
+  "text_answer": [
+   "dunmore",
+   "dun more"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 60,
+  "qid": "s10_q1",
+  "lang": "en",
+  "prompt": "answer en which district has the most polluted air?",
+  "answer": "brookfield",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "glenrock",
+   "glen rock"
+  ],
+  "text_answer": [
+   "dunmore",
+   "dun more"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 61,
+  "qid": "s10_q1",
+  "lang": "en",
+  "prompt": "answer en which district has the most polluted air?",
+  "answer": "cedarline",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "glenrock",
+   "glen rock"
+  ],
+  "text_answer": [
+   "dunmore",
+   "dun more"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 62,
+  "qid": "s10_q1",
+  "lang": "en",
+  "prompt": "answer en which district has the most polluted air?",
+  "answer": "ivydale",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "glenrock",
+   "glen rock"
+  ],
+  "text_answer": [
+   "dunmore",
+   "dun more"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 63,
+  "qid": "s10_q1",
+  "lang": "tr",
+  "prompt": "answer tr havası en kirli olan ilçe hangisi?",
+  "answer": "istanbul",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "glenrock",
+   "glen rock",
+   "glenrock",
+   "glen rock"
+  ],
+  "text_answer": [
+   "dunmore",
+   "dun more",
+   "dunmore",
+   "dun more"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 64,
+  "qid": "s10_q2",
+  "lang": "en",
+  "prompt": "answer en which district has the cleanest air?",
+  "answer": "amery",
+  "conds": [
+   "conflict",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "dunmore",
+   "dun more"
+  ],
+  "text_answer": [
+   "glenrock",
+   "glen rock"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 65,
+  "qid": "s10_q2",
+  "lang": "en",
+  "prompt": "answer en which district has the cleanest air?",
+  "answer": "asterly",
+  "conds": [
+   "conflict",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "dunmore",
+   "dun more"
+  ],
+  "text_answer": [
+   "glenrock",
+   "glen rock"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 66,
+  "qid": "s10_q2",
+  "lang": "en",
+  "prompt": "answer en which district has the cleanest air?",
+  "answer": "dunsmore",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "dunmore",
+   "dun more"
+  ],
+  "text_answer": [
+   "glenrock",
+   "glen rock"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 67,
+  "qid": "s10_q2",
+  "lang": "tr",
+  "prompt": "answer tr havası en temiz olan ilçe hangisi?",
+  "answer": "amsterdam",
+  "conds": [
+   "conflict",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "dunmore",
+   "dun more",
+   "dunmore",
+   "dun more"
+  ],
+  "text_answer": [
+   "glenrock",
+   "glen rock",
+   "glenrock",
+   "glen rock"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 68,
+  "qid": "s10_q2",
+  "lang": "tr",
+  "prompt": "answer tr havası en temiz olan ilçe hangisi?",
+  "answer": "asterly",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "dunmore",
+   "dun more",
+   "dunmore",
+   "dun more"
+  ],
+  "text_answer": [
+   "glenrock",
+   "glen rock",
+   "glenrock",
+   "glen rock"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 69,
+  "qid": "s10_q2",
+  "lang": "tr",
+  "prompt": "answer tr havası en temiz olan ilçe hangisi?",
+  "answer": "havası en temiz olan ilçe İstanbul'dur.",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "dunmore",
+   "dun more",
+   "dunmore",
+   "dun more"
+  ],
+  "text_answer": [
+   "glenrock",
+   "glen rock",
+   "glenrock",
+   "glen rock"
+  ],
+  "chart": "scanned municipal report page (PDF) · 3x3 tile map with gradient colour legend",
+  "names_in_chart": {
+   "districts": [
+    "Asterly",
+    "Brookfield",
+    "Cedarline",
+    "Dunmore",
+    "Elmwood",
+    "Fairhaven",
+    "Glenrock",
+    "Harborview",
+    "Ivydale"
+   ],
+   "grid": "3x3, reading order",
+   "visual": [
+    72,
+    38,
+    48,
+    15,
+    63,
+    33,
+    80,
+    55,
+    30
+   ],
+   "conflict_truth": [
+    18,
+    52,
+    42,
+    75,
+    27,
+    57,
+    10,
+    35,
+    60
+   ],
+   "legend_ends": {
+    "light": 10,
+    "dark": 80
+   },
+   "legend_ticks_light_to_dark": {
+    "consistent": [
+     10,
+     20,
+     30,
+     40,
+     50,
+     60,
+     70,
+     80
+    ],
+    "conflict": [
+     80,
+     70,
+     60,
+     50,
+     40,
+     30,
+     20,
+     10
+    ],
+    "nonumbers": []
+   },
+   "legend_words_light_to_dark": {
+    "consistent": {
+     "en": [
+      "Clean",
+      "Polluted"
+     ],
+     "tr": [
+      "Temiz",
+      "Kirli"
+     ]
+    },
+    "conflict": {
+     "en": [
+      "Polluted",
+      "Clean"
+     ],
+     "tr": [
+      "Kirli",
+      "Temiz"
+     ]
+    },
+    "nonumbers": {
+     "en": [],
+     "tr": []
+    }
+   },
+   "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+   "tile_colors": {
+    "Asterly": "#4b3984",
+    "Brookfield": "#a79ac5",
+    "Cedarline": "#8c7cb1",
+    "Dunmore": "#e6e2f2",
+    "Elmwood": "#645195",
+    "Fairhaven": "#b5a9cf",
+    "Glenrock": "#332475",
+    "Harborview": "#7968a4",
+    "Ivydale": "#bdb2d4"
+   },
+   "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  }
+ },
+ {
+  "item": 70,
+  "qid": "s11_q1",
+  "lang": "en",
+  "prompt": "answer en which stock gained the most over the past month?",
+  "answer": "kdnl",
+  "conds": [
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 4,
+  "drawing_answer": [
+   "mxra",
+   "mirexa"
+  ],
+  "text_answer": [
+   "tlwy",
+   "talnway"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 71,
+  "qid": "s11_q1",
+  "lang": "en",
+  "prompt": "answer en which stock gained the most over the past month?",
+  "answer": "t.l.wy",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "mxra",
+   "mirexa"
+  ],
+  "text_answer": [
+   "tlwy",
+   "talnway"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 72,
+  "qid": "s11_q1",
+  "lang": "tr",
+  "prompt": "answer tr son bir ayda en çok hangi hisse değer kazandı?",
+  "answer": "kdnl",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "mxra",
+   "mirexa",
+   "mxra",
+   "mirexa"
+  ],
+  "text_answer": [
+   "tlwy",
+   "talnway",
+   "tlwy",
+   "talnway"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 73,
+  "qid": "s11_q1",
+  "lang": "tr",
+  "prompt": "answer tr son bir ayda en çok hangi hisse değer kazandı?",
+  "answer": "tltwy",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "mxra",
+   "mirexa",
+   "mxra",
+   "mirexa"
+  ],
+  "text_answer": [
+   "tlwy",
+   "talnway",
+   "tlwy",
+   "talnway"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 74,
+  "qid": "s11_q3a",
+  "lang": "en",
+  "prompt": "answer en how many of the four stocks went up over the past month?",
+  "answer": "2",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "3",
+   "^three",
+   "three stocks",
+   "three of them"
+  ],
+  "text_answer": [
+   "1",
+   "^one",
+   "only one",
+   "just one",
+   "one stock",
+   "one of them"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 75,
+  "qid": "s11_q3a",
+  "lang": "tr",
+  "prompt": "answer tr son ayda dört hisseden kaçı yükseldi?",
+  "answer": "m",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "3",
+   "^three",
+   "three stocks",
+   "three of them",
+   "3",
+   "^üç",
+   "üçü",
+   "üç tane",
+   "üç hisse"
+  ],
+  "text_answer": [
+   "1",
+   "^one",
+   "only one",
+   "just one",
+   "one stock",
+   "one of them",
+   "1",
+   "^bir",
+   "=bir",
+   "=tek",
+   "biri",
+   "=bir tane",
+   "=bir tanesi",
+   "=yalnızca bir",
+   "=sadece bir",
+   "yalnızca biri",
+   "sadece biri",
+   "=bir hisse"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 76,
+  "qid": "s11_q3a",
+  "lang": "tr",
+  "prompt": "answer tr son ayda dört hisseden kaçı yükseldi?",
+  "answer": "t.lwy",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "3",
+   "^three",
+   "three stocks",
+   "three of them",
+   "3",
+   "^üç",
+   "üçü",
+   "üç tane",
+   "üç hisse"
+  ],
+  "text_answer": [
+   "1",
+   "^one",
+   "only one",
+   "just one",
+   "one stock",
+   "one of them",
+   "1",
+   "^bir",
+   "=bir",
+   "=tek",
+   "biri",
+   "=bir tane",
+   "=bir tanesi",
+   "=yalnızca bir",
+   "=sadece bir",
+   "yalnızca biri",
+   "sadece biri",
+   "=bir hisse"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 77,
+  "qid": "s11_q3b",
+  "lang": "en",
+  "prompt": "answer en how many of the four stocks went down over the past month?",
+  "answer": "2",
+  "conds": [
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "1",
+   "^one",
+   "only one",
+   "just one",
+   "one stock",
+   "one of them"
+  ],
+  "text_answer": [
+   "3",
+   "^three",
+   "three stocks",
+   "three of them"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 78,
+  "qid": "s11_q3b",
+  "lang": "tr",
+  "prompt": "answer tr son ayda dört hisseden kaçı düştü?",
+  "answer": "2",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "1",
+   "^one",
+   "only one",
+   "just one",
+   "one stock",
+   "one of them",
+   "1",
+   "^bir",
+   "=bir",
+   "=tek",
+   "biri",
+   "=bir tane",
+   "=bir tanesi",
+   "=yalnızca bir",
+   "=sadece bir",
+   "yalnızca biri",
+   "sadece biri",
+   "=bir hisse"
+  ],
+  "text_answer": [
+   "3",
+   "^three",
+   "three stocks",
+   "three of them",
+   "3",
+   "^üç",
+   "üçü",
+   "üç tane",
+   "üç hisse"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 79,
+  "qid": "s11_q3b",
+  "lang": "tr",
+  "prompt": "answer tr son ayda dört hisseden kaçı düştü?",
+  "answer": "t.lwy",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "1",
+   "^one",
+   "only one",
+   "just one",
+   "one stock",
+   "one of them",
+   "1",
+   "^bir",
+   "=bir",
+   "=tek",
+   "biri",
+   "=bir tane",
+   "=bir tanesi",
+   "=yalnızca bir",
+   "=sadece bir",
+   "yalnızca biri",
+   "sadece biri",
+   "=bir hisse"
+  ],
+  "text_answer": [
+   "3",
+   "^three",
+   "three stocks",
+   "three of them",
+   "3",
+   "^üç",
+   "üçü",
+   "üç tane",
+   "üç hisse"
+  ],
+  "chart": "finance app watchlist (light web app) · sparklines",
+  "names_in_chart": {
+   "tickers": [
+    "KDNL",
+    "MXRA",
+    "TLWY",
+    "VESK"
+   ],
+   "companies": [
+    "Korandel Metals",
+    "Mirexa Labs",
+    "Talnway Freight",
+    "Vesker Energy"
+   ],
+   "visual_change_pct": [
+    4.8,
+    12.7,
+    -18.4,
+    7.5
+   ],
+   "conflict_change_pct": [
+    -4.8,
+    -12.7,
+    18.4,
+    -7.5
+   ],
+   "last_price": [
+    132.4,
+    64.85,
+    88.05,
+    27.16
+   ],
+   "series_pct_from_start": {
+    "KDNL": [
+     0.0,
+     -0.57,
+     0.08,
+     -0.54,
+     0.88,
+     2.69,
+     3.33,
+     3.3,
+     3.89,
+     3.99,
+     3.64,
+     3.56,
+     4.12,
+     5.51,
+     6.41,
+     5.9,
+     4.2,
+     3.45,
+     3.21,
+     4.68,
+     4.8
+    ],
+    "MXRA": [
+     0.0,
+     0.12,
+     -1.91,
+     -2.25,
+     0.27,
+     2.1,
+     1.89,
+     2.95,
+     2.28,
+     6.0,
+     4.04,
+     2.4,
+     5.43,
+     6.84,
+     8.68,
+     10.2,
+     9.81,
+     11.49,
+     13.73,
+     13.67,
+     12.7
+    ],
+    "TLWY": [
+     0.0,
+     0.17,
+     2.2,
+     0.28,
+     -1.86,
+     -2.41,
+     -3.98,
+     -7.57,
+     -10.18,
+     -12.26,
+     -14.31,
+     -14.03,
+     -16.49,
+     -15.04,
+     -15.56,
+     -15.92,
+     -14.35,
+     -15.2,
+     -18.68,
+     -19.19,
+     -18.4
+    ],
+    "VESK": [
+     0.0,
+     0.85,
+     -1.02,
+     -0.68,
+     1.84,
+     0.43,
+     1.54,
+     1.22,
+     3.52,
+     3.38,
+     3.05,
+     5.49,
+     7.46,
+     7.45,
+     5.45,
+     3.85,
+     4.82,
+     5.81,
+     4.48,
+     6.43,
+     7.5
+    ]
+   },
+   "dates": "21 daily closes, 4 Sep – 2 Oct 2026",
+   "px_per_pct_shared": 4.913,
+   "tr_change_format": "%+18,4 / %−18,4 (sign after %)",
+   "third_cue_guard": "largest |change| = TLWY (text winner), so 'pick the biggest number' fails the consistent control; highest/lowest last price = KDNL / VESK (neither winner)",
+   "no_read_value": "No 'what was X's 1-month change' question: there is no y-axis, so in conflict the magnitude can only come from the printed text, and a sign-dropped or sign-in-words reading of that text ('12.7%', 'minus 12.7', 'eksi 12,7') would score as a geometry win. A sign-read check would need a separate, unpooled control row type in common/collect.py + the notebook.",
+   "analysis_note": "q1 has a magnitude confound: in conflict the text winner TLWY is also the line with the biggest move and shaded area, so a direction-blind 'most dramatic line' pick scores as text (the consistent control removes only readers who do this every time). Weight q2, q3a/q3b and q4a/q4b, which have no magnitude confound, above q1 when concluding 'text wins'."
+  }
+ },
+ {
+  "item": 80,
+  "qid": "s12_q5",
+  "lang": "en",
+  "prompt": "answer en how many km from school does the top scorer live?",
+  "answer": "10",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "2",
+   "^two"
+  ],
+  "text_answer": [
+   "12",
+   "^twelve"
+  ],
+  "chart": "textbook exercise page · scatter plot",
+  "names_in_chart": {
+   "x_variable": "distance from home to school (km)",
+   "y_variable": "final exam score (0–100)",
+   "n_students": 20,
+   "dot_x_km_on_consistent_axis": [
+    2.0,
+    1.5,
+    2.5,
+    3.0,
+    3.5,
+    4.5,
+    5.0,
+    5.5,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    9.0,
+    9.5,
+    10.0,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.5
+   ],
+   "score": [
+    91,
+    84,
+    88,
+    77,
+    85,
+    74,
+    82,
+    69,
+    75,
+    64,
+    73,
+    61,
+    68,
+    56,
+    64,
+    54,
+    60,
+    49,
+    55,
+    46
+   ],
+   "conflict_truth_km": [
+    12.0,
+    12.5,
+    11.5,
+    11.0,
+    10.5,
+    9.5,
+    9.0,
+    8.5,
+    7.5,
+    7.0,
+    6.5,
+    6.0,
+    5.0,
+    4.5,
+    4.0,
+    3.0,
+    2.5,
+    2.0,
+    1.5,
+    0.5
+   ],
+   "x_tick_positions": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "x_tick_labels": {
+    "consistent": [
+     0,
+     2,
+     4,
+     6,
+     8,
+     10,
+     12,
+     14
+    ],
+    "conflict": [
+     14,
+     12,
+     10,
+     8,
+     6,
+     4,
+     2,
+     0
+    ],
+    "nonumbers": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "y_axis": [
+    35,
+    100
+   ],
+   "slope_points_per_km": {
+    "consistent": -3.3,
+    "conflict": 3.3
+   },
+   "r": {
+    "consistent": -0.936,
+    "conflict": 0.936
+   },
+   "farthest_student_score": {
+    "consistent": 46,
+    "conflict": 84
+   },
+   "top_scorer_km": {
+    "consistent": 2,
+    "conflict": 12
+   }
+  }
+ },
+ {
+  "item": 81,
+  "qid": "s12_q5",
+  "lang": "en",
+  "prompt": "answer en how many km from school does the top scorer live?",
+  "answer": "14",
+  "conds": [
+   "conflict",
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "2",
+   "^two"
+  ],
+  "text_answer": [
+   "12",
+   "^twelve"
+  ],
+  "chart": "textbook exercise page · scatter plot",
+  "names_in_chart": {
+   "x_variable": "distance from home to school (km)",
+   "y_variable": "final exam score (0–100)",
+   "n_students": 20,
+   "dot_x_km_on_consistent_axis": [
+    2.0,
+    1.5,
+    2.5,
+    3.0,
+    3.5,
+    4.5,
+    5.0,
+    5.5,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    9.0,
+    9.5,
+    10.0,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.5
+   ],
+   "score": [
+    91,
+    84,
+    88,
+    77,
+    85,
+    74,
+    82,
+    69,
+    75,
+    64,
+    73,
+    61,
+    68,
+    56,
+    64,
+    54,
+    60,
+    49,
+    55,
+    46
+   ],
+   "conflict_truth_km": [
+    12.0,
+    12.5,
+    11.5,
+    11.0,
+    10.5,
+    9.5,
+    9.0,
+    8.5,
+    7.5,
+    7.0,
+    6.5,
+    6.0,
+    5.0,
+    4.5,
+    4.0,
+    3.0,
+    2.5,
+    2.0,
+    1.5,
+    0.5
+   ],
+   "x_tick_positions": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "x_tick_labels": {
+    "consistent": [
+     0,
+     2,
+     4,
+     6,
+     8,
+     10,
+     12,
+     14
+    ],
+    "conflict": [
+     14,
+     12,
+     10,
+     8,
+     6,
+     4,
+     2,
+     0
+    ],
+    "nonumbers": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "y_axis": [
+    35,
+    100
+   ],
+   "slope_points_per_km": {
+    "consistent": -3.3,
+    "conflict": 3.3
+   },
+   "r": {
+    "consistent": -0.936,
+    "conflict": 0.936
+   },
+   "farthest_student_score": {
+    "consistent": 46,
+    "conflict": 84
+   },
+   "top_scorer_km": {
+    "consistent": 2,
+    "conflict": 12
+   }
+  }
+ },
+ {
+  "item": 82,
+  "qid": "s12_q5",
+  "lang": "en",
+  "prompt": "answer en how many km from school does the top scorer live?",
+  "answer": "8",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "2",
+   "^two"
+  ],
+  "text_answer": [
+   "12",
+   "^twelve"
+  ],
+  "chart": "textbook exercise page · scatter plot",
+  "names_in_chart": {
+   "x_variable": "distance from home to school (km)",
+   "y_variable": "final exam score (0–100)",
+   "n_students": 20,
+   "dot_x_km_on_consistent_axis": [
+    2.0,
+    1.5,
+    2.5,
+    3.0,
+    3.5,
+    4.5,
+    5.0,
+    5.5,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    9.0,
+    9.5,
+    10.0,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.5
+   ],
+   "score": [
+    91,
+    84,
+    88,
+    77,
+    85,
+    74,
+    82,
+    69,
+    75,
+    64,
+    73,
+    61,
+    68,
+    56,
+    64,
+    54,
+    60,
+    49,
+    55,
+    46
+   ],
+   "conflict_truth_km": [
+    12.0,
+    12.5,
+    11.5,
+    11.0,
+    10.5,
+    9.5,
+    9.0,
+    8.5,
+    7.5,
+    7.0,
+    6.5,
+    6.0,
+    5.0,
+    4.5,
+    4.0,
+    3.0,
+    2.5,
+    2.0,
+    1.5,
+    0.5
+   ],
+   "x_tick_positions": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "x_tick_labels": {
+    "consistent": [
+     0,
+     2,
+     4,
+     6,
+     8,
+     10,
+     12,
+     14
+    ],
+    "conflict": [
+     14,
+     12,
+     10,
+     8,
+     6,
+     4,
+     2,
+     0
+    ],
+    "nonumbers": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "y_axis": [
+    35,
+    100
+   ],
+   "slope_points_per_km": {
+    "consistent": -3.3,
+    "conflict": 3.3
+   },
+   "r": {
+    "consistent": -0.936,
+    "conflict": 0.936
+   },
+   "farthest_student_score": {
+    "consistent": 46,
+    "conflict": 84
+   },
+   "top_scorer_km": {
+    "consistent": 2,
+    "conflict": 12
+   }
+  }
+ },
+ {
+  "item": 83,
+  "qid": "s12_q5",
+  "lang": "tr",
+  "prompt": "answer tr en yüksek puanı alan öğrenci okula kaç km uzakta?",
+  "answer": "14",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 2,
+  "drawing_answer": [
+   "2",
+   "^two",
+   "2",
+   "^iki"
+  ],
+  "text_answer": [
+   "12",
+   "^twelve",
+   "12",
+   "^on iki",
+   "^oniki"
+  ],
+  "chart": "textbook exercise page · scatter plot",
+  "names_in_chart": {
+   "x_variable": "distance from home to school (km)",
+   "y_variable": "final exam score (0–100)",
+   "n_students": 20,
+   "dot_x_km_on_consistent_axis": [
+    2.0,
+    1.5,
+    2.5,
+    3.0,
+    3.5,
+    4.5,
+    5.0,
+    5.5,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    9.0,
+    9.5,
+    10.0,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.5
+   ],
+   "score": [
+    91,
+    84,
+    88,
+    77,
+    85,
+    74,
+    82,
+    69,
+    75,
+    64,
+    73,
+    61,
+    68,
+    56,
+    64,
+    54,
+    60,
+    49,
+    55,
+    46
+   ],
+   "conflict_truth_km": [
+    12.0,
+    12.5,
+    11.5,
+    11.0,
+    10.5,
+    9.5,
+    9.0,
+    8.5,
+    7.5,
+    7.0,
+    6.5,
+    6.0,
+    5.0,
+    4.5,
+    4.0,
+    3.0,
+    2.5,
+    2.0,
+    1.5,
+    0.5
+   ],
+   "x_tick_positions": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "x_tick_labels": {
+    "consistent": [
+     0,
+     2,
+     4,
+     6,
+     8,
+     10,
+     12,
+     14
+    ],
+    "conflict": [
+     14,
+     12,
+     10,
+     8,
+     6,
+     4,
+     2,
+     0
+    ],
+    "nonumbers": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "y_axis": [
+    35,
+    100
+   ],
+   "slope_points_per_km": {
+    "consistent": -3.3,
+    "conflict": 3.3
+   },
+   "r": {
+    "consistent": -0.936,
+    "conflict": 0.936
+   },
+   "farthest_student_score": {
+    "consistent": 46,
+    "conflict": 84
+   },
+   "top_scorer_km": {
+    "consistent": 2,
+    "conflict": 12
+   }
+  }
+ },
+ {
+  "item": 84,
+  "qid": "s12_q5",
+  "lang": "tr",
+  "prompt": "answer tr en yüksek puanı alan öğrenci okula kaç km uzakta?",
+  "answer": "20",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "2",
+   "^two",
+   "2",
+   "^iki"
+  ],
+  "text_answer": [
+   "12",
+   "^twelve",
+   "12",
+   "^on iki",
+   "^oniki"
+  ],
+  "chart": "textbook exercise page · scatter plot",
+  "names_in_chart": {
+   "x_variable": "distance from home to school (km)",
+   "y_variable": "final exam score (0–100)",
+   "n_students": 20,
+   "dot_x_km_on_consistent_axis": [
+    2.0,
+    1.5,
+    2.5,
+    3.0,
+    3.5,
+    4.5,
+    5.0,
+    5.5,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    9.0,
+    9.5,
+    10.0,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.5
+   ],
+   "score": [
+    91,
+    84,
+    88,
+    77,
+    85,
+    74,
+    82,
+    69,
+    75,
+    64,
+    73,
+    61,
+    68,
+    56,
+    64,
+    54,
+    60,
+    49,
+    55,
+    46
+   ],
+   "conflict_truth_km": [
+    12.0,
+    12.5,
+    11.5,
+    11.0,
+    10.5,
+    9.5,
+    9.0,
+    8.5,
+    7.5,
+    7.0,
+    6.5,
+    6.0,
+    5.0,
+    4.5,
+    4.0,
+    3.0,
+    2.5,
+    2.0,
+    1.5,
+    0.5
+   ],
+   "x_tick_positions": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "x_tick_labels": {
+    "consistent": [
+     0,
+     2,
+     4,
+     6,
+     8,
+     10,
+     12,
+     14
+    ],
+    "conflict": [
+     14,
+     12,
+     10,
+     8,
+     6,
+     4,
+     2,
+     0
+    ],
+    "nonumbers": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "y_axis": [
+    35,
+    100
+   ],
+   "slope_points_per_km": {
+    "consistent": -3.3,
+    "conflict": 3.3
+   },
+   "r": {
+    "consistent": -0.936,
+    "conflict": 0.936
+   },
+   "farthest_student_score": {
+    "consistent": 46,
+    "conflict": 84
+   },
+   "top_scorer_km": {
+    "consistent": 2,
+    "conflict": 12
+   }
+  }
+ },
+ {
+  "item": 85,
+  "qid": "s12_q5",
+  "lang": "tr",
+  "prompt": "answer tr en yüksek puanı alan öğrenci okula kaç km uzakta?",
+  "answer": "7.8",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "2",
+   "^two",
+   "2",
+   "^iki"
+  ],
+  "text_answer": [
+   "12",
+   "^twelve",
+   "12",
+   "^on iki",
+   "^oniki"
+  ],
+  "chart": "textbook exercise page · scatter plot",
+  "names_in_chart": {
+   "x_variable": "distance from home to school (km)",
+   "y_variable": "final exam score (0–100)",
+   "n_students": 20,
+   "dot_x_km_on_consistent_axis": [
+    2.0,
+    1.5,
+    2.5,
+    3.0,
+    3.5,
+    4.5,
+    5.0,
+    5.5,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    9.0,
+    9.5,
+    10.0,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.5
+   ],
+   "score": [
+    91,
+    84,
+    88,
+    77,
+    85,
+    74,
+    82,
+    69,
+    75,
+    64,
+    73,
+    61,
+    68,
+    56,
+    64,
+    54,
+    60,
+    49,
+    55,
+    46
+   ],
+   "conflict_truth_km": [
+    12.0,
+    12.5,
+    11.5,
+    11.0,
+    10.5,
+    9.5,
+    9.0,
+    8.5,
+    7.5,
+    7.0,
+    6.5,
+    6.0,
+    5.0,
+    4.5,
+    4.0,
+    3.0,
+    2.5,
+    2.0,
+    1.5,
+    0.5
+   ],
+   "x_tick_positions": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "x_tick_labels": {
+    "consistent": [
+     0,
+     2,
+     4,
+     6,
+     8,
+     10,
+     12,
+     14
+    ],
+    "conflict": [
+     14,
+     12,
+     10,
+     8,
+     6,
+     4,
+     2,
+     0
+    ],
+    "nonumbers": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "y_axis": [
+    35,
+    100
+   ],
+   "slope_points_per_km": {
+    "consistent": -3.3,
+    "conflict": 3.3
+   },
+   "r": {
+    "consistent": -0.936,
+    "conflict": 0.936
+   },
+   "farthest_student_score": {
+    "consistent": 46,
+    "conflict": 84
+   },
+   "top_scorer_km": {
+    "consistent": 2,
+    "conflict": 12
+   }
+  }
+ },
+ {
+  "item": 86,
+  "qid": "s13_q1",
+  "lang": "en",
+  "prompt": "answer en which device has the least battery left?",
+  "answer": "tablet",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "earbuds",
+   "earbud",
+   "earphones",
+   "earphone",
+   "headphones",
+   "headphone",
+   "buds",
+   "airpods",
+   "headset"
+  ],
+  "text_answer": [
+   "phone",
+   "smartphone",
+   "mobile",
+   "cellphone",
+   "iphone"
+  ],
+  "chart": "phone home-screen widget (light, frosted card on soft wallpaper) · radial progress rings",
+  "names_in_chart": {
+   "devices": [
+    "Phone",
+    "Earbuds",
+    "Watch",
+    "Tablet"
+   ],
+   "visual": [
+    88,
+    9,
+    54,
+    31
+   ],
+   "conflict_labels": [
+    9,
+    88,
+    31,
+    54
+   ],
+   "ring": "starts at 12 o'clock, clockwise, 0-100 % of the circle; no ticks or scale"
+  }
+ },
+ {
+  "item": 87,
+  "qid": "s13_q1",
+  "lang": "tr",
+  "prompt": "answer tr hangi cihazın şarjı en az kaldı?",
+  "answer": "tablet",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 5,
+  "drawing_answer": [
+   "earbuds",
+   "earbud",
+   "earphones",
+   "earphone",
+   "headphones",
+   "headphone",
+   "buds",
+   "airpods",
+   "headset",
+   "kulaklık",
+   "kulak",
+   "airpods"
+  ],
+  "text_answer": [
+   "phone",
+   "smartphone",
+   "mobile",
+   "cellphone",
+   "iphone",
+   "telefon",
+   "akıllı telefon",
+   "cep telefonu",
+   "iphone"
+  ],
+  "chart": "phone home-screen widget (light, frosted card on soft wallpaper) · radial progress rings",
+  "names_in_chart": {
+   "devices": [
+    "Phone",
+    "Earbuds",
+    "Watch",
+    "Tablet"
+   ],
+   "visual": [
+    88,
+    9,
+    54,
+    31
+   ],
+   "conflict_labels": [
+    9,
+    88,
+    31,
+    54
+   ],
+   "ring": "starts at 12 o'clock, clockwise, 0-100 % of the circle; no ticks or scale"
+  }
+ },
+ {
+  "item": 88,
+  "qid": "s13_q2",
+  "lang": "tr",
+  "prompt": "answer tr hangi cihazın şarjı en çok kaldı?",
+  "answer": "tablet",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224",
+   "448"
+  ],
+  "rows": 4,
+  "drawing_answer": [
+   "phone",
+   "smartphone",
+   "mobile",
+   "cellphone",
+   "iphone",
+   "telefon",
+   "akıllı telefon",
+   "cep telefonu",
+   "iphone"
+  ],
+  "text_answer": [
+   "earbuds",
+   "earbud",
+   "earphones",
+   "earphone",
+   "headphones",
+   "headphone",
+   "buds",
+   "airpods",
+   "headset",
+   "kulaklık",
+   "kulak",
+   "airpods"
+  ],
+  "chart": "phone home-screen widget (light, frosted card on soft wallpaper) · radial progress rings",
+  "names_in_chart": {
+   "devices": [
+    "Phone",
+    "Earbuds",
+    "Watch",
+    "Tablet"
+   ],
+   "visual": [
+    88,
+    9,
+    54,
+    31
+   ],
+   "conflict_labels": [
+    9,
+    88,
+    31,
+    54
+   ],
+   "ring": "starts at 12 o'clock, clockwise, 0-100 % of the circle; no ticks or scale"
+  }
+ },
+ {
+  "item": 89,
+  "qid": "s13_q3a",
+  "lang": "tr",
+  "prompt": "answer tr telefonun şarjı bitmek üzere mi?",
+  "answer": "unanswerable",
+  "conds": [
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "no",
+   "hayır",
+   "^değil"
+  ],
+  "text_answer": [
+   "yes",
+   "evet"
+  ],
+  "chart": "phone home-screen widget (light, frosted card on soft wallpaper) · radial progress rings",
+  "names_in_chart": {
+   "devices": [
+    "Phone",
+    "Earbuds",
+    "Watch",
+    "Tablet"
+   ],
+   "visual": [
+    88,
+    9,
+    54,
+    31
+   ],
+   "conflict_labels": [
+    9,
+    88,
+    31,
+    54
+   ],
+   "ring": "starts at 12 o'clock, clockwise, 0-100 % of the circle; no ticks or scale"
+  }
+ },
+ {
+  "item": 90,
+  "qid": "s13_q4",
+  "lang": "tr",
+  "prompt": "answer tr saatin şarjı yüzde kaç?",
+  "answer": "63%",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "54",
+   "^fifty-four",
+   "^fifty four",
+   "54%",
+   "54 percent",
+   "^fifty-four percent",
+   "^fifty four percent",
+   "54",
+   "^elli dört",
+   "^ellidört",
+   "%54",
+   "yüzde 54",
+   "^yüzde elli dört",
+   "^yüzde ellidört"
+  ],
+  "text_answer": [
+   "31",
+   "^thirty-one",
+   "^thirty one",
+   "31%",
+   "31 percent",
+   "^thirty-one percent",
+   "^thirty one percent",
+   "31",
+   "^otuz bir",
+   "^otuzbir",
+   "%31",
+   "yüzde 31",
+   "^yüzde otuz bir",
+   "^yüzde otuzbir"
+  ],
+  "chart": "phone home-screen widget (light, frosted card on soft wallpaper) · radial progress rings",
+  "names_in_chart": {
+   "devices": [
+    "Phone",
+    "Earbuds",
+    "Watch",
+    "Tablet"
+   ],
+   "visual": [
+    88,
+    9,
+    54,
+    31
+   ],
+   "conflict_labels": [
+    9,
+    88,
+    31,
+    54
+   ],
+   "ring": "starts at 12 o'clock, clockwise, 0-100 % of the circle; no ticks or scale"
+  }
+ },
+ {
+  "item": 91,
+  "qid": "s13_q4",
+  "lang": "tr",
+  "prompt": "answer tr saatin şarjı yüzde kaç?",
+  "answer": "64",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "54",
+   "^fifty-four",
+   "^fifty four",
+   "54%",
+   "54 percent",
+   "^fifty-four percent",
+   "^fifty four percent",
+   "54",
+   "^elli dört",
+   "^ellidört",
+   "%54",
+   "yüzde 54",
+   "^yüzde elli dört",
+   "^yüzde ellidört"
+  ],
+  "text_answer": [
+   "31",
+   "^thirty-one",
+   "^thirty one",
+   "31%",
+   "31 percent",
+   "^thirty-one percent",
+   "^thirty one percent",
+   "31",
+   "^otuz bir",
+   "^otuzbir",
+   "%31",
+   "yüzde 31",
+   "^yüzde otuz bir",
+   "^yüzde otuzbir"
+  ],
+  "chart": "phone home-screen widget (light, frosted card on soft wallpaper) · radial progress rings",
+  "names_in_chart": {
+   "devices": [
+    "Phone",
+    "Earbuds",
+    "Watch",
+    "Tablet"
+   ],
+   "visual": [
+    88,
+    9,
+    54,
+    31
+   ],
+   "conflict_labels": [
+    9,
+    88,
+    31,
+    54
+   ],
+   "ring": "starts at 12 o'clock, clockwise, 0-100 % of the circle; no ticks or scale"
+  }
+ },
+ {
+  "item": 92,
+  "qid": "s14_q1",
+  "lang": "en",
+  "prompt": "answer en which region had the highest revenue in q3?",
+  "answer": "north",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "east",
+   "east region",
+   "eastern"
+  ],
+  "text_answer": [
+   "central",
+   "central region",
+   "centre",
+   "center"
+  ],
+  "chart": "generic spreadsheet screenshot · in-cell data bars",
+  "names_in_chart": {
+   "regions": [
+    "North",
+    "South",
+    "East",
+    "West",
+    "Central"
+   ],
+   "regions_tr": [
+    "Kuzey",
+    "Güney",
+    "Doğu",
+    "Batı",
+    "Merkez"
+   ],
+   "visual": [
+    420,
+    180,
+    610,
+    260,
+    330
+   ],
+   "conflict_labels": [
+    260,
+    330,
+    180,
+    420,
+    610
+   ],
+   "total": 1800,
+   "unit": "thousand €"
+  }
+ },
+ {
+  "item": 93,
+  "qid": "s14_q1",
+  "lang": "tr",
+  "prompt": "answer tr 3. çeyrekte geliri en yüksek olan bölge hangisi?",
+  "answer": "Konya",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "east",
+   "east region",
+   "eastern",
+   "doğu"
+  ],
+  "text_answer": [
+   "central",
+   "central region",
+   "centre",
+   "center",
+   "merkez"
+  ],
+  "chart": "generic spreadsheet screenshot · in-cell data bars",
+  "names_in_chart": {
+   "regions": [
+    "North",
+    "South",
+    "East",
+    "West",
+    "Central"
+   ],
+   "regions_tr": [
+    "Kuzey",
+    "Güney",
+    "Doğu",
+    "Batı",
+    "Merkez"
+   ],
+   "visual": [
+    420,
+    180,
+    610,
+    260,
+    330
+   ],
+   "conflict_labels": [
+    260,
+    330,
+    180,
+    420,
+    610
+   ],
+   "total": 1800,
+   "unit": "thousand €"
+  }
+ },
+ {
+  "item": 94,
+  "qid": "s14_q1",
+  "lang": "tr",
+  "prompt": "answer tr 3. çeyrekte geliri en yüksek olan bölge hangisi?",
+  "answer": "eğlence bölgesi",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "east",
+   "east region",
+   "eastern",
+   "doğu"
+  ],
+  "text_answer": [
+   "central",
+   "central region",
+   "centre",
+   "center",
+   "merkez"
+  ],
+  "chart": "generic spreadsheet screenshot · in-cell data bars",
+  "names_in_chart": {
+   "regions": [
+    "North",
+    "South",
+    "East",
+    "West",
+    "Central"
+   ],
+   "regions_tr": [
+    "Kuzey",
+    "Güney",
+    "Doğu",
+    "Batı",
+    "Merkez"
+   ],
+   "visual": [
+    420,
+    180,
+    610,
+    260,
+    330
+   ],
+   "conflict_labels": [
+    260,
+    330,
+    180,
+    420,
+    610
+   ],
+   "total": 1800,
+   "unit": "thousand €"
+  }
+ },
+ {
+  "item": 95,
+  "qid": "s14_q2",
+  "lang": "en",
+  "prompt": "answer en which region had the lowest revenue in q3?",
+  "answer": "central",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "south",
+   "south region",
+   "southern"
+  ],
+  "text_answer": [
+   "east",
+   "east region",
+   "eastern"
+  ],
+  "chart": "generic spreadsheet screenshot · in-cell data bars",
+  "names_in_chart": {
+   "regions": [
+    "North",
+    "South",
+    "East",
+    "West",
+    "Central"
+   ],
+   "regions_tr": [
+    "Kuzey",
+    "Güney",
+    "Doğu",
+    "Batı",
+    "Merkez"
+   ],
+   "visual": [
+    420,
+    180,
+    610,
+    260,
+    330
+   ],
+   "conflict_labels": [
+    260,
+    330,
+    180,
+    420,
+    610
+   ],
+   "total": 1800,
+   "unit": "thousand €"
+  }
+ },
+ {
+  "item": 96,
+  "qid": "s14_q2",
+  "lang": "tr",
+  "prompt": "answer tr 3. çeyrekte geliri en düşük olan bölge hangisi?",
+  "answer": "Derin",
+  "conds": [
+   "consistent"
+  ],
+  "models": [
+   "448"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "south",
+   "south region",
+   "southern",
+   "güney"
+  ],
+  "text_answer": [
+   "east",
+   "east region",
+   "eastern",
+   "doğu"
+  ],
+  "chart": "generic spreadsheet screenshot · in-cell data bars",
+  "names_in_chart": {
+   "regions": [
+    "North",
+    "South",
+    "East",
+    "West",
+    "Central"
+   ],
+   "regions_tr": [
+    "Kuzey",
+    "Güney",
+    "Doğu",
+    "Batı",
+    "Merkez"
+   ],
+   "visual": [
+    420,
+    180,
+    610,
+    260,
+    330
+   ],
+   "conflict_labels": [
+    260,
+    330,
+    180,
+    420,
+    610
+   ],
+   "total": 1800,
+   "unit": "thousand €"
+  }
+ },
+ {
+  "item": 97,
+  "qid": "s14_q2",
+  "lang": "tr",
+  "prompt": "answer tr 3. çeyrekte geliri en düşük olan bölge hangisi?",
+  "answer": "eğlence bölgesi",
+  "conds": [
+   "conflict",
+   "consistent",
+   "nonumbers"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 3,
+  "drawing_answer": [
+   "south",
+   "south region",
+   "southern",
+   "güney"
+  ],
+  "text_answer": [
+   "east",
+   "east region",
+   "eastern",
+   "doğu"
+  ],
+  "chart": "generic spreadsheet screenshot · in-cell data bars",
+  "names_in_chart": {
+   "regions": [
+    "North",
+    "South",
+    "East",
+    "West",
+    "Central"
+   ],
+   "regions_tr": [
+    "Kuzey",
+    "Güney",
+    "Doğu",
+    "Batı",
+    "Merkez"
+   ],
+   "visual": [
+    420,
+    180,
+    610,
+    260,
+    330
+   ],
+   "conflict_labels": [
+    260,
+    330,
+    180,
+    420,
+    610
+   ],
+   "total": 1800,
+   "unit": "thousand €"
+  }
+ },
+ {
+  "item": 98,
+  "qid": "s14_q4",
+  "lang": "tr",
+  "prompt": "answer tr doğu bölgesinin geliri ne kadardı?",
+  "answer": "150",
+  "conds": [
+   "conflict"
+  ],
+  "models": [
+   "224"
+  ],
+  "rows": 1,
+  "drawing_answer": [
+   "610",
+   "^six hundred ten",
+   "^six hundred and ten",
+   "610000",
+   "610",
+   "^altı yüz on",
+   "^altıyüz on",
+   "^altıyüzon",
+   "610000"
+  ],
+  "text_answer": [
+   "180",
+   "^one hundred eighty",
+   "^one hundred and eighty",
+   "180000",
+   "180",
+   "^yüz seksen",
+   "^yüzseksen",
+   "180000"
+  ],
+  "chart": "generic spreadsheet screenshot · in-cell data bars",
+  "names_in_chart": {
+   "regions": [
+    "North",
+    "South",
+    "East",
+    "West",
+    "Central"
+   ],
+   "regions_tr": [
+    "Kuzey",
+    "Güney",
+    "Doğu",
+    "Batı",
+    "Merkez"
+   ],
+   "visual": [
+    420,
+    180,
+    610,
+    260,
+    330
+   ],
+   "conflict_labels": [
+    260,
+    330,
+    180,
+    420,
+    610
+   ],
+   "total": 1800,
+   "unit": "thousand €"
+  }
+ }
+]

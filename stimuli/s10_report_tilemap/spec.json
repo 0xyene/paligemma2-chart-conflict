@@ -1,0 +1,231 @@
+{
+  "id": "s10_report_tilemap",
+  "title": {
+    "en": "Air quality by district (scanned municipal report, tile map)",
+    "tr": "İlçelere göre hava kalitesi (taranmış belediye raporu, karo harita)"
+  },
+  "chart": "3x3 tile map with gradient colour legend",
+  "style": "scanned municipal report page (PDF)",
+  "tech": "HTML/CSS page + inline SVG tile map, gradient legend and fixed-seed paper grain (headless Chrome)",
+  "mechanism": "legend",
+  "conflict_summary": "Tiles are shaded in one purple ramp, Glenrock darkest and Dunmore lightest. Consistent legend: light end = 10 Clean, dark end = 80 Polluted. In conflict only the legend labels are reversed (light = 80 Polluted, dark = 10 Clean), so every tile's true value becomes 90 - v and the darkest tile (Glenrock) has the cleanest air.",
+  "data": {
+    "districts": [
+      "Asterly",
+      "Brookfield",
+      "Cedarline",
+      "Dunmore",
+      "Elmwood",
+      "Fairhaven",
+      "Glenrock",
+      "Harborview",
+      "Ivydale"
+    ],
+    "grid": "3x3, reading order",
+    "visual": [
+      72,
+      38,
+      48,
+      15,
+      63,
+      33,
+      80,
+      55,
+      30
+    ],
+    "conflict_truth": [
+      18,
+      52,
+      42,
+      75,
+      27,
+      57,
+      10,
+      35,
+      60
+    ],
+    "legend_ends": {
+      "light": 10,
+      "dark": 80
+    },
+    "legend_ticks_light_to_dark": {
+      "consistent": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "conflict": [
+        80,
+        70,
+        60,
+        50,
+        40,
+        30,
+        20,
+        10
+      ],
+      "nonumbers": []
+    },
+    "legend_words_light_to_dark": {
+      "consistent": {
+        "en": [
+          "Clean",
+          "Polluted"
+        ],
+        "tr": [
+          "Temiz",
+          "Kirli"
+        ]
+      },
+      "conflict": {
+        "en": [
+          "Polluted",
+          "Clean"
+        ],
+        "tr": [
+          "Kirli",
+          "Temiz"
+        ]
+      },
+      "nonumbers": {
+        "en": [],
+        "tr": []
+      }
+    },
+    "nonumbers": "legend tick numbers and end words blank; gradient bar, tick marks and unit title kept",
+    "tile_colors": {
+      "Asterly": "#4b3984",
+      "Brookfield": "#a79ac5",
+      "Cedarline": "#8c7cb1",
+      "Dunmore": "#e6e2f2",
+      "Elmwood": "#645195",
+      "Fairhaven": "#b5a9cf",
+      "Glenrock": "#332475",
+      "Harborview": "#7968a4",
+      "Ivydale": "#bdb2d4"
+    },
+    "unit": "µg/m³ PM2.5, annual mean (fictional)"
+  },
+  "questions": [
+    {
+      "qid": "s10_q1",
+      "kind": "argmax",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which district has the most polluted air?",
+        "tr": "answer tr havası en kirli olan ilçe hangisi?"
+      },
+      "visual": {
+        "en": [
+          "glenrock",
+          "glen rock"
+        ],
+        "tr": [
+          "glenrock",
+          "glen rock"
+        ]
+      },
+      "text": {
+        "en": [
+          "dunmore",
+          "dun more"
+        ],
+        "tr": [
+          "dunmore",
+          "dun more"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s10_q2",
+      "kind": "argmin",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which district has the cleanest air?",
+        "tr": "answer tr havası en temiz olan ilçe hangisi?"
+      },
+      "visual": {
+        "en": [
+          "dunmore",
+          "dun more"
+        ],
+        "tr": [
+          "dunmore",
+          "dun more"
+        ]
+      },
+      "text": {
+        "en": [
+          "glenrock",
+          "glen rock"
+        ],
+        "tr": [
+          "glenrock",
+          "glen rock"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s10_q3a",
+      "kind": "compare",
+      "pair": "s10_p1",
+      "prompt": {
+        "en": "answer en is the air in dunmore more polluted than in glenrock?",
+        "tr": "answer tr dunmore'da hava glenrock'takinden daha mı kirli?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s10_q3b",
+      "kind": "compare",
+      "pair": "s10_p1",
+      "prompt": {
+        "en": "answer en is the air in dunmore cleaner than in glenrock?",
+        "tr": "answer tr dunmore'da hava glenrock'takinden daha mı temiz?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "nonumbers": true
+    }
+  ],
+  "conflict_has_truth": true
+}

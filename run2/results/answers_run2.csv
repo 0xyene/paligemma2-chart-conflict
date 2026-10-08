@@ -1,0 +1,821 @@
+model,exp,image,prompt,answer,seconds
+224,E1,s02_magazine_line_inverted_consistent_en.png,answer en what number is at the top of the y-axis?,600,0.63
+224,E1,s02_magazine_line_inverted_consistent_en.png,answer en what number is at the bottom of the y-axis?,100,0.61
+224,E1,s02_magazine_line_inverted_consistent_en.png,answer en how many bicycle thefts were reported in 2025?,800,0.63
+224,E1,s02_magazine_line_inverted_consistent_en.png,answer en how many bicycle thefts were reported in 2018?,180,0.64
+224,E1,s02_magazine_line_inverted_consistent_tr.png,answer tr y ekseninin en üstündeki sayı kaç?,600,0.61
+224,E1,s02_magazine_line_inverted_consistent_tr.png,answer tr y ekseninin en altındaki sayı kaç?,0,0.49
+224,E1,s02_magazine_line_inverted_consistent_tr.png,answer tr 2025'te kaç bisiklet hırsızlığı bildirildi?,2000,0.65
+224,E1,s02_magazine_line_inverted_consistent_tr.png,answer tr 2018'de kaç bisiklet hırsızlığı bildirildi?,140,0.59
+224,E1,s02_magazine_line_inverted_conflict_en.png,answer en what number is at the top of the y-axis?,600,0.6
+224,E1,s02_magazine_line_inverted_conflict_en.png,answer en what number is at the bottom of the y-axis?,500,0.59
+224,E1,s02_magazine_line_inverted_conflict_en.png,answer en how many bicycle thefts were reported in 2025?,800,0.59
+224,E1,s02_magazine_line_inverted_conflict_en.png,answer en how many bicycle thefts were reported in 2018?,180,0.6
+224,E1,s02_magazine_line_inverted_conflict_tr.png,answer tr y ekseninin en üstündeki sayı kaç?,500,0.6
+224,E1,s02_magazine_line_inverted_conflict_tr.png,answer tr y ekseninin en altındaki sayı kaç?,0,0.49
+224,E1,s02_magazine_line_inverted_conflict_tr.png,answer tr 2025'te kaç bisiklet hırsızlığı bildirildi?,500,0.6
+224,E1,s02_magazine_line_inverted_conflict_tr.png,answer tr 2018'de kaç bisiklet hırsızlığı bildirildi?,"1,540",0.71
+224,E1,s12_textbook_scatter_consistent_en.png,answer en what number is at the left end of the x-axis?,0,0.5
+224,E1,s12_textbook_scatter_consistent_en.png,answer en what number is at the right end of the x-axis?,14,0.55
+224,E1,s12_textbook_scatter_consistent_en.png,answer en how many km from school does the student with the lowest score live?,6,0.5
+224,E1,s12_textbook_scatter_consistent_tr.png,answer tr x ekseninin en solundaki sayı kaç?,0,0.49
+224,E1,s12_textbook_scatter_consistent_tr.png,answer tr x ekseninin en sağındaki sayı kaç?,14,0.55
+224,E1,s12_textbook_scatter_consistent_tr.png,answer tr en düşük puanı alan öğrenci okula kaç km uzaklıkta oturuyor?,2 km,0.58
+224,E1,s12_textbook_scatter_conflict_en.png,answer en what number is at the left end of the x-axis?,0,0.51
+224,E1,s12_textbook_scatter_conflict_en.png,answer en what number is at the right end of the x-axis?,0,0.51
+224,E1,s12_textbook_scatter_conflict_en.png,answer en how many km from school does the student with the lowest score live?,6,0.51
+224,E1,s12_textbook_scatter_conflict_tr.png,answer tr x ekseninin en solundaki sayı kaç?,0,0.51
+224,E1,s12_textbook_scatter_conflict_tr.png,answer tr x ekseninin en sağındaki sayı kaç?,0,0.5
+224,E1,s12_textbook_scatter_conflict_tr.png,answer tr en düşük puanı alan öğrenci okula kaç km uzaklıkta oturuyor?,4,0.52
+224,E1,s10_report_tilemap_consistent_en.png,answer en what number is at the top of the legend?,50,0.61
+224,E1,s10_report_tilemap_consistent_en.png,answer en what word is at the top of the legend?,air quality by district,0.69
+224,E1,s10_report_tilemap_consistent_en.png,answer en what is the pm2.5 value in glenrock?,20,0.56
+224,E1,s10_report_tilemap_consistent_tr.png,answer tr lejantın en üstündeki sayı kaç?,5,0.51
+224,E1,s10_report_tilemap_consistent_tr.png,answer tr lejantın en üstündeki kelime ne?,galatasaray,0.56
+224,E1,s10_report_tilemap_consistent_tr.png,"answer tr glenrock'ta pm2,5 değeri kaç?",20,0.56
+224,E1,s10_report_tilemap_conflict_en.png,answer en what number is at the top of the legend?,50,0.57
+224,E1,s10_report_tilemap_conflict_en.png,answer en what word is at the top of the legend?,air quality by district,0.66
+224,E1,s10_report_tilemap_conflict_en.png,answer en what is the pm2.5 value in glenrock?,10,0.56
+224,E1,s10_report_tilemap_conflict_tr.png,answer tr lejantın en üstündeki sayı kaç?,5,0.52
+224,E1,s10_report_tilemap_conflict_tr.png,answer tr lejantın en üstündeki kelime ne?,galatasaray,0.56
+224,E1,s10_report_tilemap_conflict_tr.png,"answer tr glenrock'ta pm2,5 değeri kaç?",10,0.59
+224,E3,s01_newspaper_bars_consistent_en_s1.png,answer en did monthly sales go up or down from january to june?,down,0.51
+224,E3,s01_newspaper_bars_consistent_en_s1.png,answer en in which month were the most loaves sold?,may,0.5
+224,E3,s01_newspaper_bars_consistent_en_s1.png,answer en were more loaves sold in june than in january?,yes,0.5
+224,E3,s01_newspaper_bars_consistent_en_s1.png,answer en were fewer loaves sold in june than in january?,no,0.51
+224,E3,s01_newspaper_bars_consistent_en_s1.png,answer en how many loaves were sold in june?,300,0.6
+224,E3,s01_newspaper_bars_conflict_en_s1.png,answer en did monthly sales go up or down from january to june?,down,0.51
+224,E3,s01_newspaper_bars_conflict_en_s1.png,answer en in which month were the most loaves sold?,may,0.5
+224,E3,s01_newspaper_bars_conflict_en_s1.png,answer en were more loaves sold in june than in january?,yes,0.53
+224,E3,s01_newspaper_bars_conflict_en_s1.png,answer en were fewer loaves sold in june than in january?,no,0.52
+224,E3,s01_newspaper_bars_conflict_en_s1.png,answer en how many loaves were sold in june?,312,0.62
+224,E3,s01_newspaper_bars_consistent_en_s2.png,answer en did monthly sales go up or down from january to june?,down,0.52
+224,E3,s01_newspaper_bars_consistent_en_s2.png,answer en in which month were the most loaves sold?,may,0.51
+224,E3,s01_newspaper_bars_consistent_en_s2.png,answer en were more loaves sold in june than in january?,yes,0.52
+224,E3,s01_newspaper_bars_consistent_en_s2.png,answer en were fewer loaves sold in june than in january?,no,0.53
+224,E3,s01_newspaper_bars_consistent_en_s2.png,answer en how many loaves were sold in june?,330,0.63
+224,E3,s01_newspaper_bars_conflict_en_s2.png,answer en did monthly sales go up or down from january to june?,down,0.51
+224,E3,s01_newspaper_bars_conflict_en_s2.png,answer en in which month were the most loaves sold?,may,0.51
+224,E3,s01_newspaper_bars_conflict_en_s2.png,answer en were more loaves sold in june than in january?,yes,0.51
+224,E3,s01_newspaper_bars_conflict_en_s2.png,answer en were fewer loaves sold in june than in january?,no,0.51
+224,E3,s01_newspaper_bars_conflict_en_s2.png,answer en how many loaves were sold in june?,330,0.61
+224,E3,s01_newspaper_bars_consistent_en_s3.png,answer en did monthly sales go up or down from january to june?,down,0.51
+224,E3,s01_newspaper_bars_consistent_en_s3.png,answer en in which month were the most loaves sold?,may,0.51
+224,E3,s01_newspaper_bars_consistent_en_s3.png,answer en were more loaves sold in june than in january?,yes,0.51
+224,E3,s01_newspaper_bars_consistent_en_s3.png,answer en were fewer loaves sold in june than in january?,no,0.51
+224,E3,s01_newspaper_bars_consistent_en_s3.png,answer en how many loaves were sold in june?,330,0.61
+224,E3,s01_newspaper_bars_conflict_en_s3.png,answer en did monthly sales go up or down from january to june?,down,0.51
+224,E3,s01_newspaper_bars_conflict_en_s3.png,answer en in which month were the most loaves sold?,may,0.52
+224,E3,s01_newspaper_bars_conflict_en_s3.png,answer en were more loaves sold in june than in january?,yes,0.51
+224,E3,s01_newspaper_bars_conflict_en_s3.png,answer en were fewer loaves sold in june than in january?,no,0.52
+224,E3,s01_newspaper_bars_conflict_en_s3.png,answer en how many loaves were sold in june?,330,0.62
+224,E3,s01_newspaper_bars_consistent_en_s4.png,answer en did monthly sales go up or down from january to june?,down,0.51
+224,E3,s01_newspaper_bars_consistent_en_s4.png,answer en in which month were the most loaves sold?,may,0.51
+224,E3,s01_newspaper_bars_consistent_en_s4.png,answer en were more loaves sold in june than in january?,yes,0.51
+224,E3,s01_newspaper_bars_consistent_en_s4.png,answer en were fewer loaves sold in june than in january?,no,0.53
+224,E3,s01_newspaper_bars_consistent_en_s4.png,answer en how many loaves were sold in june?,640,0.63
+224,E3,s01_newspaper_bars_conflict_en_s4.png,answer en did monthly sales go up or down from january to june?,down,0.52
+224,E3,s01_newspaper_bars_conflict_en_s4.png,answer en in which month were the most loaves sold?,may,0.52
+224,E3,s01_newspaper_bars_conflict_en_s4.png,answer en were more loaves sold in june than in january?,yes,0.53
+224,E3,s01_newspaper_bars_conflict_en_s4.png,answer en were fewer loaves sold in june than in january?,no,0.52
+224,E3,s01_newspaper_bars_conflict_en_s4.png,answer en how many loaves were sold in june?,640,0.63
+224,E3,s06_tv_thermometers_consistent_en_s1.png,answer en which city is the warmest?,cova,0.57
+224,E3,s06_tv_thermometers_consistent_en_s1.png,answer en which city is the coldest?,amsterdam,0.56
+224,E3,s06_tv_thermometers_consistent_en_s1.png,answer en is it below freezing in avlen?,yes,0.52
+224,E3,s06_tv_thermometers_consistent_en_s1.png,answer en is it above freezing in avlen?,yes,0.51
+224,E3,s06_tv_thermometers_consistent_en_s1.png,answer en what is the temperature in dimel?,-31,0.62
+224,E3,s06_tv_thermometers_conflict_en_s1.png,answer en which city is the warmest?,cova,0.57
+224,E3,s06_tv_thermometers_conflict_en_s1.png,answer en which city is the coldest?,avlen,0.57
+224,E3,s06_tv_thermometers_conflict_en_s1.png,answer en is it below freezing in avlen?,yes,0.52
+224,E3,s06_tv_thermometers_conflict_en_s1.png,answer en is it above freezing in avlen?,yes,0.52
+224,E3,s06_tv_thermometers_conflict_en_s1.png,answer en what is the temperature in dimel?,31,0.57
+224,E3,s06_tv_thermometers_consistent_en_s2.png,answer en which city is the warmest?,cova,0.57
+224,E3,s06_tv_thermometers_consistent_en_s2.png,answer en which city is the coldest?,amsterdam,0.57
+224,E3,s06_tv_thermometers_consistent_en_s2.png,answer en is it below freezing in avlen?,yes,0.52
+224,E3,s06_tv_thermometers_consistent_en_s2.png,answer en is it above freezing in avlen?,yes,0.52
+224,E3,s06_tv_thermometers_consistent_en_s2.png,answer en what is the temperature in dimel?,-3°,0.62
+224,E3,s06_tv_thermometers_conflict_en_s2.png,answer en which city is the warmest?,cova,0.57
+224,E3,s06_tv_thermometers_conflict_en_s2.png,answer en which city is the coldest?,avlen,0.57
+224,E3,s06_tv_thermometers_conflict_en_s2.png,answer en is it below freezing in avlen?,yes,0.53
+224,E3,s06_tv_thermometers_conflict_en_s2.png,answer en is it above freezing in avlen?,yes,0.55
+224,E3,s06_tv_thermometers_conflict_en_s2.png,answer en what is the temperature in dimel?,31°,0.65
+224,E3,s06_tv_thermometers_consistent_en_s3.png,answer en which city is the warmest?,cova,0.59
+224,E3,s06_tv_thermometers_consistent_en_s3.png,answer en which city is the coldest?,avlen,0.6
+224,E3,s06_tv_thermometers_consistent_en_s3.png,answer en is it below freezing in avlen?,yes,0.54
+224,E3,s06_tv_thermometers_consistent_en_s3.png,answer en is it above freezing in avlen?,yes,0.55
+224,E3,s06_tv_thermometers_consistent_en_s3.png,answer en what is the temperature in dimel?,3°,0.59
+224,E3,s06_tv_thermometers_conflict_en_s3.png,answer en which city is the warmest?,cova,0.56
+224,E3,s06_tv_thermometers_conflict_en_s3.png,answer en which city is the coldest?,avlen,0.58
+224,E3,s06_tv_thermometers_conflict_en_s3.png,answer en is it below freezing in avlen?,yes,0.53
+224,E3,s06_tv_thermometers_conflict_en_s3.png,answer en is it above freezing in avlen?,yes,0.53
+224,E3,s06_tv_thermometers_conflict_en_s3.png,answer en what is the temperature in dimel?,31°,0.62
+224,E3,s06_tv_thermometers_consistent_en_s4.png,answer en which city is the warmest?,cova,0.58
+224,E3,s06_tv_thermometers_consistent_en_s4.png,answer en which city is the coldest?,dimel,0.58
+224,E3,s06_tv_thermometers_consistent_en_s4.png,answer en is it below freezing in avlen?,yes,0.53
+224,E3,s06_tv_thermometers_consistent_en_s4.png,answer en is it above freezing in avlen?,yes,0.53
+224,E3,s06_tv_thermometers_consistent_en_s4.png,answer en what is the temperature in dimel?,-3°,0.63
+224,E3,s06_tv_thermometers_conflict_en_s4.png,answer en which city is the warmest?,cova,0.58
+224,E3,s06_tv_thermometers_conflict_en_s4.png,answer en which city is the coldest?,avlen,0.58
+224,E3,s06_tv_thermometers_conflict_en_s4.png,answer en is it below freezing in avlen?,yes,0.53
+224,E3,s06_tv_thermometers_conflict_en_s4.png,answer en is it above freezing in avlen?,yes,0.54
+224,E3,s06_tv_thermometers_conflict_en_s4.png,answer en what is the temperature in dimel?,31°,0.64
+224,E3,s13_widget_battery_consistent_en_s1.png,answer en which device has the least battery left?,earbuds,0.59
+224,E3,s13_widget_battery_consistent_en_s1.png,answer en which device has the most battery left?,phone,0.55
+224,E3,s13_widget_battery_consistent_en_s1.png,answer en is the phone battery almost empty?,no,0.55
+224,E3,s13_widget_battery_consistent_en_s1.png,answer en is the phone battery almost full?,yes,0.55
+224,E3,s13_widget_battery_consistent_en_s1.png,answer en what percentage of battery does the watch have?,54%,0.65
+224,E3,s13_widget_battery_conflict_en_s1.png,answer en which device has the least battery left?,phone,0.55
+224,E3,s13_widget_battery_conflict_en_s1.png,answer en which device has the most battery left?,phone,0.57
+224,E3,s13_widget_battery_conflict_en_s1.png,answer en is the phone battery almost empty?,yes,0.57
+224,E3,s13_widget_battery_conflict_en_s1.png,answer en is the phone battery almost full?,yes,0.55
+224,E3,s13_widget_battery_conflict_en_s1.png,answer en what percentage of battery does the watch have?,11%,0.65
+224,E3,s13_widget_battery_consistent_en_s2.png,answer en which device has the least battery left?,earbuds,0.59
+224,E3,s13_widget_battery_consistent_en_s2.png,answer en which device has the most battery left?,phone,0.54
+224,E3,s13_widget_battery_consistent_en_s2.png,answer en is the phone battery almost empty?,no,0.54
+224,E3,s13_widget_battery_consistent_en_s2.png,answer en is the phone battery almost full?,yes,0.54
+224,E3,s13_widget_battery_consistent_en_s2.png,answer en what percentage of battery does the watch have?,54%,0.64
+224,E3,s13_widget_battery_conflict_en_s2.png,answer en which device has the least battery left?,earbuds,0.59
+224,E3,s13_widget_battery_conflict_en_s2.png,answer en which device has the most battery left?,phone,0.55
+224,E3,s13_widget_battery_conflict_en_s2.png,answer en is the phone battery almost empty?,no,0.55
+224,E3,s13_widget_battery_conflict_en_s2.png,answer en is the phone battery almost full?,yes,0.54
+224,E3,s13_widget_battery_conflict_en_s2.png,answer en what percentage of battery does the watch have?,31%,0.63
+224,E3,s13_widget_battery_consistent_en_s3.png,answer en which device has the least battery left?,tablet,0.55
+224,E3,s13_widget_battery_consistent_en_s3.png,answer en which device has the most battery left?,phone,0.53
+224,E3,s13_widget_battery_consistent_en_s3.png,answer en is the phone battery almost empty?,no,0.54
+224,E3,s13_widget_battery_consistent_en_s3.png,answer en is the phone battery almost full?,yes,0.54
+224,E3,s13_widget_battery_consistent_en_s3.png,answer en what percentage of battery does the watch have?,54%,0.64
+224,E3,s13_widget_battery_conflict_en_s3.png,answer en which device has the least battery left?,phone,0.57
+224,E3,s13_widget_battery_conflict_en_s3.png,answer en which device has the most battery left?,phone,0.58
+224,E3,s13_widget_battery_conflict_en_s3.png,answer en is the phone battery almost empty?,no,0.57
+224,E3,s13_widget_battery_conflict_en_s3.png,answer en is the phone battery almost full?,yes,0.56
+224,E3,s13_widget_battery_conflict_en_s3.png,answer en what percentage of battery does the watch have?,31%,0.65
+224,E3,s13_widget_battery_consistent_en_s4.png,answer en which device has the least battery left?,tablet,0.56
+224,E3,s13_widget_battery_consistent_en_s4.png,answer en which device has the most battery left?,phone,0.57
+224,E3,s13_widget_battery_consistent_en_s4.png,answer en is the phone battery almost empty?,yes,0.56
+224,E3,s13_widget_battery_consistent_en_s4.png,answer en is the phone battery almost full?,yes,0.55
+224,E3,s13_widget_battery_consistent_en_s4.png,answer en what percentage of battery does the watch have?,54%,0.65
+224,E3,s13_widget_battery_conflict_en_s4.png,answer en which device has the least battery left?,phone,0.55
+224,E3,s13_widget_battery_conflict_en_s4.png,answer en which device has the most battery left?,phone,0.55
+224,E3,s13_widget_battery_conflict_en_s4.png,answer en is the phone battery almost empty?,yes,0.55
+224,E3,s13_widget_battery_conflict_en_s4.png,answer en is the phone battery almost full?,yes,0.55
+224,E3,s13_widget_battery_conflict_en_s4.png,answer en what percentage of battery does the watch have?,31%,0.65
+224,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en which region had the highest revenue in q3?,north,0.54
+224,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en which region had the lowest revenue in q3?,east,0.55
+224,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en did the west region earn more than the north region?,yes,0.54
+224,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en did the west region earn less than the north region?,yes,0.55
+224,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en what was the revenue of the east region?,610,0.65
+224,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en which region had the highest revenue in q3?,north,0.55
+224,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en which region had the lowest revenue in q3?,east,0.56
+224,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en did the west region earn more than the north region?,yes,0.55
+224,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en did the west region earn less than the north region?,yes,0.55
+224,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en what was the revenue of the east region?,103,0.67
+224,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en which region had the highest revenue in q3?,north,0.57
+224,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en which region had the lowest revenue in q3?,east,0.58
+224,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en did the west region earn more than the north region?,yes,0.57
+224,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en did the west region earn less than the north region?,yes,0.57
+224,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en what was the revenue of the east region?,610,0.69
+224,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en which region had the highest revenue in q3?,north,0.59
+224,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en which region had the lowest revenue in q3?,east,0.56
+224,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en did the west region earn more than the north region?,yes,0.56
+224,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en did the west region earn less than the north region?,yes,0.54
+224,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en what was the revenue of the east region?,180,0.66
+224,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en which region had the highest revenue in q3?,north,0.54
+224,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en which region had the lowest revenue in q3?,east,0.56
+224,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en did the west region earn more than the north region?,yes,0.56
+224,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en did the west region earn less than the north region?,yes,0.57
+224,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en what was the revenue of the east region?,610,0.66
+224,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en which region had the highest revenue in q3?,north,0.56
+224,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en which region had the lowest revenue in q3?,east,0.56
+224,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en did the west region earn more than the north region?,yes,0.57
+224,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en did the west region earn less than the north region?,yes,0.56
+224,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en what was the revenue of the east region?,180,0.67
+224,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en which region had the highest revenue in q3?,north,0.57
+224,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en which region had the lowest revenue in q3?,east,0.56
+224,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en did the west region earn more than the north region?,yes,0.56
+224,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en did the west region earn less than the north region?,yes,0.56
+224,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en what was the revenue of the east region?,610,0.68
+224,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en which region had the highest revenue in q3?,north,0.59
+224,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en which region had the lowest revenue in q3?,east,0.58
+224,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en did the west region earn more than the north region?,yes,0.6
+224,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en did the west region earn less than the north region?,yes,0.6
+224,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en what was the revenue of the east region?,180,0.68
+448,E2,s01_newspaper_bars_consistent_en_d224.png,answer en did monthly sales go up or down from january to june?,up,1.71
+448,E2c,s01_newspaper_bars_consistent_en_r448.png,answer en did monthly sales go up or down from january to june?,up,1.73
+448,E2,s01_newspaper_bars_consistent_en_d224.png,answer en in which month were the most loaves sold?,jun,1.75
+448,E2c,s01_newspaper_bars_consistent_en_r448.png,answer en in which month were the most loaves sold?,jun,1.75
+448,E2,s01_newspaper_bars_consistent_en_d224.png,answer en were more loaves sold in june than in january?,yes,1.75
+448,E2c,s01_newspaper_bars_consistent_en_r448.png,answer en were more loaves sold in june than in january?,yes,1.74
+448,E2,s01_newspaper_bars_consistent_en_d224.png,answer en were fewer loaves sold in june than in january?,yes,1.76
+448,E2c,s01_newspaper_bars_consistent_en_r448.png,answer en were fewer loaves sold in june than in january?,yes,1.77
+448,E2,s01_newspaper_bars_consistent_en_d224.png,answer en how many loaves were sold in june?,640,1.89
+448,E2c,s01_newspaper_bars_consistent_en_r448.png,answer en how many loaves were sold in june?,640,1.91
+448,E2,s01_newspaper_bars_consistent_tr_d224.png,answer tr ocaktan hazirana aylık satışlar arttı mı azaldı mı?,azaldı,1.93
+448,E2,s01_newspaper_bars_consistent_tr_d224.png,answer tr en çok ekmek hangi ayda satıldı?,may,1.8
+448,E2,s01_newspaper_bars_consistent_tr_d224.png,answer tr haziranda ocaktan daha fazla ekmek satıldı mı?,yes,1.81
+448,E2,s01_newspaper_bars_consistent_tr_d224.png,answer tr haziranda ocaktan daha az ekmek satıldı mı?,yes,1.82
+448,E2,s01_newspaper_bars_consistent_tr_d224.png,answer tr haziranda kaç ekmek satıldı?,640,1.94
+448,E2,s01_newspaper_bars_conflict_en_d224.png,answer en did monthly sales go up or down from january to june?,up,1.83
+448,E2c,s01_newspaper_bars_conflict_en_r448.png,answer en did monthly sales go up or down from january to june?,up,1.85
+448,E2,s01_newspaper_bars_conflict_en_d224.png,answer en in which month were the most loaves sold?,jun,1.86
+448,E2c,s01_newspaper_bars_conflict_en_r448.png,answer en in which month were the most loaves sold?,jun,1.86
+448,E2,s01_newspaper_bars_conflict_en_d224.png,answer en were more loaves sold in june than in january?,yes,1.85
+448,E2c,s01_newspaper_bars_conflict_en_r448.png,answer en were more loaves sold in june than in january?,yes,1.83
+448,E2,s01_newspaper_bars_conflict_en_d224.png,answer en were fewer loaves sold in june than in january?,yes,1.83
+448,E2c,s01_newspaper_bars_conflict_en_r448.png,answer en were fewer loaves sold in june than in january?,yes,1.82
+448,E2,s01_newspaper_bars_conflict_en_d224.png,answer en how many loaves were sold in june?,120,1.92
+448,E2c,s01_newspaper_bars_conflict_en_r448.png,answer en how many loaves were sold in june?,120,1.94
+448,E2,s01_newspaper_bars_conflict_tr_d224.png,answer tr ocaktan hazirana aylık satışlar arttı mı azaldı mı?,azaldı,1.94
+448,E2,s01_newspaper_bars_conflict_tr_d224.png,answer tr en çok ekmek hangi ayda satıldı?,may,1.8
+448,E2,s01_newspaper_bars_conflict_tr_d224.png,answer tr haziranda ocaktan daha fazla ekmek satıldı mı?,yes,1.79
+448,E2,s01_newspaper_bars_conflict_tr_d224.png,answer tr haziranda ocaktan daha az ekmek satıldı mı?,yes,1.79
+448,E2,s01_newspaper_bars_conflict_tr_d224.png,answer tr haziranda kaç ekmek satıldı?,120,1.88
+448,E2,s02_magazine_line_inverted_consistent_en_d224.png,answer en did the number of bicycle thefts increase or decrease from 2018 to 2025?,increase,1.78
+448,E2c,s02_magazine_line_inverted_consistent_en_r448.png,answer en did the number of bicycle thefts increase or decrease from 2018 to 2025?,increase,1.77
+448,E2,s02_magazine_line_inverted_consistent_en_d224.png,answer en in which year were the most bicycle thefts reported?,2020,1.96
+448,E2c,s02_magazine_line_inverted_consistent_en_r448.png,answer en in which year were the most bicycle thefts reported?,2025,1.94
+448,E2,s02_magazine_line_inverted_consistent_en_d224.png,answer en in which year were the fewest bicycle thefts reported?,2022,1.93
+448,E2c,s02_magazine_line_inverted_consistent_en_r448.png,answer en in which year were the fewest bicycle thefts reported?,2022,1.92
+448,E2,s02_magazine_line_inverted_consistent_en_d224.png,answer en were more bicycle thefts reported in 2025 than in 2018?,yes,1.76
+448,E2c,s02_magazine_line_inverted_consistent_en_r448.png,answer en were more bicycle thefts reported in 2025 than in 2018?,yes,1.75
+448,E2,s02_magazine_line_inverted_consistent_en_d224.png,answer en were fewer bicycle thefts reported in 2025 than in 2018?,yes,1.75
+448,E2c,s02_magazine_line_inverted_consistent_en_r448.png,answer en were fewer bicycle thefts reported in 2025 than in 2018?,yes,1.76
+448,E2,s02_magazine_line_inverted_consistent_tr_d224.png,answer tr 2018'den 2025'e bisiklet hırsızlığı sayısı arttı mı azaldı mı?,arttı,1.84
+448,E2,s02_magazine_line_inverted_consistent_tr_d224.png,answer tr en çok bisiklet hırsızlığı hangi yıl bildirildi?,2020,1.91
+448,E2,s02_magazine_line_inverted_consistent_tr_d224.png,answer tr en az bisiklet hırsızlığı hangi yıl bildirildi?,2021,1.92
+448,E2,s02_magazine_line_inverted_consistent_tr_d224.png,answer tr 2025'te 2018'den daha fazla bisiklet hırsızlığı bildirildi mi?,yes,1.75
+448,E2,s02_magazine_line_inverted_consistent_tr_d224.png,answer tr 2025'te 2018'den daha az bisiklet hırsızlığı bildirildi mi?,yes,1.75
+448,E2,s02_magazine_line_inverted_conflict_en_d224.png,answer en did the number of bicycle thefts increase or decrease from 2018 to 2025?,increase,1.75
+448,E2c,s02_magazine_line_inverted_conflict_en_r448.png,answer en did the number of bicycle thefts increase or decrease from 2018 to 2025?,increase,1.75
+448,E2,s02_magazine_line_inverted_conflict_en_d224.png,answer en in which year were the most bicycle thefts reported?,2020,1.94
+448,E2c,s02_magazine_line_inverted_conflict_en_r448.png,answer en in which year were the most bicycle thefts reported?,2025,1.93
+448,E2,s02_magazine_line_inverted_conflict_en_d224.png,answer en in which year were the fewest bicycle thefts reported?,2022,1.93
+448,E2c,s02_magazine_line_inverted_conflict_en_r448.png,answer en in which year were the fewest bicycle thefts reported?,2022,1.92
+448,E2,s02_magazine_line_inverted_conflict_en_d224.png,answer en were more bicycle thefts reported in 2025 than in 2018?,yes,1.76
+448,E2c,s02_magazine_line_inverted_conflict_en_r448.png,answer en were more bicycle thefts reported in 2025 than in 2018?,yes,1.77
+448,E2,s02_magazine_line_inverted_conflict_en_d224.png,answer en were fewer bicycle thefts reported in 2025 than in 2018?,yes,1.77
+448,E2c,s02_magazine_line_inverted_conflict_en_r448.png,answer en were fewer bicycle thefts reported in 2025 than in 2018?,yes,1.78
+448,E2,s02_magazine_line_inverted_conflict_tr_d224.png,answer tr 2018'den 2025'e bisiklet hırsızlığı sayısı arttı mı azaldı mı?,arttı,1.84
+448,E2,s02_magazine_line_inverted_conflict_tr_d224.png,answer tr en çok bisiklet hırsızlığı hangi yıl bildirildi?,2020,1.94
+448,E2,s02_magazine_line_inverted_conflict_tr_d224.png,answer tr en az bisiklet hırsızlığı hangi yıl bildirildi?,2018,1.95
+448,E2,s02_magazine_line_inverted_conflict_tr_d224.png,answer tr 2025'te 2018'den daha fazla bisiklet hırsızlığı bildirildi mi?,yes,1.79
+448,E2,s02_magazine_line_inverted_conflict_tr_d224.png,answer tr 2025'te 2018'den daha az bisiklet hırsızlığı bildirildi mi?,yes,1.78
+448,E2,s03_slide_donut_consistent_en_d224.png,answer en which brand has the largest market share?,nimbus,1.83
+448,E2c,s03_slide_donut_consistent_en_r448.png,answer en which brand has the largest market share?,nimbus,1.83
+448,E2,s03_slide_donut_consistent_en_d224.png,answer en which brand has the smallest market share?,zento,1.84
+448,E2c,s03_slide_donut_consistent_en_r448.png,answer en which brand has the smallest market share?,zento,1.85
+448,E2,s03_slide_donut_consistent_en_d224.png,answer en does zento have more than a third of the market?,no,1.78
+448,E2c,s03_slide_donut_consistent_en_r448.png,answer en does zento have more than a third of the market?,no,1.77
+448,E2,s03_slide_donut_consistent_en_d224.png,answer en does zento have less than a third of the market?,yes,1.78
+448,E2c,s03_slide_donut_consistent_en_r448.png,answer en does zento have less than a third of the market?,yes,1.77
+448,E2,s03_slide_donut_consistent_en_d224.png,answer en what is orca's market share?,27%,1.89
+448,E2c,s03_slide_donut_consistent_en_r448.png,answer en what is orca's market share?,27%,1.9
+448,E2,s03_slide_donut_consistent_tr_d224.png,answer tr en büyük pazar payına hangi marka sahip?,nimbus,1.84
+448,E2,s03_slide_donut_consistent_tr_d224.png,answer tr en küçük pazar payına hangi marka sahip?,orca,1.78
+448,E2,s03_slide_donut_consistent_tr_d224.png,answer tr zento'nun pazar payı üçte birden fazla mı?,no,1.77
+448,E2,s03_slide_donut_consistent_tr_d224.png,answer tr zento'nun pazar payı üçte birden az mı?,yes,1.77
+448,E2,s03_slide_donut_consistent_tr_d224.png,answer tr orca'nın pazar payı yüzde kaç?,27,1.83
+448,E2,s03_slide_donut_conflict_en_d224.png,answer en which brand has the largest market share?,nokia,1.77
+448,E2c,s03_slide_donut_conflict_en_r448.png,answer en which brand has the largest market share?,nokia,1.77
+448,E2,s03_slide_donut_conflict_en_d224.png,answer en which brand has the smallest market share?,nimbus,1.85
+448,E2c,s03_slide_donut_conflict_en_r448.png,answer en which brand has the smallest market share?,nimbus,1.83
+448,E2,s03_slide_donut_conflict_en_d224.png,answer en does zento have more than a third of the market?,yes,1.76
+448,E2c,s03_slide_donut_conflict_en_r448.png,answer en does zento have more than a third of the market?,yes,1.77
+448,E2,s03_slide_donut_conflict_en_d224.png,answer en does zento have less than a third of the market?,yes,1.76
+448,E2c,s03_slide_donut_conflict_en_r448.png,answer en does zento have less than a third of the market?,yes,1.77
+448,E2,s03_slide_donut_conflict_en_d224.png,answer en what is orca's market share?,17%,1.88
+448,E2c,s03_slide_donut_conflict_en_r448.png,answer en what is orca's market share?,17%,1.89
+448,E2,s03_slide_donut_conflict_tr_d224.png,answer tr en büyük pazar payına hangi marka sahip?,nimbus,1.85
+448,E2,s03_slide_donut_conflict_tr_d224.png,answer tr en küçük pazar payına hangi marka sahip?,orca,1.78
+448,E2,s03_slide_donut_conflict_tr_d224.png,answer tr zento'nun pazar payı üçte birden fazla mı?,no,1.77
+448,E2,s03_slide_donut_conflict_tr_d224.png,answer tr zento'nun pazar payı üçte birden az mı?,yes,1.77
+448,E2,s03_slide_donut_conflict_tr_d224.png,answer tr orca'nın pazar payı yüzde kaç?,17,1.82
+448,E2,s04_app_screentime_consistent_en_d224.png,answer en which app was used the most this week?,dorvi,1.82
+448,E2c,s04_app_screentime_consistent_en_r448.png,answer en which app was used the most this week?,dorvi,1.82
+448,E2,s04_app_screentime_consistent_en_d224.png,answer en which app was used the least this week?,tovra,1.83
+448,E2c,s04_app_screentime_consistent_en_r448.png,answer en which app was used the least this week?,tovra,1.83
+448,E2,s04_app_screentime_consistent_en_d224.png,answer en was dorvi used more than kuvelo this week?,yes,1.76
+448,E2c,s04_app_screentime_consistent_en_r448.png,answer en was dorvi used more than kuvelo this week?,yes,1.76
+448,E2,s04_app_screentime_consistent_en_d224.png,answer en was dorvi used less than kuvelo this week?,yes,1.76
+448,E2c,s04_app_screentime_consistent_en_r448.png,answer en was dorvi used less than kuvelo this week?,yes,1.77
+448,E2,s04_app_screentime_consistent_en_d224.png,answer en how long was dorvi used this week?,2h 30m,2.05
+448,E2c,s04_app_screentime_consistent_en_r448.png,answer en how long was dorvi used this week?,2h 30m,2.05
+448,E2,s04_app_screentime_consistent_tr_d224.png,answer tr bu hafta en çok hangi uygulama kullanıldı?,unanswerable,1.91
+448,E2,s04_app_screentime_consistent_tr_d224.png,answer tr bu hafta en az hangi uygulama kullanıldı?,unanswerable,1.89
+448,E2,s04_app_screentime_consistent_tr_d224.png,answer tr dorvi bu hafta kuvelo'dan daha fazla kullanıldı mı?,yes,1.77
+448,E2,s04_app_screentime_consistent_tr_d224.png,answer tr dorvi bu hafta kuvelo'dan daha az kullanıldı mı?,yes,1.76
+448,E2,s04_app_screentime_consistent_tr_d224.png,answer tr dorvi bu hafta ne kadar süre kullanıldı?,24 sa 45 dk,2.11
+448,E2,s04_app_screentime_conflict_en_d224.png,answer en which app was used the most this week?,dorvi,1.82
+448,E2c,s04_app_screentime_conflict_en_r448.png,answer en which app was used the most this week?,dorvi,1.83
+448,E2,s04_app_screentime_conflict_en_d224.png,answer en which app was used the least this week?,tovra,1.85
+448,E2c,s04_app_screentime_conflict_en_r448.png,answer en which app was used the least this week?,tovra,1.83
+448,E2,s04_app_screentime_conflict_en_d224.png,answer en was dorvi used more than kuvelo this week?,yes,1.77
+448,E2c,s04_app_screentime_conflict_en_r448.png,answer en was dorvi used more than kuvelo this week?,yes,1.77
+448,E2,s04_app_screentime_conflict_en_d224.png,answer en was dorvi used less than kuvelo this week?,yes,1.77
+448,E2c,s04_app_screentime_conflict_en_r448.png,answer en was dorvi used less than kuvelo this week?,yes,1.77
+448,E2,s04_app_screentime_conflict_en_d224.png,answer en how long was dorvi used this week?,7h 10m,2.07
+448,E2c,s04_app_screentime_conflict_en_r448.png,answer en how long was dorvi used this week?,7h 10m,2.07
+448,E2,s04_app_screentime_conflict_tr_d224.png,answer tr bu hafta en çok hangi uygulama kullanıldı?,unanswerable,1.9
+448,E2,s04_app_screentime_conflict_tr_d224.png,answer tr bu hafta en az hangi uygulama kullanıldı?,unanswerable,1.89
+448,E2,s04_app_screentime_conflict_tr_d224.png,answer tr dorvi bu hafta kuvelo'dan daha fazla kullanıldı mı?,yes,1.77
+448,E2,s04_app_screentime_conflict_tr_d224.png,answer tr dorvi bu hafta kuvelo'dan daha az kullanıldı mı?,yes,1.77
+448,E2,s04_app_screentime_conflict_tr_d224.png,answer tr dorvi bu hafta ne kadar süre kullanıldı?,7 sa 10 dk,2.06
+448,E2,s05_poster_pictogram_consistent_en_d224.png,answer en which school planted the most trees?,aster primary school,1.89
+448,E2c,s05_poster_pictogram_consistent_en_r448.png,answer en which school planted the most trees?,aster primary school,1.89
+448,E2,s05_poster_pictogram_consistent_en_d224.png,answer en how many trees did aster school plant?,50,1.86
+448,E2c,s05_poster_pictogram_consistent_en_r448.png,answer en how many trees did aster school plant?,50,1.84
+448,E2,s05_poster_pictogram_consistent_en_d224.png,answer en did mira school plant more trees than lumen school?,yes,1.77
+448,E2c,s05_poster_pictogram_consistent_en_r448.png,answer en did mira school plant more trees than lumen school?,yes,1.77
+448,E2,s05_poster_pictogram_consistent_en_d224.png,answer en did mira school plant fewer trees than lumen school?,yes,1.78
+448,E2c,s05_poster_pictogram_consistent_en_r448.png,answer en did mira school plant fewer trees than lumen school?,yes,1.78
+448,E2,s05_poster_pictogram_consistent_en_d224.png,answer en which school planted the fewest trees?,nova primary school,1.88
+448,E2c,s05_poster_pictogram_consistent_en_r448.png,answer en which school planted the fewest trees?,nova primary school,1.9
+448,E2,s05_poster_pictogram_consistent_tr_d224.png,answer tr en çok ağacı hangi okul dikti?,aster,1.8
+448,E2,s05_poster_pictogram_consistent_tr_d224.png,answer tr aster okulu kaç ağaç dikti?,50,1.83
+448,E2,s05_poster_pictogram_consistent_tr_d224.png,"answer tr mira okulu, lumen okulundan daha fazla ağaç dikti mi?",yes,1.77
+448,E2,s05_poster_pictogram_consistent_tr_d224.png,"answer tr mira okulu, lumen okulundan daha az ağaç dikti mi?",yes,1.78
+448,E2,s05_poster_pictogram_consistent_tr_d224.png,answer tr en az ağacı hangi okul dikti?,mena,1.77
+448,E2,s05_poster_pictogram_conflict_en_d224.png,answer en which school planted the most trees?,nova primary school,1.89
+448,E2c,s05_poster_pictogram_conflict_en_r448.png,answer en which school planted the most trees?,aster primary school,1.88
+448,E2,s05_poster_pictogram_conflict_en_d224.png,answer en how many trees did aster school plant?,20,1.85
+448,E2c,s05_poster_pictogram_conflict_en_r448.png,answer en how many trees did aster school plant?,20,1.84
+448,E2,s05_poster_pictogram_conflict_en_d224.png,answer en did mira school plant more trees than lumen school?,yes,1.76
+448,E2c,s05_poster_pictogram_conflict_en_r448.png,answer en did mira school plant more trees than lumen school?,yes,1.77
+448,E2,s05_poster_pictogram_conflict_en_d224.png,answer en did mira school plant fewer trees than lumen school?,yes,1.77
+448,E2c,s05_poster_pictogram_conflict_en_r448.png,answer en did mira school plant fewer trees than lumen school?,yes,1.77
+448,E2,s05_poster_pictogram_conflict_en_d224.png,answer en which school planted the fewest trees?,nova primary school,1.89
+448,E2c,s05_poster_pictogram_conflict_en_r448.png,answer en which school planted the fewest trees?,nova primary school,1.89
+448,E2,s05_poster_pictogram_conflict_tr_d224.png,answer tr en çok ağacı hangi okul dikti?,aster,1.78
+448,E2,s05_poster_pictogram_conflict_tr_d224.png,answer tr aster okulu kaç ağaç dikti?,20,1.82
+448,E2,s05_poster_pictogram_conflict_tr_d224.png,"answer tr mira okulu, lumen okulundan daha fazla ağaç dikti mi?",yes,1.77
+448,E2,s05_poster_pictogram_conflict_tr_d224.png,"answer tr mira okulu, lumen okulundan daha az ağaç dikti mi?",yes,1.76
+448,E2,s05_poster_pictogram_conflict_tr_d224.png,answer tr en az ağacı hangi okul dikti?,pimen,1.83
+448,E2,s06_tv_thermometers_consistent_en_d224.png,answer en which city is the warmest?,avlen,1.83
+448,E2c,s06_tv_thermometers_consistent_en_r448.png,answer en which city is the warmest?,avlen,1.83
+448,E2,s06_tv_thermometers_consistent_en_d224.png,answer en which city is the coldest?,dimel,1.84
+448,E2c,s06_tv_thermometers_consistent_en_r448.png,answer en which city is the coldest?,dimel,1.83
+448,E2,s06_tv_thermometers_consistent_en_d224.png,answer en is it below freezing in avlen?,yes,1.77
+448,E2c,s06_tv_thermometers_consistent_en_r448.png,answer en is it below freezing in avlen?,yes,1.76
+448,E2,s06_tv_thermometers_consistent_en_d224.png,answer en is it above freezing in avlen?,yes,1.76
+448,E2c,s06_tv_thermometers_consistent_en_r448.png,answer en is it above freezing in avlen?,yes,1.76
+448,E2,s06_tv_thermometers_consistent_en_d224.png,answer en what is the temperature in dimel?,-3,1.82
+448,E2c,s06_tv_thermometers_consistent_en_r448.png,answer en what is the temperature in dimel?,-3°,1.88
+448,E2,s06_tv_thermometers_consistent_tr_d224.png,answer tr en sıcak şehir hangisi?,avlen,1.87
+448,E2,s06_tv_thermometers_consistent_tr_d224.png,answer tr en soğuk şehir hangisi?,dimel,1.83
+448,E2,s06_tv_thermometers_consistent_tr_d224.png,answer tr avlen'de sıcaklık sıfırın altında mı?,yes,1.76
+448,E2,s06_tv_thermometers_consistent_tr_d224.png,answer tr avlen'de sıcaklık sıfırın üstünde mi?,yes,1.77
+448,E2,s06_tv_thermometers_consistent_tr_d224.png,answer tr dimel'de sıcaklık kaç derece?,-3,1.82
+448,E2,s06_tv_thermometers_conflict_en_d224.png,answer en which city is the warmest?,dimel,1.82
+448,E2c,s06_tv_thermometers_conflict_en_r448.png,answer en which city is the warmest?,dimel,1.82
+448,E2,s06_tv_thermometers_conflict_en_d224.png,answer en which city is the coldest?,avlen,1.84
+448,E2c,s06_tv_thermometers_conflict_en_r448.png,answer en which city is the coldest?,avlen,1.84
+448,E2,s06_tv_thermometers_conflict_en_d224.png,answer en is it below freezing in avlen?,yes,1.78
+448,E2c,s06_tv_thermometers_conflict_en_r448.png,answer en is it below freezing in avlen?,yes,1.76
+448,E2,s06_tv_thermometers_conflict_en_d224.png,answer en is it above freezing in avlen?,no,1.77
+448,E2c,s06_tv_thermometers_conflict_en_r448.png,answer en is it above freezing in avlen?,no,1.77
+448,E2,s06_tv_thermometers_conflict_en_d224.png,answer en what is the temperature in dimel?,31,1.83
+448,E2c,s06_tv_thermometers_conflict_en_r448.png,answer en what is the temperature in dimel?,31°,1.88
+448,E2,s06_tv_thermometers_conflict_tr_d224.png,answer tr en sıcak şehir hangisi?,dimel,1.85
+448,E2,s06_tv_thermometers_conflict_tr_d224.png,answer tr en soğuk şehir hangisi?,avlen,1.84
+448,E2,s06_tv_thermometers_conflict_tr_d224.png,answer tr avlen'de sıcaklık sıfırın altında mı?,yes,1.77
+448,E2,s06_tv_thermometers_conflict_tr_d224.png,answer tr avlen'de sıcaklık sıfırın üstünde mi?,no,1.78
+448,E2,s06_tv_thermometers_conflict_tr_d224.png,answer tr dimel'de sıcaklık kaç derece?,31,1.83
+448,E2,s07_dashboard_gauges_consistent_en_d224.png,answer en which server has the highest cpu load?,alpha-01,1.95
+448,E2c,s07_dashboard_gauges_consistent_en_r448.png,answer en which server has the highest cpu load?,alpha-01,1.94
+448,E2,s07_dashboard_gauges_consistent_en_d224.png,answer en which server has the lowest cpu load?,beta-02,1.96
+448,E2c,s07_dashboard_gauges_consistent_en_r448.png,answer en which server has the lowest cpu load?,beta-02,1.95
+448,E2,s07_dashboard_gauges_consistent_en_d224.png,answer en is the cpu load of gamma-03 above 80 percent?,yes,1.77
+448,E2c,s07_dashboard_gauges_consistent_en_r448.png,answer en is the cpu load of gamma-03 above 80 percent?,no,1.78
+448,E2,s07_dashboard_gauges_consistent_en_d224.png,answer en is the cpu load of gamma-03 below 80 percent?,yes,1.78
+448,E2c,s07_dashboard_gauges_consistent_en_r448.png,answer en is the cpu load of gamma-03 below 80 percent?,no,1.78
+448,E2,s07_dashboard_gauges_consistent_en_d224.png,answer en what is the cpu load of alpha-01?,38%,1.89
+448,E2c,s07_dashboard_gauges_consistent_en_r448.png,answer en what is the cpu load of alpha-01?,38%,1.89
+448,E2,s07_dashboard_gauges_consistent_tr_d224.png,answer tr cpu yükü en yüksek olan sunucu hangisi?,alpha-01,1.96
+448,E2,s07_dashboard_gauges_consistent_tr_d224.png,answer tr cpu yükü en düşük olan sunucu hangisi?,alpha-01,1.95
+448,E2,s07_dashboard_gauges_consistent_tr_d224.png,answer tr gamma-03'ün cpu yükü yüzde 80'in üzerinde mi?,yes,1.78
+448,E2,s07_dashboard_gauges_consistent_tr_d224.png,answer tr gamma-03'ün cpu yükü yüzde 80'in altında mı?,yes,1.77
+448,E2,s07_dashboard_gauges_consistent_tr_d224.png,answer tr alpha-01'in cpu yükü yüzde kaç?,38,1.82
+448,E2,s07_dashboard_gauges_conflict_en_d224.png,answer en which server has the highest cpu load?,alpha-01,1.94
+448,E2c,s07_dashboard_gauges_conflict_en_r448.png,answer en which server has the highest cpu load?,alpha-01,1.94
+448,E2,s07_dashboard_gauges_conflict_en_d224.png,answer en which server has the lowest cpu load?,alpha-01,1.95
+448,E2c,s07_dashboard_gauges_conflict_en_r448.png,answer en which server has the lowest cpu load?,alpha-01,1.95
+448,E2,s07_dashboard_gauges_conflict_en_d224.png,answer en is the cpu load of gamma-03 above 80 percent?,no,1.78
+448,E2c,s07_dashboard_gauges_conflict_en_r448.png,answer en is the cpu load of gamma-03 above 80 percent?,no,1.77
+448,E2,s07_dashboard_gauges_conflict_en_d224.png,answer en is the cpu load of gamma-03 below 80 percent?,yes,1.77
+448,E2c,s07_dashboard_gauges_conflict_en_r448.png,answer en is the cpu load of gamma-03 below 80 percent?,yes,1.77
+448,E2,s07_dashboard_gauges_conflict_en_d224.png,answer en what is the cpu load of alpha-01?,15%,1.88
+448,E2c,s07_dashboard_gauges_conflict_en_r448.png,answer en what is the cpu load of alpha-01?,15%,1.89
+448,E2,s07_dashboard_gauges_conflict_tr_d224.png,answer tr cpu yükü en yüksek olan sunucu hangisi?,alpha-01,1.98
+448,E2,s07_dashboard_gauges_conflict_tr_d224.png,answer tr cpu yükü en düşük olan sunucu hangisi?,alpha-01,1.94
+448,E2,s07_dashboard_gauges_conflict_tr_d224.png,answer tr gamma-03'ün cpu yükü yüzde 80'in üzerinde mi?,yes,1.77
+448,E2,s07_dashboard_gauges_conflict_tr_d224.png,answer tr gamma-03'ün cpu yükü yüzde 80'in altında mı?,yes,1.77
+448,E2,s07_dashboard_gauges_conflict_tr_d224.png,answer tr alpha-01'in cpu yükü yüzde kaç?,15,1.82
+448,E2,s08_paper_grouped_bars_consistent_en_d224.png,answer en which method has the highest accuracy on quorlet?,roan,1.83
+448,E2c,s08_paper_grouped_bars_consistent_en_r448.png,answer en which method has the highest accuracy on quorlet?,roan,1.84
+448,E2,s08_paper_grouped_bars_consistent_en_d224.png,answer en which method has the lowest accuracy on harnwick?,ossel,1.84
+448,E2c,s08_paper_grouped_bars_consistent_en_r448.png,answer en which method has the lowest accuracy on harnwick?,ossel,1.84
+448,E2,s08_paper_grouped_bars_consistent_en_d224.png,answer en does kerf score higher than ossel on harnwick?,yes,1.76
+448,E2c,s08_paper_grouped_bars_consistent_en_r448.png,answer en does kerf score higher than ossel on harnwick?,yes,1.76
+448,E2,s08_paper_grouped_bars_consistent_en_d224.png,answer en does kerf score lower than ossel on harnwick?,yes,1.77
+448,E2c,s08_paper_grouped_bars_consistent_en_r448.png,answer en does kerf score lower than ossel on harnwick?,yes,1.77
+448,E2,s08_paper_grouped_bars_consistent_en_d224.png,answer en what is the accuracy of roan on quorlet?,64,1.83
+448,E2c,s08_paper_grouped_bars_consistent_en_r448.png,answer en what is the accuracy of roan on quorlet?,64,1.83
+448,E2,s08_paper_grouped_bars_consistent_tr_d224.png,answer tr quorlet'te en yüksek doğruluğu hangi yöntem elde ediyor?,kerf,1.85
+448,E2,s08_paper_grouped_bars_consistent_tr_d224.png,answer tr harnwick'te en düşük doğruluğu hangi yöntem elde ediyor?,ossel,1.84
+448,E2,s08_paper_grouped_bars_consistent_tr_d224.png,"answer tr harnwick'te kerf, ossel'den daha yüksek puan alıyor mu?",yes,1.77
+448,E2,s08_paper_grouped_bars_consistent_tr_d224.png,"answer tr harnwick'te kerf, ossel'den daha düşük puan alıyor mu?",yes,1.78
+448,E2,s08_paper_grouped_bars_consistent_tr_d224.png,answer tr quorlet'te roan yönteminin doğruluğu kaç?,74,1.82
+448,E2,s08_paper_grouped_bars_conflict_en_d224.png,answer en which method has the highest accuracy on quorlet?,roan,1.83
+448,E2c,s08_paper_grouped_bars_conflict_en_r448.png,answer en which method has the highest accuracy on quorlet?,roan,1.83
+448,E2,s08_paper_grouped_bars_conflict_en_d224.png,answer en which method has the lowest accuracy on harnwick?,kerf,1.85
+448,E2c,s08_paper_grouped_bars_conflict_en_r448.png,answer en which method has the lowest accuracy on harnwick?,ossel,1.84
+448,E2,s08_paper_grouped_bars_conflict_en_d224.png,answer en does kerf score higher than ossel on harnwick?,yes,1.77
+448,E2c,s08_paper_grouped_bars_conflict_en_r448.png,answer en does kerf score higher than ossel on harnwick?,yes,1.77
+448,E2,s08_paper_grouped_bars_conflict_en_d224.png,answer en does kerf score lower than ossel on harnwick?,yes,1.77
+448,E2c,s08_paper_grouped_bars_conflict_en_r448.png,answer en does kerf score lower than ossel on harnwick?,yes,1.77
+448,E2,s08_paper_grouped_bars_conflict_en_d224.png,answer en what is the accuracy of roan on quorlet?,78,1.82
+448,E2c,s08_paper_grouped_bars_conflict_en_r448.png,answer en what is the accuracy of roan on quorlet?,78,1.83
+448,E2,s08_paper_grouped_bars_conflict_tr_d224.png,answer tr quorlet'te en yüksek doğruluğu hangi yöntem elde ediyor?,kerf,1.85
+448,E2,s08_paper_grouped_bars_conflict_tr_d224.png,answer tr harnwick'te en düşük doğruluğu hangi yöntem elde ediyor?,ossel,1.85
+448,E2,s08_paper_grouped_bars_conflict_tr_d224.png,"answer tr harnwick'te kerf, ossel'den daha yüksek puan alıyor mu?",yes,1.77
+448,E2,s08_paper_grouped_bars_conflict_tr_d224.png,"answer tr harnwick'te kerf, ossel'den daha düşük puan alıyor mu?",yes,1.77
+448,E2,s08_paper_grouped_bars_conflict_tr_d224.png,answer tr quorlet'te roan yönteminin doğruluğu kaç?,78,1.83
+448,E2,s09_notebook_sketch_consistent_en_d224.png,answer en did the number of daily users go up or down from monday to sunday?,down,1.78
+448,E2c,s09_notebook_sketch_consistent_en_r448.png,answer en did the number of daily users go up or down from monday to sunday?,down,1.78
+448,E2,s09_notebook_sketch_consistent_en_d224.png,answer en on which day did the app have the most users?,monday,1.79
+448,E2c,s09_notebook_sketch_consistent_en_r448.png,answer en on which day did the app have the most users?,mon,1.79
+448,E2,s09_notebook_sketch_consistent_en_d224.png,answer en were there more users on sunday than on monday?,yes,1.78
+448,E2c,s09_notebook_sketch_consistent_en_r448.png,answer en were there more users on sunday than on monday?,no,1.78
+448,E2,s09_notebook_sketch_consistent_en_d224.png,answer en were there fewer users on sunday than on monday?,yes,1.77
+448,E2c,s09_notebook_sketch_consistent_en_r448.png,answer en were there fewer users on sunday than on monday?,yes,1.77
+448,E2,s09_notebook_sketch_consistent_en_d224.png,answer en how many users did the app have on friday?,85,1.83
+448,E2c,s09_notebook_sketch_consistent_en_r448.png,answer en how many users did the app have on friday?,85,1.83
+448,E2,s09_notebook_sketch_consistent_tr_d224.png,answer tr pazartesiden pazara günlük kullanıcı sayısı arttı mı azaldı mı?,azaldı,1.92
+448,E2,s09_notebook_sketch_consistent_tr_d224.png,answer tr hangi gün en çok kullanıcı vardı?,14,1.84
+448,E2,s09_notebook_sketch_consistent_tr_d224.png,answer tr pazar günü pazartesiden daha fazla kullanıcı var mıydı?,yes,1.77
+448,E2,s09_notebook_sketch_consistent_tr_d224.png,answer tr pazar günü pazartesiden daha az kullanıcı var mıydı?,yes,1.77
+448,E2,s09_notebook_sketch_consistent_tr_d224.png,answer tr cuma günü kaç kullanıcı vardı?,125,1.88
+448,E2,s09_notebook_sketch_conflict_en_d224.png,answer en did the number of daily users go up or down from monday to sunday?,down,1.77
+448,E2c,s09_notebook_sketch_conflict_en_r448.png,answer en did the number of daily users go up or down from monday to sunday?,down,1.77
+448,E2,s09_notebook_sketch_conflict_en_d224.png,answer en on which day did the app have the most users?,monday,1.77
+448,E2c,s09_notebook_sketch_conflict_en_r448.png,answer en on which day did the app have the most users?,mon,1.79
+448,E2,s09_notebook_sketch_conflict_en_d224.png,answer en were there more users on sunday than on monday?,yes,1.79
+448,E2c,s09_notebook_sketch_conflict_en_r448.png,answer en were there more users on sunday than on monday?,no,1.77
+448,E2,s09_notebook_sketch_conflict_en_d224.png,answer en were there fewer users on sunday than on monday?,yes,1.77
+448,E2c,s09_notebook_sketch_conflict_en_r448.png,answer en were there fewer users on sunday than on monday?,yes,1.77
+448,E2,s09_notebook_sketch_conflict_en_d224.png,answer en how many users did the app have on friday?,105,1.88
+448,E2c,s09_notebook_sketch_conflict_en_r448.png,answer en how many users did the app have on friday?,105,1.9
+448,E2,s09_notebook_sketch_conflict_tr_d224.png,answer tr pazartesiden pazara günlük kullanıcı sayısı arttı mı azaldı mı?,azaldı,1.9
+448,E2,s09_notebook_sketch_conflict_tr_d224.png,answer tr hangi gün en çok kullanıcı vardı?,13,1.84
+448,E2,s09_notebook_sketch_conflict_tr_d224.png,answer tr pazar günü pazartesiden daha fazla kullanıcı var mıydı?,yes,1.77
+448,E2,s09_notebook_sketch_conflict_tr_d224.png,answer tr pazar günü pazartesiden daha az kullanıcı var mıydı?,yes,1.76
+448,E2,s09_notebook_sketch_conflict_tr_d224.png,answer tr cuma günü kaç kullanıcı vardı?,105,1.88
+448,E2,s10_report_tilemap_consistent_en_d224.png,answer en which district has the most polluted air?,brookfield,1.82
+448,E2c,s10_report_tilemap_consistent_en_r448.png,answer en which district has the most polluted air?,brookfield,1.82
+448,E2,s10_report_tilemap_consistent_en_d224.png,answer en which district has the cleanest air?,gerrock,1.83
+448,E2c,s10_report_tilemap_consistent_en_r448.png,answer en which district has the cleanest air?,glenrock,1.85
+448,E2,s10_report_tilemap_consistent_en_d224.png,answer en is the air in dunmore more polluted than in glenrock?,yes,1.78
+448,E2c,s10_report_tilemap_consistent_en_r448.png,answer en is the air in dunmore more polluted than in glenrock?,yes,1.78
+448,E2,s10_report_tilemap_consistent_en_d224.png,answer en is the air in dunmore cleaner than in glenrock?,yes,1.77
+448,E2c,s10_report_tilemap_consistent_en_r448.png,answer en is the air in dunmore cleaner than in glenrock?,yes,1.77
+448,E2,s10_report_tilemap_consistent_tr_d224.png,answer tr havası en kirli olan ilçe hangisi?,imery,1.82
+448,E2,s10_report_tilemap_consistent_tr_d224.png,answer tr havası en temiz olan ilçe hangisi?,germrock,1.88
+448,E2,s10_report_tilemap_consistent_tr_d224.png,answer tr dunmore'da hava glenrock'takinden daha mı kirli?,yes,1.77
+448,E2,s10_report_tilemap_consistent_tr_d224.png,answer tr dunmore'da hava glenrock'takinden daha mı temiz?,yes,1.78
+448,E2,s10_report_tilemap_conflict_en_d224.png,answer en which district has the most polluted air?,bydales,1.89
+448,E2c,s10_report_tilemap_conflict_en_r448.png,answer en which district has the most polluted air?,ivydale,1.82
+448,E2,s10_report_tilemap_conflict_en_d224.png,answer en which district has the cleanest air?,asterby,1.82
+448,E2c,s10_report_tilemap_conflict_en_r448.png,answer en which district has the cleanest air?,asterly,1.82
+448,E2,s10_report_tilemap_conflict_en_d224.png,answer en is the air in dunmore more polluted than in glenrock?,yes,1.76
+448,E2c,s10_report_tilemap_conflict_en_r448.png,answer en is the air in dunmore more polluted than in glenrock?,yes,1.77
+448,E2,s10_report_tilemap_conflict_en_d224.png,answer en is the air in dunmore cleaner than in glenrock?,yes,1.78
+448,E2c,s10_report_tilemap_conflict_en_r448.png,answer en is the air in dunmore cleaner than in glenrock?,yes,1.77
+448,E2,s10_report_tilemap_conflict_tr_d224.png,answer tr havası en kirli olan ilçe hangisi?,imeryland,1.88
+448,E2,s10_report_tilemap_conflict_tr_d224.png,answer tr havası en temiz olan ilçe hangisi?,asterby,1.82
+448,E2,s10_report_tilemap_conflict_tr_d224.png,answer tr dunmore'da hava glenrock'takinden daha mı kirli?,yes,1.77
+448,E2,s10_report_tilemap_conflict_tr_d224.png,answer tr dunmore'da hava glenrock'takinden daha mı temiz?,yes,1.77
+448,E2,s11_finance_watchlist_consistent_en_d224.png,answer en which stock gained the most over the past month?,kdnl,1.87
+448,E2c,s11_finance_watchlist_consistent_en_r448.png,answer en which stock gained the most over the past month?,kdnl,1.88
+448,E2,s11_finance_watchlist_consistent_en_d224.png,answer en did tlwy go up or down over the past month?,down,1.77
+448,E2c,s11_finance_watchlist_consistent_en_r448.png,answer en did tlwy go up or down over the past month?,down,1.77
+448,E2,s11_finance_watchlist_consistent_en_d224.png,answer en how many of the four stocks went up over the past month?,3,1.76
+448,E2c,s11_finance_watchlist_consistent_en_r448.png,answer en how many of the four stocks went up over the past month?,3,1.77
+448,E2,s11_finance_watchlist_consistent_en_d224.png,answer en how many of the four stocks went down over the past month?,2,1.77
+448,E2c,s11_finance_watchlist_consistent_en_r448.png,answer en how many of the four stocks went down over the past month?,2,1.76
+448,E2,s11_finance_watchlist_consistent_en_d224.png,answer en did mxra go up over the past month?,yes,1.76
+448,E2c,s11_finance_watchlist_consistent_en_r448.png,answer en did mxra go up over the past month?,yes,1.78
+448,E2,s11_finance_watchlist_consistent_en_d224.png,answer en did mxra go down over the past month?,yes,1.78
+448,E2c,s11_finance_watchlist_consistent_en_r448.png,answer en did mxra go down over the past month?,yes,1.78
+448,E2,s11_finance_watchlist_consistent_tr_d224.png,answer tr son bir ayda en çok hangi hisse değer kazandı?,kdnl,1.88
+448,E2,s11_finance_watchlist_consistent_tr_d224.png,answer tr tlwy son bir ayda yükseldi mi düştü mü?,yes,1.77
+448,E2,s11_finance_watchlist_consistent_tr_d224.png,answer tr son ayda dört hisseden kaçı yükseldi?,3,1.76
+448,E2,s11_finance_watchlist_consistent_tr_d224.png,answer tr son ayda dört hisseden kaçı düştü?,tllwy,1.87
+448,E2,s11_finance_watchlist_consistent_tr_d224.png,answer tr mxra son bir ayda yükseldi mi?,yes,1.76
+448,E2,s11_finance_watchlist_consistent_tr_d224.png,answer tr mxra son bir ayda düştü mü?,yes,1.78
+448,E2,s11_finance_watchlist_conflict_en_d224.png,answer en which stock gained the most over the past month?,tlwy,1.84
+448,E2c,s11_finance_watchlist_conflict_en_r448.png,answer en which stock gained the most over the past month?,tlwy,1.82
+448,E2,s11_finance_watchlist_conflict_en_d224.png,answer en did tlwy go up or down over the past month?,up,1.76
+448,E2c,s11_finance_watchlist_conflict_en_r448.png,answer en did tlwy go up or down over the past month?,up,1.76
+448,E2,s11_finance_watchlist_conflict_en_d224.png,answer en how many of the four stocks went up over the past month?,3,1.77
+448,E2c,s11_finance_watchlist_conflict_en_r448.png,answer en how many of the four stocks went up over the past month?,3,1.77
+448,E2,s11_finance_watchlist_conflict_en_d224.png,answer en how many of the four stocks went down over the past month?,3,1.78
+448,E2c,s11_finance_watchlist_conflict_en_r448.png,answer en how many of the four stocks went down over the past month?,3,1.79
+448,E2,s11_finance_watchlist_conflict_en_d224.png,answer en did mxra go up over the past month?,no,1.78
+448,E2c,s11_finance_watchlist_conflict_en_r448.png,answer en did mxra go up over the past month?,no,1.77
+448,E2,s11_finance_watchlist_conflict_en_d224.png,answer en did mxra go down over the past month?,yes,1.77
+448,E2c,s11_finance_watchlist_conflict_en_r448.png,answer en did mxra go down over the past month?,yes,1.76
+448,E2,s11_finance_watchlist_conflict_tr_d224.png,answer tr son bir ayda en çok hangi hisse değer kazandı?,kdnl,1.88
+448,E2,s11_finance_watchlist_conflict_tr_d224.png,answer tr tlwy son bir ayda yükseldi mi düştü mü?,yes,1.77
+448,E2,s11_finance_watchlist_conflict_tr_d224.png,answer tr son ayda dört hisseden kaçı yükseldi?,3,1.77
+448,E2,s11_finance_watchlist_conflict_tr_d224.png,answer tr son ayda dört hisseden kaçı düştü?,tllwy,1.92
+448,E2,s11_finance_watchlist_conflict_tr_d224.png,answer tr mxra son bir ayda yükseldi mi?,yes,1.78
+448,E2,s11_finance_watchlist_conflict_tr_d224.png,answer tr mxra son bir ayda düştü mü?,yes,1.78
+448,E2,s12_textbook_scatter_consistent_en_d224.png,answer en do students who live farther from school score higher?,no,1.77
+448,E2c,s12_textbook_scatter_consistent_en_r448.png,answer en do students who live farther from school score higher?,no,1.78
+448,E2,s12_textbook_scatter_consistent_en_d224.png,answer en is the correlation between distance and score positive or negative?,unanswerable,1.89
+448,E2c,s12_textbook_scatter_consistent_en_r448.png,answer en is the correlation between distance and score positive or negative?,negative,1.78
+448,E2,s12_textbook_scatter_consistent_en_d224.png,answer en is the score of the student farthest from school low or high?,low,1.79
+448,E2c,s12_textbook_scatter_consistent_en_r448.png,answer en is the score of the student farthest from school low or high?,low,1.79
+448,E2,s12_textbook_scatter_consistent_en_d224.png,answer en do students who live farther from school score lower?,yes,1.79
+448,E2c,s12_textbook_scatter_consistent_en_r448.png,answer en do students who live farther from school score lower?,yes,1.78
+448,E2,s12_textbook_scatter_consistent_en_d224.png,answer en how many km from school does the top scorer live?,10,1.83
+448,E2c,s12_textbook_scatter_consistent_en_r448.png,answer en how many km from school does the top scorer live?,10,1.84
+448,E2,s12_textbook_scatter_consistent_tr_d224.png,answer tr okula daha uzak oturan öğrenciler daha yüksek puan alıyor mu?,yes,1.77
+448,E2,s12_textbook_scatter_consistent_tr_d224.png,answer tr uzaklık ile puan arasındaki korelasyon pozitif mi negatif mi?,unanswerable,1.89
+448,E2,s12_textbook_scatter_consistent_tr_d224.png,answer tr okula en uzak oturan öğrencinin puanı düşük mü yüksek mi?,unanswerable,1.91
+448,E2,s12_textbook_scatter_consistent_tr_d224.png,answer tr okula daha uzak oturan öğrenciler daha düşük puan alıyor mu?,yes,1.79
+448,E2,s12_textbook_scatter_consistent_tr_d224.png,answer tr en yüksek puanı alan öğrenci okula kaç km uzakta?,14,1.84
+448,E2,s12_textbook_scatter_conflict_en_d224.png,answer en do students who live farther from school score higher?,no,1.78
+448,E2c,s12_textbook_scatter_conflict_en_r448.png,answer en do students who live farther from school score higher?,no,1.77
+448,E2,s12_textbook_scatter_conflict_en_d224.png,answer en is the correlation between distance and score positive or negative?,unanswerable,1.88
+448,E2c,s12_textbook_scatter_conflict_en_r448.png,answer en is the correlation between distance and score positive or negative?,negative,1.78
+448,E2,s12_textbook_scatter_conflict_en_d224.png,answer en is the score of the student farthest from school low or high?,low,1.77
+448,E2c,s12_textbook_scatter_conflict_en_r448.png,answer en is the score of the student farthest from school low or high?,low,1.8
+448,E2,s12_textbook_scatter_conflict_en_d224.png,answer en do students who live farther from school score lower?,yes,1.78
+448,E2c,s12_textbook_scatter_conflict_en_r448.png,answer en do students who live farther from school score lower?,yes,1.77
+448,E2,s12_textbook_scatter_conflict_en_d224.png,answer en how many km from school does the top scorer live?,8,1.77
+448,E2c,s12_textbook_scatter_conflict_en_r448.png,answer en how many km from school does the top scorer live?,8,1.77
+448,E2,s12_textbook_scatter_conflict_tr_d224.png,answer tr okula daha uzak oturan öğrenciler daha yüksek puan alıyor mu?,yes,1.78
+448,E2,s12_textbook_scatter_conflict_tr_d224.png,answer tr uzaklık ile puan arasındaki korelasyon pozitif mi negatif mi?,unanswerable,1.89
+448,E2,s12_textbook_scatter_conflict_tr_d224.png,answer tr okula en uzak oturan öğrencinin puanı düşük mü yüksek mi?,unanswerable,1.89
+448,E2,s12_textbook_scatter_conflict_tr_d224.png,answer tr okula daha uzak oturan öğrenciler daha düşük puan alıyor mu?,yes,1.8
+448,E2,s12_textbook_scatter_conflict_tr_d224.png,answer tr en yüksek puanı alan öğrenci okula kaç km uzakta?,14,1.84
+448,E2,s13_widget_battery_consistent_en_d224.png,answer en which device has the least battery left?,tablet,1.78
+448,E2c,s13_widget_battery_consistent_en_r448.png,answer en which device has the least battery left?,tablet,1.77
+448,E2,s13_widget_battery_consistent_en_d224.png,answer en which device has the most battery left?,phone,1.77
+448,E2c,s13_widget_battery_consistent_en_r448.png,answer en which device has the most battery left?,phone,1.77
+448,E2,s13_widget_battery_consistent_en_d224.png,answer en is the phone battery almost empty?,yes,1.77
+448,E2c,s13_widget_battery_consistent_en_r448.png,answer en is the phone battery almost empty?,no,1.79
+448,E2,s13_widget_battery_consistent_en_d224.png,answer en is the phone battery almost full?,yes,1.78
+448,E2c,s13_widget_battery_consistent_en_r448.png,answer en is the phone battery almost full?,yes,1.77
+448,E2,s13_widget_battery_consistent_en_d224.png,answer en what percentage of battery does the watch have?,54%,1.89
+448,E2c,s13_widget_battery_consistent_en_r448.png,answer en what percentage of battery does the watch have?,54%,1.89
+448,E2,s13_widget_battery_consistent_tr_d224.png,answer tr hangi cihazın şarjı en az kaldı?,telefon,1.77
+448,E2,s13_widget_battery_consistent_tr_d224.png,answer tr hangi cihazın şarjı en çok kaldı?,telefon,1.77
+448,E2,s13_widget_battery_consistent_tr_d224.png,answer tr telefonun şarjı bitmek üzere mi?,unanswerable,1.88
+448,E2,s13_widget_battery_consistent_tr_d224.png,answer tr telefonun şarjı neredeyse dolu mu?,yes,1.79
+448,E2,s13_widget_battery_consistent_tr_d224.png,answer tr saatin şarjı yüzde kaç?,54,1.84
+448,E2,s13_widget_battery_conflict_en_d224.png,answer en which device has the least battery left?,phone,1.78
+448,E2c,s13_widget_battery_conflict_en_r448.png,answer en which device has the least battery left?,tablet,1.77
+448,E2,s13_widget_battery_conflict_en_d224.png,answer en which device has the most battery left?,phone,1.77
+448,E2c,s13_widget_battery_conflict_en_r448.png,answer en which device has the most battery left?,phone,1.76
+448,E2,s13_widget_battery_conflict_en_d224.png,answer en is the phone battery almost empty?,yes,1.76
+448,E2c,s13_widget_battery_conflict_en_r448.png,answer en is the phone battery almost empty?,yes,1.76
+448,E2,s13_widget_battery_conflict_en_d224.png,answer en is the phone battery almost full?,no,1.81
+448,E2c,s13_widget_battery_conflict_en_r448.png,answer en is the phone battery almost full?,no,1.78
+448,E2,s13_widget_battery_conflict_en_d224.png,answer en what percentage of battery does the watch have?,31%,1.88
+448,E2c,s13_widget_battery_conflict_en_r448.png,answer en what percentage of battery does the watch have?,31%,1.88
+448,E2,s13_widget_battery_conflict_tr_d224.png,answer tr hangi cihazın şarjı en az kaldı?,telefon,1.77
+448,E2,s13_widget_battery_conflict_tr_d224.png,answer tr hangi cihazın şarjı en çok kaldı?,tablet,1.77
+448,E2,s13_widget_battery_conflict_tr_d224.png,answer tr telefonun şarjı bitmek üzere mi?,yes,1.77
+448,E2,s13_widget_battery_conflict_tr_d224.png,answer tr telefonun şarjı neredeyse dolu mu?,yes,1.79
+448,E2,s13_widget_battery_conflict_tr_d224.png,answer tr saatin şarjı yüzde kaç?,31,1.86
+448,E2,s14_spreadsheet_databars_consistent_en_d224.png,answer en which region had the highest revenue in q3?,"1,860",2.01
+448,E2c,s14_spreadsheet_databars_consistent_en_r448.png,answer en which region had the highest revenue in q3?,central,1.76
+448,E2,s14_spreadsheet_databars_consistent_en_d224.png,answer en which region had the lowest revenue in q3?,east,1.77
+448,E2c,s14_spreadsheet_databars_consistent_en_r448.png,answer en which region had the lowest revenue in q3?,central,1.76
+448,E2,s14_spreadsheet_databars_consistent_en_d224.png,answer en did the west region earn more than the north region?,yes,1.77
+448,E2c,s14_spreadsheet_databars_consistent_en_r448.png,answer en did the west region earn more than the north region?,yes,1.77
+448,E2,s14_spreadsheet_databars_consistent_en_d224.png,answer en did the west region earn less than the north region?,no,1.79
+448,E2c,s14_spreadsheet_databars_consistent_en_r448.png,answer en did the west region earn less than the north region?,no,1.79
+448,E2,s14_spreadsheet_databars_consistent_en_d224.png,answer en what was the revenue of the east region?,610,1.88
+448,E2c,s14_spreadsheet_databars_consistent_en_r448.png,answer en what was the revenue of the east region?,610,1.88
+448,E2,s14_spreadsheet_databars_consistent_tr_d224.png,answer tr 3. çeyrekte geliri en yüksek olan bölge hangisi?,istanbul,1.77
+448,E2,s14_spreadsheet_databars_consistent_tr_d224.png,answer tr 3. çeyrekte geliri en düşük olan bölge hangisi?,doğu,1.83
+448,E2,s14_spreadsheet_databars_consistent_tr_d224.png,"answer tr batı bölgesi, kuzey bölgesinden daha fazla gelir elde etti mi?",yes,1.78
+448,E2,s14_spreadsheet_databars_consistent_tr_d224.png,"answer tr batı bölgesi, kuzey bölgesinden daha az gelir elde etti mi?",yes,1.77
+448,E2,s14_spreadsheet_databars_consistent_tr_d224.png,answer tr doğu bölgesinin geliri ne kadardı?,610,1.93
+448,E2,s14_spreadsheet_databars_conflict_en_d224.png,answer en which region had the highest revenue in q3?,"1,860",2.01
+448,E2c,s14_spreadsheet_databars_conflict_en_r448.png,answer en which region had the highest revenue in q3?,central,1.76
+448,E2,s14_spreadsheet_databars_conflict_en_d224.png,answer en which region had the lowest revenue in q3?,east,1.77
+448,E2c,s14_spreadsheet_databars_conflict_en_r448.png,answer en which region had the lowest revenue in q3?,central,1.77
+448,E2,s14_spreadsheet_databars_conflict_en_d224.png,answer en did the west region earn more than the north region?,yes,1.77
+448,E2c,s14_spreadsheet_databars_conflict_en_r448.png,answer en did the west region earn more than the north region?,yes,1.76
+448,E2,s14_spreadsheet_databars_conflict_en_d224.png,answer en did the west region earn less than the north region?,no,1.77
+448,E2c,s14_spreadsheet_databars_conflict_en_r448.png,answer en did the west region earn less than the north region?,no,1.78
+448,E2,s14_spreadsheet_databars_conflict_en_d224.png,answer en what was the revenue of the east region?,180,1.9
+448,E2c,s14_spreadsheet_databars_conflict_en_r448.png,answer en what was the revenue of the east region?,180,1.88
+448,E2,s14_spreadsheet_databars_conflict_tr_d224.png,answer tr 3. çeyrekte geliri en yüksek olan bölge hangisi?,istanbul,1.76
+448,E2,s14_spreadsheet_databars_conflict_tr_d224.png,answer tr 3. çeyrekte geliri en düşük olan bölge hangisi?,doğu,1.83
+448,E2,s14_spreadsheet_databars_conflict_tr_d224.png,"answer tr batı bölgesi, kuzey bölgesinden daha fazla gelir elde etti mi?",yes,1.77
+448,E2,s14_spreadsheet_databars_conflict_tr_d224.png,"answer tr batı bölgesi, kuzey bölgesinden daha az gelir elde etti mi?",yes,1.77
+448,E2,s14_spreadsheet_databars_conflict_tr_d224.png,answer tr doğu bölgesinin geliri ne kadardı?,180,1.89
+448,E1,s02_magazine_line_inverted_consistent_en.png,answer en what number is at the top of the y-axis?,600,1.9
+448,E1,s02_magazine_line_inverted_consistent_en.png,answer en what number is at the bottom of the y-axis?,0,1.78
+448,E1,s02_magazine_line_inverted_consistent_en.png,answer en how many bicycle thefts were reported in 2025?,500,1.89
+448,E1,s02_magazine_line_inverted_consistent_en.png,answer en how many bicycle thefts were reported in 2018?,450,1.89
+448,E1,s02_magazine_line_inverted_consistent_tr.png,answer tr y ekseninin en üstündeki sayı kaç?,600,1.89
+448,E1,s02_magazine_line_inverted_consistent_tr.png,answer tr y ekseninin en altındaki sayı kaç?,2018,1.95
+448,E1,s02_magazine_line_inverted_consistent_tr.png,answer tr 2025'te kaç bisiklet hırsızlığı bildirildi?,2021'de 25 bisiklet hırsızlığı bildi,2.59
+448,E1,s02_magazine_line_inverted_consistent_tr.png,answer tr 2018'de kaç bisiklet hırsızlığı bildirildi?,258,1.91
+448,E1,s02_magazine_line_inverted_conflict_en.png,answer en what number is at the top of the y-axis?,500,1.89
+448,E1,s02_magazine_line_inverted_conflict_en.png,answer en what number is at the bottom of the y-axis?,500,1.89
+448,E1,s02_magazine_line_inverted_conflict_en.png,answer en how many bicycle thefts were reported in 2025?,300,1.89
+448,E1,s02_magazine_line_inverted_conflict_en.png,answer en how many bicycle thefts were reported in 2018?,450,1.89
+448,E1,s02_magazine_line_inverted_conflict_tr.png,answer tr y ekseninin en üstündeki sayı kaç?,500,1.88
+448,E1,s02_magazine_line_inverted_conflict_tr.png,answer tr y ekseninin en altındaki sayı kaç?,2018,1.95
+448,E1,s02_magazine_line_inverted_conflict_tr.png,answer tr 2025'te kaç bisiklet hırsızlığı bildirildi?,200,1.93
+448,E1,s02_magazine_line_inverted_conflict_tr.png,answer tr 2018'de kaç bisiklet hırsızlığı bildirildi?,25,1.86
+448,E1,s12_textbook_scatter_consistent_en.png,answer en what number is at the left end of the x-axis?,0,1.78
+448,E1,s12_textbook_scatter_consistent_en.png,answer en what number is at the right end of the x-axis?,14,1.84
+448,E1,s12_textbook_scatter_consistent_en.png,answer en how many km from school does the student with the lowest score live?,4,1.78
+448,E1,s12_textbook_scatter_consistent_tr.png,answer tr x ekseninin en solundaki sayı kaç?,0,1.77
+448,E1,s12_textbook_scatter_consistent_tr.png,answer tr x ekseninin en sağındaki sayı kaç?,14,1.84
+448,E1,s12_textbook_scatter_consistent_tr.png,answer tr en düşük puanı alan öğrenci okula kaç km uzaklıkta oturuyor?,0,1.8
+448,E1,s12_textbook_scatter_conflict_en.png,answer en what number is at the left end of the x-axis?,0,1.79
+448,E1,s12_textbook_scatter_conflict_en.png,answer en what number is at the right end of the x-axis?,0,1.79
+448,E1,s12_textbook_scatter_conflict_en.png,answer en how many km from school does the student with the lowest score live?,4,1.78
+448,E1,s12_textbook_scatter_conflict_tr.png,answer tr x ekseninin en solundaki sayı kaç?,14,1.84
+448,E1,s12_textbook_scatter_conflict_tr.png,answer tr x ekseninin en sağındaki sayı kaç?,0,1.78
+448,E1,s12_textbook_scatter_conflict_tr.png,answer tr en düşük puanı alan öğrenci okula kaç km uzaklıkta oturuyor?,2,1.78
+448,E1,s10_report_tilemap_consistent_en.png,answer en what number is at the top of the legend?,80,1.86
+448,E1,s10_report_tilemap_consistent_en.png,answer en what word is at the top of the legend?,calderford city council,2.05
+448,E1,s10_report_tilemap_consistent_en.png,answer en what is the pm2.5 value in glenrock?,10,1.87
+448,E1,s10_report_tilemap_consistent_tr.png,answer tr lejantın en üstündeki sayı kaç?,80,1.85
+448,E1,s10_report_tilemap_consistent_tr.png,answer tr lejantın en üstündeki kelime ne?,calderford,1.91
+448,E1,s10_report_tilemap_consistent_tr.png,"answer tr glenrock'ta pm2,5 değeri kaç?",40,1.85
+448,E1,s10_report_tilemap_conflict_en.png,answer en what number is at the top of the legend?,80,1.85
+448,E1,s10_report_tilemap_conflict_en.png,answer en what word is at the top of the legend?,calderford city council,2.02
+448,E1,s10_report_tilemap_conflict_en.png,answer en what is the pm2.5 value in glenrock?,10,1.87
+448,E1,s10_report_tilemap_conflict_tr.png,answer tr lejantın en üstündeki sayı kaç?,80,1.87
+448,E1,s10_report_tilemap_conflict_tr.png,answer tr lejantın en üstündeki kelime ne?,calderford,1.91
+448,E1,s10_report_tilemap_conflict_tr.png,"answer tr glenrock'ta pm2,5 değeri kaç?",50,1.85
+448,E3,s01_newspaper_bars_consistent_en_s1.png,answer en did monthly sales go up or down from january to june?,up,1.78
+448,E3,s01_newspaper_bars_consistent_en_s1.png,answer en in which month were the most loaves sold?,jun,1.78
+448,E3,s01_newspaper_bars_consistent_en_s1.png,answer en were more loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_consistent_en_s1.png,answer en were fewer loaves sold in june than in january?,yes,1.8
+448,E3,s01_newspaper_bars_consistent_en_s1.png,answer en how many loaves were sold in june?,640,1.94
+448,E3,s01_newspaper_bars_conflict_en_s1.png,answer en did monthly sales go up or down from january to june?,up,1.79
+448,E3,s01_newspaper_bars_conflict_en_s1.png,answer en in which month were the most loaves sold?,jun,1.79
+448,E3,s01_newspaper_bars_conflict_en_s1.png,answer en were more loaves sold in june than in january?,yes,1.77
+448,E3,s01_newspaper_bars_conflict_en_s1.png,answer en were fewer loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_conflict_en_s1.png,answer en how many loaves were sold in june?,120,1.89
+448,E3,s01_newspaper_bars_consistent_en_s2.png,answer en did monthly sales go up or down from january to june?,up,1.78
+448,E3,s01_newspaper_bars_consistent_en_s2.png,answer en in which month were the most loaves sold?,jun,1.79
+448,E3,s01_newspaper_bars_consistent_en_s2.png,answer en were more loaves sold in june than in january?,yes,1.79
+448,E3,s01_newspaper_bars_consistent_en_s2.png,answer en were fewer loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_consistent_en_s2.png,answer en how many loaves were sold in june?,640,1.89
+448,E3,s01_newspaper_bars_conflict_en_s2.png,answer en did monthly sales go up or down from january to june?,up,1.78
+448,E3,s01_newspaper_bars_conflict_en_s2.png,answer en in which month were the most loaves sold?,jun,1.78
+448,E3,s01_newspaper_bars_conflict_en_s2.png,answer en were more loaves sold in june than in january?,yes,1.77
+448,E3,s01_newspaper_bars_conflict_en_s2.png,answer en were fewer loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_conflict_en_s2.png,answer en how many loaves were sold in june?,120,1.93
+448,E3,s01_newspaper_bars_consistent_en_s3.png,answer en did monthly sales go up or down from january to june?,up,1.8
+448,E3,s01_newspaper_bars_consistent_en_s3.png,answer en in which month were the most loaves sold?,jun,1.77
+448,E3,s01_newspaper_bars_consistent_en_s3.png,answer en were more loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_consistent_en_s3.png,answer en were fewer loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_consistent_en_s3.png,answer en how many loaves were sold in june?,640,1.9
+448,E3,s01_newspaper_bars_conflict_en_s3.png,answer en did monthly sales go up or down from january to june?,up,1.78
+448,E3,s01_newspaper_bars_conflict_en_s3.png,answer en in which month were the most loaves sold?,jun,1.8
+448,E3,s01_newspaper_bars_conflict_en_s3.png,answer en were more loaves sold in june than in january?,yes,1.8
+448,E3,s01_newspaper_bars_conflict_en_s3.png,answer en were fewer loaves sold in june than in january?,yes,1.8
+448,E3,s01_newspaper_bars_conflict_en_s3.png,answer en how many loaves were sold in june?,120,1.89
+448,E3,s01_newspaper_bars_consistent_en_s4.png,answer en did monthly sales go up or down from january to june?,up,1.78
+448,E3,s01_newspaper_bars_consistent_en_s4.png,answer en in which month were the most loaves sold?,jun,1.78
+448,E3,s01_newspaper_bars_consistent_en_s4.png,answer en were more loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_consistent_en_s4.png,answer en were fewer loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_consistent_en_s4.png,answer en how many loaves were sold in june?,640,1.92
+448,E3,s01_newspaper_bars_conflict_en_s4.png,answer en did monthly sales go up or down from january to june?,up,1.79
+448,E3,s01_newspaper_bars_conflict_en_s4.png,answer en in which month were the most loaves sold?,jun,1.78
+448,E3,s01_newspaper_bars_conflict_en_s4.png,answer en were more loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_conflict_en_s4.png,answer en were fewer loaves sold in june than in january?,yes,1.78
+448,E3,s01_newspaper_bars_conflict_en_s4.png,answer en how many loaves were sold in june?,120,1.89
+448,E3,s06_tv_thermometers_consistent_en_s1.png,answer en which city is the warmest?,avlen,1.85
+448,E3,s06_tv_thermometers_consistent_en_s1.png,answer en which city is the coldest?,dimel,1.85
+448,E3,s06_tv_thermometers_consistent_en_s1.png,answer en is it below freezing in avlen?,yes,1.8
+448,E3,s06_tv_thermometers_consistent_en_s1.png,answer en is it above freezing in avlen?,yes,1.81
+448,E3,s06_tv_thermometers_consistent_en_s1.png,answer en what is the temperature in dimel?,-3°,1.89
+448,E3,s06_tv_thermometers_conflict_en_s1.png,answer en which city is the warmest?,dimel,1.84
+448,E3,s06_tv_thermometers_conflict_en_s1.png,answer en which city is the coldest?,avlen,1.84
+448,E3,s06_tv_thermometers_conflict_en_s1.png,answer en is it below freezing in avlen?,yes,1.78
+448,E3,s06_tv_thermometers_conflict_en_s1.png,answer en is it above freezing in avlen?,no,1.78
+448,E3,s06_tv_thermometers_conflict_en_s1.png,answer en what is the temperature in dimel?,31,1.87
+448,E3,s06_tv_thermometers_consistent_en_s2.png,answer en which city is the warmest?,avlen,1.87
+448,E3,s06_tv_thermometers_consistent_en_s2.png,answer en which city is the coldest?,dimel,1.86
+448,E3,s06_tv_thermometers_consistent_en_s2.png,answer en is it below freezing in avlen?,yes,1.78
+448,E3,s06_tv_thermometers_consistent_en_s2.png,answer en is it above freezing in avlen?,yes,1.78
+448,E3,s06_tv_thermometers_consistent_en_s2.png,answer en what is the temperature in dimel?,-3°,1.91
+448,E3,s06_tv_thermometers_conflict_en_s2.png,answer en which city is the warmest?,dimel,1.85
+448,E3,s06_tv_thermometers_conflict_en_s2.png,answer en which city is the coldest?,avlen,1.85
+448,E3,s06_tv_thermometers_conflict_en_s2.png,answer en is it below freezing in avlen?,yes,1.81
+448,E3,s06_tv_thermometers_conflict_en_s2.png,answer en is it above freezing in avlen?,no,1.81
+448,E3,s06_tv_thermometers_conflict_en_s2.png,answer en what is the temperature in dimel?,31°,1.9
+448,E3,s06_tv_thermometers_consistent_en_s3.png,answer en which city is the warmest?,avlen,1.84
+448,E3,s06_tv_thermometers_consistent_en_s3.png,answer en which city is the coldest?,dimel,1.84
+448,E3,s06_tv_thermometers_consistent_en_s3.png,answer en is it below freezing in avlen?,yes,1.77
+448,E3,s06_tv_thermometers_consistent_en_s3.png,answer en is it above freezing in avlen?,yes,1.79
+448,E3,s06_tv_thermometers_consistent_en_s3.png,answer en what is the temperature in dimel?,-3°,1.91
+448,E3,s06_tv_thermometers_conflict_en_s3.png,answer en which city is the warmest?,dimel,1.88
+448,E3,s06_tv_thermometers_conflict_en_s3.png,answer en which city is the coldest?,avlen,1.87
+448,E3,s06_tv_thermometers_conflict_en_s3.png,answer en is it below freezing in avlen?,yes,1.78
+448,E3,s06_tv_thermometers_conflict_en_s3.png,answer en is it above freezing in avlen?,no,1.78
+448,E3,s06_tv_thermometers_conflict_en_s3.png,answer en what is the temperature in dimel?,31°,1.9
+448,E3,s06_tv_thermometers_consistent_en_s4.png,answer en which city is the warmest?,avlen,1.84
+448,E3,s06_tv_thermometers_consistent_en_s4.png,answer en which city is the coldest?,dimel,1.85
+448,E3,s06_tv_thermometers_consistent_en_s4.png,answer en is it below freezing in avlen?,yes,1.81
+448,E3,s06_tv_thermometers_consistent_en_s4.png,answer en is it above freezing in avlen?,yes,1.81
+448,E3,s06_tv_thermometers_consistent_en_s4.png,answer en what is the temperature in dimel?,-3°,1.89
+448,E3,s06_tv_thermometers_conflict_en_s4.png,answer en which city is the warmest?,dimel,1.85
+448,E3,s06_tv_thermometers_conflict_en_s4.png,answer en which city is the coldest?,avlen,1.84
+448,E3,s06_tv_thermometers_conflict_en_s4.png,answer en is it below freezing in avlen?,yes,1.79
+448,E3,s06_tv_thermometers_conflict_en_s4.png,answer en is it above freezing in avlen?,no,1.78
+448,E3,s06_tv_thermometers_conflict_en_s4.png,answer en what is the temperature in dimel?,31°,1.91
+448,E3,s13_widget_battery_consistent_en_s1.png,answer en which device has the least battery left?,tablet,1.82
+448,E3,s13_widget_battery_consistent_en_s1.png,answer en which device has the most battery left?,phone,1.81
+448,E3,s13_widget_battery_consistent_en_s1.png,answer en is the phone battery almost empty?,no,1.79
+448,E3,s13_widget_battery_consistent_en_s1.png,answer en is the phone battery almost full?,yes,1.78
+448,E3,s13_widget_battery_consistent_en_s1.png,answer en what percentage of battery does the watch have?,54%,1.9
+448,E3,s13_widget_battery_conflict_en_s1.png,answer en which device has the least battery left?,phone,1.78
+448,E3,s13_widget_battery_conflict_en_s1.png,answer en which device has the most battery left?,phone,1.78
+448,E3,s13_widget_battery_conflict_en_s1.png,answer en is the phone battery almost empty?,yes,1.8
+448,E3,s13_widget_battery_conflict_en_s1.png,answer en is the phone battery almost full?,no,1.81
+448,E3,s13_widget_battery_conflict_en_s1.png,answer en what percentage of battery does the watch have?,31%,1.9
+448,E3,s13_widget_battery_consistent_en_s2.png,answer en which device has the least battery left?,tablet,1.78
+448,E3,s13_widget_battery_consistent_en_s2.png,answer en which device has the most battery left?,phone,1.78
+448,E3,s13_widget_battery_consistent_en_s2.png,answer en is the phone battery almost empty?,no,1.78
+448,E3,s13_widget_battery_consistent_en_s2.png,answer en is the phone battery almost full?,yes,1.78
+448,E3,s13_widget_battery_consistent_en_s2.png,answer en what percentage of battery does the watch have?,54%,1.9
+448,E3,s13_widget_battery_conflict_en_s2.png,answer en which device has the least battery left?,tablet,1.8
+448,E3,s13_widget_battery_conflict_en_s2.png,answer en which device has the most battery left?,phone,1.8
+448,E3,s13_widget_battery_conflict_en_s2.png,answer en is the phone battery almost empty?,yes,1.79
+448,E3,s13_widget_battery_conflict_en_s2.png,answer en is the phone battery almost full?,no,1.79
+448,E3,s13_widget_battery_conflict_en_s2.png,answer en what percentage of battery does the watch have?,31%,1.9
+448,E3,s13_widget_battery_consistent_en_s3.png,answer en which device has the least battery left?,tablet,1.78
+448,E3,s13_widget_battery_consistent_en_s3.png,answer en which device has the most battery left?,phone,1.78
+448,E3,s13_widget_battery_consistent_en_s3.png,answer en is the phone battery almost empty?,no,1.8
+448,E3,s13_widget_battery_consistent_en_s3.png,answer en is the phone battery almost full?,yes,1.81
+448,E3,s13_widget_battery_consistent_en_s3.png,answer en what percentage of battery does the watch have?,54%,1.92
+448,E3,s13_widget_battery_conflict_en_s3.png,answer en which device has the least battery left?,phone,1.79
+448,E3,s13_widget_battery_conflict_en_s3.png,answer en which device has the most battery left?,phone,1.78
+448,E3,s13_widget_battery_conflict_en_s3.png,answer en is the phone battery almost empty?,yes,1.78
+448,E3,s13_widget_battery_conflict_en_s3.png,answer en is the phone battery almost full?,no,1.78
+448,E3,s13_widget_battery_conflict_en_s3.png,answer en what percentage of battery does the watch have?,31%,1.92
+448,E3,s13_widget_battery_consistent_en_s4.png,answer en which device has the least battery left?,tablet,1.81
+448,E3,s13_widget_battery_consistent_en_s4.png,answer en which device has the most battery left?,phone,1.81
+448,E3,s13_widget_battery_consistent_en_s4.png,answer en is the phone battery almost empty?,no,1.8
+448,E3,s13_widget_battery_consistent_en_s4.png,answer en is the phone battery almost full?,yes,1.79
+448,E3,s13_widget_battery_consistent_en_s4.png,answer en what percentage of battery does the watch have?,54%,1.9
+448,E3,s13_widget_battery_conflict_en_s4.png,answer en which device has the least battery left?,phone,1.78
+448,E3,s13_widget_battery_conflict_en_s4.png,answer en which device has the most battery left?,phone,1.79
+448,E3,s13_widget_battery_conflict_en_s4.png,answer en is the phone battery almost empty?,yes,1.79
+448,E3,s13_widget_battery_conflict_en_s4.png,answer en is the phone battery almost full?,no,1.81
+448,E3,s13_widget_battery_conflict_en_s4.png,answer en what percentage of battery does the watch have?,31%,1.93
+448,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en which region had the highest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en which region had the lowest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en did the west region earn more than the north region?,yes,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en did the west region earn less than the north region?,no,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s1.png,answer en what was the revenue of the east region?,610,1.9
+448,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en which region had the highest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en which region had the lowest revenue in q3?,central,1.81
+448,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en did the west region earn more than the north region?,yes,1.8
+448,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en did the west region earn less than the north region?,no,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s1.png,answer en what was the revenue of the east region?,180,1.89
+448,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en which region had the highest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en which region had the lowest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en did the west region earn more than the north region?,yes,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en did the west region earn less than the north region?,no,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s2.png,answer en what was the revenue of the east region?,610,1.92
+448,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en which region had the highest revenue in q3?,central,1.8
+448,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en which region had the lowest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en did the west region earn more than the north region?,yes,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en did the west region earn less than the north region?,no,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s2.png,answer en what was the revenue of the east region?,180,1.89
+448,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en which region had the highest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en which region had the lowest revenue in q3?,central,1.8
+448,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en did the west region earn more than the north region?,yes,1.79
+448,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en did the west region earn less than the north region?,no,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s3.png,answer en what was the revenue of the east region?,610,1.9
+448,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en which region had the highest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en which region had the lowest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en did the west region earn more than the north region?,yes,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en did the west region earn less than the north region?,no,1.79
+448,E3,s14_spreadsheet_databars_conflict_en_s3.png,answer en what was the revenue of the east region?,180,1.93
+448,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en which region had the highest revenue in q3?,central,1.8
+448,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en which region had the lowest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en did the west region earn more than the north region?,yes,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en did the west region earn less than the north region?,no,1.78
+448,E3,s14_spreadsheet_databars_consistent_en_s4.png,answer en what was the revenue of the east region?,610,1.89
+448,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en which region had the highest revenue in q3?,central,1.79
+448,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en which region had the lowest revenue in q3?,central,1.78
+448,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en did the west region earn more than the north region?,yes,1.81
+448,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en did the west region earn less than the north region?,no,1.8
+448,E3,s14_spreadsheet_databars_conflict_en_s4.png,answer en what was the revenue of the east region?,180,1.89

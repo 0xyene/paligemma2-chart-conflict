@@ -1,0 +1,226 @@
+{
+  "id": "s13_widget_battery",
+  "title": {
+    "en": "Batteries widget on a phone home screen",
+    "tr": "Telefon ana ekranında Piller widget'ı"
+  },
+  "chart": "radial progress rings",
+  "style": "phone home-screen widget (light, frosted card on soft wallpaper)",
+  "tech": "HTML/CSS + inline SVG rings (stroke-dasharray), headless Chrome",
+  "mechanism": "label",
+  "conflict_summary": "Ring fills Phone 88 / Earbuds 9 / Watch 54 / Tablet 31; in conflict the centre percentages read Phone 9 / Earbuds 88 / Watch 31 / Tablet 54.",
+  "data": {
+    "devices": [
+      "Phone",
+      "Earbuds",
+      "Watch",
+      "Tablet"
+    ],
+    "visual": [
+      88,
+      9,
+      54,
+      31
+    ],
+    "conflict_labels": [
+      9,
+      88,
+      31,
+      54
+    ],
+    "ring": "starts at 12 o'clock, clockwise, 0-100 % of the circle; no ticks or scale"
+  },
+  "questions": [
+    {
+      "qid": "s13_q1",
+      "kind": "argmin",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en which device has the least battery left?",
+        "tr": "answer tr hangi cihazın şarjı en az kaldı?"
+      },
+      "visual": {
+        "en": [
+          "earbuds",
+          "earbud",
+          "earphones",
+          "earphone",
+          "headphones",
+          "headphone",
+          "buds",
+          "airpods",
+          "headset"
+        ],
+        "tr": [
+          "kulaklık",
+          "kulak",
+          "airpods"
+        ]
+      },
+      "text": {
+        "en": [
+          "phone",
+          "smartphone",
+          "mobile",
+          "cellphone",
+          "iphone"
+        ],
+        "tr": [
+          "telefon",
+          "akıllı telefon",
+          "cep telefonu",
+          "iphone"
+        ]
+      }
+    },
+    {
+      "qid": "s13_q2",
+      "kind": "argmax",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en which device has the most battery left?",
+        "tr": "answer tr hangi cihazın şarjı en çok kaldı?"
+      },
+      "visual": {
+        "en": [
+          "phone",
+          "smartphone",
+          "mobile",
+          "cellphone",
+          "iphone"
+        ],
+        "tr": [
+          "telefon",
+          "akıllı telefon",
+          "cep telefonu",
+          "iphone"
+        ]
+      },
+      "text": {
+        "en": [
+          "earbuds",
+          "earbud",
+          "earphones",
+          "earphone",
+          "headphones",
+          "headphone",
+          "buds",
+          "airpods",
+          "headset"
+        ],
+        "tr": [
+          "kulaklık",
+          "kulak",
+          "airpods"
+        ]
+      }
+    },
+    {
+      "qid": "s13_q3a",
+      "kind": "threshold",
+      "pair": "s13_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en is the phone battery almost empty?",
+        "tr": "answer tr telefonun şarjı bitmek üzere mi?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      }
+    },
+    {
+      "qid": "s13_q3b",
+      "kind": "threshold",
+      "pair": "s13_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en is the phone battery almost full?",
+        "tr": "answer tr telefonun şarjı neredeyse dolu mu?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      }
+    },
+    {
+      "qid": "s13_q4",
+      "kind": "read_value",
+      "pair": null,
+      "nonumbers": false,
+      "prompt": {
+        "en": "answer en what percentage of battery does the watch have?",
+        "tr": "answer tr saatin şarjı yüzde kaç?"
+      },
+      "visual": {
+        "en": [
+          "54",
+          "^fifty-four",
+          "^fifty four",
+          "54%",
+          "54 percent",
+          "^fifty-four percent",
+          "^fifty four percent"
+        ],
+        "tr": [
+          "54",
+          "^elli dört",
+          "^ellidört",
+          "%54",
+          "yüzde 54",
+          "^yüzde elli dört",
+          "^yüzde ellidört"
+        ]
+      },
+      "text": {
+        "en": [
+          "31",
+          "^thirty-one",
+          "^thirty one",
+          "31%",
+          "31 percent",
+          "^thirty-one percent",
+          "^thirty one percent"
+        ],
+        "tr": [
+          "31",
+          "^otuz bir",
+          "^otuzbir",
+          "%31",
+          "yüzde 31",
+          "^yüzde otuz bir",
+          "^yüzde otuzbir"
+        ]
+      }
+    }
+  ],
+  "conflict_has_truth": false
+}

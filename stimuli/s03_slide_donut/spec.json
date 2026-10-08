@@ -1,0 +1,196 @@
+{
+  "id": "s03_slide_donut",
+  "title": {
+    "en": "Smartphone market share (presentation slide)",
+    "tr": "Akıllı telefon pazar payı (sunum slaytı)"
+  },
+  "chart": "donut",
+  "style": "corporate presentation slide",
+  "tech": "hand-built inline SVG document (headless Chrome)",
+  "mechanism": "label",
+  "conflict_summary": "Slices clockwise from 12 o'clock are Nimbus 46, Orca 27, Pixa 17, Zento 10; in conflict the callouts print the shares reversed (Nimbus 10%, Orca 17%, Pixa 27%, Zento 46%).",
+  "data": {
+    "brands": [
+      "Nimbus",
+      "Orca",
+      "Pixa",
+      "Zento"
+    ],
+    "visual": [
+      46,
+      27,
+      17,
+      10
+    ],
+    "conflict_labels": [
+      10,
+      17,
+      27,
+      46
+    ],
+    "slice_order": "clockwise from 12 o'clock",
+    "colors": {
+      "Nimbus": "#4a86ad",
+      "Orca": "#2c3a86",
+      "Pixa": "#c2bba9",
+      "Zento": "#8f88c6"
+    }
+  },
+  "questions": [
+    {
+      "qid": "s03_q1",
+      "kind": "argmax",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en which brand has the largest market share?",
+        "tr": "answer tr en büyük pazar payına hangi marka sahip?"
+      },
+      "visual": {
+        "en": [
+          "nimbus"
+        ],
+        "tr": [
+          "nimbus"
+        ]
+      },
+      "text": {
+        "en": [
+          "zento"
+        ],
+        "tr": [
+          "zento"
+        ]
+      }
+    },
+    {
+      "qid": "s03_q2",
+      "kind": "argmin",
+      "pair": null,
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en which brand has the smallest market share?",
+        "tr": "answer tr en küçük pazar payına hangi marka sahip?"
+      },
+      "visual": {
+        "en": [
+          "zento"
+        ],
+        "tr": [
+          "zento"
+        ]
+      },
+      "text": {
+        "en": [
+          "nimbus"
+        ],
+        "tr": [
+          "nimbus"
+        ]
+      }
+    },
+    {
+      "qid": "s03_q3a",
+      "kind": "threshold",
+      "pair": "s03_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en does zento have more than a third of the market?",
+        "tr": "answer tr zento'nun pazar payı üçte birden fazla mı?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      }
+    },
+    {
+      "qid": "s03_q3b",
+      "kind": "threshold",
+      "pair": "s03_p1",
+      "nonumbers": true,
+      "prompt": {
+        "en": "answer en does zento have less than a third of the market?",
+        "tr": "answer tr zento'nun pazar payı üçte birden az mı?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil"
+        ]
+      }
+    },
+    {
+      "qid": "s03_q4",
+      "kind": "read_value",
+      "pair": null,
+      "nonumbers": false,
+      "prompt": {
+        "en": "answer en what is orca's market share?",
+        "tr": "answer tr orca'nın pazar payı yüzde kaç?"
+      },
+      "visual": {
+        "en": [
+          "27",
+          "^twenty-seven",
+          "^twenty seven",
+          "27%",
+          "27 percent",
+          "^twenty-seven percent",
+          "^twenty seven percent"
+        ],
+        "tr": [
+          "27",
+          "^yirmi yedi",
+          "^yirmiyedi",
+          "%27",
+          "yüzde 27",
+          "^yüzde yirmi yedi",
+          "^yüzde yirmiyedi"
+        ]
+      },
+      "text": {
+        "en": [
+          "17",
+          "^seventeen",
+          "17%",
+          "17 percent",
+          "^seventeen percent"
+        ],
+        "tr": [
+          "17",
+          "^on yedi",
+          "^onyedi",
+          "%17",
+          "yüzde 17",
+          "^yüzde on yedi",
+          "^yüzde onyedi"
+        ]
+      }
+    }
+  ],
+  "conflict_has_truth": false
+}

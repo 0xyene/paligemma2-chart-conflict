@@ -1,0 +1,209 @@
+{
+  "id": "s14_spreadsheet_databars",
+  "title": {
+    "en": "Q3 revenue by region (spreadsheet)",
+    "tr": "Bölgelere göre 3. çeyrek geliri (tablo)"
+  },
+  "chart": "in-cell data bars",
+  "style": "generic spreadsheet screenshot",
+  "tech": "HTML table + CSS (headless Chrome)",
+  "mechanism": "label",
+  "conflict_summary": "Data bars: East longest, South shortest, North > West; in conflict the printed revenues are permuted (East 180, Central 610, West 420 > North 260). Total 1,800 identical. Bars orange in all versions.",
+  "data": {
+    "regions": [
+      "North",
+      "South",
+      "East",
+      "West",
+      "Central"
+    ],
+    "regions_tr": [
+      "Kuzey",
+      "Güney",
+      "Doğu",
+      "Batı",
+      "Merkez"
+    ],
+    "visual": [
+      420,
+      180,
+      610,
+      260,
+      330
+    ],
+    "conflict_labels": [
+      260,
+      330,
+      180,
+      420,
+      610
+    ],
+    "total": 1800,
+    "unit": "thousand €"
+  },
+  "questions": [
+    {
+      "qid": "s14_q1",
+      "kind": "argmax",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which region had the highest revenue in q3?",
+        "tr": "answer tr 3. çeyrekte geliri en yüksek olan bölge hangisi?"
+      },
+      "visual": {
+        "en": [
+          "east",
+          "east region",
+          "eastern"
+        ],
+        "tr": [
+          "doğu"
+        ]
+      },
+      "text": {
+        "en": [
+          "central",
+          "central region",
+          "centre",
+          "center"
+        ],
+        "tr": [
+          "merkez"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s14_q2",
+      "kind": "argmin",
+      "pair": null,
+      "prompt": {
+        "en": "answer en which region had the lowest revenue in q3?",
+        "tr": "answer tr 3. çeyrekte geliri en düşük olan bölge hangisi?"
+      },
+      "visual": {
+        "en": [
+          "south",
+          "south region",
+          "southern"
+        ],
+        "tr": [
+          "güney"
+        ]
+      },
+      "text": {
+        "en": [
+          "east",
+          "east region",
+          "eastern"
+        ],
+        "tr": [
+          "doğu"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s14_q3a",
+      "kind": "compare",
+      "pair": "s14_p1",
+      "prompt": {
+        "en": "answer en did the west region earn more than the north region?",
+        "tr": "answer tr batı bölgesi, kuzey bölgesinden daha fazla gelir elde etti mi?"
+      },
+      "visual": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil",
+          "^etmedi",
+          "^elde etmedi"
+        ]
+      },
+      "text": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet",
+          "^etti",
+          "^elde etti"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s14_q3b",
+      "kind": "compare",
+      "pair": "s14_p1",
+      "prompt": {
+        "en": "answer en did the west region earn less than the north region?",
+        "tr": "answer tr batı bölgesi, kuzey bölgesinden daha az gelir elde etti mi?"
+      },
+      "visual": {
+        "en": [
+          "yes"
+        ],
+        "tr": [
+          "evet",
+          "^etti",
+          "^elde etti"
+        ]
+      },
+      "text": {
+        "en": [
+          "no"
+        ],
+        "tr": [
+          "hayır",
+          "^değil",
+          "^etmedi",
+          "^elde etmedi"
+        ]
+      },
+      "nonumbers": true
+    },
+    {
+      "qid": "s14_q4",
+      "kind": "read_value",
+      "pair": null,
+      "prompt": {
+        "en": "answer en what was the revenue of the east region?",
+        "tr": "answer tr doğu bölgesinin geliri ne kadardı?"
+      },
+      "visual": {
+        "en": [
+          "610",
+          "^six hundred ten",
+          "^six hundred and ten",
+          "610000"
+        ],
+        "tr": [
+          "610",
+          "^altı yüz on",
+          "^altıyüz on",
+          "^altıyüzon",
+          "610000"
+        ]
+      },
+      "text": {
+        "en": [
+          "180",
+          "^one hundred eighty",
+          "^one hundred and eighty",
+          "180000"
+        ],
+        "tr": [
+          "180",
+          "^yüz seksen",
+          "^yüzseksen",
+          "180000"
+        ]
+      },
+      "nonumbers": false
+    }
+  ],
+  "conflict_has_truth": false
+}

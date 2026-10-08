@@ -1,0 +1,525 @@
+{
+ "note": "Run-2 judge pass (2026-10-07): two independent Claude judges, same rubric as run 1, on the 30 unmatched answer strings not already judged in run 1. A verdict counts only when both judges agree (else neither). The other 29 strings were judged in run 1 and kept their run-1 verdict (all 'neither').",
+ "items": [
+  {
+   "item": 1,
+   "lang": "en",
+   "qid": "s01_q4",
+   "answer": "300",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "224_k1"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "300 matches neither 640 (drawing) nor 120 (text)",
+   "reason_B": "300 is neither 640 nor 120 and matches no chart value"
+  },
+  {
+   "item": 2,
+   "lang": "en",
+   "qid": "s01_q4",
+   "answer": "312",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "224_k1"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "312 matches neither 640 nor 120",
+   "reason_B": "312 is neither 640 nor 120 and matches no chart value"
+  },
+  {
+   "item": 3,
+   "lang": "en",
+   "qid": "s02_q2",
+   "answer": "2020",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "2020 is a different year in the chart, not 2025 or 2018",
+   "reason_B": "2020 is a different year from 2025 (drawing) and 2018 (text)"
+  },
+  {
+   "item": 4,
+   "lang": "tr",
+   "qid": "s02_q2",
+   "answer": "2020",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "2020 is a different year in the chart, not 2025 or 2018",
+   "reason_B": "2020 is a different year from 2025 (drawing) and 2018 (text)"
+  },
+  {
+   "item": 5,
+   "lang": "tr",
+   "qid": "s04_q2",
+   "answer": "unanswerable",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal ('unanswerable')",
+   "reason_B": "refusal ('unanswerable')"
+  },
+  {
+   "item": 6,
+   "lang": "tr",
+   "qid": "s04_q4",
+   "answer": "24 sa 45 dk",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "24 sa 45 dk = the weekly total (1485 min), not Dorvi's 2h30 or 7h10",
+   "reason_B": "24 h 45 min is neither 2 h 30 min nor 7 h 10 min, and is not any app's time"
+  },
+  {
+   "item": 7,
+   "lang": "en",
+   "qid": "s05_q1",
+   "answer": "nova primary school",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Nova is a different school, not Lumen or Mira",
+   "reason_B": "Nova is a different school from Lumen (drawing) and Mira (text)"
+  },
+  {
+   "item": 8,
+   "lang": "tr",
+   "qid": "s05_q4",
+   "answer": "mena",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'mena' is no clear garble of Nova or Aster (Mira is about as close); ambiguous",
+   "reason_B": "Possible matches: Mira, Lumen, Nova (all about equally far); it is ambiguous and none points clearly to Nova or Aster"
+  },
+  {
+   "item": 9,
+   "lang": "tr",
+   "qid": "s05_q4",
+   "answer": "pimen",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'pimen' is closest to Lumen, which is neither Nova nor Aster",
+   "reason_B": "Possible matches: Lumen (closest, 2 letters changed), nothing else close; Lumen is neither Nova nor Aster"
+  },
+  {
+   "item": 10,
+   "lang": "en",
+   "qid": "s06_q4",
+   "answer": "-31",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "224_k1"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "-31 differs from both -3 and 31; could be either, so ambiguous",
+   "reason_B": "-31 differs from both -3 (drawing) and 31 (text)"
+  },
+  {
+   "item": 11,
+   "lang": "en",
+   "qid": "s06_q4",
+   "answer": "3°",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "224_k3"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "3° is plus 3, not -3 (sign missing) and not 31",
+   "reason_B": "'3°' drops the minus sign; +3 differs from both -3 (drawing) and 31 (text)"
+  },
+  {
+   "item": 12,
+   "lang": "tr",
+   "qid": "s08_q4",
+   "answer": "74",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "74 matches neither 64 nor 78",
+   "reason_B": "74 is neither 64 (drawing) nor 78 (text)"
+  },
+  {
+   "item": 13,
+   "lang": "tr",
+   "qid": "s09_q2",
+   "answer": "13",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "A number ('13') given for a which-day question",
+   "reason_B": "'13' is a number for a which-day question, not Monday or Saturday"
+  },
+  {
+   "item": 14,
+   "lang": "tr",
+   "qid": "s09_q2",
+   "answer": "14",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "A number ('14') given for a which-day question",
+   "reason_B": "'14' is a number for a which-day question, not Monday or Saturday"
+  },
+  {
+   "item": 15,
+   "lang": "en",
+   "qid": "s10_q1",
+   "answer": "bydales",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'bydales' looks like Ivydale, not Glenrock or Dunmore",
+   "reason_B": "Possible matches: Ivydale (closest), loosely Brookfield; neither is Glenrock or Dunmore"
+  },
+  {
+   "item": 16,
+   "lang": "tr",
+   "qid": "s10_q1",
+   "answer": "imery",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'imery' matches no district in the chart",
+   "reason_B": "Possible matches: none close (Ivydale/Elmwood only loosely); 'imery' is not Glenrock or Dunmore"
+  },
+  {
+   "item": 17,
+   "lang": "tr",
+   "qid": "s10_q1",
+   "answer": "imeryland",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'imeryland' matches no district in the chart",
+   "reason_B": "Possible matches: none close (Ivydale/Elmwood only loosely); 'imeryland' is not Glenrock or Dunmore"
+  },
+  {
+   "item": 18,
+   "lang": "en",
+   "qid": "s10_q2",
+   "answer": "asterby",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'asterby' is a garble of Asterly, a different district",
+   "reason_B": "Possible matches: Asterly (l->b); a different district from Dunmore/Glenrock"
+  },
+  {
+   "item": 19,
+   "lang": "en",
+   "qid": "s10_q2",
+   "answer": "gerrock",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "text",
+   "judge_B": "text",
+   "verdict": "text",
+   "reason_A": "'gerrock' garbles Glenrock, the only -rock name in the chart and the text answer",
+   "reason_B": "Possible matches: only Glenrock ('gerrock' = Glenrock with l dropped and n->r); no other -rock name, so it is the text answer"
+  },
+  {
+   "item": 20,
+   "lang": "tr",
+   "qid": "s10_q2",
+   "answer": "asterby",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'asterby' is a garble of Asterly, a different district",
+   "reason_B": "Possible matches: Asterly (one letter changed, l->b), nothing else close; Asterly is neither Dunmore nor Glenrock"
+  },
+  {
+   "item": 21,
+   "lang": "tr",
+   "qid": "s10_q2",
+   "answer": "germrock",
+   "conds": [
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "text",
+   "judge_B": "text",
+   "verdict": "text",
+   "reason_A": "'germrock' garbles Glenrock (g-e-...-rock, no other close name), the text answer",
+   "reason_B": "Possible matches: only Glenrock has G- and -rock (no other district is close); 'germrock' is a garble of Glenrock, the text answer"
+  },
+  {
+   "item": 22,
+   "lang": "tr",
+   "qid": "s11_q2",
+   "answer": "yes",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'yes' to a rose-or-fell question names no direction",
+   "reason_B": "'yes' does not answer a rose-or-fell question"
+  },
+  {
+   "item": 23,
+   "lang": "tr",
+   "qid": "s11_q3b",
+   "answer": "tllwy",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "A ticker (TLWY garble) given for a how-many count question",
+   "reason_B": "'tllwy' garbles the ticker TLWY but the question asks how many stocks; it gives no count"
+  },
+  {
+   "item": 24,
+   "lang": "en",
+   "qid": "s12_q2",
+   "answer": "unanswerable",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal ('unanswerable')",
+   "reason_B": "refusal ('unanswerable')"
+  },
+  {
+   "item": 25,
+   "lang": "tr",
+   "qid": "s12_q2",
+   "answer": "unanswerable",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal ('unanswerable')",
+   "reason_B": "refusal ('unanswerable')"
+  },
+  {
+   "item": 26,
+   "lang": "tr",
+   "qid": "s12_q3",
+   "answer": "unanswerable",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal ('unanswerable')",
+   "reason_B": "refusal ('unanswerable')"
+  },
+  {
+   "item": 27,
+   "lang": "en",
+   "qid": "s13_q4",
+   "answer": "11%",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "224_k1"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "11% matches neither 54 nor 31",
+   "reason_B": "11% is neither 54 (drawing) nor 31 (text), and no device has 11"
+  },
+  {
+   "item": 28,
+   "lang": "en",
+   "qid": "s14_q1",
+   "answer": "1,860",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "A number (1,860) given for a which-region question",
+   "reason_B": "1,860 is a number for a which-region question; it is close to the 1800 total, not a region"
+  },
+  {
+   "item": 29,
+   "lang": "tr",
+   "qid": "s14_q1",
+   "answer": "istanbul",
+   "conds": [
+    "conflict",
+    "consistent"
+   ],
+   "models": [
+    "448d"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'istanbul' is not a region in the chart",
+   "reason_B": "'istanbul' is not a region in the chart (North/South/East/West/Central)"
+  },
+  {
+   "item": 30,
+   "lang": "en",
+   "qid": "s14_q4",
+   "answer": "103",
+   "conds": [
+    "conflict"
+   ],
+   "models": [
+    "224_k1"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "103 matches neither 610 nor 180",
+   "reason_B": "103 is not 610 (drawing) or 180 (text) and matches no value in the chart"
+  }
+ ]
+}

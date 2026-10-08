@@ -1,0 +1,42 @@
+{
+  "sid": "s13_widget_battery",
+  "ok": true,
+  "script": "run2/size_sweep/s13_widget_battery.py",
+  "sizes": [
+    {
+      "k": 1,
+      "param": "font-size 24px (.pct)",
+      "cue_px": 17,
+      "original": false,
+      "consistent": "run2/images/size/s13_widget_battery_consistent_en_s1.png",
+      "conflict": "run2/images/size/s13_widget_battery_conflict_en_s1.png"
+    },
+    {
+      "k": 2,
+      "param": "font-size 40px (.pct)",
+      "cue_px": 27,
+      "original": true,
+      "consistent": "run2/images/size/s13_widget_battery_consistent_en_s2.png",
+      "conflict": "run2/images/size/s13_widget_battery_conflict_en_s2.png"
+    },
+    {
+      "k": 3,
+      "param": "font-size 46px (.pct), baseline y 107 (was 115)",
+      "cue_px": 33,
+      "original": false,
+      "consistent": "run2/images/size/s13_widget_battery_consistent_en_s3.png",
+      "conflict": "run2/images/size/s13_widget_battery_conflict_en_s3.png"
+    },
+    {
+      "k": 4,
+      "param": "font-size 52px (.pct), baseline y 106.5 (was 115)",
+      "cue_px": 37,
+      "original": false,
+      "consistent": "run2/images/size/s13_widget_battery_consistent_en_s4.png",
+      "conflict": "run2/images/size/s13_widget_battery_conflict_en_s4.png"
+    }
+  ],
+  "identical_to_run1": true,
+  "outside_text_share": 0.0,
+  "notes": "s2 vs run-1 max abs diff {'consistent': 0, 'conflict': 0}; s1: font 24px y 115 cue_px 17 ring clearance 23.3 px glyph gap 33 px outside share 0.0000; s2: font 40px y 115 cue_px 27 ring clearance 12.1 px glyph gap 23 px outside share 0.0000; s3: font 46px y 107 cue_px 33 ring clearance 11.4 px glyph gap 10 px outside share 0.0000; s4: font 52px y 106.5 cue_px 37 ring clearance 6.1 px glyph gap 6 px outside share 0.0000; cue_px [17, 27, 33, 37] strictly increasing"
+}

@@ -1,0 +1,161 @@
+model,lang,qid,stimulus,kind,mechanism,a_true,V,T,a_lie,o_true,o_lie,s_true,s_lie,sw,draw,model_k,base_model,k,cue_px
+224_k1,en,s01_q1,s01_newspaper_bars,trend,label,down,"['up', 'went up', 'increased', 'increase', 'increases', 'increasing', 'rose', 'rise', 'risen', 'rising', 'grew', 'grown', 'growing', 'upward', 'higher']","['down', 'went down', 'decreased', 'decrease', 'decreases', 'decreasing', 'fell', 'fall', 'fallen', 'falling', 'dropped', 'drop', 'declined', 'decline', 'declining', 'downward', 'lower']",down,wrong,text,T,T,False,True,224_k1,224,1,12
+224_k1,en,s01_q2,s01_newspaper_bars,argmax,label,may,"['june', 'jun']","['january', 'jan']",may,wrong,neither,O,O,False,True,224_k1,224,1,12
+224_k1,en,s01_q3a,s01_newspaper_bars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k1,224,1,12
+224_k1,en,s01_q3b,s01_newspaper_bars,compare,label,no,['no'],['yes'],no,correct,visual,V,V,False,True,224_k1,224,1,12
+224_k1,en,s01_q4,s01_newspaper_bars,read_value,label,300,"['640', '^six hundred forty', '^six hundred and forty']","['120', '^one hundred twenty', '^one hundred and twenty']",312,wrong,neither,O,O,False,False,224_k1,224,1,12
+224_k2,en,s01_q1,s01_newspaper_bars,trend,label,down,"['up', 'went up', 'increased', 'increase', 'increases', 'increasing', 'rose', 'rise', 'risen', 'rising', 'grew', 'grown', 'growing', 'upward', 'higher']","['down', 'went down', 'decreased', 'decrease', 'decreases', 'decreasing', 'fell', 'fall', 'fallen', 'falling', 'dropped', 'drop', 'declined', 'decline', 'declining', 'downward', 'lower']",down,wrong,text,T,T,False,True,224_k2,224,2,19
+224_k2,en,s01_q2,s01_newspaper_bars,argmax,label,may,"['june', 'jun']","['january', 'jan']",may,wrong,neither,O,O,False,True,224_k2,224,2,19
+224_k2,en,s01_q3a,s01_newspaper_bars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k2,224,2,19
+224_k2,en,s01_q3b,s01_newspaper_bars,compare,label,no,['no'],['yes'],no,correct,visual,V,V,False,True,224_k2,224,2,19
+224_k2,en,s01_q4,s01_newspaper_bars,read_value,label,330,"['640', '^six hundred forty', '^six hundred and forty']","['120', '^one hundred twenty', '^one hundred and twenty']",330,wrong,neither,O,O,False,False,224_k2,224,2,19
+224_k3,en,s01_q1,s01_newspaper_bars,trend,label,down,"['up', 'went up', 'increased', 'increase', 'increases', 'increasing', 'rose', 'rise', 'risen', 'rising', 'grew', 'grown', 'growing', 'upward', 'higher']","['down', 'went down', 'decreased', 'decrease', 'decreases', 'decreasing', 'fell', 'fall', 'fallen', 'falling', 'dropped', 'drop', 'declined', 'decline', 'declining', 'downward', 'lower']",down,wrong,text,T,T,False,True,224_k3,224,3,29
+224_k3,en,s01_q2,s01_newspaper_bars,argmax,label,may,"['june', 'jun']","['january', 'jan']",may,wrong,neither,O,O,False,True,224_k3,224,3,29
+224_k3,en,s01_q3a,s01_newspaper_bars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k3,224,3,29
+224_k3,en,s01_q3b,s01_newspaper_bars,compare,label,no,['no'],['yes'],no,correct,visual,V,V,False,True,224_k3,224,3,29
+224_k3,en,s01_q4,s01_newspaper_bars,read_value,label,330,"['640', '^six hundred forty', '^six hundred and forty']","['120', '^one hundred twenty', '^one hundred and twenty']",330,wrong,neither,O,O,False,False,224_k3,224,3,29
+224_k4,en,s01_q1,s01_newspaper_bars,trend,label,down,"['up', 'went up', 'increased', 'increase', 'increases', 'increasing', 'rose', 'rise', 'risen', 'rising', 'grew', 'grown', 'growing', 'upward', 'higher']","['down', 'went down', 'decreased', 'decrease', 'decreases', 'decreasing', 'fell', 'fall', 'fallen', 'falling', 'dropped', 'drop', 'declined', 'decline', 'declining', 'downward', 'lower']",down,wrong,text,T,T,False,True,224_k4,224,4,38
+224_k4,en,s01_q2,s01_newspaper_bars,argmax,label,may,"['june', 'jun']","['january', 'jan']",may,wrong,neither,O,O,False,True,224_k4,224,4,38
+224_k4,en,s01_q3a,s01_newspaper_bars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k4,224,4,38
+224_k4,en,s01_q3b,s01_newspaper_bars,compare,label,no,['no'],['yes'],no,correct,visual,V,V,False,True,224_k4,224,4,38
+224_k4,en,s01_q4,s01_newspaper_bars,read_value,label,640,"['640', '^six hundred forty', '^six hundred and forty']","['120', '^one hundred twenty', '^one hundred and twenty']",640,correct,visual,V,V,False,False,224_k4,224,4,38
+224_k1,en,s06_q1,s06_tv_thermometers,argmax,readout,cova,['avlen'],['dimel'],cova,wrong,neither,O,O,False,True,224_k1,224,1,19
+224_k1,en,s06_q2,s06_tv_thermometers,argmin,readout,amsterdam,['dimel'],['avlen'],avlen,wrong,text,O,T,True,True,224_k1,224,1,19
+224_k1,en,s06_q3a,s06_tv_thermometers,threshold,readout,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k1,224,1,19
+224_k1,en,s06_q3b,s06_tv_thermometers,threshold,readout,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k1,224,1,19
+224_k1,en,s06_q4,s06_tv_thermometers,read_value,readout,-31,"['-3', '^minus three', 'minus 3', '3 below zero', 'three below zero']","['31', '^thirty-one', '^thirty one']",31,wrong,text,O,T,True,False,224_k1,224,1,19
+224_k2,en,s06_q1,s06_tv_thermometers,argmax,readout,cova,['avlen'],['dimel'],cova,wrong,neither,O,O,False,True,224_k2,224,2,28
+224_k2,en,s06_q2,s06_tv_thermometers,argmin,readout,amsterdam,['dimel'],['avlen'],avlen,wrong,text,O,T,True,True,224_k2,224,2,28
+224_k2,en,s06_q3a,s06_tv_thermometers,threshold,readout,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k2,224,2,28
+224_k2,en,s06_q3b,s06_tv_thermometers,threshold,readout,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k2,224,2,28
+224_k2,en,s06_q4,s06_tv_thermometers,read_value,readout,-3°,"['-3', '^minus three', 'minus 3', '3 below zero', 'three below zero']","['31', '^thirty-one', '^thirty one']",31°,correct,text,V,T,True,False,224_k2,224,2,28
+224_k3,en,s06_q1,s06_tv_thermometers,argmax,readout,cova,['avlen'],['dimel'],cova,wrong,neither,O,O,False,True,224_k3,224,3,38
+224_k3,en,s06_q2,s06_tv_thermometers,argmin,readout,avlen,['dimel'],['avlen'],avlen,wrong,text,T,T,False,True,224_k3,224,3,38
+224_k3,en,s06_q3a,s06_tv_thermometers,threshold,readout,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k3,224,3,38
+224_k3,en,s06_q3b,s06_tv_thermometers,threshold,readout,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k3,224,3,38
+224_k3,en,s06_q4,s06_tv_thermometers,read_value,readout,3°,"['-3', '^minus three', 'minus 3', '3 below zero', 'three below zero']","['31', '^thirty-one', '^thirty one']",31°,wrong,text,O,T,True,False,224_k3,224,3,38
+224_k4,en,s06_q1,s06_tv_thermometers,argmax,readout,cova,['avlen'],['dimel'],cova,wrong,neither,O,O,False,True,224_k4,224,4,47
+224_k4,en,s06_q2,s06_tv_thermometers,argmin,readout,dimel,['dimel'],['avlen'],avlen,correct,text,V,T,True,True,224_k4,224,4,47
+224_k4,en,s06_q3a,s06_tv_thermometers,threshold,readout,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k4,224,4,47
+224_k4,en,s06_q3b,s06_tv_thermometers,threshold,readout,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k4,224,4,47
+224_k4,en,s06_q4,s06_tv_thermometers,read_value,readout,-3°,"['-3', '^minus three', 'minus 3', '3 below zero', 'three below zero']","['31', '^thirty-one', '^thirty one']",31°,correct,text,V,T,True,False,224_k4,224,4,47
+224_k1,en,s13_q1,s13_widget_battery,argmin,label,earbuds,"['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']","['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']",phone,correct,text,V,T,True,True,224_k1,224,1,17
+224_k1,en,s13_q2,s13_widget_battery,argmax,label,phone,"['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']","['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']",phone,correct,visual,V,V,False,True,224_k1,224,1,17
+224_k1,en,s13_q3a,s13_widget_battery,threshold,label,no,['no'],['yes'],yes,correct,text,V,T,True,True,224_k1,224,1,17
+224_k1,en,s13_q3b,s13_widget_battery,threshold,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k1,224,1,17
+224_k1,en,s13_q4,s13_widget_battery,read_value,label,54%,"['54', '^fifty-four', '^fifty four', '54%', '54 percent', '^fifty-four percent', '^fifty four percent']","['31', '^thirty-one', '^thirty one', '31%', '31 percent', '^thirty-one percent', '^thirty one percent']",11%,correct,neither,V,O,False,False,224_k1,224,1,17
+224_k2,en,s13_q1,s13_widget_battery,argmin,label,earbuds,"['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']","['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']",earbuds,correct,visual,V,V,False,True,224_k2,224,2,27
+224_k2,en,s13_q2,s13_widget_battery,argmax,label,phone,"['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']","['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']",phone,correct,visual,V,V,False,True,224_k2,224,2,27
+224_k2,en,s13_q3a,s13_widget_battery,threshold,label,no,['no'],['yes'],no,correct,visual,V,V,False,True,224_k2,224,2,27
+224_k2,en,s13_q3b,s13_widget_battery,threshold,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k2,224,2,27
+224_k2,en,s13_q4,s13_widget_battery,read_value,label,54%,"['54', '^fifty-four', '^fifty four', '54%', '54 percent', '^fifty-four percent', '^fifty four percent']","['31', '^thirty-one', '^thirty one', '31%', '31 percent', '^thirty-one percent', '^thirty one percent']",31%,correct,text,V,T,True,False,224_k2,224,2,27
+224_k3,en,s13_q1,s13_widget_battery,argmin,label,tablet,"['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']","['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']",phone,wrong,text,O,T,True,True,224_k3,224,3,33
+224_k3,en,s13_q2,s13_widget_battery,argmax,label,phone,"['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']","['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']",phone,correct,visual,V,V,False,True,224_k3,224,3,33
+224_k3,en,s13_q3a,s13_widget_battery,threshold,label,no,['no'],['yes'],no,correct,visual,V,V,False,True,224_k3,224,3,33
+224_k3,en,s13_q3b,s13_widget_battery,threshold,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k3,224,3,33
+224_k3,en,s13_q4,s13_widget_battery,read_value,label,54%,"['54', '^fifty-four', '^fifty four', '54%', '54 percent', '^fifty-four percent', '^fifty four percent']","['31', '^thirty-one', '^thirty one', '31%', '31 percent', '^thirty-one percent', '^thirty one percent']",31%,correct,text,V,T,True,False,224_k3,224,3,33
+224_k4,en,s13_q1,s13_widget_battery,argmin,label,tablet,"['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']","['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']",phone,wrong,text,O,T,True,True,224_k4,224,4,37
+224_k4,en,s13_q2,s13_widget_battery,argmax,label,phone,"['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']","['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']",phone,correct,visual,V,V,False,True,224_k4,224,4,37
+224_k4,en,s13_q3a,s13_widget_battery,threshold,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k4,224,4,37
+224_k4,en,s13_q3b,s13_widget_battery,threshold,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k4,224,4,37
+224_k4,en,s13_q4,s13_widget_battery,read_value,label,54%,"['54', '^fifty-four', '^fifty four', '54%', '54 percent', '^fifty-four percent', '^fifty four percent']","['31', '^thirty-one', '^thirty one', '31%', '31 percent', '^thirty-one percent', '^thirty one percent']",31%,correct,text,V,T,True,False,224_k4,224,4,37
+224_k1,en,s14_q1,s14_spreadsheet_databars,argmax,label,north,"['east', 'east region', 'eastern']","['central', 'central region', 'centre', 'center']",north,wrong,neither,O,O,False,True,224_k1,224,1,12
+224_k1,en,s14_q2,s14_spreadsheet_databars,argmin,label,east,"['south', 'south region', 'southern']","['east', 'east region', 'eastern']",east,wrong,text,T,T,False,True,224_k1,224,1,12
+224_k1,en,s14_q3a,s14_spreadsheet_databars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k1,224,1,12
+224_k1,en,s14_q3b,s14_spreadsheet_databars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k1,224,1,12
+224_k1,en,s14_q4,s14_spreadsheet_databars,read_value,label,610,"['610', '^six hundred ten', '^six hundred and ten', '610000']","['180', '^one hundred eighty', '^one hundred and eighty', '180000']",103,correct,neither,V,O,False,False,224_k1,224,1,12
+224_k2,en,s14_q1,s14_spreadsheet_databars,argmax,label,north,"['east', 'east region', 'eastern']","['central', 'central region', 'centre', 'center']",north,wrong,neither,O,O,False,True,224_k2,224,2,20
+224_k2,en,s14_q2,s14_spreadsheet_databars,argmin,label,east,"['south', 'south region', 'southern']","['east', 'east region', 'eastern']",east,wrong,text,T,T,False,True,224_k2,224,2,20
+224_k2,en,s14_q3a,s14_spreadsheet_databars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k2,224,2,20
+224_k2,en,s14_q3b,s14_spreadsheet_databars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k2,224,2,20
+224_k2,en,s14_q4,s14_spreadsheet_databars,read_value,label,610,"['610', '^six hundred ten', '^six hundred and ten', '610000']","['180', '^one hundred eighty', '^one hundred and eighty', '180000']",180,correct,text,V,T,True,False,224_k2,224,2,20
+224_k3,en,s14_q1,s14_spreadsheet_databars,argmax,label,north,"['east', 'east region', 'eastern']","['central', 'central region', 'centre', 'center']",north,wrong,neither,O,O,False,True,224_k3,224,3,28
+224_k3,en,s14_q2,s14_spreadsheet_databars,argmin,label,east,"['south', 'south region', 'southern']","['east', 'east region', 'eastern']",east,wrong,text,T,T,False,True,224_k3,224,3,28
+224_k3,en,s14_q3a,s14_spreadsheet_databars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k3,224,3,28
+224_k3,en,s14_q3b,s14_spreadsheet_databars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k3,224,3,28
+224_k3,en,s14_q4,s14_spreadsheet_databars,read_value,label,610,"['610', '^six hundred ten', '^six hundred and ten', '610000']","['180', '^one hundred eighty', '^one hundred and eighty', '180000']",180,correct,text,V,T,True,False,224_k3,224,3,28
+224_k4,en,s14_q1,s14_spreadsheet_databars,argmax,label,north,"['east', 'east region', 'eastern']","['central', 'central region', 'centre', 'center']",north,wrong,neither,O,O,False,True,224_k4,224,4,36
+224_k4,en,s14_q2,s14_spreadsheet_databars,argmin,label,east,"['south', 'south region', 'southern']","['east', 'east region', 'eastern']",east,wrong,text,T,T,False,True,224_k4,224,4,36
+224_k4,en,s14_q3a,s14_spreadsheet_databars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,224_k4,224,4,36
+224_k4,en,s14_q3b,s14_spreadsheet_databars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,224_k4,224,4,36
+224_k4,en,s14_q4,s14_spreadsheet_databars,read_value,label,610,"['610', '^six hundred ten', '^six hundred and ten', '610000']","['180', '^one hundred eighty', '^one hundred and eighty', '180000']",180,correct,text,V,T,True,False,224_k4,224,4,36
+448_k1,en,s01_q1,s01_newspaper_bars,trend,label,up,"['up', 'went up', 'increased', 'increase', 'increases', 'increasing', 'rose', 'rise', 'risen', 'rising', 'grew', 'grown', 'growing', 'upward', 'higher']","['down', 'went down', 'decreased', 'decrease', 'decreases', 'decreasing', 'fell', 'fall', 'fallen', 'falling', 'dropped', 'drop', 'declined', 'decline', 'declining', 'downward', 'lower']",up,correct,visual,V,V,False,True,448_k1,448,1,12
+448_k1,en,s01_q2,s01_newspaper_bars,argmax,label,jun,"['june', 'jun']","['january', 'jan']",jun,correct,visual,V,V,False,True,448_k1,448,1,12
+448_k1,en,s01_q3a,s01_newspaper_bars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,448_k1,448,1,12
+448_k1,en,s01_q3b,s01_newspaper_bars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k1,448,1,12
+448_k1,en,s01_q4,s01_newspaper_bars,read_value,label,640,"['640', '^six hundred forty', '^six hundred and forty']","['120', '^one hundred twenty', '^one hundred and twenty']",120,correct,text,V,T,True,False,448_k1,448,1,12
+448_k2,en,s01_q1,s01_newspaper_bars,trend,label,up,"['up', 'went up', 'increased', 'increase', 'increases', 'increasing', 'rose', 'rise', 'risen', 'rising', 'grew', 'grown', 'growing', 'upward', 'higher']","['down', 'went down', 'decreased', 'decrease', 'decreases', 'decreasing', 'fell', 'fall', 'fallen', 'falling', 'dropped', 'drop', 'declined', 'decline', 'declining', 'downward', 'lower']",up,correct,visual,V,V,False,True,448_k2,448,2,19
+448_k2,en,s01_q2,s01_newspaper_bars,argmax,label,jun,"['june', 'jun']","['january', 'jan']",jun,correct,visual,V,V,False,True,448_k2,448,2,19
+448_k2,en,s01_q3a,s01_newspaper_bars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,448_k2,448,2,19
+448_k2,en,s01_q3b,s01_newspaper_bars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k2,448,2,19
+448_k2,en,s01_q4,s01_newspaper_bars,read_value,label,640,"['640', '^six hundred forty', '^six hundred and forty']","['120', '^one hundred twenty', '^one hundred and twenty']",120,correct,text,V,T,True,False,448_k2,448,2,19
+448_k3,en,s01_q1,s01_newspaper_bars,trend,label,up,"['up', 'went up', 'increased', 'increase', 'increases', 'increasing', 'rose', 'rise', 'risen', 'rising', 'grew', 'grown', 'growing', 'upward', 'higher']","['down', 'went down', 'decreased', 'decrease', 'decreases', 'decreasing', 'fell', 'fall', 'fallen', 'falling', 'dropped', 'drop', 'declined', 'decline', 'declining', 'downward', 'lower']",up,correct,visual,V,V,False,True,448_k3,448,3,29
+448_k3,en,s01_q2,s01_newspaper_bars,argmax,label,jun,"['june', 'jun']","['january', 'jan']",jun,correct,visual,V,V,False,True,448_k3,448,3,29
+448_k3,en,s01_q3a,s01_newspaper_bars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,448_k3,448,3,29
+448_k3,en,s01_q3b,s01_newspaper_bars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k3,448,3,29
+448_k3,en,s01_q4,s01_newspaper_bars,read_value,label,640,"['640', '^six hundred forty', '^six hundred and forty']","['120', '^one hundred twenty', '^one hundred and twenty']",120,correct,text,V,T,True,False,448_k3,448,3,29
+448_k4,en,s01_q1,s01_newspaper_bars,trend,label,up,"['up', 'went up', 'increased', 'increase', 'increases', 'increasing', 'rose', 'rise', 'risen', 'rising', 'grew', 'grown', 'growing', 'upward', 'higher']","['down', 'went down', 'decreased', 'decrease', 'decreases', 'decreasing', 'fell', 'fall', 'fallen', 'falling', 'dropped', 'drop', 'declined', 'decline', 'declining', 'downward', 'lower']",up,correct,visual,V,V,False,True,448_k4,448,4,38
+448_k4,en,s01_q2,s01_newspaper_bars,argmax,label,jun,"['june', 'jun']","['january', 'jan']",jun,correct,visual,V,V,False,True,448_k4,448,4,38
+448_k4,en,s01_q3a,s01_newspaper_bars,compare,label,yes,['yes'],['no'],yes,correct,visual,V,V,False,True,448_k4,448,4,38
+448_k4,en,s01_q3b,s01_newspaper_bars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k4,448,4,38
+448_k4,en,s01_q4,s01_newspaper_bars,read_value,label,640,"['640', '^six hundred forty', '^six hundred and forty']","['120', '^one hundred twenty', '^one hundred and twenty']",120,correct,text,V,T,True,False,448_k4,448,4,38
+448_k1,en,s06_q1,s06_tv_thermometers,argmax,readout,avlen,['avlen'],['dimel'],dimel,correct,text,V,T,True,True,448_k1,448,1,19
+448_k1,en,s06_q2,s06_tv_thermometers,argmin,readout,dimel,['dimel'],['avlen'],avlen,correct,text,V,T,True,True,448_k1,448,1,19
+448_k1,en,s06_q3a,s06_tv_thermometers,threshold,readout,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k1,448,1,19
+448_k1,en,s06_q3b,s06_tv_thermometers,threshold,readout,yes,['yes'],['no'],no,correct,text,V,T,True,True,448_k1,448,1,19
+448_k1,en,s06_q4,s06_tv_thermometers,read_value,readout,-3°,"['-3', '^minus three', 'minus 3', '3 below zero', 'three below zero']","['31', '^thirty-one', '^thirty one']",31,correct,text,V,T,True,False,448_k1,448,1,19
+448_k2,en,s06_q1,s06_tv_thermometers,argmax,readout,avlen,['avlen'],['dimel'],dimel,correct,text,V,T,True,True,448_k2,448,2,28
+448_k2,en,s06_q2,s06_tv_thermometers,argmin,readout,dimel,['dimel'],['avlen'],avlen,correct,text,V,T,True,True,448_k2,448,2,28
+448_k2,en,s06_q3a,s06_tv_thermometers,threshold,readout,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k2,448,2,28
+448_k2,en,s06_q3b,s06_tv_thermometers,threshold,readout,yes,['yes'],['no'],no,correct,text,V,T,True,True,448_k2,448,2,28
+448_k2,en,s06_q4,s06_tv_thermometers,read_value,readout,-3°,"['-3', '^minus three', 'minus 3', '3 below zero', 'three below zero']","['31', '^thirty-one', '^thirty one']",31°,correct,text,V,T,True,False,448_k2,448,2,28
+448_k3,en,s06_q1,s06_tv_thermometers,argmax,readout,avlen,['avlen'],['dimel'],dimel,correct,text,V,T,True,True,448_k3,448,3,38
+448_k3,en,s06_q2,s06_tv_thermometers,argmin,readout,dimel,['dimel'],['avlen'],avlen,correct,text,V,T,True,True,448_k3,448,3,38
+448_k3,en,s06_q3a,s06_tv_thermometers,threshold,readout,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k3,448,3,38
+448_k3,en,s06_q3b,s06_tv_thermometers,threshold,readout,yes,['yes'],['no'],no,correct,text,V,T,True,True,448_k3,448,3,38
+448_k3,en,s06_q4,s06_tv_thermometers,read_value,readout,-3°,"['-3', '^minus three', 'minus 3', '3 below zero', 'three below zero']","['31', '^thirty-one', '^thirty one']",31°,correct,text,V,T,True,False,448_k3,448,3,38
+448_k4,en,s06_q1,s06_tv_thermometers,argmax,readout,avlen,['avlen'],['dimel'],dimel,correct,text,V,T,True,True,448_k4,448,4,47
+448_k4,en,s06_q2,s06_tv_thermometers,argmin,readout,dimel,['dimel'],['avlen'],avlen,correct,text,V,T,True,True,448_k4,448,4,47
+448_k4,en,s06_q3a,s06_tv_thermometers,threshold,readout,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k4,448,4,47
+448_k4,en,s06_q3b,s06_tv_thermometers,threshold,readout,yes,['yes'],['no'],no,correct,text,V,T,True,True,448_k4,448,4,47
+448_k4,en,s06_q4,s06_tv_thermometers,read_value,readout,-3°,"['-3', '^minus three', 'minus 3', '3 below zero', 'three below zero']","['31', '^thirty-one', '^thirty one']",31°,correct,text,V,T,True,False,448_k4,448,4,47
+448_k1,en,s13_q1,s13_widget_battery,argmin,label,tablet,"['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']","['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']",phone,wrong,text,O,T,True,True,448_k1,448,1,17
+448_k1,en,s13_q2,s13_widget_battery,argmax,label,phone,"['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']","['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']",phone,correct,visual,V,V,False,True,448_k1,448,1,17
+448_k1,en,s13_q3a,s13_widget_battery,threshold,label,no,['no'],['yes'],yes,correct,text,V,T,True,True,448_k1,448,1,17
+448_k1,en,s13_q3b,s13_widget_battery,threshold,label,yes,['yes'],['no'],no,correct,text,V,T,True,True,448_k1,448,1,17
+448_k1,en,s13_q4,s13_widget_battery,read_value,label,54%,"['54', '^fifty-four', '^fifty four', '54%', '54 percent', '^fifty-four percent', '^fifty four percent']","['31', '^thirty-one', '^thirty one', '31%', '31 percent', '^thirty-one percent', '^thirty one percent']",31%,correct,text,V,T,True,False,448_k1,448,1,17
+448_k2,en,s13_q1,s13_widget_battery,argmin,label,tablet,"['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']","['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']",tablet,wrong,neither,O,O,False,True,448_k2,448,2,27
+448_k2,en,s13_q2,s13_widget_battery,argmax,label,phone,"['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']","['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']",phone,correct,visual,V,V,False,True,448_k2,448,2,27
+448_k2,en,s13_q3a,s13_widget_battery,threshold,label,no,['no'],['yes'],yes,correct,text,V,T,True,True,448_k2,448,2,27
+448_k2,en,s13_q3b,s13_widget_battery,threshold,label,yes,['yes'],['no'],no,correct,text,V,T,True,True,448_k2,448,2,27
+448_k2,en,s13_q4,s13_widget_battery,read_value,label,54%,"['54', '^fifty-four', '^fifty four', '54%', '54 percent', '^fifty-four percent', '^fifty four percent']","['31', '^thirty-one', '^thirty one', '31%', '31 percent', '^thirty-one percent', '^thirty one percent']",31%,correct,text,V,T,True,False,448_k2,448,2,27
+448_k3,en,s13_q1,s13_widget_battery,argmin,label,tablet,"['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']","['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']",phone,wrong,text,O,T,True,True,448_k3,448,3,33
+448_k3,en,s13_q2,s13_widget_battery,argmax,label,phone,"['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']","['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']",phone,correct,visual,V,V,False,True,448_k3,448,3,33
+448_k3,en,s13_q3a,s13_widget_battery,threshold,label,no,['no'],['yes'],yes,correct,text,V,T,True,True,448_k3,448,3,33
+448_k3,en,s13_q3b,s13_widget_battery,threshold,label,yes,['yes'],['no'],no,correct,text,V,T,True,True,448_k3,448,3,33
+448_k3,en,s13_q4,s13_widget_battery,read_value,label,54%,"['54', '^fifty-four', '^fifty four', '54%', '54 percent', '^fifty-four percent', '^fifty four percent']","['31', '^thirty-one', '^thirty one', '31%', '31 percent', '^thirty-one percent', '^thirty one percent']",31%,correct,text,V,T,True,False,448_k3,448,3,33
+448_k4,en,s13_q1,s13_widget_battery,argmin,label,tablet,"['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']","['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']",phone,wrong,text,O,T,True,True,448_k4,448,4,37
+448_k4,en,s13_q2,s13_widget_battery,argmax,label,phone,"['phone', 'smartphone', 'mobile', 'cellphone', 'iphone']","['earbuds', 'earbud', 'earphones', 'earphone', 'headphones', 'headphone', 'buds', 'airpods', 'headset']",phone,correct,visual,V,V,False,True,448_k4,448,4,37
+448_k4,en,s13_q3a,s13_widget_battery,threshold,label,no,['no'],['yes'],yes,correct,text,V,T,True,True,448_k4,448,4,37
+448_k4,en,s13_q3b,s13_widget_battery,threshold,label,yes,['yes'],['no'],no,correct,text,V,T,True,True,448_k4,448,4,37
+448_k4,en,s13_q4,s13_widget_battery,read_value,label,54%,"['54', '^fifty-four', '^fifty four', '54%', '54 percent', '^fifty-four percent', '^fifty four percent']","['31', '^thirty-one', '^thirty one', '31%', '31 percent', '^thirty-one percent', '^thirty one percent']",31%,correct,text,V,T,True,False,448_k4,448,4,37
+448_k1,en,s14_q1,s14_spreadsheet_databars,argmax,label,central,"['east', 'east region', 'eastern']","['central', 'central region', 'centre', 'center']",central,wrong,text,T,T,False,True,448_k1,448,1,12
+448_k1,en,s14_q2,s14_spreadsheet_databars,argmin,label,central,"['south', 'south region', 'southern']","['east', 'east region', 'eastern']",central,wrong,neither,O,O,False,True,448_k1,448,1,12
+448_k1,en,s14_q3a,s14_spreadsheet_databars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k1,448,1,12
+448_k1,en,s14_q3b,s14_spreadsheet_databars,compare,label,no,['yes'],['no'],no,wrong,text,T,T,False,True,448_k1,448,1,12
+448_k1,en,s14_q4,s14_spreadsheet_databars,read_value,label,610,"['610', '^six hundred ten', '^six hundred and ten', '610000']","['180', '^one hundred eighty', '^one hundred and eighty', '180000']",180,correct,text,V,T,True,False,448_k1,448,1,12
+448_k2,en,s14_q1,s14_spreadsheet_databars,argmax,label,central,"['east', 'east region', 'eastern']","['central', 'central region', 'centre', 'center']",central,wrong,text,T,T,False,True,448_k2,448,2,20
+448_k2,en,s14_q2,s14_spreadsheet_databars,argmin,label,central,"['south', 'south region', 'southern']","['east', 'east region', 'eastern']",central,wrong,neither,O,O,False,True,448_k2,448,2,20
+448_k2,en,s14_q3a,s14_spreadsheet_databars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k2,448,2,20
+448_k2,en,s14_q3b,s14_spreadsheet_databars,compare,label,no,['yes'],['no'],no,wrong,text,T,T,False,True,448_k2,448,2,20
+448_k2,en,s14_q4,s14_spreadsheet_databars,read_value,label,610,"['610', '^six hundred ten', '^six hundred and ten', '610000']","['180', '^one hundred eighty', '^one hundred and eighty', '180000']",180,correct,text,V,T,True,False,448_k2,448,2,20
+448_k3,en,s14_q1,s14_spreadsheet_databars,argmax,label,central,"['east', 'east region', 'eastern']","['central', 'central region', 'centre', 'center']",central,wrong,text,T,T,False,True,448_k3,448,3,28
+448_k3,en,s14_q2,s14_spreadsheet_databars,argmin,label,central,"['south', 'south region', 'southern']","['east', 'east region', 'eastern']",central,wrong,neither,O,O,False,True,448_k3,448,3,28
+448_k3,en,s14_q3a,s14_spreadsheet_databars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k3,448,3,28
+448_k3,en,s14_q3b,s14_spreadsheet_databars,compare,label,no,['yes'],['no'],no,wrong,text,T,T,False,True,448_k3,448,3,28
+448_k3,en,s14_q4,s14_spreadsheet_databars,read_value,label,610,"['610', '^six hundred ten', '^six hundred and ten', '610000']","['180', '^one hundred eighty', '^one hundred and eighty', '180000']",180,correct,text,V,T,True,False,448_k3,448,3,28
+448_k4,en,s14_q1,s14_spreadsheet_databars,argmax,label,central,"['east', 'east region', 'eastern']","['central', 'central region', 'centre', 'center']",central,wrong,text,T,T,False,True,448_k4,448,4,36
+448_k4,en,s14_q2,s14_spreadsheet_databars,argmin,label,central,"['south', 'south region', 'southern']","['east', 'east region', 'eastern']",central,wrong,neither,O,O,False,True,448_k4,448,4,36
+448_k4,en,s14_q3a,s14_spreadsheet_databars,compare,label,yes,['no'],['yes'],yes,wrong,text,T,T,False,True,448_k4,448,4,36
+448_k4,en,s14_q3b,s14_spreadsheet_databars,compare,label,no,['yes'],['no'],no,wrong,text,T,T,False,True,448_k4,448,4,36
+448_k4,en,s14_q4,s14_spreadsheet_databars,read_value,label,610,"['610', '^six hundred ten', '^six hundred and ten', '610000']","['180', '^one hundred eighty', '^one hundred and eighty', '180000']",180,correct,text,V,T,True,False,448_k4,448,4,36

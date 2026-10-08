@@ -1,0 +1,331 @@
+Bars or Labels?
+Contents
+The answer
+1 · The gap
+2 · Hypothesis
+3 · Design
+4 · Can it read?
+5 · Where answers go
+6 · Pull by question
+7 · Values vs scales
+8 · Resolution
+9 · Language
+10 · Fallbacks
+11 · Every answer
+12 · What it supports
+13 · Limits
+Files
+PaliGemma 2 mix · chart cue conflict · run 1 + follow-up run 2
+Bars or labels?
+When a chart's printed numbers say one thing and its bars, slices and needles say another, which one does PaliGemma 2 answer from?
+Short answer. Mostly the drawing, and that is less reassuring than it sounds. The model can read numbers printed on the marks : asked for a value, it quotes them. On questions about the drawing it mostly ignores them, and mix-448 follows them about twice as often as mix-224. A follow-up run shows the gap is mostly not about image detail : given images cut to mix-224's detail, mix-448 still followed the text nearly as often as before. What's left is the model, and these runs can't separate its weights from its larger 448 px input. On the 3 charts where the text sets the scale (axis ticks, a legend), it never used that text, not even when the text was the truth, and asked directly which number sits at the end of a flipped axis, it rarely got it right.
+18%
+of questions about the drawing switched to the lying text at mix-448 (7% at mix-224). The drawing usually wins.
+91%
+of "how much is X?" answers quote the lying label on that mark at mix-448. Asked which is bigger, it mostly ignores the same labels.
+0 of 41
+answers that could switch moved to a true axis or legend , across both models (3 charts; the other 15 of 56 already gave that answer on the normal chart).
+9 : 0
+charts where mix-448 followed the text more than mix-224, vs less (5 tied, sign test p = 0.004).
+15%
+of drawing questions switched to the lying text when mix-448 got images cut to mix-224's detail (run 2), against 18% normally and 7% for mix-224. Less detail barely changed it.
+1 of 8
+flipped axes reported right at both ends when asked directly (run 2), against 6 of 8 normal ones, where the usual answer is also right. It sees the axis numbers but doesn't place them.
+Keep the controls in mind: on charts with true numbers it answers 43%–64% of questions right, and says "yes" to 75% of yes/no questions.
+1 · The gap
+What the PaliGemma 2 paper measured, and what accuracy can't show
+Steiner et al. (2024, arXiv 2412.03555) report accuracy on chart, document and diagram benchmarks. Each benchmark gets its own fine-tuned model, and results are reported per input resolution.
+PaliGemma 2 3B, fine-tuned per task: accuracy (%) at 224 px and 448 px
+Numbers from the paper's tables. Text-heavy tasks gain the most from resolution; AI2D, the diagram task, barely moves.
+The paper's own reading: text, document, screen and chart tasks improve mainly with resolution, more than with a bigger language model.
+Why accuracy can't tell you how the model read the chart
+A chart question can be answered two ways: from the marks or from the printed numbers. On a normal chart both ways give the same answer.
+Normal chart
+"Which month sold more?"
+Bar heights say June
+Printed numbers say June
+Same answer either way, so a right answer hides which way the model went.
+Same chart, lying numbers
+"Which month sold more?"
+Bar heights say June
+Printed numbers say January
+Make the two ways disagree and the answer shows which one the model used.
+What the paper doesn't test
+Nothing separates reading the marks from reading the printed numbers.
+No robustness tests: no conflicting text, edited charts, misleading axes or typographic attacks.
+The mix checkpoints most people download were released after the paper and aren't evaluated in it. Every chart number there comes from a task-specific fine-tune.
+Closest prior work: Deng et al. (CVPR 2025) find that VLMs side with the text when conflicting text is given in the prompt next to the image. Mahbub et al. (IEEE VIS 2025) change a chart's geometry and keep its text truthful, the mirror image of this design. Here the conflicting text sits inside the chart's pixels.
+The gap. We know PaliGemma 2 answers chart questions better at higher resolution. We don't know whether it gets there by reading the chart or by reading the numbers printed on it.
+2 · Hypothesis
+What we expected
+H1. On charts that print their values, PaliGemma 2 answers from the printed text more than from the marks. direction stated after the run
+The plan asked the question both ways: marks or text? This direction was written down after the run, from the paper's resolution result. Why it was plausible: the paper's chart scores rise mostly with resolution, and resolution mostly helps with small text. If the gain comes from reading printed numbers, the model may lean on them and skip the marks.
+If the model mainly… …then on the lying chart its answers…
+reads the marks stay with the drawing drawing
+reads the printed text (H1) move to the text's answer text
+reads neither reliably scatter, or fall back on habits such as "yes" or the first item other
+Four follow-up questions
+Q1
+Does it depend on the question?
+"Which is biggest?", "up or down?", yes/no and "how much is X?" need different amounts of reading.
+in the design
+Q2
+What if the text is the truth?
+On three charts the axis is flipped or the legend is reversed, so the shape misleads and the text is right. If the model ignores the text there too, its preference for the drawing can't be caution about text.
+in the design why it ignores it: tested in run 2
+Q3
+Does resolution matter?
+mix-224 and mix-448 were both run from the start. The prediction that 448 follows text more, because the digits are twice as tall in its input, came after reading the paper with the results in hand.
+added after the run pixels vs checkpoint: tested in run 2
+Q4
+English vs Turkish?
+Same charts, same questions, translated. Names stay identical so answers compare directly.
+in the design
+3 · Design
+One drawing, three captions
+Each chart is drawn once and rendered three times. The marks are pixel-identical in all three. Only the printed text changes, and a pixel diff confirms the changed pixels sit on those strings and nowhere else.
+True numbers
+The text agrees with the drawing. This is the control: can the model answer at all?
+Lying numbers
+Only the text changes, so it contradicts the drawing. Any change in the answer was caused by the text.
+No numbers
+The text is removed. A baseline for how well it reads the drawing alone.
+s06, TV weather thermometers. Columns: true numbers, lying numbers, no numbers. Rows: English, Turkish. The mercury columns are identical in all six.
+"which city is the warmest?" · mix-448, English
+True numbers
+avlen right
+Lying numbers
+dimel the city whose readout now says 31°
+No numbers
+avlen reads the tubes
+Two kinds of lie
+11 charts · the text lies
+Text on the marks
+Value labels (9 charts) and big digital readouts (2) are swapped, reversed or sign-flipped. There is no right answer on these, only a preference for the drawing or the text.
+3 charts · the text is right
+Text that sets the scale
+A flipped or reversed axis (2 charts) or a reversed colour legend (1). Reading the shape naively gives the wrong answer; reading the ticks or the legend gives the truth.
+14 charts, 14 settings
+Five renderers (HTML/CSS, SVG, Canvas, matplotlib, PIL) and everyday settings, from a newspaper page to a photographed journal article. Every name is invented, so the answer can't come from memory. Click a chart to see its six versions.
+s01 Loaves sold per month s02 Bicycle thefts reported per year s03 Smartphone market share s04 Screen time this week s05 Trees planted by each school s06 Noon temperatures s07 CPU load per server s08 Accuracy of three methods on two benchmarks s09 Daily users of our app s10 Air quality by district s11 Watchlist · 1 month s12 Distance to school vs exam score s13 Batteries widget on a phone home screen s14 Q3 revenue by region
+Questions
+Question type Example Questions
+Which one is biggest / smallest? "which city is the warmest?" 23
+Up or down? Higher or lower? "did monthly sales go up or down from january to june?" 8
+Yes / no, in opposite pairs "were more loaves sold in june than in january? / …fewer…?" 28
+How much is X?
+not asked without numbers, except s05's icon count "how many loaves were sold in june?" 11
+Guards built in
+Yes/no questions come in opposite pairs ("more?" and "fewer?"), so saying yes to everything shows up as yes to both and can't pass as reading.
+Every lie changes every answer. The text's answer always differs from the drawing's.
+Readable digits. Cue text is 19–48 px tall in the 896 px image and was checked by eye at 448 px.
+Checked scoring. Two independent LLM judges (separate Claude agents) reviewed the 98 distinct answers ( 212 of the 792 rows) the matcher couldn't place and agreed on every one. 4 outcomes were overridden, such as tltwy → TLWY, and each override applies to every image where that answer appears.
+The run
+14 charts × 3 versions × 2 languages = 84 images at 896 px, 70 questions .
+792 answers : 396 image–question pairs for each of paligemma2-3b-mix-224 and mix-448 .
+Prompt format answer en … / answer tr … , greedy decoding, up to 16 new tokens. About 22 minutes on a free Colab T4 (0.78 s and 2.53 s per answer).
+4 · Result 1 · Controls
+Can it read these charts at all?
+Before asking which cue wins, check that the plain chart gets a right answer.
+Share right, with true numbers and with no numbers
+The 58 questions that can be answered from the drawing alone, so both dots cover the same questions.
+true numbers no numbers
+Right a bit over half the time. Over all 70 questions on true charts: mix-448 64% English, 56% Turkish; mix-224 54% and 43%. Many conflict answers therefore come from charts it couldn't read in the first place.
+True numbers help. Taking them away costs mix-448 12 points in English and 7 in Turkish.
+Turkish yes/no questions get English answers. 99% of them at mix-448 (98% at 224) came back as "yes"/"no" instead of "evet"/"hayır". Other Turkish questions were answered in English 6% of the time at 448.
+A strong "yes" habit
+Each yes/no pair asks one fact both ways, so a model that reads the chart says yes once and no once. Every square below is one pair (14 charts × 2 languages).
+mix-448 mix-224
+right both ways both match the lie's answers
+yes to both no to both unclear
+No numbers
+6 right · 5 lie's answers · 13 yes to both · 1 no to both · 1 unclear
+True numbers
+7 right · 3 lie's answers · 16 yes to both · 2 no to both
+Lying numbers
+4 right · 8 lie's answers · 15 yes to both · 1 no to both
+mix-448 says "yes" to 75% of yes/no questions on true charts, where half would be right. Only 7 of 28 pairs come out right both ways; 16 are yes to both. A single yes/no answer says little on its own, which is why the next sections always compare against the background rate.
+5 · Result 2 · Main test
+Where the answers go when the numbers lie
+Follow each question from the true chart on the left to the lying chart on the right. Same drawing, same question; only the printed text changed.
+mix-448 mix-224
+About the drawing All questions Which one Direction Yes / no How much
+Of 65 answers that were right on the true chart, 17 (26%) switched to the lying text's answer, 3 changed to something else and 45 stayed with the drawing.
+Answers moved into the text's answer 21 times and out of it 1 time. The text pulls in one direction only.
+29 answers were already the lie's answer on the true chart (28 stayed there), mostly from the yes habit, so they say nothing about the text. Share of all 118 questions that switched: 18% , 95% interval 7%–30% (resampling charts).
+The main result. On questions about the drawing, mix-448 switched to the lying text on 18% of questions (95% interval 7%–30%) and mix-224 on 7% (2%–14%). Counting only answers that were right on the true chart: 17 of 65 (26%) and 7 of 55 (13%). With the "how much" questions included: 29% and 14% of all questions (43% and 26% of answers right on the true chart).
+The test planned before the run agrees. On questions it answered right from the drawing alone (yes/no scored per pair), the lying text won 6 of 33 at mix-448 (18%) and 2 of 25 at mix-224 (8%). Stricter still, leaving out switches to the answer it also gives with no numbers (often the first item or "yes"): 12 of 118 (10%) and 7 of 118 (6%). Leaving out s06's two freezing questions, which need the readout: 17% and 6%.
+6 · Result 3 · By question type
+How hard the text pulls, by question
+Each row shows how often the model gives the lie's answer on each version. On the true and no-numbers charts that answer is simply a wrong answer, so those dots are the background rate. The arrow is what the lying text adds.
+mix-448 mix-224
+no numbers true numbers lying numbers
+"How much is X?" goes to the label. mix-448 quoted the lying label on 91% of these, up from 0% on true charts. That is plain reading, since most of these charts have no axis to measure a mark against. It also shows the model can read these digits.
+Questions about the drawing move less. Which-one +17 pts, direction +25 pts, yes/no +14 pts at mix-448 (mix-224: +7 pts, +6 pts, +5 pts).
+Lying numbers are worse than no numbers. On the 114 drawing questions asked in all three versions, the lie's answer comes up 28% of the time with no numbers, 24% with true numbers and 39% with lying ones. True numbers help a little; lying numbers hurt more than having none.
+A lie that says "yes" wins more easily. Of yes/no questions answered right on the true chart, 4 of 9 switched when the lie's answer was "yes", and 4 of 23 when it was "no". The yes habit and the text push the same way. Small numbers.
+7 · Result 4 · What the text does
+Value text pulls; scale text didn't (3 charts)
+Split the 14 charts by the job the text does, using questions about the drawing only. Each dot is one chart: the share of its drawing questions that switched to the text's answer.
+mix-448 mix-224
+digits 19–24 px tall, the same range as the scale charts bigger digits
+Text on the marks pulls. At mix-448, 8 of 11 value-text charts had a drawing question switch to the text (21 of 92, 23%). At mix-224: 4 of 11 charts, 8 of 92.
+Scale text didn't. 0 of 26 drawing questions on the axis and legend charts switched, at either resolution. Counting every question there, 0 of the 41 answers that could switch did; the other 15 already gave the text's answer on the normal chart, mostly "yes". On these charts the text was the truth, so following the drawing meant being wrong. With 3 charts against 11, the chart-level test is weak: exact permutation p = 0.055 at mix-448, 0.33 at mix-224.
+It doesn't use the ticks on normal charts either. Removing the tick labels from s02 and s12 changed 1 of 18 answers. Asked on the true chart how far the top scorer lives from school (2 km), the four answers were 14, 14, 10 and 14.
+Digit size isn't the difference. Value-text charts with 19–24 px digits (solid dots), the same range as the scale charts (21–23 px), switched on 7 of 52 drawing questions at mix-448. Run 2 changed only the label size within four charts and switching stayed flat (section 8).
+It can read labels it doesn't use. On "how much is X?" it quoted the lying label 20 of 22 times at mix-448, yet on drawing questions the same kind of label moved 21 of 92 answers.
+s02, bicycle thefts. In the middle column the axis runs from 600 at the bottom to 0 at the top, so the same rising line means thefts fell . Asked in English "did the number of bicycle thefts increase or decrease from 2018 to 2025?", mix-448 said increase increase increase on the true, flipped and no-number versions, and mix-224 the same ( increase on the flipped one). On the flipped chart that answer is wrong.
+Run 2: asked directly, it rarely places a flipped scale's numbers predicted before the run
+Run 1 left two explanations open: it can't read flipped ticks, or it reads them and doesn't apply them to the marks. Run 2 asked plain reading questions ("what number is at the top of the y-axis?") on the normal and the flipped version of each scale chart, both models, both languages. On a normal chart the printed number and the usual one are the same, so only the flipped column can tell reading from habit.
+What it says is printed at the ends of the scale
+For each version: the number actually printed there, then the four answers: mix-224 then mix-448, English then Turkish.
+what is printed (right) the usual order instead (what a normal scale would say) another number
+Asked Normal chart Flipped chart
+printed answers printed answers
+What number is at the top of the y-axis? s02 · bicycle thefts reported per year
+600 600 600 600 600
+0 600 500 500 500
+What number is at the bottom of the y-axis? s02 · bicycle thefts reported per year
+0 100 0 0 2018
+600 500 0 500 2018
+What number is at the left end of the x-axis? s12 · distance to school vs exam score
+0 0 0 0 0
+14 0 0 0 14
+What number is at the right end of the x-axis? s12 · distance to school vs exam score
+14 14 14 14 14
+0 0 0 0 0
+What number is at the top of the legend? s10 · air quality by district
+80 50 5 80 80
+10 50 5 80 80
+It rarely places a flipped axis's numbers. Counting an axis as read when both of its ends are right, the flipped axes were read 1 of 8 times, the normal ones 6 of 8; on a normal axis the usual answer is also the right one, so only the flipped count shows reading. Of the 20 single answers on flipped scales, 5 were what is printed, 7 the usual order and 8 another number, mostly one printed on the same chart. count chosen after the run
+But it does see the scale text. Flipping only the tick labels changed 10 of the 20 answers, mostly to another printed number (500 on the bicycle axis, the year 2018). So "can't read the ticks" is too strong: it registers them without knowing which one sits where.
+The 0s at the right end are real changes, but not reading. 4 of the 5 right answers are "0" for the right end of the reversed x-axis; the same cells said 14 on the normal chart. The models also said "0" for the left end on both versions, so they put 0 at both ends rather than reading the order. The only flipped axis read right at both ends was s12 at mix-448 in Turkish.
+The legend number question failed the same way as the word question. On s10 each model gave the same number on both versions (mix-224 50 and 5, mix-448 80), so it doesn't show legend reading either way; the axis count above leaves it out.
+Legible digits didn't help. s02's tick labels are 22 px tall at 896 px, the size of value labels it quotes readily (19–24 px), and its flipped axis got 0 right answers out of 8.
+Questions that need the scale didn't separate anything. Asked "how many thefts in 2025?" or "what is Glenrock's PM2.5?", both models were mostly wrong even on the normal charts (2 and 2 of 8 right) and often gave the same number on both versions. The predictions said these would follow the shape; they couldn't test it.
+No positive control. The reading question was never asked where the right answer differs from the usual one on a normal chart (an axis from 200 to 800, say), so failing it could partly be failing to find "top" or "end".
+The legend word question failed and is left out: asked for the word at the top of the legend, the models answered air quality by district , calderford , calderford city council , galatasaray , the page title, the council's name or a football club.
+On these charts the model doesn't connect scale text to the marks. Asked directly, it sees the numbers on a flipped axis (its answers change) but rarely says which one sits where. Text sitting on a mark it can read as that mark's value, but it mostly uses that text only when asked for the value itself. All of this rests on 3 charts.
+8 · Result 5 · 224 vs 448 px
+mix-448 follows the text more, and less detail barely changes that
+Same questions, both models. Chart by chart, mix-448 switched to the text more often than mix-224 on 9 charts, less on 0 and tied on 5 (sign test p = 0.004; drawing questions only: 7 / 0 / 7, p = 0.02). Averaged over charts, 448 switches 16 points more (95% interval 9–23), or 11 points more on drawing questions (4–18). Item by item, 22 questions switched only at 448 and none only at 224 (13 vs 0 on drawing questions). Items from one chart move together, so the chart-level numbers are the ones to quote.
+Share of each chart's questions that switched to the text
+All questions, "how much" included. One line per chart; hover a line to name it.
+higher at 448 tied
+mix-224 shrinks the 896 px image to a quarter of its width and mix-448 to half, so the same digits are 5–12 px tall for 224 and 10–24 px for 448. Run 1 couldn't tell whether 448 follows the text more because it sees the digits better or because it is a different checkpoint. Run 2 split the two.
+Run 2: same weights, mix-224's level of detail predicted before the run
+mix-448 was run again on every true and lying image after throwing detail away: 896 → 224 → 448 px, so it gets the information mix-224 got, enlarged back to its own input size (its digits stay twice as tall, but blurred). A control resized 896 → 448 the same way and repeated run 1's mix-448 answers on all 140 English true and lying image–question pairs (140 of 140), so the resizing itself changes nothing. The prediction: if detail drives the effect, switching drops to mix-224's level; if the checkpoint does, it stays near mix-448's.
+Less detail lowers accuracy but barely changes text-following
+118 questions about the drawing per model (both languages). Bars are 95% intervals that resample whole charts.
+Questions about the drawing "How much is X?"
+mix-224 (run 1) mix-448 on mix-224's detail, enlarged back (run 2) mix-448 (run 1)
+Text-following mostly stays. 18 of 118 drawing questions switched to the lying text, against 21 for mix-448 and 8 for mix-224: 8 points (95% interval 3 to 16) more than mix-224 and 3 points (95% interval −1 to 6) fewer than mix-448. Taking the detail away closed 23% of the gap (95% interval −11 to 60%, resampling charts), so the result lands nearer the "checkpoint" prediction, with a wide interval. Chart by chart it switched more than mix-224 on 5 charts and less on 0 (p = 0.06; all questions 9 : 0, p = 0.004), and against mix-448 1 more, 4 less (p = 0.38).
+On "how much is X?" it lands exactly on the checkpoint prediction. It quoted the lying label 91% of the time, like mix-448 (91%) and unlike mix-224 (55%). So the information survives in a 224 px image; mix-224's misses there are misreads (330 or 420 for the newspaper chart's 640), which points at the model, its weights or its coarser 256-patch view, not at missing detail.
+What "the model" means here. The degraded images still reach mix-448 at 448 px, so its digits stay twice as tall (blurred) and cover four times as many patches as in mix-224's input. These runs rule out image detail, not that input grid: "checkpoint" means weights plus input size.
+Accuracy drops. On the true charts it answered 55 of 118 drawing questions right, the same count as mix-224 and 8 points (95% interval 3 to 14) below mix-448. It didn't get there by answering like mix-224: it kept most of mix-448's right answers and lost others to new "yes" and "unanswerable" answers on the blurred images ("yes" 101 of 280 vs 84; "unanswerable" 11 vs 2). not in the predictions
+Answer by answer it stays closer to itself. On the 83 of 280 image–question pairs where run 1's two models got different scored outcomes, it matched mix-448 63 times and mix-224 16 times (4 neither). Comparing exact answer strings instead gives 75 : 7, inflated by formatting ("27" vs "27%"). not in the predictions
+Run 2: label size alone, within one chart predicted before the run
+In run 1 digit size was tangled with chart type: the two biggest-digit charts were both readouts. Run 2 re-rendered four charts with only the cue text at four sizes, marks pixel-identical, and asked every question again in English.
+Drawing questions that switched to the lying text, by label size
+4 drawing questions per chart and size. Label height is measured at 896 px; mix-448 sees it at half that, mix-224 at a quarter. The dashed line marks the chart's original size.
+mix-224 mix-448
+s06 · TV thermometers
+digital readout
+s13 · battery widget
+value labels
+s01 · newspaper bars
+value labels
+s14 · spreadsheet
+value labels
+No chart switched more with bigger labels. From the smallest labels to the largest, the four charts together switched on 6, 5, 6, 6 of 16 drawing questions at mix-448 and 3, 1, 1, 2 of 16 at mix-224. Each point is the same 4 questions asked again; at mix-224 two charts dipped by 1–2. mix-448 could read every size (it quoted the lying label 16 of 16 times), so this covers readable sizes only.
+The chart decides, more than the label size. At mix-448 the thermometer readouts (s06) switched 3 of 4 at every size, even shrunk to 19 px; the newspaper bars (s01) and the spreadsheet (s14) switched on none, even at their largest labels (38 and 36 px). One catch: s06 and s13 are the only swept charts with threshold questions ("above freezing?", "almost full?"), which gave 12 of the 23 switches at mix-448. On the "which is highest / lowest?" questions all four share, s06 and s13 still switched 11 times and s01 and s14 never. Run 1's weak link between digit size and switching across charts (ρ = 0.45 at mix-448, 11 charts, p = 0.16) most likely came from which charts have big digits.
+Size mattered only at the reading floor. On the one "how much" question per chart, mix-224 quoted the lying label 1 of 4 times at the smallest size, where the digits are at most 4.8 px tall in its input, and 9 of 12 above it. All three misses above it are the newspaper chart, where mix-224 never quoted the lie: it misread the label at the smaller sizes and gave the drawing's value at the largest. Past about 5 px, the chart still matters.
+Repeat check. The original-size images are pixel-identical to run 1 and gave the same answer 80 of 80 times, at both resolutions.
+9 · Result 6 · English vs Turkish
+Turkish follows the same pattern, a little weaker
+English Turkish
+Turkish switched a little less : 8 of 59 drawing questions (14%) vs 13 of 59 (22%) at mix-448, 3% vs 10% at mix-224. Paired by question, the gap isn't significant (9 questions switched only in English, 4 only in Turkish, p = 0.27).
+It is also right less often in Turkish (56% vs 64% at 448), so part of the gap is simply reading less of the chart.
+Values vs scales holds in both languages. No scale-text question moved to the text in either.
+10 · Failure modes
+What it says when it can't read the chart
+The grey answers in the flow chart aren't random. When an answer was "something else" on both the true and the lying chart, it was the very same answer 50 times out of 61. Three habits explain most of them.
+Answer with the first item 21 of 24
+On the server dashboard (s07), 21 of 24 "which server…?" answers were alpha-01 , the first gauge, whether the question asked for the highest or the lowest load. Only 1 was right.
+Answer from world knowledge 24 of 170
+24 of the 170 wrong "which one?" answers name something real that isn't on the chart. The guess fits the topic: phone brands for a smartphone slide, European cities for a weather graphic, a real machine-learning method for a chart of invented methods, Turkish place names when the question is in Turkish.
+k-nearest neighbor ×5 · s08 accuracy of three methods on two benchmarks · mix-224 · EN berlin ×3 · s06 noon temperatures · mix-224 · TR istanbul ×3 · s10 air quality by district · mix-224 · TR konya ×3 · s14 q3 revenue by region · mix-448 · TR nokia ×3 · s03 smartphone market share · mix-224, mix-448 · EN samsung ×3 · s03 smartphone market share · mix-224 · TR amsterdam ×2 · s10 air quality by district · mix-224 · TR amsterdam ×1 · s06 noon temperatures · mix-224 · EN instagram ×1 · s04 screen time this week · mix-448 · TR
+Don't answer
+A few answers aren't answers: unanswerable , don't , the chart's title ( air quality by district ), or a sentence describing some other picture. All of them count as "something else".
+11 · Every answer
+Explore every answer
+Pick a chart. Each cell is one model and language; its three squares are the answers on the no-numbers , true and lying versions, in that order. Click a cell to read the answers.
+drawing's answer lying text's answer something else not asked
+s01 s02 s03 s04 s05 s06 s07 s08 s09 s10 s11 s12 s13 s14
+s06 · Noon temperatures (TV weather)
+TV weather broadcast graphic · digital readout · the text lies · digits 47 px
+Mercury columns: Avlen highest, Dimel lowest (just under the 0 °C notch); in conflict the readouts are swapped 31°<->−3° (Avlen<->Dimel, three cards apart) and 12°<->24° (Berim<->Covra).
+Question 224 EN 224 TR 448 EN 448 TR
+which city is the warmest? en sıcak şehir hangisi? avlen dimel
+which city is the coldest? en soğuk şehir hangisi? dimel avlen
+is it below freezing in avlen? avlen'de sıcaklık sıfırın altında mı? no yes
+is it above freezing in avlen? avlen'de sıcaklık sıfırın üstünde mi? yes no
+what is the temperature in dimel? dimel'de sıcaklık kaç derece? -3 31
+mix-448 · English · "which city is the warmest?" · the drawing says avlen , the lie says dimel
+No numbers
+avlen the drawing's answer
+True numbers
+avlen the drawing's answer
+Lying numbers
+dimel the lying text's answer
+12 · Reading the results
+What the data supports
+H1, text over marks: partly
+"How much is X?" doesn't test H1. Asked for a value, it quotes the label on that mark (91% at mix-448, 55% at mix-224), so it can read the digits. Most of these charts give no way to read a value from the marks, so this says nothing about which cue it prefers.
+Mostly false for questions the drawing can answer. They switched to the text 18% of the time at mix-448 and 7% at mix-224. The exception is the TV thermometer readouts: 6 of 8 drawing questions at mix-448.
+Where the pull appears, the text causes it. On drawing questions, answers moved into the text's answer 21 times and out of it once at mix-448 (41 vs 1 with "how much" questions). Noise would move both ways.
+The four questions
+Q1 · question type matters. Value questions follow the label; trends, rankings and yes/no mostly follow the drawing.
+Q2 · scale text wasn't used, on 3 charts. 0 of 41 answers that could switch moved to a true axis or legend. Run 2: asked for the number at a named end of a flipped axis, it got both ends right 1 of 8 times, yet flipping the labels changed 10 of 20 answers, mostly to another printed number: it registers the scale text without placing it. On label charts it can read the labels, so its drawing preference there isn't about legibility.
+Q3 · mix-448 follows the text more, and it's mostly not image detail. 9 : 0 charts (5 tied, p = 0.004). Run 2 (predicted): with mix-224's level of detail, mix-448 kept most of its text-following (18 vs 21 and 8 of 118 drawing questions), and label size within a chart didn't raise switching. What remains is the model: its weights and its larger input, which these runs can't separate. Not predicted: its accuracy fell to mix-224's count, partly through more "yes" and "unanswerable" answers on the blurred images.
+Q4 · language barely matters. Turkish switched slightly less (14% vs 22% of drawing questions at mix-448), not significantly. Turkish yes/no answers come back in English.
+Run 2: what was predicted, what happened
+By the file timestamps, the predictions were written about two and a half hours before run 2 started ( run2/PREDICTIONS.md : created 07:16, last edited 10:53 on 2026-10-07, before a date-correction note added after the run; its header says 10-08, a typo). There is no external record such as a commit. Run 2 asked 820 questions on a free T4 GPU, none missing.
+Test Predicted before the run Result Verdict
+Control: does the resize repeat run 1? At least 95% of answers identical. 140 of 140 identical. as predicted
+Pixels or checkpoint? Detail: drawing questions switch about 7%, "how much" quotes the lie about 55%. Checkpoint: about 18% and 91%. In between: both matter. 15% and 91%. Closes 23% of the drawing gap (95% interval −11 to 60%). checkpoint on "how much"; nearer checkpoint on drawing questions
+Can it read a flipped scale? Reads but doesn't apply: reading questions right on both versions. Can't read: the usual order on the flipped one. Flipped axes read at both ends 1 of 8, normal 6 of 8. Of 20 flipped answers: 7 the usual order, 8 another number; flipping changed 10 of 20 answers. neither: sees the numbers, doesn't place them
+Read-through questions Both branches: answers follow the shape (about 520 thefts in 2025 on the flipped chart). Flipped: shape 2, printed scale 5, other 9 of 16. Normal charts right only 4 of 16. untestable: wrong on normal charts too
+Which scale reads better? s12 weak at both resolutions; s02 better at 448 than at 224. s02's flipped axis: 0 right of 8. The only flipped scale read at both ends was s12. wrong
+Does label size alone change switching? Size: switching rises with label size within a chart, most at mix-224 and on "how much"; shrinking s06's readouts lowers it. Chart type: flat. No chart rose with size; s06 3, 3, 3, 3 of 4 at mix-448 from smallest to largest. "How much" at mix-224: 1 of 4 at the smallest size, 9 of 12 above it. chart (or its questions); size only as a reading floor
+Still open
+Why some charts pull and others don't. Chart identity, more than label size, carries the switching: at mix-448 the TV thermometer readouts (s06) and the battery widget (s13) pull at every label size, the newspaper bars (s01) and the spreadsheet (s14) at none. What these charts share, or which questions they were asked, is untested.
+More scale charts, and a positive control. The scale result rests on 3 charts (2 once the legend probe is set aside) and 20 single answers per version. A wider set of flipped and log axes, plus normal axes whose ends aren't the usual numbers, would test whether "sees the numbers but doesn't place them" holds.
+What in the model. mix-448 and mix-224 differ in training and in input grid (1024 vs 256 patches). Run 2 rules out image detail; which of those two makes 448 trust printed numbers more is not something these runs can see.
+Not covered by either run: the fine-tuned ChartQA checkpoints the paper reports, and mix-10B at 448 px (4- or 8-bit on a T4), the next model to try. 896 px exists only as a pretrained checkpoint, not as a mix one.
+13 · Read before quoting
+Decisions and limits
+Decided after seeing the data
+Turkish answers count in either language. Turkish yes/no questions came back in English almost every time; otherwise nearly all of them would be lost.
+4 outcomes overridden after two independent LLM judges agreed: e.g. tltwy → TLWY, and -3° given to "is it above freezing in Avlen?" read as the text's "no". Each override applies to every image where that answer appears. The notebook's own report.txt scores with the raw matcher, before these overrides, so its mix-224 figures are slightly lower.
+H1's direction (text over marks) was written down after the run. The planned question was two-sided.
+Grouping by what the question asks. s02's "in which year were the most thefts?" counts as "which one", and s11's "how many stocks went up?" counts as direction.
+Run 2, after seeing the answers: the word question on the legend ("what word is at the top of the legend?") was dropped, because on both versions the answers named the page title or a football club, not the legend; a scale version counts as "read" only when every number question on it is right; the comparison of degraded mix-448's answers with each model's (scored outcomes, after an exact-string version overstated it), its accuracy and answer habits on true charts, the interval on the share of the gap closed, and counting axes only were not in the predictions. As in run 1, answers the matcher couldn't place went to two independent LLM judges: 30 new distinct answers, agreed on all 30. 2 were read as the text's answer ("gerrock" and "germrock" for Glenrock, degraded mix-448 on the normal legend chart), which changes no number on this page; the rest stay "something else".
+The headline uses every answer. A stricter count uses only questions answered right on the true chart, with yes/no scored per pair (mix-448: 62% drawing, 25% text). The headline shows the background rates next to it.
+Limits
+Small. 14 charts, so the 95% intervals are wide. Answers from one chart move together, which is why intervals resample whole charts.
+Only 3 scale-text charts, effectively 2. On the legend chart (s10) it is right only 25% (mix-224) and 38% (mix-448) of the time even with true numbers. The values-vs-scales lead rests on them.
+Items aren't independent : 2 languages × 14 charts. The intervals and the chart-level sign test account for this; item-level counts such as 22 vs 0 are descriptive.
+One run , greedy decoding, 3B mix checkpoints only, synthetic charts.
+The no-numbers baseline removes text, a bigger change than swapping digits, so it is only a rough background rate.
+mix-224 and mix-448 are different checkpoints. Run 2 shows image detail explains little of the text-following gap. The degraded images still reach mix-448 at 448 px, so its digits stay twice as tall and cover four times as many patches as in mix-224's input: "checkpoint" here means weights plus input grid.
+Run 2 is small too. The scale probe is 3 charts, 12 versions per condition; the size sweep is 4 charts with 4 drawing questions per size. Read-through questions ("how many thefts in 2025?") were mostly answered wrong even on normal charts (4 of 16 right), so they couldn't show which reading it used. The reading probe has no positive control.
+One way of removing detail. Run 2 shrank images with bicubic resampling. The control repeated run 1's mix-448 answers exactly with the same resampler, so it matches the model's own resize, but other ways of blurring weren't tried.
+Reproduce
+Files
+~/claude/paligemma2-experiment/chart-conflict/ is the project. QUESTIONS.md lists every sheet with its questions and expected answers.
+results/run1/ holds the raw answers ( answers.csv ), the scored and adjudicated results ( results.csv ) and the notebook's text report.
+report/make_data.py computes the run-1 numbers on this page from results.csv (checking the overlapping ones against the notebook's report) and takes the run-2 numbers from run2/results/results2.json , written by run2/analyze2.py .
+run2/ holds the follow-up: PREDICTIONS.md (written before the run), the notebook and bundle builder, the size-sweep renderers, results/answers_run2.csv (raw answers), results/adjudication2.json (judge verdicts) and analyze2.py , which writes results/report2.txt .
+python3.12 run2/analyze2.py && python3.12 report/make_data.py && python3.12 report/build.py
+Close
