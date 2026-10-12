@@ -1,0 +1,265 @@
+model,image,prompt,answer,seconds
+224,s01_newspaper_bars_consistent_en.png,answer en do the numbers on the chart match the bars?,yes,0.51
+224,s01_newspaper_bars_consistent_en.png,answer en do the numbers on the chart contradict the bars?,yes,0.51
+224,s01_newspaper_bars_consistent_en.png,answer en is there a mistake in this chart?,yes,0.51
+224,s01_newspaper_bars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,no,0.51
+224,s01_newspaper_bars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,no,0.52
+224,s01_newspaper_bars_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Grafın altındaki metinde düzeltilmesi gerekiyor.,1.06
+224,s01_newspaper_bars_conflict_en.png,answer en do the numbers on the chart match the bars?,yes,0.51
+224,s01_newspaper_bars_conflict_en.png,answer en do the numbers on the chart contradict the bars?,yes,0.52
+224,s01_newspaper_bars_conflict_en.png,answer en is there a mistake in this chart?,yes,0.52
+224,s01_newspaper_bars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,no,0.52
+224,s01_newspaper_bars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,no,0.52
+224,s01_newspaper_bars_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Graftaki sayılar sahtedir.,0.87
+224,s03_slide_donut_consistent_en.png,answer en do the numbers on the chart match the slices?,yes,0.52
+224,s03_slide_donut_consistent_en.png,answer en do the numbers on the chart contradict the slices?,no,0.52
+224,s03_slide_donut_consistent_en.png,answer en is there a mistake in this chart?,no,0.5
+224,s03_slide_donut_consistent_tr.png,answer tr grafikteki sayılar dilimlerle uyuşuyor mu?,no,0.52
+224,s03_slide_donut_consistent_tr.png,answer tr grafikteki sayılar dilimlerle çelişiyor mu?,no,0.52
+224,s03_slide_donut_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Resimde hata var.,0.77
+224,s03_slide_donut_conflict_en.png,answer en do the numbers on the chart match the slices?,yes,0.52
+224,s03_slide_donut_conflict_en.png,answer en do the numbers on the chart contradict the slices?,no,0.52
+224,s03_slide_donut_conflict_en.png,answer en is there a mistake in this chart?,no,0.52
+224,s03_slide_donut_conflict_tr.png,answer tr grafikteki sayılar dilimlerle uyuşuyor mu?,no,0.52
+224,s03_slide_donut_conflict_tr.png,answer tr grafikteki sayılar dilimlerle çelişiyor mu?,no,0.52
+224,s03_slide_donut_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Resimde hata var.,0.77
+224,s04_app_screentime_consistent_en.png,answer en do the numbers on the chart match the bars?,yes,0.52
+224,s04_app_screentime_consistent_en.png,answer en do the numbers on the chart contradict the bars?,no,0.53
+224,s04_app_screentime_consistent_en.png,answer en is there a mistake in this chart?,no,0.52
+224,s04_app_screentime_consistent_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,no,0.53
+224,s04_app_screentime_consistent_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,no,0.53
+224,s04_app_screentime_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Resimde bir hata var.,0.83
+224,s04_app_screentime_conflict_en.png,answer en do the numbers on the chart match the bars?,yes,0.53
+224,s04_app_screentime_conflict_en.png,answer en do the numbers on the chart contradict the bars?,no,0.53
+224,s04_app_screentime_conflict_en.png,answer en is there a mistake in this chart?,no,0.53
+224,s04_app_screentime_conflict_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,no,0.53
+224,s04_app_screentime_conflict_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,no,0.53
+224,s04_app_screentime_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Resimde bir hata var.,0.83
+224,s05_poster_pictogram_consistent_en.png,answer en do the numbers on the chart match the tree icons?,yes,0.54
+224,s05_poster_pictogram_consistent_en.png,answer en do the numbers on the chart contradict the tree icons?,no,0.54
+224,s05_poster_pictogram_consistent_en.png,answer en is there a mistake in this chart?,yes,0.54
+224,s05_poster_pictogram_consistent_tr.png,answer tr grafikteki sayılar ağaç simgeleriyle uyuşuyor mu?,yes,0.54
+224,s05_poster_pictogram_consistent_tr.png,answer tr grafikteki sayılar ağaç simgeleriyle çelişiyor mu?,yes,0.54
+224,s05_poster_pictogram_consistent_tr.png,answer tr bu grafikte bir hata var mı?,grafikte sayılar düzgün değil.,0.94
+224,s05_poster_pictogram_conflict_en.png,answer en do the numbers on the chart match the tree icons?,no,0.55
+224,s05_poster_pictogram_conflict_en.png,answer en do the numbers on the chart contradict the tree icons?,no,0.55
+224,s05_poster_pictogram_conflict_en.png,answer en is there a mistake in this chart?,yes,0.54
+224,s05_poster_pictogram_conflict_tr.png,answer tr grafikteki sayılar ağaç simgeleriyle uyuşuyor mu?,yes,0.55
+224,s05_poster_pictogram_conflict_tr.png,answer tr grafikteki sayılar ağaç simgeleriyle çelişiyor mu?,yes,0.55
+224,s05_poster_pictogram_conflict_tr.png,answer tr bu grafikte bir hata var mı?,grafikte sayılar düzgün değil.,0.95
+224,s06_tv_thermometers_consistent_en.png,answer en do the numbers on the chart match the thermometer fills?,no,0.55
+224,s06_tv_thermometers_consistent_en.png,answer en do the numbers on the chart contradict the thermometer fills?,no,0.55
+224,s06_tv_thermometers_consistent_en.png,answer en is there a mistake in this chart?,no,0.55
+224,s06_tv_thermometers_consistent_tr.png,answer tr grafikteki sayılar termometrelerin doluluğuyla uyuşuyor mu?,no,0.56
+224,s06_tv_thermometers_consistent_tr.png,answer tr grafikteki sayılar termometrelerin doluluğuyla çelişiyor mu?,yes,0.56
+224,s06_tv_thermometers_consistent_tr.png,answer tr bu grafikte bir hata var mı?,"grafikte ""düz"" yazan yerlerde ""c"" ve ""f",1.26
+224,s06_tv_thermometers_conflict_en.png,answer en do the numbers on the chart match the thermometer fills?,no,0.55
+224,s06_tv_thermometers_conflict_en.png,answer en do the numbers on the chart contradict the thermometer fills?,no,0.56
+224,s06_tv_thermometers_conflict_en.png,answer en is there a mistake in this chart?,no,0.53
+224,s06_tv_thermometers_conflict_tr.png,answer tr grafikteki sayılar termometrelerin doluluğuyla uyuşuyor mu?,no,0.55
+224,s06_tv_thermometers_conflict_tr.png,answer tr grafikteki sayılar termometrelerin doluluğuyla çelişiyor mu?,yes,0.55
+224,s06_tv_thermometers_conflict_tr.png,answer tr bu grafikte bir hata var mı?,grafikte 24 derecelik sıcaklık gösterilmektedir ancak 23,1.25
+224,s07_dashboard_gauges_consistent_en.png,answer en do the numbers on the chart match the gauges?,yes,0.55
+224,s07_dashboard_gauges_consistent_en.png,answer en do the numbers on the chart contradict the gauges?,no,0.55
+224,s07_dashboard_gauges_consistent_en.png,answer en is there a mistake in this chart?,no,0.55
+224,s07_dashboard_gauges_consistent_tr.png,answer tr grafikteki sayılar göstergelerle uyuşuyor mu?,yes,0.55
+224,s07_dashboard_gauges_consistent_tr.png,answer tr grafikteki sayılar göstergelerle çelişiyor mu?,no,0.56
+224,s07_dashboard_gauges_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Resimde bir hata var.,0.86
+224,s07_dashboard_gauges_conflict_en.png,answer en do the numbers on the chart match the gauges?,yes,0.56
+224,s07_dashboard_gauges_conflict_en.png,answer en do the numbers on the chart contradict the gauges?,no,0.56
+224,s07_dashboard_gauges_conflict_en.png,answer en is there a mistake in this chart?,no,0.56
+224,s07_dashboard_gauges_conflict_tr.png,answer tr grafikteki sayılar göstergelerle uyuşuyor mu?,yes,0.56
+224,s07_dashboard_gauges_conflict_tr.png,answer tr grafikteki sayılar göstergelerle çelişiyor mu?,yes,0.56
+224,s07_dashboard_gauges_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Resimde bir hata var.,0.86
+224,s08_paper_grouped_bars_consistent_en.png,answer en do the numbers on the chart match the bars?,yes,0.58
+224,s08_paper_grouped_bars_consistent_en.png,answer en do the numbers on the chart contradict the bars?,no,0.58
+224,s08_paper_grouped_bars_consistent_en.png,answer en is there a mistake in this chart?,yes,0.58
+224,s08_paper_grouped_bars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,no,0.58
+224,s08_paper_grouped_bars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,no,0.58
+224,s08_paper_grouped_bars_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Resimde hata var. Grafikte belirtilen verinin tam bir kopy,1.28
+224,s08_paper_grouped_bars_conflict_en.png,answer en do the numbers on the chart match the bars?,yes,0.58
+224,s08_paper_grouped_bars_conflict_en.png,answer en do the numbers on the chart contradict the bars?,no,0.58
+224,s08_paper_grouped_bars_conflict_en.png,answer en is there a mistake in this chart?,yes,0.58
+224,s08_paper_grouped_bars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,no,0.59
+224,s08_paper_grouped_bars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,no,0.59
+224,s08_paper_grouped_bars_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Resimde hata var. Grafikte belirtilen verinin tam bir kopy,1.29
+224,s09_notebook_sketch_consistent_en.png,answer en do the numbers on the chart match the line?,yes,0.59
+224,s09_notebook_sketch_consistent_en.png,answer en do the numbers on the chart contradict the line?,yes,0.59
+224,s09_notebook_sketch_consistent_en.png,answer en is there a mistake in this chart?,yes,0.59
+224,s09_notebook_sketch_consistent_tr.png,answer tr grafikteki sayılar çizgiyle uyuşuyor mu?,yes,0.6
+224,s09_notebook_sketch_consistent_tr.png,answer tr grafikteki sayılar çizgiyle çelişiyor mu?,yes,0.6
+224,s09_notebook_sketch_consistent_tr.png,answer tr bu grafikte bir hata var mı?,yes,0.6
+224,s09_notebook_sketch_conflict_en.png,answer en do the numbers on the chart match the line?,yes,0.6
+224,s09_notebook_sketch_conflict_en.png,answer en do the numbers on the chart contradict the line?,yes,0.61
+224,s09_notebook_sketch_conflict_en.png,answer en is there a mistake in this chart?,yes,0.61
+224,s09_notebook_sketch_conflict_tr.png,answer tr grafikteki sayılar çizgiyle uyuşuyor mu?,yes,0.61
+224,s09_notebook_sketch_conflict_tr.png,answer tr grafikteki sayılar çizgiyle çelişiyor mu?,yes,0.61
+224,s09_notebook_sketch_conflict_tr.png,answer tr bu grafikte bir hata var mı?,yes,0.61
+224,s11_finance_watchlist_consistent_en.png,answer en do the numbers on the chart match the sparklines?,yes,0.59
+224,s11_finance_watchlist_consistent_en.png,answer en do the numbers on the chart contradict the sparklines?,yes,0.59
+224,s11_finance_watchlist_consistent_en.png,answer en is there a mistake in this chart?,no,0.59
+224,s11_finance_watchlist_consistent_tr.png,answer tr grafikteki sayılar mini grafiklerle uyuşuyor mu?,yes,0.6
+224,s11_finance_watchlist_consistent_tr.png,answer tr grafikteki sayılar mini grafiklerle çelişiyor mu?,yes,0.6
+224,s11_finance_watchlist_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Resimde bir hata var.,0.9
+224,s11_finance_watchlist_conflict_en.png,answer en do the numbers on the chart match the sparklines?,yes,0.6
+224,s11_finance_watchlist_conflict_en.png,answer en do the numbers on the chart contradict the sparklines?,yes,0.6
+224,s11_finance_watchlist_conflict_en.png,answer en is there a mistake in this chart?,no,0.6
+224,s11_finance_watchlist_conflict_tr.png,answer tr grafikteki sayılar mini grafiklerle uyuşuyor mu?,yes,0.6
+224,s11_finance_watchlist_conflict_tr.png,answer tr grafikteki sayılar mini grafiklerle çelişiyor mu?,yes,0.6
+224,s11_finance_watchlist_conflict_tr.png,answer tr bu grafikte bir hata var mı?,grafikte hata var.,0.81
+224,s13_widget_battery_consistent_en.png,answer en do the numbers on the chart match the rings?,yes,0.61
+224,s13_widget_battery_consistent_en.png,answer en do the numbers on the chart contradict the rings?,no,0.61
+224,s13_widget_battery_consistent_en.png,answer en is there a mistake in this chart?,no,0.6
+224,s13_widget_battery_consistent_tr.png,answer tr grafikteki sayılar halkalarla uyuşuyor mu?,yes,0.61
+224,s13_widget_battery_consistent_tr.png,answer tr grafikteki sayılar halkalarla çelişiyor mu?,yes,0.61
+224,s13_widget_battery_consistent_tr.png,answer tr bu grafikte bir hata var mı?,% 9'un yerine % 8'in olduğu bir hata var.,1.32
+224,s13_widget_battery_conflict_en.png,answer en do the numbers on the chart match the rings?,yes,0.61
+224,s13_widget_battery_conflict_en.png,answer en do the numbers on the chart contradict the rings?,no,0.61
+224,s13_widget_battery_conflict_en.png,answer en is there a mistake in this chart?,no,0.61
+224,s13_widget_battery_conflict_tr.png,answer tr grafikteki sayılar halkalarla uyuşuyor mu?,yes,0.61
+224,s13_widget_battery_conflict_tr.png,answer tr grafikteki sayılar halkalarla çelişiyor mu?,yes,0.62
+224,s13_widget_battery_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Resimde bir hata var.,0.92
+224,s14_spreadsheet_databars_consistent_en.png,answer en do the numbers on the chart match the bars?,yes,0.62
+224,s14_spreadsheet_databars_consistent_en.png,answer en do the numbers on the chart contradict the bars?,yes,0.62
+224,s14_spreadsheet_databars_consistent_en.png,answer en is there a mistake in this chart?,yes,0.62
+224,s14_spreadsheet_databars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,no,0.62
+224,s14_spreadsheet_databars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,yes,0.62
+224,s14_spreadsheet_databars_consistent_tr.png,answer tr bu grafikte bir hata var mı?,grafikte bir hata var.,0.88
+224,s14_spreadsheet_databars_conflict_en.png,answer en do the numbers on the chart match the bars?,yes,0.64
+224,s14_spreadsheet_databars_conflict_en.png,answer en do the numbers on the chart contradict the bars?,yes,0.63
+224,s14_spreadsheet_databars_conflict_en.png,answer en is there a mistake in this chart?,yes,0.63
+224,s14_spreadsheet_databars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,no,0.64
+224,s14_spreadsheet_databars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,yes,0.63
+224,s14_spreadsheet_databars_conflict_tr.png,answer tr bu grafikte bir hata var mı?,grafikte bir hata var.,0.89
+448,s01_newspaper_bars_consistent_en.png,answer en do the numbers on the chart match the bars?,yes,2.04
+448,s01_newspaper_bars_consistent_en.png,answer en do the numbers on the chart contradict the bars?,yes,2.06
+448,s01_newspaper_bars_consistent_en.png,answer en is there a mistake in this chart?,no,2.08
+448,s01_newspaper_bars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,yes,2.11
+448,s01_newspaper_bars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,yes,2.12
+448,s01_newspaper_bars_consistent_tr.png,answer tr bu grafikte bir hata var mı?,no,2.14
+448,s01_newspaper_bars_conflict_en.png,answer en do the numbers on the chart match the bars?,yes,2.16
+448,s01_newspaper_bars_conflict_en.png,answer en do the numbers on the chart contradict the bars?,yes,2.18
+448,s01_newspaper_bars_conflict_en.png,answer en is there a mistake in this chart?,no,2.19
+448,s01_newspaper_bars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,yes,2.21
+448,s01_newspaper_bars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,yes,2.21
+448,s01_newspaper_bars_conflict_tr.png,answer tr bu grafikte bir hata var mı?,no,2.19
+448,s03_slide_donut_consistent_en.png,answer en do the numbers on the chart match the slices?,yes,2.18
+448,s03_slide_donut_consistent_en.png,answer en do the numbers on the chart contradict the slices?,yes,2.16
+448,s03_slide_donut_consistent_en.png,answer en is there a mistake in this chart?,no,2.14
+448,s03_slide_donut_consistent_tr.png,answer tr grafikteki sayılar dilimlerle uyuşuyor mu?,yes,2.12
+448,s03_slide_donut_consistent_tr.png,answer tr grafikteki sayılar dilimlerle çelişiyor mu?,no,2.11
+448,s03_slide_donut_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Serinin ilk dört bölümünün toplamı serinin totalıdır.,2.88
+448,s03_slide_donut_conflict_en.png,answer en do the numbers on the chart match the slices?,yes,2.07
+448,s03_slide_donut_conflict_en.png,answer en do the numbers on the chart contradict the slices?,yes,2.06
+448,s03_slide_donut_conflict_en.png,answer en is there a mistake in this chart?,no,2.05
+448,s03_slide_donut_conflict_tr.png,answer tr grafikteki sayılar dilimlerle uyuşuyor mu?,yes,2.05
+448,s03_slide_donut_conflict_tr.png,answer tr grafikteki sayılar dilimlerle çelişiyor mu?,no,2.04
+448,s03_slide_donut_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Serinin ilk dört bölümünün toplamı serinin totalıdır.,2.83
+448,s04_app_screentime_consistent_en.png,answer en do the numbers on the chart match the bars?,yes,2.02
+448,s04_app_screentime_consistent_en.png,answer en do the numbers on the chart contradict the bars?,no,2.01
+448,s04_app_screentime_consistent_en.png,answer en is there a mistake in this chart?,no,2.01
+448,s04_app_screentime_consistent_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,"Üst üste iki ve dört çubuk, sayıları ise bir ç",2.8
+448,s04_app_screentime_consistent_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,Sayılar çubuklarla çelişiyor.,2.57
+448,s04_app_screentime_consistent_tr.png,answer tr bu grafikte bir hata var mı?,"Resimde hata var. Ekranda ""Ekran süsü"" yazan",2.79
+448,s04_app_screentime_conflict_en.png,answer en do the numbers on the chart match the bars?,yes,2.0
+448,s04_app_screentime_conflict_en.png,answer en do the numbers on the chart contradict the bars?,yes,2.0
+448,s04_app_screentime_conflict_en.png,answer en is there a mistake in this chart?,no,2.01
+448,s04_app_screentime_conflict_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,"Üst üste iki ve dört saati olan dört çubuk, say",2.81
+448,s04_app_screentime_conflict_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,Sayılar çubuklarla çelişiyor.,2.59
+448,s04_app_screentime_conflict_tr.png,answer tr bu grafikte bir hata var mı?,"Resimde hata var. Ekranda ""Ekran süsü"" yazan",2.82
+448,s05_poster_pictogram_consistent_en.png,answer en do the numbers on the chart match the tree icons?,yes,2.04
+448,s05_poster_pictogram_consistent_en.png,answer en do the numbers on the chart contradict the tree icons?,yes,2.05
+448,s05_poster_pictogram_consistent_en.png,answer en is there a mistake in this chart?,no,2.04
+448,s05_poster_pictogram_consistent_tr.png,answer tr grafikteki sayılar ağaç simgeleriyle uyuşuyor mu?,yes,2.06
+448,s05_poster_pictogram_consistent_tr.png,answer tr grafikteki sayılar ağaç simgeleriyle çelişiyor mu?,yes,2.06
+448,s05_poster_pictogram_consistent_tr.png,answer tr bu grafikte bir hata var mı?,no,2.07
+448,s05_poster_pictogram_conflict_en.png,answer en do the numbers on the chart match the tree icons?,yes,2.07
+448,s05_poster_pictogram_conflict_en.png,answer en do the numbers on the chart contradict the tree icons?,yes,2.08
+448,s05_poster_pictogram_conflict_en.png,answer en is there a mistake in this chart?,no,2.08
+448,s05_poster_pictogram_conflict_tr.png,answer tr grafikteki sayılar ağaç simgeleriyle uyuşuyor mu?,yes,2.08
+448,s05_poster_pictogram_conflict_tr.png,answer tr grafikteki sayılar ağaç simgeleriyle çelişiyor mu?,yes,2.09
+448,s05_poster_pictogram_conflict_tr.png,answer tr bu grafikte bir hata var mı?,no,2.09
+448,s06_tv_thermometers_consistent_en.png,answer en do the numbers on the chart match the thermometer fills?,no,2.08
+448,s06_tv_thermometers_consistent_en.png,answer en do the numbers on the chart contradict the thermometer fills?,yes,2.09
+448,s06_tv_thermometers_consistent_en.png,answer en is there a mistake in this chart?,no,2.09
+448,s06_tv_thermometers_consistent_tr.png,answer tr grafikteki sayılar termometrelerin doluluğuyla uyuşuyor mu?,no,2.1
+448,s06_tv_thermometers_consistent_tr.png,answer tr grafikteki sayılar termometrelerin doluluğuyla çelişiyor mu?,No,2.09
+448,s06_tv_thermometers_consistent_tr.png,answer tr bu grafikte bir hata var mı?,hiçbir hata yok. Resimde exact aynı sıcaklık gösterilmektedir,2.89
+448,s06_tv_thermometers_conflict_en.png,answer en do the numbers on the chart match the thermometer fills?,yes,2.08
+448,s06_tv_thermometers_conflict_en.png,answer en do the numbers on the chart contradict the thermometer fills?,yes,2.09
+448,s06_tv_thermometers_conflict_en.png,answer en is there a mistake in this chart?,no,2.07
+448,s06_tv_thermometers_conflict_tr.png,answer tr grafikteki sayılar termometrelerin doluluğuyla uyuşuyor mu?,no,2.08
+448,s06_tv_thermometers_conflict_tr.png,answer tr grafikteki sayılar termometrelerin doluluğuyla çelişiyor mu?,No,2.07
+448,s06_tv_thermometers_conflict_tr.png,answer tr bu grafikte bir hata var mı?,hiçbir hata yok. Resimde exact aynı temps gösterilmektedir.,2.86
+448,s07_dashboard_gauges_consistent_en.png,answer en do the numbers on the chart match the gauges?,yes,2.06
+448,s07_dashboard_gauges_consistent_en.png,answer en do the numbers on the chart contradict the gauges?,yes,2.05
+448,s07_dashboard_gauges_consistent_en.png,answer en is there a mistake in this chart?,no,2.05
+448,s07_dashboard_gauges_consistent_tr.png,answer tr grafikteki sayılar göstergelerle uyuşuyor mu?,grafikteki sayılar göstergelerle uyuşuyor.,2.73
+448,s07_dashboard_gauges_consistent_tr.png,answer tr grafikteki sayılar göstergelerle çelişiyor mu?,Sayılar göstergelerle çelişiyor.,2.62
+448,s07_dashboard_gauges_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Görüntüde hata var. Son 5 dk'da görüntülenen,2.84
+448,s07_dashboard_gauges_conflict_en.png,answer en do the numbers on the chart match the gauges?,yes,2.04
+448,s07_dashboard_gauges_conflict_en.png,answer en do the numbers on the chart contradict the gauges?,yes,2.03
+448,s07_dashboard_gauges_conflict_en.png,answer en is there a mistake in this chart?,no,2.03
+448,s07_dashboard_gauges_conflict_tr.png,answer tr grafikteki sayılar göstergelerle uyuşuyor mu?,"Üstteki üç gösterge, alttaki üç gösterge ile uyuş",2.84
+448,s07_dashboard_gauges_conflict_tr.png,answer tr grafikteki sayılar göstergelerle çelişiyor mu?,"Sunucu, adres, kabin ve çalışma süresi göstergelerle ç",2.84
+448,s07_dashboard_gauges_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Görüntüde hata var. Son 5 dk'da görüntülenen,2.84
+448,s08_paper_grouped_bars_consistent_en.png,answer en do the numbers on the chart match the bars?,yes,2.06
+448,s08_paper_grouped_bars_consistent_en.png,answer en do the numbers on the chart contradict the bars?,yes,2.06
+448,s08_paper_grouped_bars_consistent_en.png,answer en is there a mistake in this chart?,no,2.05
+448,s08_paper_grouped_bars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,No,2.06
+448,s08_paper_grouped_bars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,No,2.06
+448,s08_paper_grouped_bars_consistent_tr.png,answer tr bu grafikte bir hata var mı?,"Görüntüdeki grafikte ""Kurucu"" kelimesinin iki",2.86
+448,s08_paper_grouped_bars_conflict_en.png,answer en do the numbers on the chart match the bars?,yes,2.06
+448,s08_paper_grouped_bars_conflict_en.png,answer en do the numbers on the chart contradict the bars?,yes,2.06
+448,s08_paper_grouped_bars_conflict_en.png,answer en is there a mistake in this chart?,no,2.06
+448,s08_paper_grouped_bars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,No,2.07
+448,s08_paper_grouped_bars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,No,2.07
+448,s08_paper_grouped_bars_conflict_tr.png,answer tr bu grafikte bir hata var mı?,"Görüntüdeki grafikte ""Kurucu"" kelimesinin alt",2.86
+448,s09_notebook_sketch_consistent_en.png,answer en do the numbers on the chart match the line?,yes,2.07
+448,s09_notebook_sketch_consistent_en.png,answer en do the numbers on the chart contradict the line?,no,2.07
+448,s09_notebook_sketch_consistent_en.png,answer en is there a mistake in this chart?,yes,2.07
+448,s09_notebook_sketch_consistent_tr.png,answer tr grafikteki sayılar çizgiyle uyuşuyor mu?,yes,2.07
+448,s09_notebook_sketch_consistent_tr.png,answer tr grafikteki sayılar çizgiyle çelişiyor mu?,yes,2.08
+448,s09_notebook_sketch_consistent_tr.png,answer tr bu grafikte bir hata var mı?,no,2.07
+448,s09_notebook_sketch_conflict_en.png,answer en do the numbers on the chart match the line?,yes,2.08
+448,s09_notebook_sketch_conflict_en.png,answer en do the numbers on the chart contradict the line?,no,2.08
+448,s09_notebook_sketch_conflict_en.png,answer en is there a mistake in this chart?,yes,2.08
+448,s09_notebook_sketch_conflict_tr.png,answer tr grafikteki sayılar çizgiyle uyuşuyor mu?,yes,2.08
+448,s09_notebook_sketch_conflict_tr.png,answer tr grafikteki sayılar çizgiyle çelişiyor mu?,yes,2.08
+448,s09_notebook_sketch_conflict_tr.png,answer tr bu grafikte bir hata var mı?,no,2.08
+448,s11_finance_watchlist_consistent_en.png,answer en do the numbers on the chart match the sparklines?,yes,2.06
+448,s11_finance_watchlist_consistent_en.png,answer en do the numbers on the chart contradict the sparklines?,yes,2.07
+448,s11_finance_watchlist_consistent_en.png,answer en is there a mistake in this chart?,"Sorry, as a base VLM I am not trained to answer this question.",2.86
+448,s11_finance_watchlist_consistent_tr.png,answer tr grafikteki sayılar mini grafiklerle uyuşuyor mu?,Mini grafikler de kripto para piyasalarının değişim eğilimler,2.87
+448,s11_finance_watchlist_consistent_tr.png,answer tr grafikteki sayılar mini grafiklerle çelişiyor mu?,"Mini grafikler kdv, mxra, tlwy, vesk ve ves",2.87
+448,s11_finance_watchlist_consistent_tr.png,answer tr bu grafikte bir hata var mı?,Grafiğin altındaki metinde hatalar gösterilmektedir.,2.75
+448,s11_finance_watchlist_conflict_en.png,answer en do the numbers on the chart match the sparklines?,yes,2.07
+448,s11_finance_watchlist_conflict_en.png,answer en do the numbers on the chart contradict the sparklines?,yes,2.07
+448,s11_finance_watchlist_conflict_en.png,answer en is there a mistake in this chart?,"Sorry, as a base VLM I am not trained to answer this question.",2.86
+448,s11_finance_watchlist_conflict_tr.png,answer tr grafikteki sayılar mini grafiklerle uyuşuyor mu?,Mini grafikler de kripto para piyasalarının düşüşünü gösteriyor,2.87
+448,s11_finance_watchlist_conflict_tr.png,answer tr grafikteki sayılar mini grafiklerle çelişiyor mu?,"Mini grafikler kdv, mxra, tlwy, vesk ve ves",2.87
+448,s11_finance_watchlist_conflict_tr.png,answer tr bu grafikte bir hata var mı?,Grafiğin altındaki metinde hata belirtilmediği için bu soruya,2.86
+448,s13_widget_battery_consistent_en.png,answer en do the numbers on the chart match the rings?,yes,2.06
+448,s13_widget_battery_consistent_en.png,answer en do the numbers on the chart contradict the rings?,yes,2.07
+448,s13_widget_battery_consistent_en.png,answer en is there a mistake in this chart?,no,2.06
+448,s13_widget_battery_consistent_tr.png,answer tr grafikteki sayılar halkalarla uyuşuyor mu?,Üzerinde halkalar olan bir grafik var mı?,2.64
+448,s13_widget_battery_consistent_tr.png,answer tr grafikteki sayılar halkalarla çelişiyor mu?,Sayılar halkalarla çelişiyor.,2.59
+448,s13_widget_battery_consistent_tr.png,answer tr bu grafikte bir hata var mı?,%9'un altındaki numaralar incorrecttir.,2.7
+448,s13_widget_battery_conflict_en.png,answer en do the numbers on the chart match the rings?,yes,2.07
+448,s13_widget_battery_conflict_en.png,answer en do the numbers on the chart contradict the rings?,yes,2.06
+448,s13_widget_battery_conflict_en.png,answer en is there a mistake in this chart?,no,2.06
+448,s13_widget_battery_conflict_tr.png,answer tr grafikteki sayılar halkalarla uyuşuyor mu?,Üzerinde halkalar olan bir grafik var mı?,2.64
+448,s13_widget_battery_conflict_tr.png,answer tr grafikteki sayılar halkalarla çelişiyor mu?,Sayılar halkalarla çelişiyor.,2.58
+448,s13_widget_battery_conflict_tr.png,answer tr bu grafikte bir hata var mı?,"%88'de telefon şarjı, %31'de saat",2.86
+448,s14_spreadsheet_databars_consistent_en.png,answer en do the numbers on the chart match the bars?,yes,2.06
+448,s14_spreadsheet_databars_consistent_en.png,answer en do the numbers on the chart contradict the bars?,no,2.06
+448,s14_spreadsheet_databars_consistent_en.png,answer en is there a mistake in this chart?,no,2.06
+448,s14_spreadsheet_databars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,yes,2.06
+448,s14_spreadsheet_databars_consistent_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,Sayılar çubuklarla çelişiyor.,2.64
+448,s14_spreadsheet_databars_consistent_tr.png,answer tr bu grafikte bir hata var mı?,"Görüntüdeki hata, ""Ortalama"" kelimesinin ""Ort",2.86
+448,s14_spreadsheet_databars_conflict_en.png,answer en do the numbers on the chart match the bars?,yes,2.06
+448,s14_spreadsheet_databars_conflict_en.png,answer en do the numbers on the chart contradict the bars?,no,2.06
+448,s14_spreadsheet_databars_conflict_en.png,answer en is there a mistake in this chart?,no,2.05
+448,s14_spreadsheet_databars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla uyuşuyor mu?,yes,2.06
+448,s14_spreadsheet_databars_conflict_tr.png,answer tr grafikteki sayılar çubuklarla çelişiyor mu?,Sayılar çubuklarla çelişiyor.,2.63
+448,s14_spreadsheet_databars_conflict_tr.png,answer tr bu grafikte bir hata var mı?,"Görüntüdeki hata, ""Ortalama"" kelimesinin ""Ort",2.85

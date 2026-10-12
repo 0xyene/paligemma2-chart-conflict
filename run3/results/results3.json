@@ -1,0 +1,161 @@
+{
+ "n_answers": 264,
+ "missing": 0,
+ "yes": {
+  "224_match": {
+   "consistent": [
+    15,
+    22
+   ],
+   "conflict": [
+    14,
+    22
+   ],
+   "p": 1.0,
+   "by_lang": {
+    "en": [
+     10,
+     9
+    ],
+    "tr": [
+     5,
+     5
+    ]
+   }
+  },
+  "224_mismatch": {
+   "consistent": [
+    10,
+    22
+   ],
+   "conflict": [
+    11,
+    22
+   ],
+   "p": 1.0,
+   "by_lang": {
+    "en": [
+     4,
+     4
+    ],
+    "tr": [
+     6,
+     7
+    ]
+   }
+  },
+  "224_error": {
+   "consistent": [
+    14,
+    22
+   ],
+   "conflict": [
+    15,
+    22
+   ],
+   "p": 1.0,
+   "by_lang": {
+    "en": [
+     5,
+     5
+    ],
+    "tr": [
+     9,
+     10
+    ]
+   }
+  },
+  "448_match": {
+   "consistent": [
+    16,
+    22
+   ],
+   "conflict": [
+    16,
+    22
+   ],
+   "p": 1.0,
+   "by_lang": {
+    "en": [
+     10,
+     11
+    ],
+    "tr": [
+     6,
+     5
+    ]
+   }
+  },
+  "448_mismatch": {
+   "consistent": [
+    15,
+    22
+   ],
+   "conflict": [
+    15,
+    22
+   ],
+   "p": 1.0,
+   "by_lang": {
+    "en": [
+     8,
+     9
+    ],
+    "tr": [
+     7,
+     6
+    ]
+   }
+  },
+  "448_error": {
+   "consistent": [
+    5,
+    22
+   ],
+   "conflict": [
+    3,
+    22
+   ],
+   "p": 0.6980847945113402,
+   "by_lang": {
+    "en": [
+     1,
+     1
+    ],
+    "tr": [
+     4,
+     2
+    ]
+   }
+  }
+ },
+ "caught": {
+  "224": {
+   "lying": [
+    2,
+    22
+   ],
+   "consistent_false_alarm": [
+    2,
+    22
+   ],
+   "p": 1.0,
+   "charts": [
+    "s06_tv_thermometers",
+    "s14_spreadsheet_databars"
+   ]
+  },
+  "448": {
+   "lying": [
+    0,
+    22
+   ],
+   "consistent_false_alarm": [
+    1,
+    22
+   ],
+   "p": 1.0,
+   "charts": []
+  }
+ }
+}

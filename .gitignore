@@ -6,4 +6,5 @@ build/
 check/
 run2/build/
 run2/bundle/
+run3/bundle/
 run2/size_sweep/check/
