@@ -418,6 +418,66 @@ adj2 = json.loads((Path(__file__).resolve().parents[1] / "run2" / "results" / "a
 r2["judging"] = {"new": len(adj2), "changed": sum(a["verdict"] != "neither" for a in adj2), "agree": sum(a["judge_A"] == a["judge_B"] for a in adj2)}
 out["run2"] = r2
 
+# ---------- runs 3 and 4 (run3/results/results3.json, run4/results/results4.json from analyze3.py / analyze4.py, after the judge pass)
+ROOT = Path(__file__).resolve().parents[1]
+R3J = json.loads((ROOT / "run3" / "results" / "results3.json").read_text(encoding="utf-8"))
+R4J = json.loads((ROOT / "run4" / "results" / "results4.json").read_text(encoding="utf-8"))
+rep3 = (ROOT / "run3" / "results" / "report3.txt").read_text(encoding="utf-8")
+fisher = lambda a, b, n: float(stats.fisher_exact([[a, n - a], [b, n - b]])[1])
+# run 3's questions: 3B from run 3 (T4, float32), 10B from run 4 (A100, bfloat16) — same 44 images, same prompts
+r3 = {"n_answers": R3J["n_answers"], "missing": R3J["missing"], "models": {}}
+for m in ("224", "448"):
+    r3["models"][m] = {q: {"agree": R3J["yes"][f"{m}_{q}"]["consistent"][0], "lie": R3J["yes"][f"{m}_{q}"]["conflict"][0],
+                           "n": R3J["yes"][f"{m}_{q}"]["consistent"][1], "p": R3J["yes"][f"{m}_{q}"]["p"]} for q in ("match", "mismatch", "error")}
+    r3["models"][m]["caught"] = {"agree": R3J["caught"][m]["consistent_false_alarm"][0], "lie": R3J["caught"][m]["lying"][0], "n": 22, "p": R3J["caught"][m]["p"]}
+for m in ("10b-224", "10b-448"):
+    F = R4J["f"][m]
+    r3["models"][m] = {q: {"agree": F[q]["consistent"][0], "lie": F[q]["conflict"][0], "n": F[q]["consistent"][1], "p": F[q]["p"]} for q in ("match", "mismatch", "error")}
+    r3["models"][m]["caught"] = {"agree": F["caught"]["agreeing"], "lie": F["caught"]["lying"], "n": 22, "p": fisher(F["caught"]["lying"], F["caught"]["agreeing"], 22)}
+# match/contradict pattern per image (report3.txt table): yes to both = says the numbers match AND contradict
+import re as _re
+yy = {}
+for m, block in zip(("224", "448"), rep3.split("answer pattern per image")[1].split("mix-448")):
+    row = _re.search(r"yes/yes\s+(\d+)\s+(\d+)", block); yy[m] = {"lie": int(row.group(1)), "agree": int(row.group(2))}
+r3["yes_yes"] = yy
+r3["judged"] = int(_re.search(r"judge pass.*?: (\d+) answers decoded", rep3).group(1))
+r3["sentences"] = int(_re.search(r"coded: \d+ of (\d+)", rep3).group(1))
+adj34 = json.loads((ROOT / "judge" / "adjudication.json").read_text(encoding="utf-8"))["items"]
+r3["judge34"] = {"n": len(adj34), "agree": sum(str(a["judge_A"]).strip().lower() == str(a["judge_B"]).strip().lower() for a in adj34)}
+out["run3"] = r3
+
+M4 = ("224bf", "448bf", "10b-224", "10b-448")       # size compared bfloat16 vs bfloat16
+r4 = {"n_answers": 3564, "control_hw": R4J["control_hw"], "control_dtype": R4J["control_dtype"], "models": {}}
+for m in M4:
+    e5, cmp_, pr, wl, wa, pa, co = R4J["e5"][m], R4J["e4_flip"][m], R4J["e4_pairs"][m], R4J["e4_which_lying"][m], R4J["e4_which_agreeing"][m], R4J["e4_parts"][m], R4J["e4_composition"][m]
+    l2a, l2l = e5["L2"]["false_yes"][0], R4J["e5_l2_lying"][m][0]
+    r4["models"][m] = {
+        "ladder": {L: e5[L]["false_yes"] for L in ("L0", "L1", "L2", "L3")},
+        "ladder_true": {L: e5[L]["true_yes"] for L in ("L0", "L1", "L2", "L3")},
+        "l2": {"agree": l2a, "lie": l2l, "n": 22, "p": fisher(l2a, l2l, 22)},
+        "which": {"agree": wa[0], "lie": wl["drawing"], "lie_numbers": wl["numbers"], "n": 22, "p": fisher(wa[0], wl["drawing"], 22)},
+        "flip": {"agree": cmp_["consistent"][0], "lie": cmp_["conflict"][0], "n": 22, "p": cmp_["p"]},
+        "caught": {"agree": pr["consistent"]["caught"], "lie": pr["conflict"]["caught"], "n": 22, "p": pr["p"]},
+        "yes_yes": {"agree": pr["consistent"]["yes_yes"], "lie": pr["conflict"]["yes_yes"], "n": 22},
+        "read_lying": pa["read_lying"], "composition": co,
+    }
+# one chart asked every way: s06 thermometers, 10B-448, English (drawing: Avlen fullest, Dimel emptiest; lying text swaps them)
+A4 = pd.read_csv(ROOT / "run4" / "results" / "answers_run4.csv", keep_default_na=False)
+ex = A4[(A4.model == "10b-448") & A4.image.str.startswith("s06_tv_thermometers") & A4.image.str.endswith("_en.png")]
+def ans(cond, q):
+    hit = ex[(ex.image == f"s06_tv_thermometers_{cond}_en.png") & ex.prompt.str.endswith(q)]
+    assert len(hit) == 1, (cond, q); return hit.answer.iloc[0].strip()
+EXQS = [  # question, kind, drawing's answer, lying text's answer (None = not a drawing/text question)
+    ("which city has the fullest thermometer?", "Which city has the fullest thermometer?", "avlen", "dimel"),
+    ("does dimel have the fullest thermometer?", "Does Dimel have the fullest thermometer?", "no", "yes"),
+    ("what temperature is shown for avlen?", "What temperature is shown for Avlen?", None, None),
+    ("is the temperature under the fullest thermometer the highest of the four temperatures?", "Is the temperature under the fullest thermometer the highest of the four?", None, None),
+    ("do the numbers on the chart match the thermometer fills?", "Do the numbers match the thermometer fills?", None, None),
+    ("do the numbers on the chart contradict the thermometer fills?", "Do the numbers contradict the thermometer fills?", None, None),
+]
+r4["example"] = [{"q": lab, "agree": ans("consistent", q), "lie": ans("conflict", q), "V": v, "T": t} for q, lab, v, t in EXQS]
+out["run4"] = r4
+
 (Path(__file__).parent / "data.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, allow_nan=False), encoding="utf-8")
 
 # ---------- cross-checks against the notebook's own report (results/run1/report.txt) and the earlier summaries
@@ -446,6 +506,17 @@ assert r2["judging"] == {"new": 30, "changed": 2, "agree": 30}
 assert r2["e2_agree_outcome"]["differ"] == 83 and (r2["e2_agree_outcome"]["like448"], r2["e2_agree_outcome"]["like224"]) == (63, 16)
 assert r2["e1_axes"] == {"consistent": [6, 8], "conflict": [1, 8]} and r2["e1_changed"] == [10, 20]
 assert r2["e3_kinds"]["448"] == {"threshold": 12, "rank": 11, "rank_s01_s14": 0, "all": 23}, r2["e3_kinds"]
+# runs 3–4: the numbers in report3.txt / report4.txt
+R3m, R4m = r3["models"], r4["models"]
+assert [(R3m[m]["match"]["agree"], R3m[m]["match"]["lie"]) for m in ("224", "448", "10b-224", "10b-448")] == [(15, 14), (16, 16), (22, 21), (15, 15)]
+assert (R3m["448"]["error"]["agree"], R3m["448"]["error"]["lie"]) == (6, 4) and (R3m["224"]["caught"]["lie"], R3m["224"]["caught"]["agree"], R3m["448"]["caught"]["lie"], R3m["448"]["caught"]["agree"]) == (2, 2, 0, 1)
+assert r3["yes_yes"] == {"224": {"lie": 9, "agree": 8}, "448": {"lie": 13, "agree": 12}}, r3["yes_yes"]
+assert [R4m[m]["ladder"]["L2"][0] for m in M4] == [18, 15, 7, 4] and [R4m[m]["l2"]["lie"] for m in M4] == [22, 19, 15, 13]
+assert [(R4m[m]["which"]["agree"], R4m[m]["which"]["lie"]) for m in M4] == [(11, 6), (14, 6), (13, 8), (17, 9)]
+assert [(R4m[m]["caught"]["lie"], R4m[m]["caught"]["agree"]) for m in M4] == [(1, 0), (3, 2), (0, 0), (4, 3)]
+assert round(R4m["10b-448"]["which"]["p"], 3) == 0.031 and round(R4m["10b-448"]["l2"]["p"], 3) == 0.012 and round(R4m["10b-224"]["l2"]["p"], 3) == 0.034
+assert r3["judge34"] == {"n": 190, "agree": 188}
+assert r4["control_hw"] == {"224": [132, 132], "448": [132, 132]}
 print("data.json written; cross-checks pass")
 print(json.dumps({"head": head, "planned": plan, "role": role, "resolution": res, "language": lang}, indent=1)[:6000])
 print(json.dumps(out["wrong_names"], ensure_ascii=False)[:1200], out["s12_q5_true"], out["judging"])

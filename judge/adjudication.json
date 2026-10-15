@@ -1,0 +1,2989 @@
+{
+ "note": "Runs 3-4 judge pass (2026-10-12): two independent Claude judges decoded every answer the rule-based scoring didn't match cleanly (incl. run 3's keyword-coded sentences). A verdict counts only when both agree.",
+ "items": [
+  {
+   "id": 1,
+   "kind": "read",
+   "image": "s01_newspaper_bars_conflict_en.png",
+   "question": "what number is written above the january bar?",
+   "answer": "600",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "600",
+   "judge_B": "600",
+   "verdict": "600",
+   "reason_A": "States 600.",
+   "reason_B": "States 600."
+  },
+  {
+   "id": 2,
+   "kind": "read",
+   "image": "s01_newspaper_bars_conflict_en.png",
+   "question": "what number is written above the june bar?",
+   "answer": "420",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "420",
+   "judge_B": "420",
+   "verdict": "420",
+   "reason_A": "States 420.",
+   "reason_B": "States 420."
+  },
+  {
+   "id": 3,
+   "kind": "read",
+   "image": "s01_newspaper_bars_consistent_en.png",
+   "question": "what number is written above the january bar?",
+   "answer": "640",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "640",
+   "judge_B": "640",
+   "verdict": "640",
+   "reason_A": "States 640.",
+   "reason_B": "States 640."
+  },
+  {
+   "id": 4,
+   "kind": "read",
+   "image": "s01_newspaper_bars_consistent_en.png",
+   "question": "what number is written above the june bar?",
+   "answer": "540",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf",
+    "run4:10b-224"
+   ],
+   "judge_A": "540",
+   "judge_B": "540",
+   "verdict": "540",
+   "reason_A": "States 540.",
+   "reason_B": "States 540."
+  },
+  {
+   "id": 5,
+   "kind": "read",
+   "image": "s07_dashboard_gauges_consistent_en.png",
+   "question": "what number is shown under the gamma-03 gauge?",
+   "answer": "27",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "27",
+   "judge_B": "27",
+   "verdict": "27",
+   "reason_A": "States 27.",
+   "reason_B": "States 27."
+  },
+  {
+   "id": 6,
+   "kind": "read",
+   "image": "s08_paper_grouped_bars_conflict_en.png",
+   "question": "on quorlet, what number is written on the kerf bar?",
+   "answer": "64",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "64",
+   "judge_B": "64",
+   "verdict": "64",
+   "reason_A": "States 64.",
+   "reason_B": "States 64."
+  },
+  {
+   "id": 7,
+   "kind": "read",
+   "image": "s08_paper_grouped_bars_consistent_en.png",
+   "question": "on quorlet, what number is written on the kerf bar?",
+   "answer": "52",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf",
+    "run4:10b-224"
+   ],
+   "judge_A": "52",
+   "judge_B": "52",
+   "verdict": "52",
+   "reason_A": "States 52.",
+   "reason_B": "States 52."
+  },
+  {
+   "id": 8,
+   "kind": "read",
+   "image": "s09_notebook_sketch_consistent_en.png",
+   "question": "what number is written at monday's point?",
+   "answer": "70",
+   "seen_in": [
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "70",
+   "judge_B": "70",
+   "verdict": "70",
+   "reason_A": "States 70.",
+   "reason_B": "States 70."
+  },
+  {
+   "id": 9,
+   "kind": "read",
+   "image": "s09_notebook_sketch_consistent_en.png",
+   "question": "what number is written at sunday's point?",
+   "answer": "90",
+   "seen_in": [
+    "run4:224"
+   ],
+   "judge_A": "90",
+   "judge_B": "90",
+   "verdict": "90",
+   "reason_A": "States 90.",
+   "reason_B": "States 90."
+  },
+  {
+   "id": 10,
+   "kind": "read",
+   "image": "s09_notebook_sketch_consistent_en.png",
+   "question": "what number is written at sunday's point?",
+   "answer": "100",
+   "seen_in": [
+    "run4:224bf"
+   ],
+   "judge_A": "100",
+   "judge_B": "100",
+   "verdict": "100",
+   "reason_A": "States 100.",
+   "reason_B": "States 100."
+  },
+  {
+   "id": 11,
+   "kind": "read",
+   "image": "s09_notebook_sketch_consistent_en.png",
+   "question": "what number is written at sunday's point?",
+   "answer": "63",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "63",
+   "judge_B": "63",
+   "verdict": "63",
+   "reason_A": "States 63.",
+   "reason_B": "States 63."
+  },
+  {
+   "id": 12,
+   "kind": "read",
+   "image": "s13_widget_battery_conflict_en.png",
+   "question": "what percentage is shown for the earbuds?",
+   "answer": "82%",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "82",
+   "judge_B": "82",
+   "verdict": "82",
+   "reason_A": "States 82%; chart values are written without the % sign.",
+   "reason_B": "States 82%; percent sign dropped to match chart_values format."
+  },
+  {
+   "id": 13,
+   "kind": "read",
+   "image": "s14_spreadsheet_databars_conflict_en.png",
+   "question": "what number is shown for south?",
+   "answer": "5",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "5",
+   "judge_B": "5",
+   "verdict": "5",
+   "reason_A": "States 5.",
+   "reason_B": "States 5."
+  },
+  {
+   "id": 14,
+   "kind": "read",
+   "image": "s14_spreadsheet_databars_conflict_en.png",
+   "question": "what number is shown for south?",
+   "answer": "230",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "230",
+   "judge_B": "230",
+   "verdict": "230",
+   "reason_A": "States 230.",
+   "reason_B": "States 230."
+  },
+  {
+   "id": 15,
+   "kind": "which",
+   "image": "s01_newspaper_bars_conflict_en.png",
+   "question": "which month has the shortest bar?",
+   "answer": "march",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "mar",
+   "judge_B": "mar",
+   "verdict": "mar",
+   "reason_A": "'march' is the full name of mar.",
+   "reason_B": "'march' is the full name of mar."
+  },
+  {
+   "id": 16,
+   "kind": "which",
+   "image": "s01_newspaper_bars_consistent_en.png",
+   "question": "which month has the shortest bar?",
+   "answer": "march",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "mar",
+   "judge_B": "mar",
+   "verdict": "mar",
+   "reason_A": "'march' is the full name of mar.",
+   "reason_B": "'march' is the full name of mar."
+  },
+  {
+   "id": 17,
+   "kind": "which",
+   "image": "s03_slide_donut_conflict_en.png",
+   "question": "which brand has the biggest slice?",
+   "answer": "nokia",
+   "seen_in": [
+    "run4:224",
+    "run4:448",
+    "run4:224bf",
+    "run4:448bf"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'nokia' is not on the chart and not a clear variant of any item.",
+   "reason_B": "'nokia' is not on the chart and not a variant of any listed brand."
+  },
+  {
+   "id": 18,
+   "kind": "which",
+   "image": "s03_slide_donut_conflict_en.png",
+   "question": "which brand has the biggest slice?",
+   "answer": "q2 2026",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'q2 2026' is a date/period, not a brand.",
+   "reason_B": "'q2 2026' is a period, not a brand name."
+  },
+  {
+   "id": 19,
+   "kind": "which",
+   "image": "s03_slide_donut_conflict_en.png",
+   "question": "which brand has the smallest slice?",
+   "answer": "nintus",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "nimbus",
+   "judge_B": "nimbus",
+   "verdict": "nimbus",
+   "reason_A": "'nintus' is a close misspelling of nimbus; no other item is close.",
+   "reason_B": "'nintus' is a near-spelling of nimbus; no other brand is close."
+  },
+  {
+   "id": 20,
+   "kind": "which",
+   "image": "s03_slide_donut_consistent_en.png",
+   "question": "which brand has the biggest slice?",
+   "answer": "q2 2026",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'q2 2026' is a date/period, not a brand.",
+   "reason_B": "'q2 2026' is a period, not a brand name."
+  },
+  {
+   "id": 21,
+   "kind": "which",
+   "image": "s04_app_screentime_conflict_en.png",
+   "question": "which app has the longest bar?",
+   "answer": "tova",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "tovra",
+   "judge_B": "tovra",
+   "verdict": "tovra",
+   "reason_A": "'tova' is tovra with one letter dropped.",
+   "reason_B": "'tova' is tovra missing one letter; no other app is close."
+  },
+  {
+   "id": 22,
+   "kind": "which",
+   "image": "s04_app_screentime_conflict_en.png",
+   "question": "which app has the longest bar?",
+   "answer": "t",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "A single letter 't' does not name an item.",
+   "reason_B": "A single letter 't' does not name an item."
+  },
+  {
+   "id": 23,
+   "kind": "which",
+   "image": "s04_app_screentime_conflict_en.png",
+   "question": "which app has the shortest bar?",
+   "answer": "tova",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "tovra",
+   "judge_B": "tovra",
+   "verdict": "tovra",
+   "reason_A": "'tova' is tovra with one letter dropped.",
+   "reason_B": "'tova' is tovra missing one letter; no other app is close."
+  },
+  {
+   "id": 24,
+   "kind": "which",
+   "image": "s04_app_screentime_conflict_en.png",
+   "question": "which app has the shortest bar?",
+   "answer": "t",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "A single letter 't' does not name an item.",
+   "reason_B": "A single letter 't' does not name an item."
+  },
+  {
+   "id": 25,
+   "kind": "which",
+   "image": "s04_app_screentime_consistent_en.png",
+   "question": "which app has the longest bar?",
+   "answer": "tova",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "tovra",
+   "judge_B": "tovra",
+   "verdict": "tovra",
+   "reason_A": "'tova' is tovra with one letter dropped.",
+   "reason_B": "'tova' is tovra missing one letter; no other app is close."
+  },
+  {
+   "id": 26,
+   "kind": "which",
+   "image": "s04_app_screentime_consistent_en.png",
+   "question": "which app has the longest bar?",
+   "answer": "t",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "A single letter 't' does not name an item.",
+   "reason_B": "A single letter 't' does not name an item."
+  },
+  {
+   "id": 27,
+   "kind": "which",
+   "image": "s04_app_screentime_consistent_en.png",
+   "question": "which app has the shortest bar?",
+   "answer": "tova",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "tovra",
+   "judge_B": "tovra",
+   "verdict": "tovra",
+   "reason_A": "'tova' is tovra with one letter dropped.",
+   "reason_B": "'tova' is tovra missing one letter; no other app is close."
+  },
+  {
+   "id": 28,
+   "kind": "which",
+   "image": "s04_app_screentime_consistent_en.png",
+   "question": "which app has the shortest bar?",
+   "answer": "t",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "A single letter 't' does not name an item.",
+   "reason_B": "A single letter 't' does not name an item."
+  },
+  {
+   "id": 29,
+   "kind": "which",
+   "image": "s05_poster_pictogram_conflict_en.png",
+   "question": "which school has the longest row of tree icons?",
+   "answer": "lymen primary school",
+   "seen_in": [
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "lumen",
+   "judge_B": "lumen",
+   "verdict": "lumen",
+   "reason_A": "'lymen primary school' is a misspelling of lumen.",
+   "reason_B": "'lymen primary school' is a misspelling of lumen."
+  },
+  {
+   "id": 30,
+   "kind": "which",
+   "image": "s05_poster_pictogram_conflict_en.png",
+   "question": "which school has the longest row of tree icons?",
+   "answer": "wren primary school",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'wren' is not on the chart and not close to any item.",
+   "reason_B": "'wren primary school' is not on the chart and not close to any school."
+  },
+  {
+   "id": 31,
+   "kind": "which",
+   "image": "s05_poster_pictogram_consistent_en.png",
+   "question": "which school has the longest row of tree icons?",
+   "answer": "lymen primary school",
+   "seen_in": [
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "lumen",
+   "judge_B": "lumen",
+   "verdict": "lumen",
+   "reason_A": "'lymen primary school' is a misspelling of lumen.",
+   "reason_B": "'lymen primary school' is a misspelling of lumen."
+  },
+  {
+   "id": 32,
+   "kind": "which",
+   "image": "s05_poster_pictogram_consistent_en.png",
+   "question": "which school has the longest row of tree icons?",
+   "answer": "wren primary school",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'wren' is not on the chart and not close to any item.",
+   "reason_B": "'wren primary school' is not on the chart and not close to any school."
+  },
+  {
+   "id": 33,
+   "kind": "which",
+   "image": "s06_tv_thermometers_conflict_en.png",
+   "question": "which city has the fullest thermometer?",
+   "answer": "berlin",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "berim",
+   "judge_B": "berim",
+   "verdict": "berim",
+   "reason_A": "'berlin' shares 'ber-' with berim (edit distance 2); other items are clearly further.",
+   "reason_B": "'berlin' shares 'ber-' and is closest to berim; the other cities are far off."
+  },
+  {
+   "id": 34,
+   "kind": "which",
+   "image": "s06_tv_thermometers_consistent_en.png",
+   "question": "which city has the fullest thermometer?",
+   "answer": "berlin",
+   "seen_in": [
+    "run4:224",
+    "run4:448",
+    "run4:224bf",
+    "run4:448bf"
+   ],
+   "judge_A": "berim",
+   "judge_B": "berim",
+   "verdict": "berim",
+   "reason_A": "'berlin' shares 'ber-' with berim (edit distance 2); other items are clearly further.",
+   "reason_B": "'berlin' shares 'ber-' and is closest to berim; the other cities are far off."
+  },
+  {
+   "id": 35,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_conflict_en.png",
+   "question": "which server has the emptiest gauge?",
+   "answer": "game-03",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "gamma-03",
+   "judge_B": "gamma-03",
+   "verdict": "gamma-03",
+   "reason_A": "'game-03' is a misspelling of gamma-03.",
+   "reason_B": "'game-03' is a misspelling of gamma-03."
+  },
+  {
+   "id": 36,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_conflict_en.png",
+   "question": "which server has the emptiest gauge?",
+   "answer": "alpha-01",
+   "seen_in": [
+    "run4:448",
+    "run4:448bf",
+    "run4:10b-224"
+   ],
+   "judge_A": "alpha-01",
+   "judge_B": "alpha-01",
+   "verdict": "alpha-01",
+   "reason_A": "Exact item name.",
+   "reason_B": "Exact name."
+  },
+  {
+   "id": 37,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_conflict_en.png",
+   "question": "which server has the emptiest gauge?",
+   "answer": "gamma-03",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "gamma-03",
+   "judge_B": "gamma-03",
+   "verdict": "gamma-03",
+   "reason_A": "Exact item name.",
+   "reason_B": "Exact name."
+  },
+  {
+   "id": 38,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_conflict_en.png",
+   "question": "which server has the fullest gauge?",
+   "answer": "game-03",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "gamma-03",
+   "judge_B": "gamma-03",
+   "verdict": "gamma-03",
+   "reason_A": "'game-03' is a misspelling of gamma-03.",
+   "reason_B": "'game-03' is a misspelling of gamma-03."
+  },
+  {
+   "id": 39,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_conflict_en.png",
+   "question": "which server has the fullest gauge?",
+   "answer": "gamma-03",
+   "seen_in": [
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "gamma-03",
+   "judge_B": "gamma-03",
+   "verdict": "gamma-03",
+   "reason_A": "Exact item name.",
+   "reason_B": "Exact name."
+  },
+  {
+   "id": 40,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_conflict_en.png",
+   "question": "which server has the fullest gauge?",
+   "answer": "beta-02",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "beta-02",
+   "judge_B": "beta-02",
+   "verdict": "beta-02",
+   "reason_A": "Exact item name.",
+   "reason_B": "Exact name."
+  },
+  {
+   "id": 41,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_consistent_en.png",
+   "question": "which server has the emptiest gauge?",
+   "answer": "beta-02",
+   "seen_in": [
+    "run4:448",
+    "run4:448bf",
+    "run4:10b-448"
+   ],
+   "judge_A": "beta-02",
+   "judge_B": "beta-02",
+   "verdict": "beta-02",
+   "reason_A": "Exact item name.",
+   "reason_B": "Exact name."
+  },
+  {
+   "id": 42,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_consistent_en.png",
+   "question": "which server has the emptiest gauge?",
+   "answer": "alpha-01",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "alpha-01",
+   "judge_B": "alpha-01",
+   "verdict": "alpha-01",
+   "reason_A": "Exact item name.",
+   "reason_B": "Exact name."
+  },
+  {
+   "id": 43,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_consistent_en.png",
+   "question": "which server has the fullest gauge?",
+   "answer": "game-03",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf",
+    "run4:10b-224"
+   ],
+   "judge_A": "gamma-03",
+   "judge_B": "gamma-03",
+   "verdict": "gamma-03",
+   "reason_A": "'game-03' is a misspelling of gamma-03.",
+   "reason_B": "'game-03' is a misspelling of gamma-03."
+  },
+  {
+   "id": 44,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_consistent_en.png",
+   "question": "which server has the fullest gauge?",
+   "answer": "gamma-03",
+   "seen_in": [
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "gamma-03",
+   "judge_B": "gamma-03",
+   "verdict": "gamma-03",
+   "reason_A": "Exact item name.",
+   "reason_B": "Exact name."
+  },
+  {
+   "id": 45,
+   "kind": "which",
+   "image": "s07_dashboard_gauges_consistent_en.png",
+   "question": "which server has the fullest gauge?",
+   "answer": "alpha-01",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "alpha-01",
+   "judge_B": "alpha-01",
+   "verdict": "alpha-01",
+   "reason_A": "Exact item name.",
+   "reason_B": "Exact name."
+  },
+  {
+   "id": 46,
+   "kind": "which",
+   "image": "s08_paper_grouped_bars_conflict_en.png",
+   "question": "on quorlet, which method has the shortest bar?",
+   "answer": "k-means",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'k-means' is an outside method name, not a variant of roan/kerf/ossel.",
+   "reason_B": "'k-means' is a clustering method, not a variant of kerf or any listed item."
+  },
+  {
+   "id": 47,
+   "kind": "which",
+   "image": "s08_paper_grouped_bars_conflict_en.png",
+   "question": "on quorlet, which method has the shortest bar?",
+   "answer": "osel",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "ossel",
+   "judge_B": "ossel",
+   "verdict": "ossel",
+   "reason_A": "'osel' is ossel with one s dropped.",
+   "reason_B": "'osel' is ossel missing one s."
+  },
+  {
+   "id": 48,
+   "kind": "which",
+   "image": "s08_paper_grouped_bars_conflict_en.png",
+   "question": "on quorlet, which method has the tallest bar?",
+   "answer": "k-means",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'k-means' is an outside method name, not a variant of roan/kerf/ossel.",
+   "reason_B": "'k-means' is a clustering method, not a variant of kerf or any listed item."
+  },
+  {
+   "id": 49,
+   "kind": "which",
+   "image": "s08_paper_grouped_bars_consistent_en.png",
+   "question": "on quorlet, which method has the shortest bar?",
+   "answer": "k-means",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'k-means' is an outside method name, not a variant of roan/kerf/ossel.",
+   "reason_B": "'k-means' is a clustering method, not a variant of kerf or any listed item."
+  },
+  {
+   "id": 50,
+   "kind": "which",
+   "image": "s08_paper_grouped_bars_consistent_en.png",
+   "question": "on quorlet, which method has the shortest bar?",
+   "answer": "ostsel",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "ossel",
+   "judge_B": "ossel",
+   "verdict": "ossel",
+   "reason_A": "'ostsel' is a misspelling of ossel.",
+   "reason_B": "'ostsel' is a misspelling of ossel."
+  },
+  {
+   "id": 51,
+   "kind": "which",
+   "image": "s08_paper_grouped_bars_consistent_en.png",
+   "question": "on quorlet, which method has the tallest bar?",
+   "answer": "k-means",
+   "seen_in": [
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "'k-means' is an outside method name, not a variant of roan/kerf/ossel.",
+   "reason_B": "'k-means' is a clustering method, not a variant of kerf or any listed item."
+  },
+  {
+   "id": 52,
+   "kind": "which",
+   "image": "s09_notebook_sketch_conflict_en.png",
+   "question": "which day is the highest point of the line?",
+   "answer": "110",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "none",
+   "judge_B": "none",
+   "verdict": "none",
+   "reason_A": "Answer is a number, not a day.",
+   "reason_B": "Answer is a number, not a day."
+  },
+  {
+   "id": 53,
+   "kind": "which",
+   "image": "s11_finance_watchlist_conflict_en.png",
+   "question": "which stock has the line that rises the most?",
+   "answer": "t.lwy",
+   "seen_in": [
+    "run4:224"
+   ],
+   "judge_A": "tlwy",
+   "judge_B": "tlwy",
+   "verdict": "tlwy",
+   "reason_A": "'t.lwy' is tlwy with a stray dot.",
+   "reason_B": "'t.lwy' is tlwy with a stray dot."
+  },
+  {
+   "id": 54,
+   "kind": "which",
+   "image": "s11_finance_watchlist_conflict_en.png",
+   "question": "which stock has the line that rises the most?",
+   "answer": "tlnw",
+   "seen_in": [
+    "run4:224bf"
+   ],
+   "judge_A": "tlwy",
+   "judge_B": "tlwy",
+   "verdict": "tlwy",
+   "reason_A": "'tlnw' matches the talnway/tlwy ticker; no other item is close.",
+   "reason_B": "'tlnw' matches tlwy/talnway; no other ticker is close."
+  },
+  {
+   "id": 55,
+   "kind": "which",
+   "image": "s11_finance_watchlist_consistent_en.png",
+   "question": "which stock has the line that rises the most?",
+   "answer": "mxxa",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "mxra",
+   "judge_B": "mxra",
+   "verdict": "mxra",
+   "reason_A": "'mxxa' is a one-letter misspelling of mxra.",
+   "reason_B": "'mxxa' is a misspelling of mxra."
+  },
+  {
+   "id": 56,
+   "kind": "yesno",
+   "image": "s01_newspaper_bars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Graftaki sayılar sahtedir.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Says the chart's numbers are fake, i.e. there is a problem.",
+   "reason_B": "Says the numbers in the chart are fake, i.e. there is a mistake."
+  },
+  {
+   "id": 57,
+   "kind": "yesno",
+   "image": "s01_newspaper_bars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 58,
+   "kind": "yesno",
+   "image": "s01_newspaper_bars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "i̇kisi birden fazla aynı rakam var",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Garbled description ('both more than one same digit'), no commitment.",
+   "reason_B": "Garbled description, no verdict on a mistake."
+  },
+  {
+   "id": 59,
+   "kind": "yesno",
+   "image": "s01_newspaper_bars_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Grafın altındaki metinde düzeltilmesi gerekiyor.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Says the text under the chart needs correcting, implying a mistake.",
+   "reason_B": "Says the text under the chart needs correcting, i.e. there is a mistake."
+  },
+  {
+   "id": 60,
+   "kind": "yesno",
+   "image": "s01_newspaper_bars_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 61,
+   "kind": "yesno",
+   "image": "s01_newspaper_bars_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "i̇kisi birden fazla çizgi ile bir grafik",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes the chart (a graph with multiple lines).",
+   "reason_B": "Describes the chart without a verdict."
+  },
+  {
+   "id": 62,
+   "kind": "yesno",
+   "image": "s03_slide_donut_conflict_en.png",
+   "question": "is there a mistake in this chart?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 63,
+   "kind": "yesno",
+   "image": "s03_slide_donut_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde hata var' = there is a mistake.",
+   "reason_B": "'Resimde hata var' = there is a mistake."
+  },
+  {
+   "id": 64,
+   "kind": "yesno",
+   "image": "s03_slide_donut_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Serinin ilk dört bölümünün toplamı serinin totalıdır.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes a sum relation, no yes/no.",
+   "reason_B": "States a sum relation, no verdict on a mistake."
+  },
+  {
+   "id": 65,
+   "kind": "yesno",
+   "image": "s03_slide_donut_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 66,
+   "kind": "yesno",
+   "image": "s03_slide_donut_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Toplamda 100% olan bir grafik var.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes a chart totalling 100%, no yes/no.",
+   "reason_B": "Describes a chart totalling 100%, no verdict."
+  },
+  {
+   "id": 67,
+   "kind": "yesno",
+   "image": "s03_slide_donut_consistent_en.png",
+   "question": "is there a mistake in this chart?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 68,
+   "kind": "yesno",
+   "image": "s03_slide_donut_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde hata var' = there is a mistake.",
+   "reason_B": "'Resimde hata var' = there is a mistake."
+  },
+  {
+   "id": 69,
+   "kind": "yesno",
+   "image": "s03_slide_donut_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Serinin ilk dört bölümünün toplamı serinin totalıdır.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes a sum relation, no yes/no.",
+   "reason_B": "States a sum relation, no verdict on a mistake."
+  },
+  {
+   "id": 70,
+   "kind": "yesno",
+   "image": "s03_slide_donut_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 71,
+   "kind": "yesno",
+   "image": "s03_slide_donut_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Toplamda 100% olan bir grafik var.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes a chart totalling 100%, no yes/no.",
+   "reason_B": "Describes a chart totalling 100%, no verdict."
+  },
+  {
+   "id": 72,
+   "kind": "yesno",
+   "image": "s04_app_screentime_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde bir hata var' = there is a mistake.",
+   "reason_B": "'Resimde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 73,
+   "kind": "yesno",
+   "image": "s04_app_screentime_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde hata var. Ekranda \"Ekran süsü\" yazan",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Opens with 'Resimde hata var' = there is a mistake.",
+   "reason_B": "Opens with 'Resimde hata var' = there is a mistake."
+  },
+  {
+   "id": 74,
+   "kind": "yesno",
+   "image": "s04_app_screentime_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224",
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 75,
+   "kind": "yesno",
+   "image": "s04_app_screentime_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla uyuşuyor mu?",
+   "answer": "Üst üste iki ve dört saati olan dört çubuk, say",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated description of bars, no verdict on matching.",
+   "reason_B": "Truncated bar description, no verdict on matching."
+  },
+  {
+   "id": 76,
+   "kind": "yesno",
+   "image": "s04_app_screentime_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla uyuşuyor mu?",
+   "answer": "Üst üste iki ve dört saati olan dört çubuk var ve",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated description of bars, no verdict on matching.",
+   "reason_B": "Truncated bar description, no verdict on matching."
+  },
+  {
+   "id": 77,
+   "kind": "yesno",
+   "image": "s04_app_screentime_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla uyuşuyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'sayılar çubuklarla uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar çubuklarla uyuşuyor' = the numbers match."
+  },
+  {
+   "id": 78,
+   "kind": "yesno",
+   "image": "s04_app_screentime_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 79,
+   "kind": "yesno",
+   "image": "s04_app_screentime_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 80,
+   "kind": "yesno",
+   "image": "s04_app_screentime_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde bir hata var' = there is a mistake.",
+   "reason_B": "'Resimde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 81,
+   "kind": "yesno",
+   "image": "s04_app_screentime_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde hata var. Ekranda \"Ekran süsü\" yazan",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Opens with 'Resimde hata var' = there is a mistake.",
+   "reason_B": "Opens with 'Resimde hata var' = there is a mistake."
+  },
+  {
+   "id": 82,
+   "kind": "yesno",
+   "image": "s04_app_screentime_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Görüntüde bir hata var.",
+   "seen_in": [
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Görüntüde bir hata var' = there is a mistake.",
+   "reason_B": "'Görüntüde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 83,
+   "kind": "yesno",
+   "image": "s04_app_screentime_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224",
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 84,
+   "kind": "yesno",
+   "image": "s04_app_screentime_consistent_tr.png",
+   "question": "grafikteki sayılar çubuklarla uyuşuyor mu?",
+   "answer": "Üst üste iki ve dört çubuk, sayıları ise bir ç",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated description of bars, no verdict on matching.",
+   "reason_B": "Truncated bar description, no verdict on matching."
+  },
+  {
+   "id": 85,
+   "kind": "yesno",
+   "image": "s04_app_screentime_consistent_tr.png",
+   "question": "grafikteki sayılar çubuklarla uyuşuyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar çubuklarla uyuşuyor' = the numbers match."
+  },
+  {
+   "id": 86,
+   "kind": "yesno",
+   "image": "s04_app_screentime_consistent_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 87,
+   "kind": "yesno",
+   "image": "s04_app_screentime_consistent_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 88,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte sayılar düzgün değil.",
+   "seen_in": [
+    "run3:224",
+    "run4:224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'sayılar düzgün değil' = numbers are not right, i.e. a mistake.",
+   "reason_B": "'sayılar düzgün değil' = the numbers are not right, i.e. a mistake."
+  },
+  {
+   "id": 89,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "rakip ağaç sayısı ile ilgili.",
+   "seen_in": [
+    "run4:224bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'It is about the rival tree count' does not clearly affirm or deny a mistake.",
+   "reason_B": "'It's about the rival tree count' commits to nothing."
+  },
+  {
+   "id": 90,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "3. okulun sayısı 50 değil de 60.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "States a correction (50 should be 60), i.e. a mistake.",
+   "reason_B": "Points out a wrong number (60 instead of 50), i.e. a mistake."
+  },
+  {
+   "id": 91,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "okul sayısı 50 değil de 60 yazıyor.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Points out a discrepancy (60 written instead of 50), i.e. a mistake.",
+   "reason_B": "'says 60 instead of 50' flags a wrong number, i.e. a mistake."
+  },
+  {
+   "id": 92,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_conflict_tr.png",
+   "question": "grafikteki sayılar ağaç simgeleriyle çelişiyor mu?",
+   "answer": "sayılar ağacın sayısıyla çelişiyor.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the tree count, answering the contradiction question yes."
+  },
+  {
+   "id": 93,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte sayılar düzgün değil.",
+   "seen_in": [
+    "run3:224",
+    "run4:224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'sayılar düzgün değil' = numbers are not right, i.e. a mistake.",
+   "reason_B": "'sayılar düzgün değil' = the numbers are not right, i.e. a mistake."
+  },
+  {
+   "id": 94,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "rakip ağaç sayısı ile ilgili.",
+   "seen_in": [
+    "run4:224bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'It is about the rival tree count' does not clearly affirm or deny a mistake.",
+   "reason_B": "'It's about the rival tree count' commits to nothing."
+  },
+  {
+   "id": 95,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "İlk satırda toplam 60 ağacın, ikinci sat",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated description of tree counts.",
+   "reason_B": "Truncated row description, no verdict."
+  },
+  {
+   "id": 96,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "İçinde bir hata var.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'İçinde bir hata var' = there is a mistake.",
+   "reason_B": "'İçinde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 97,
+   "kind": "yesno",
+   "image": "s05_poster_pictogram_consistent_tr.png",
+   "question": "grafikteki sayılar ağaç simgeleriyle çelişiyor mu?",
+   "answer": "10 ağacın altındaki sayılar ağacın simgelerine",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated before the verb; verdict unclear.",
+   "reason_B": "Truncated before the verb; match/contradict not stated."
+  },
+  {
+   "id": 98,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte 24 derecelik sıcaklık gösterilmektedir ancak 23",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated ('shows 24 degrees but 23...'); hints at a discrepancy but no clear verdict.",
+   "reason_B": "Truncated after 'shows 24 degrees but 23'; verdict not clear."
+  },
+  {
+   "id": 99,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "hiçbir hata yok. Resimde exact aynı temps gösterilmektedir.",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "no",
+   "judge_B": "no",
+   "verdict": "no",
+   "reason_A": "'hiçbir hata yok' = no mistake.",
+   "reason_B": "'hiçbir hata yok' = no mistake."
+  },
+  {
+   "id": 100,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte bir hata var. hava durumu sistemi 1°c daha fazla yüksek",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'grafikte bir hata var' = there is a mistake.",
+   "reason_B": "'grafikte bir hata var' = there is a mistake."
+  },
+  {
+   "id": 101,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 102,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "-3 derece sıcaklık yazıyor",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Just reads a value (-3 degrees).",
+   "reason_B": "Just reads a value (-3 degrees), no verdict."
+  },
+  {
+   "id": 103,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_conflict_tr.png",
+   "question": "grafikteki sayılar termometrelerin doluluğuyla uyuşuyor mu?",
+   "answer": "Görüntüdeki termometreler dondurucu, sıvı ve",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated description of thermometers.",
+   "reason_B": "Truncated thermometer description, no verdict on matching."
+  },
+  {
+   "id": 104,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_conflict_tr.png",
+   "question": "grafikteki sayılar termometrelerin doluluğuyla çelişiyor mu?",
+   "answer": "some of the numbers seem to be at odds with the thermometer readings.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Numbers 'at odds' with thermometers = yes they contradict.",
+   "reason_B": "Says some numbers are at odds with the thermometers, answering the contradiction question yes."
+  },
+  {
+   "id": 105,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte \"düz\" yazan yerlerde \"c\" ve \"f",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated, no verdict.",
+   "reason_B": "Truncated remark about labels, no verdict."
+  },
+  {
+   "id": 106,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "hiçbir hata yok. Resimde exact aynı sıcaklık gösterilmektedir",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "no",
+   "judge_B": "no",
+   "verdict": "no",
+   "reason_A": "'hiçbir hata yok' = no mistake.",
+   "reason_B": "'hiçbir hata yok' = no mistake."
+  },
+  {
+   "id": 107,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte bir hata var. hava durumu sistemi 1°c fazla yüksektir",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'grafikte bir hata var' = there is a mistake.",
+   "reason_B": "'grafikte bir hata var' = there is a mistake."
+  },
+  {
+   "id": 108,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 109,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "-3 c'nin en altındaki değer negatif",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes -3 as negative, no verdict.",
+   "reason_B": "Says the lowest value is negative, no verdict."
+  },
+  {
+   "id": 110,
+   "kind": "yesno",
+   "image": "s06_tv_thermometers_consistent_tr.png",
+   "question": "grafikteki sayılar termometrelerin doluluğuyla çelişiyor mu?",
+   "answer": "some of the numbers seem to be at odds with the image, but I can",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Main clause says numbers 'seem to be at odds' = contradict; trailing hedge is truncated.",
+   "reason_B": "Says some numbers seem at odds with the image (hedged, truncated), leaning yes to contradiction."
+  },
+  {
+   "id": 111,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde bir hata var' = there is a mistake.",
+   "reason_B": "'Resimde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 112,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Görüntüde hata var. Son 5 dk'da görüntülenen",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Görüntüde hata var' = there is a mistake.",
+   "reason_B": "Opens with 'Görüntüde hata var' = there is a mistake."
+  },
+  {
+   "id": 113,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "beta-02 sürümünde beta-01 sürümünde yer alan",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated description of versions, no verdict.",
+   "reason_B": "Truncated version talk, no verdict."
+  },
+  {
+   "id": 114,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Bu grafikte bir hata var: y-eksis'in değerleri",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Bu grafikte bir hata var' = there is a mistake.",
+   "reason_B": "'Bu grafikte bir hata var' = there is a mistake."
+  },
+  {
+   "id": 115,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_conflict_tr.png",
+   "question": "grafikteki sayılar göstergelerle uyuşuyor mu?",
+   "answer": "Üstteki üç gösterge, alttaki üç gösterge ile uyuş",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Talks about top vs bottom gauges, truncated; does not answer numbers-vs-gauges.",
+   "reason_B": "Talks about gauges matching each other, truncated; no verdict on numbers vs gauges."
+  },
+  {
+   "id": 116,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_conflict_tr.png",
+   "question": "grafikteki sayılar göstergelerle uyuşuyor mu?",
+   "answer": "Grafikteki sayılar göstergelerle uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar göstergelerle uyuşuyor' = the numbers match."
+  },
+  {
+   "id": 117,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_conflict_tr.png",
+   "question": "grafikteki sayılar göstergelerle çelişiyor mu?",
+   "answer": "Sunucu, adres, kabin ve çalışma süresi göstergelerle ç",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated list of fields, verb cut off.",
+   "reason_B": "Truncated list of fields, no clear verdict."
+  },
+  {
+   "id": 118,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_conflict_tr.png",
+   "question": "grafikteki sayılar göstergelerle çelişiyor mu?",
+   "answer": "Grafikteki sayılar göstergelerle çelişiyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the gauges, answering the contradiction question yes."
+  },
+  {
+   "id": 119,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde bir hata var' = there is a mistake.",
+   "reason_B": "'Resimde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 120,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Görüntüde hata var. Son 5 dk'da görüntülenen",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Görüntüde hata var' = there is a mistake.",
+   "reason_B": "Opens with 'Görüntüde hata var' = there is a mistake."
+  },
+  {
+   "id": 121,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "beta-01 sürümünde beta-02 sürümüne yüksel",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated description of versions, no verdict.",
+   "reason_B": "Truncated version talk, no verdict."
+  },
+  {
+   "id": 122,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Bu grafikte bir hata var: y-eksis üzerinde \" son 5",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Bu grafikte bir hata var' = there is a mistake.",
+   "reason_B": "'Bu grafikte bir hata var' = there is a mistake."
+  },
+  {
+   "id": 123,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "grafikteki sayılar göstergelerle uyuşuyor mu?",
+   "answer": "grafikteki sayılar göstergelerle uyuşuyor.",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar göstergelerle uyuşuyor' = the numbers match."
+  },
+  {
+   "id": 124,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "grafikteki sayılar göstergelerle uyuşuyor mu?",
+   "answer": "Üstteki üç gösterge, alttaki üç gösterge ile uyuş",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Talks about top vs bottom gauges, truncated; does not answer numbers-vs-gauges.",
+   "reason_B": "Talks about gauges matching each other, truncated; no verdict on numbers vs gauges."
+  },
+  {
+   "id": 125,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "grafikteki sayılar göstergelerle uyuşuyor mu?",
+   "answer": "Grafikteki sayılar göstergelerle uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar göstergelerle uyuşuyor' = the numbers match."
+  },
+  {
+   "id": 126,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "grafikteki sayılar göstergelerle çelişiyor mu?",
+   "answer": "Sayılar göstergelerle çelişiyor.",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the gauges, answering the contradiction question yes."
+  },
+  {
+   "id": 127,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "grafikteki sayılar göstergelerle çelişiyor mu?",
+   "answer": "Sunucu, adres, kabin, çalışma süresi, durum ve ç",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated list of fields, verb cut off.",
+   "reason_B": "Truncated list of fields, no clear verdict."
+  },
+  {
+   "id": 128,
+   "kind": "yesno",
+   "image": "s07_dashboard_gauges_consistent_tr.png",
+   "question": "grafikteki sayılar göstergelerle çelişiyor mu?",
+   "answer": "Grafikteki sayılar göstergelerle çelişiyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the gauges, answering the contradiction question yes."
+  },
+  {
+   "id": 129,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde hata var. Grafikte belirtilen verinin tam bir kopy",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Opens with 'Resimde hata var' = there is a mistake.",
+   "reason_B": "Opens with 'Resimde hata var' = there is a mistake."
+  },
+  {
+   "id": 130,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Görüntüdeki grafikte \"Kurucu\" kelimesinin alt",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated remark about a word, no verdict.",
+   "reason_B": "Truncated remark about a word, no verdict."
+  },
+  {
+   "id": 131,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Görüntüdeki grafikte \"Kırık\" kelimesi yer alm",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated remark about a word ('yer alm...'), no verdict.",
+   "reason_B": "Truncated remark about a word, no verdict."
+  },
+  {
+   "id": 132,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla uyuşuyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar çubuklarla uyuşuyor' = the numbers match."
+  },
+  {
+   "id": 133,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 134,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde hata var. Grafikte belirtilen verinin tam bir kopy",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Opens with 'Resimde hata var' = there is a mistake.",
+   "reason_B": "Opens with 'Resimde hata var' = there is a mistake."
+  },
+  {
+   "id": 135,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Görüntüdeki grafikte \"Kurucu\" kelimesinin iki",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated remark about a word, no verdict.",
+   "reason_B": "Truncated remark about a word, no verdict."
+  },
+  {
+   "id": 136,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_consistent_tr.png",
+   "question": "grafikteki sayılar çubuklarla uyuşuyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar çubuklarla uyuşuyor' = the numbers match."
+  },
+  {
+   "id": 137,
+   "kind": "yesno",
+   "image": "s08_paper_grouped_bars_consistent_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 138,
+   "kind": "yesno",
+   "image": "s09_notebook_sketch_conflict_tr.png",
+   "question": "grafikteki sayılar çizgiyle uyuşuyor mu?",
+   "answer": "Grafikteki sayılar çizgiyle uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar çizgiyle uyuşuyor' = the numbers match the line."
+  },
+  {
+   "id": 139,
+   "kind": "yesno",
+   "image": "s09_notebook_sketch_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "42 haftalık süre aralığına göre hesaplanmış sayılar var.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes how numbers were computed, no verdict.",
+   "reason_B": "Describes the time window, no verdict."
+  },
+  {
+   "id": 140,
+   "kind": "yesno",
+   "image": "s09_notebook_sketch_consistent_tr.png",
+   "question": "grafikteki sayılar çizgiyle uyuşuyor mu?",
+   "answer": "Grafikteki sayılar çizgiyle uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar çizgiyle uyuşuyor' = the numbers match the line."
+  },
+  {
+   "id": 141,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_en.png",
+   "question": "is there a mistake in this chart?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 142,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'grafikte hata var' = there is a mistake.",
+   "reason_B": "'grafikte hata var' = there is a mistake."
+  },
+  {
+   "id": 143,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Grafiğin altındaki metinde hata belirtilmediği için bu soruya",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Declines: no error stated in the text so cannot answer.",
+   "reason_B": "Says it can't answer since no error is stated in the text; a non-answer."
+  },
+  {
+   "id": 144,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde bir hata var.",
+   "seen_in": [
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde bir hata var' = there is a mistake.",
+   "reason_B": "'Resimde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 145,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 146,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "i̇şaretler 15 dk geçikmeli.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes a 15-minute delay note, no verdict.",
+   "reason_B": "Says quotes are 15 min delayed, a description, not a verdict."
+  },
+  {
+   "id": 147,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle uyuşuyor mu?",
+   "answer": "Mini grafikler de kripto para piyasalarının düşüşünü gösteriyor",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes mini charts showing a decline, no match verdict.",
+   "reason_B": "Describes the mini charts, no verdict on matching."
+  },
+  {
+   "id": 148,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle uyuşuyor mu?",
+   "answer": "Mini grafikler de kriptoların % değişimini gösteriyor, ancak bu",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes mini charts, then truncated 'ancak bu'; no verdict.",
+   "reason_B": "Describes the mini charts, truncated; no verdict on matching."
+  },
+  {
+   "id": 149,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle uyuşuyor mu?",
+   "answer": "mini grafiklerdeki sayılar grafikteki sayılardan daha küçük.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "no",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Says mini-chart numbers are smaller than the chart's numbers, i.e. they do not match.",
+   "reason_B": "Compares sizes of numbers; does not say match or not."
+  },
+  {
+   "id": 150,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle çelişiyor mu?",
+   "answer": "Mini grafikler kdv, mxra, tlwy, vesk ve ves",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated list of tickers.",
+   "reason_B": "Truncated ticker list, no verdict."
+  },
+  {
+   "id": 151,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_conflict_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle çelişiyor mu?",
+   "answer": "mini grafiklerdeki sayılar mini grafiklerin kendilerine ait değerlerinden daha",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated comparison, no verdict on contradiction.",
+   "reason_B": "Truncated comparison, no verdict on contradiction."
+  },
+  {
+   "id": 152,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_en.png",
+   "question": "is there a mistake in this chart?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 153,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde bir hata var' = there is a mistake.",
+   "reason_B": "'Resimde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 154,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Grafiğin altındaki metinde hatalar gösterilmektedir.",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Says errors are shown in the text below the chart, i.e. there are mistakes.",
+   "reason_B": "Says the text under the chart shows errors, i.e. there are mistakes."
+  },
+  {
+   "id": 155,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Grafiğin altındaki metinde hata belirtilmediği için bu soruya",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Declines: no error stated in the text so cannot answer.",
+   "reason_B": "Says it can't answer since no error is stated in the text; a non-answer."
+  },
+  {
+   "id": 156,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 157,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "i̇talyanca yazılmış bir grafik var.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Says the chart is in Italian, no verdict.",
+   "reason_B": "Says the chart is in Italian, no verdict."
+  },
+  {
+   "id": 158,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle uyuşuyor mu?",
+   "answer": "Mini grafikler de kripto para piyasalarının değişim eğilimler",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes mini charts, truncated, no verdict.",
+   "reason_B": "Describes the mini charts, truncated; no verdict on matching."
+  },
+  {
+   "id": 159,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle uyuşuyor mu?",
+   "answer": "Mini grafikler de kdv, mxra, tlwy, vesk ve",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated list of tickers.",
+   "reason_B": "Truncated ticker list, no verdict."
+  },
+  {
+   "id": 160,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle uyuşuyor mu?",
+   "answer": "mini grafiklerle uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'mini grafiklerle uyuşuyor' = yes they match.",
+   "reason_B": "'mini grafiklerle uyuşuyor' = they match."
+  },
+  {
+   "id": 161,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle uyuşuyor mu?",
+   "answer": "mini grafiklerdeki sayılar grafikteki sayılardan daha küçük.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "no",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Says mini-chart numbers are smaller than the chart's numbers, i.e. they do not match.",
+   "reason_B": "Compares sizes of numbers; does not say match or not."
+  },
+  {
+   "id": 162,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle çelişiyor mu?",
+   "answer": "Mini grafikler kdv, mxra, tlwy, vesk ve ves",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated list of tickers.",
+   "reason_B": "Truncated ticker list, no verdict."
+  },
+  {
+   "id": 163,
+   "kind": "yesno",
+   "image": "s11_finance_watchlist_consistent_tr.png",
+   "question": "grafikteki sayılar mini grafiklerle çelişiyor mu?",
+   "answer": "mini grafiklerdeki sayılar mini grafiklerin kendilerine ait değerleri ile",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated comparison, no verdict on contradiction.",
+   "reason_B": "Truncated comparison, no verdict on contradiction."
+  },
+  {
+   "id": 164,
+   "kind": "yesno",
+   "image": "s13_widget_battery_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Resimde bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Resimde bir hata var' = there is a mistake.",
+   "reason_B": "'Resimde bir hata var' = there is a mistake."
+  },
+  {
+   "id": 165,
+   "kind": "yesno",
+   "image": "s13_widget_battery_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "%88'de telefon şarjı, %31'de saat",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes percentages per device, no verdict.",
+   "reason_B": "Lists values, no verdict."
+  },
+  {
+   "id": 166,
+   "kind": "yesno",
+   "image": "s13_widget_battery_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "%88 oranında bir hata var.",
+   "seen_in": [
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'bir hata var' = there is a mistake (at 88%).",
+   "reason_B": "'%88 oranında bir hata var' asserts there is an error."
+  },
+  {
+   "id": 167,
+   "kind": "yesno",
+   "image": "s13_widget_battery_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "%88'de telefon pillerinin iki çeyreği eksik",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Describes a battery ring at 88%, not clearly calling it a mistake.",
+   "reason_B": "Describes the phone ring as two quarters short; implicit at most, no clear verdict."
+  },
+  {
+   "id": 168,
+   "kind": "yesno",
+   "image": "s13_widget_battery_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 169,
+   "kind": "yesno",
+   "image": "s13_widget_battery_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "tablet için pil miktarı yanlış gösterilmiştir.",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Says tablet battery is shown wrong = a mistake.",
+   "reason_B": "Says the tablet value is shown wrong, i.e. a mistake."
+  },
+  {
+   "id": 170,
+   "kind": "yesno",
+   "image": "s13_widget_battery_conflict_tr.png",
+   "question": "grafikteki sayılar halkalarla uyuşuyor mu?",
+   "answer": "Üzerinde halkalar olan bir grafik var mı?",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Answers with a question.",
+   "reason_B": "Answers with a question back."
+  },
+  {
+   "id": 171,
+   "kind": "yesno",
+   "image": "s13_widget_battery_conflict_tr.png",
+   "question": "grafikteki sayılar halkalarla çelişiyor mu?",
+   "answer": "Sayılar halkalarla çelişiyor.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the rings, answering the contradiction question yes."
+  },
+  {
+   "id": 172,
+   "kind": "yesno",
+   "image": "s13_widget_battery_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "% 9'un yerine % 8'in olduğu bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'bir hata var' = there is a mistake.",
+   "reason_B": "Says there is an error (8% where 9% should be)."
+  },
+  {
+   "id": 173,
+   "kind": "yesno",
+   "image": "s13_widget_battery_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "%9'un altındaki numaralar incorrecttir.",
+   "seen_in": [
+    "run3:448",
+    "run4:448"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "Says numbers are incorrect = a mistake.",
+   "reason_B": "Says numbers are incorrect, i.e. a mistake."
+  },
+  {
+   "id": 174,
+   "kind": "yesno",
+   "image": "s13_widget_battery_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "%9'un altındadır.",
+   "seen_in": [
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "'It is below 9%' - no verdict.",
+   "reason_B": "'it is below 9%' commits to nothing."
+  },
+  {
+   "id": 175,
+   "kind": "yesno",
+   "image": "s13_widget_battery_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Sorry, as a base VLM I am not trained to answer this question.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Refusal.",
+   "reason_B": "Refusal."
+  },
+  {
+   "id": 176,
+   "kind": "yesno",
+   "image": "s13_widget_battery_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "tablet için akıllı telefonun akıllı telefon şarj cihazı olarak kullanılması",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Incoherent description, no verdict.",
+   "reason_B": "Garbled sentence, no verdict."
+  },
+  {
+   "id": 177,
+   "kind": "yesno",
+   "image": "s13_widget_battery_consistent_tr.png",
+   "question": "grafikteki sayılar halkalarla uyuşuyor mu?",
+   "answer": "Üzerinde halkalar olan bir grafik var mı?",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Answers with a question.",
+   "reason_B": "Answers with a question back."
+  },
+  {
+   "id": 178,
+   "kind": "yesno",
+   "image": "s13_widget_battery_consistent_tr.png",
+   "question": "grafikteki sayılar halkalarla uyuşuyor mu?",
+   "answer": "Grafikteki sayılar halkalarla uyuşuyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'uyuşuyor' = yes they match.",
+   "reason_B": "'sayılar halkalarla uyuşuyor' = the numbers match."
+  },
+  {
+   "id": 179,
+   "kind": "yesno",
+   "image": "s13_widget_battery_consistent_tr.png",
+   "question": "grafikteki sayılar halkalarla çelişiyor mu?",
+   "answer": "Sayılar halkalarla çelişiyor.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the rings, answering the contradiction question yes."
+  },
+  {
+   "id": 180,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'grafikte bir hata var' = there is a mistake.",
+   "reason_B": "'grafikte bir hata var' = there is a mistake."
+  },
+  {
+   "id": 181,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Görüntüdeki hata, \"Ortalama\" kelimesinin \"Ort",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Görüntüdeki hata ...' names an error, so asserts one exists.",
+   "reason_B": "'Görüntüdeki hata, ...' names the error, presupposing there is one."
+  },
+  {
+   "id": 182,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Bu grafikte bir hata var.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Bu grafikte bir hata var' = there is a mistake.",
+   "reason_B": "'Bu grafikte bir hata var' = there is a mistake."
+  },
+  {
+   "id": 183,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_conflict_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "1.800'ü gösteren bir sütun var ama grafikte",
+   "seen_in": [
+    "run4:10b-448"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Truncated ('a column shows 1,800 but in the chart...'); no clear verdict.",
+   "reason_B": "Truncated after 'a column shows 1,800 but in the chart'; verdict not clear."
+  },
+  {
+   "id": 184,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 185,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_conflict_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 186,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "grafikte bir hata var.",
+   "seen_in": [
+    "run3:224",
+    "run4:224",
+    "run4:224bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'grafikte bir hata var' = there is a mistake.",
+   "reason_B": "'grafikte bir hata var' = there is a mistake."
+  },
+  {
+   "id": 187,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "Görüntüdeki hata, \"Ortalama\" kelimesinin \"Ort",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'Görüntüdeki hata ...' names an error, so asserts one exists.",
+   "reason_B": "'Görüntüdeki hata, ...' names the error, presupposing there is one."
+  },
+  {
+   "id": 188,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_consistent_tr.png",
+   "question": "bu grafikte bir hata var mı?",
+   "answer": "3. çeyrek geliri toplamı 1600 bin",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "neither",
+   "judge_B": "neither",
+   "verdict": "neither",
+   "reason_A": "Reads a revenue total, no verdict.",
+   "reason_B": "States a revenue total, no verdict."
+  },
+  {
+   "id": 189,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_consistent_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run3:448",
+    "run4:448",
+    "run4:448bf"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  },
+  {
+   "id": 190,
+   "kind": "yesno",
+   "image": "s14_spreadsheet_databars_consistent_tr.png",
+   "question": "grafikteki sayılar çubuklarla çelişiyor mu?",
+   "answer": "Grafikteki sayılar çubuklarla çelişiyor.",
+   "seen_in": [
+    "run4:10b-224"
+   ],
+   "judge_A": "yes",
+   "judge_B": "yes",
+   "verdict": "yes",
+   "reason_A": "'çelişiyor' = yes they contradict.",
+   "reason_B": "Says the numbers contradict the bars, answering the contradiction question yes."
+  }
+ ]
+}

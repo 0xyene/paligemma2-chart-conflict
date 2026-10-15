@@ -1,0 +1,101 @@
+run 4: 3564 answers, 3564 matched to questions; models: 3B-224 fp32 (594), 3B-448 fp32 (594), 3B-224 (594), 3B-448 (594), 10B-224 (594), 10B-448 (594)
+
+CONTROLS
+  3B-224 fp32 on this GPU vs run 3 on the T4: 132/132 answers identical
+  3B-448 fp32 on this GPU vs run 3 on the T4: 132/132 answers identical
+  3B-224 float32 vs bfloat16: 577/594 answers identical
+  3B-448 float32 vs bfloat16: 576/594 answers identical
+
+E4 · CONCRETE COMPARISONS (English, 11 charts)
+flip questions ('number on the biggest mark is the largest?' + 'on the smallest mark the smallest?'): share of yes,
+right answer = yes on agreeing, no on lying; p = Fisher exact, two-sided
+  3B-224 fp32  yes 20/22 → 20/22   p = 1.000
+  3B-448 fp32  yes 20/22 → 19/22   p = 1.000
+  3B-224       yes 20/22 → 20/22   p = 1.000
+  3B-448       yes 20/22 → 19/22   p = 1.000
+  10B-224      yes 22/22 → 19/22   p = 0.233
+  10B-448      yes 19/22 → 17/22   p = 0.698
+
+all 6 comparison questions: share right (agreeing / lying); a model that always says yes gets 22/66 and 38/66 here
+  3B-224 fp32  agreeing 44/66 · lying 32/66 · yes-share 65%
+  3B-448 fp32  agreeing 40/66 · lying 31/66 · yes-share 66%
+  3B-224       agreeing 45/66 · lying 30/66 · yes-share 63%
+  3B-448       agreeing 40/66 · lying 31/66 · yes-share 66%
+  10B-224      agreeing 52/66 · lying 23/66 · yes-share 55%
+  10B-448      agreeing 44/66 · lying 32/66 · yes-share 61%
+
+exact-opposite pairs: 'is the number on the biggest mark the largest?' vs 'is any number larger than it?' (and the
+same for the smallest mark). caught = 'no' then 'yes' on a lying chart; false alarm = the same on an agreeing chart;
+yes/yes = says both, i.e. contradicts itself
+  3B-224 fp32  caught 1/22 lying vs false alarm 1/22 agreeing (p 1.000) · yes/yes 19 lying, 15 agreeing
+  3B-448 fp32  caught 3/22 lying vs false alarm 2/22 agreeing (p 1.000) · yes/yes 17 lying, 18 agreeing
+  3B-224       caught 1/22 lying vs false alarm 0/22 agreeing (p 1.000) · yes/yes 18 lying, 15 agreeing
+  3B-448       caught 3/22 lying vs false alarm 2/22 agreeing (p 1.000) · yes/yes 17 lying, 18 agreeing
+  10B-224      caught 0/22 lying vs false alarm 0/22 agreeing (p 1.000) · yes/yes 10 lying, 10 agreeing
+  10B-448      caught 4/22 lying vs false alarm 3/22 agreeing (p 1.000) · yes/yes 13 lying, 13 agreeing
+
+the two parts on the same images
+  3B-224 fp32  names the biggest/smallest mark 17/44 · reads the number (agreeing) 19/22 · on lying charts quotes printed 19, drawn 0, other 3 of 22
+  3B-448 fp32  names the biggest/smallest mark 19/44 · reads the number (agreeing) 21/22 · on lying charts quotes printed 22, drawn 0, other 0 of 22
+  3B-224       names the biggest/smallest mark 17/44 · reads the number (agreeing) 19/22 · on lying charts quotes printed 19, drawn 0, other 3 of 22
+  3B-448       names the biggest/smallest mark 20/44 · reads the number (agreeing) 21/22 · on lying charts quotes printed 22, drawn 0, other 0 of 22
+  10B-224      names the biggest/smallest mark 21/44 · reads the number (agreeing) 19/22 · on lying charts quotes printed 19, drawn 0, other 3 of 22
+  10B-448      names the biggest/smallest mark 26/44 · reads the number (agreeing) 20/22 · on lying charts quotes printed 22, drawn 0, other 0 of 22
+
+lying charts, 'which has the tallest / shortest mark?' (a drawing question): the drawing's item vs the numbers' item
+  3B-224 fp32  drawing's item 6/22 · numbers' item 4/22 · other 12
+  3B-448 fp32  drawing's item 6/22 · numbers' item 7/22 · other 9
+  3B-224       drawing's item 6/22 · numbers' item 4/22 · other 12
+  3B-448       drawing's item 6/22 · numbers' item 7/22 · other 9
+  10B-224      drawing's item 8/22 · numbers' item 6/22 · other 8
+  10B-448      drawing's item 9/22 · numbers' item 7/22 · other 6
+
+composition, lying charts: mark named right AND printed number quoted → flip question answered right ('no')?
+  3B-224 fp32  has both facts on 6/22 marks; of those, said 'no' (right) on 1
+  3B-448 fp32  has both facts on 6/22 marks; of those, said 'no' (right) on 1
+  3B-224       has both facts on 6/22 marks; of those, said 'no' (right) on 1
+  3B-448       has both facts on 6/22 marks; of those, said 'no' (right) on 1
+  10B-224      has both facts on 7/22 marks; of those, said 'no' (right) on 3
+  10B-448      has both facts on 9/22 marks; of those, said 'no' (right) on 2
+
+E5 · THE 'NO' LADDER (English, agreeing charts; L3 = E4 comparisons)
+false yes = said yes where the right answer is no · true yes = said yes where it is yes
+  3B-224 fp32  L0 false yes  0/33 true yes 11/11 · L1 false yes  8/22 true yes 22/22 · L2 false yes 19/22 true yes 11/11 · L3 false yes 20/44 true yes 20/22
+  3B-448 fp32  L0 false yes  0/33 true yes 11/11 · L1 false yes  2/22 true yes 22/22 · L2 false yes 15/22 true yes 11/11 · L3 false yes 24/44 true yes 20/22
+  3B-224       L0 false yes  0/33 true yes 11/11 · L1 false yes  8/22 true yes 22/22 · L2 false yes 18/22 true yes 11/11 · L3 false yes 19/44 true yes 20/22
+  3B-448       L0 false yes  0/33 true yes 11/11 · L1 false yes  2/22 true yes 22/22 · L2 false yes 15/22 true yes 11/11 · L3 false yes 24/44 true yes 20/22
+  10B-224      L0 false yes  0/33 true yes 11/11 · L1 false yes  4/22 true yes 22/22 · L2 false yes  7/22 true yes 11/11 · L3 false yes 14/44 true yes 22/22
+  10B-448      L0 false yes  0/33 true yes 11/11 · L1 false yes  0/22 true yes 22/22 · L2 false yes  4/22 true yes 11/11 · L3 false yes 19/44 true yes 19/22
+by question (false yes on agreeing charts, all models pooled):
+  L0 obj_car         3B-224 fp32 0/11 · 3B-448 fp32 0/11 · 3B-224 0/11 · 3B-448 0/11 · 10B-224 0/11 · 10B-448 0/11
+  L0 obj_cat         3B-224 fp32 0/11 · 3B-448 fp32 0/11 · 3B-224 0/11 · 3B-448 0/11 · 10B-224 0/11 · 10B-448 0/11
+  L0 obj_dog         3B-224 fp32 0/11 · 3B-448 fp32 0/11 · 3B-224 0/11 · 3B-448 0/11 · 10B-224 0/11 · 10B-448 0/11
+  L1 name_absent     3B-224 fp32 8/11 · 3B-448 fp32 2/11 · 3B-224 8/11 · 3B-448 2/11 · 10B-224 4/11 · 10B-448 0/11
+  L1 topic_no        3B-224 fp32 0/11 · 3B-448 fp32 0/11 · 3B-224 0/11 · 3B-448 0/11 · 10B-224 0/11 · 10B-448 0/11
+  L2 draw_big_small  3B-224 fp32 10/11 · 3B-448 fp32 8/11 · 3B-224 10/11 · 3B-448 8/11 · 10B-224 5/11 · 10B-448 3/11
+  L2 draw_small_big  3B-224 fp32 9/11 · 3B-448 fp32 7/11 · 3B-224 8/11 · 3B-448 7/11 · 10B-224 2/11 · 10B-448 1/11
+  L3 any_less_small  3B-224 fp32 11/11 · 3B-448 fp32 11/11 · 3B-224 11/11 · 3B-448 11/11 · 10B-224 9/11 · 10B-448 10/11
+  L3 any_more_big    3B-224 fp32 5/11 · 3B-448 fp32 9/11 · 3B-224 4/11 · 3B-448 9/11 · 10B-224 1/11 · 10B-448 6/11
+  L3 cmp_big_min     3B-224 fp32 3/11 · 3B-448 fp32 2/11 · 3B-224 3/11 · 3B-448 2/11 · 10B-224 4/11 · 10B-448 1/11
+  L3 cmp_small_max   3B-224 fp32 1/11 · 3B-448 fp32 2/11 · 3B-224 1/11 · 3B-448 2/11 · 10B-224 0/11 · 10B-448 2/11
+L2 on LYING charts (the printed numbers point to the wrong item): false yes 3B-224 fp32 22/22 · 3B-448 fp32 19/22 · 3B-224 22/22 · 3B-448 19/22 · 10B-224 15/22 · 10B-448 13/22
+
+judge pass (judge/adjudication.json, two judges, both must agree): decoded 175 yes/no, 71 'which', 22 'read' answers
+
+F · RUN 3 QUESTIONS BY MODEL (en + tr, 11 charts): share of yes, agreeing → lying (n = 22 each)
+  3B-224 fp32  match 15→14 (p 1.000) · mismatch 10→11 (p 1.000) · error 15→15 (p 1.000) · caught 2/22 vs false alarm 2/22
+  3B-448 fp32  match 16→16 (p 1.000) · mismatch 15→15 (p 1.000) · error  6→ 4 (p 0.721) · caught 0/22 vs false alarm 1/22
+  3B-224       match 12→14 (p 0.760) · mismatch  8→10 (p 0.760) · error 14→14 (p 1.000) · caught 2/22 vs false alarm 3/22
+  3B-448       match 15→15 (p 1.000) · mismatch 14→14 (p 1.000) · error  4→ 4 (p 1.000) · caught 0/22 vs false alarm 1/22
+  10B-224      match 22→21 (p 1.000) · mismatch 18→17 (p 1.000) · error  8→10 (p 0.760) · caught 0/22 vs false alarm 0/22
+  10B-448      match 15→15 (p 1.000) · mismatch  9→10 (p 1.000) · error  4→ 5 (p 1.000) · caught 2/22 vs false alarm 2/22
+
+yes/no questions answered with something else: 83 (by model: 3B-448 22, 10B-224 19, 3B-448 fp32 18, 10B-448 18, 3B-224 4, 3B-224 fp32 2)
+  [3B-224 fp32] bu grafikte bir hata var mı? → 'grafikte "düz" yazan yerlerde "c" ve "f'
+  [3B-224 fp32] bu grafikte bir hata var mı? → 'grafikte 24 derecelik sıcaklık gösterilmektedir ancak 23'
+  [3B-448 fp32] bu grafikte bir hata var mı? → 'Serinin ilk dört bölümünün toplamı serinin totalıdır.'
+  [3B-448 fp32] bu grafikte bir hata var mı? → 'Serinin ilk dört bölümünün toplamı serinin totalıdır.'
+  [3B-448 fp32] grafikteki sayılar çubuklarla uyuşuyor mu? → 'Üst üste iki ve dört çubuk, sayıları ise bir ç'
+  [3B-448 fp32] grafikteki sayılar çubuklarla uyuşuyor mu? → 'Üst üste iki ve dört saati olan dört çubuk, say'
+  [3B-448 fp32] grafikteki sayılar göstergelerle uyuşuyor mu? → 'Üstteki üç gösterge, alttaki üç gösterge ile uyuş'
+  [3B-448 fp32] grafikteki sayılar göstergelerle çelişiyor mu? → 'Sunucu, adres, kabin ve çalışma süresi göstergelerle ç'

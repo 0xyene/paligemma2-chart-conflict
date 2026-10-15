@@ -7,4 +7,10 @@ check/
 run2/build/
 run2/bundle/
 run3/bundle/
+run4/bundle/
 run2/size_sweep/check/
+# blog figure intermediates (build_figs.py makes them again)
+blog_figures/post/*.html
+blog_figures/post/thumb_*.jpg
+blog_figures/post/s01_*_crop.png
+blog_figures/post/r2_*.png

@@ -11,15 +11,16 @@ Every sheet with its questions and expected answers (generated from the specs): 
 
 ## Results
 
-Run 1 (792 answers) and follow-up runs 2 (820 answers) and 3 (264 answers), all on a free Colab T4 with `google/paligemma2-3b-mix-224` and `-mix-448`, greedy decoding.
+Run 1 (792 answers) and follow-up runs 2 (820 answers) and 3 (264 answers), all on a free Colab T4 with `google/paligemma2-3b-mix-224` and `-mix-448`, greedy decoding. Run 4 (3,564 answers, Colab A100) adds `paligemma2-10b-mix-224` and `-mix-448`.
 
 - **Questions about the drawing** ("which is biggest?", "up or down?"): the lying text changed **18%** of mix-448's answers and **7%** of mix-224's.
 - **"How much is X?"**: mix-448 quoted the printed (lying) number **91%** of the time, mix-224 **55%**. The model reads the numbers but doesn't check them against the drawing.
 - **Scales:** on the 3 charts where the text sets the scale (axis ticks, a legend), the text was never used, even when it was the truth.
 - **Run 2:** given images cut to mix-224's level of detail, mix-448 still followed the text nearly as often as before, so the 448–224 gap is mostly not about image detail.
 - **Run 3:** asked directly ("do the numbers on the chart match the bars?", "…contradict the bars?", "is there a mistake in this chart?"), neither model answered differently on agreeing and lying charts: e.g. mix-448 said the numbers match on **16/22** agreeing and **16/22** lying charts.
+- **Run 4:** concrete questions, their exact opposites, a "no" ladder and the 10B models. No model notices the lie with any wording. The models often say yes to a claim *and* to its exact opposite (10–18 of 22 pairs). 10B says yes to fewer wrong claims about the drawing (4–7 vs 15–18 of 22 on agreeing charts) but does not detect the conflict either. On lying charts the printed numbers also change some answers to drawing questions, for all four models.
 
-Full write-up with every answer: [Bars or Labels?](https://claude.ai/artifact/XAcHHgbQzEBZNpTUEQpNYy). Numbers: `results/run1/report.txt`, `run2/results/report2.txt`, `run3/results/report3.txt`. Run 2 design and the predictions written before it: `run2/README.md`, `run2/PREDICTIONS.md`. Run 3: `run3/README.md`.
+Full write-up with every answer: [Bars or Labels?](https://claude.ai/artifact/XAcHHgbQzEBZNpTUEQpNYy). Numbers: `results/run1/report.txt`, `run2/results/report2.txt`, `run3/results/report3.txt`. Run 2 design and the predictions written before it: `run2/README.md`, `run2/PREDICTIONS.md`. Run 3: `run3/README.md`. Run 4: `run4/README.md`, `run4/results/report4.txt`, `run4/results/extra4.txt` (split by chart type, yes-to-both counts).
 
 ## Files
 
@@ -33,11 +34,14 @@ Full write-up with every answer: [Bars or Labels?](https://claude.ai/artifact/XA
 | `common/scoring.py`, `common/answers.py` | answer matching (same code in the notebook) and shared accept lists |
 | `stimuli/<id>/make.py` | builds one chart (HTML/SVG/Canvas via headless Chrome, matplotlib, PIL) + its `spec.json` |
 | `check/448`, `check/224` | what the model actually sees after resizing (generated, not in the repo) |
+| `judge/` | `adjudication.json`: answers the matcher can't place (runs 3–4), decoded by two independent Claude judges; a verdict counts only when both agree. `adj.py` applies it in `analyze3.py` / `analyze4.py` |
+| `report/` | the Bars or Labels? page: `make_data.py` → `data.json` → `build.py` → `index.html` |
+| `blog_figures/post/` | figures 4–8 of the blog post (`build_figs.py`; figure 6 inputs from `shot_report.py`) |
 | `check/diff` | red = pixels that differ from consistent (`<id>_<lang>.png` conflict, `…_nonumbers.png`): only the cue text (generated, not in the repo) |
 
 ## Rebuild
 
-Generated files are not in the repo: `build/` (HTML renders, plus macOS system fonts that can't be redistributed), `check/`, the `.zip` bundles, `run2/bundle/` and `run3/bundle/`. These commands recreate them (macOS + Chrome for the HTML charts).
+Generated files are not in the repo: `build/` (HTML renders, plus macOS system fonts that can't be redistributed), `check/`, the `.zip` bundles, `run2/bundle/`, `run3/bundle/` and `run4/bundle/`. These commands recreate them (macOS + Chrome for the HTML charts).
 
 ```bash
 python3.12 common/collect.py --rebuild

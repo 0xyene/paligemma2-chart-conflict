@@ -70,11 +70,24 @@ M["yn"] = M.answer.map(yn)
 M["yn_strict"] = M.yn
 coded = M.yn == "other"
 M.loc[coded, "yn"] = [yn_sentence(a, q) for a, q in zip(M.loc[coded, "answer"], M.loc[coded, "qtype"])]
+sys.path.insert(0, str(R3.parent / "judge"))
+import adj  # noqa: E402
+judged = changed = 0
+if adj.available():
+    for i, r in M.iterrows():
+        v = adj.lookup("yesno", r.image, r.prompt, r.answer)
+        if v is not None:
+            new = v if v in ("yes", "no") else "other"
+            judged += 1
+            changed += new != M.at[i, "yn"]
+            M.at[i, "yn"] = new
 M["ok"] = M.yn == M.right
 say(f"run 3: {len(M)} answers ({M.model.nunique()} models), {missing} missing; parsed:",
     " · ".join(f"{k} {v}" for k, v in M.yn.value_counts().items()))
 say(f"sentence answers coded: {int((coded & (M.yn != 'other')).sum())} of {int(coded.sum())} "
     f"(e.g. 'Resimde hata var.' = yes, 'Sayılar çubuklarla çelişiyor.' = yes); counts below include them")
+if judged:
+    say(f"judge pass (judge/adjudication.json, two judges, both must agree): {judged} answers decoded, {changed} changed vs the rule coding")
 other = M[M.yn == "other"]
 if len(other):
     say("not yes/no:", "; ".join(f"[{r.model}] {r.prompt.split(' ', 2)[2]} → {r.answer!r}" for r in other.head(10).itertuples()))

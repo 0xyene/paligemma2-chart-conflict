@@ -1,0 +1,14 @@
+chart types: label 9, readout 2 (run-3 charts)
+
+1. 'which has the tallest / shortest mark?' -> the drawing's item (true chart -> lying chart)
+  3B-224   label 9/18 -> 5/18 | readout 2/4 -> 1/4 | all 11/22 -> 6/22
+  3B-448   label 11/18 -> 4/18 | readout 3/4 -> 2/4 | all 14/22 -> 6/22
+  10B-224  label 10/18 -> 7/18 | readout 3/4 -> 1/4 | all 13/22 -> 8/22
+  10B-448  label 14/18 -> 9/18 | readout 3/4 -> 0/4 | all 17/22 -> 9/22
+
+2. lying charts, both facts (right mark + its printed number) but yes to the flip question: also yes to the opposite?
+  3B-224   both facts 6/22 · flip answered yes (wrong) 5 · of those, yes to the opposite too 5
+  3B-448   both facts 6/22 · flip answered yes (wrong) 5 · of those, yes to the opposite too 4
+  10B-224  both facts 7/22 · flip answered yes (wrong) 4 · of those, yes to the opposite too 4
+  10B-448  both facts 9/22 · flip answered yes (wrong) 7 · of those, yes to the opposite too 6
+  all four  both facts 28 · flip yes 21 · also yes to the opposite 19

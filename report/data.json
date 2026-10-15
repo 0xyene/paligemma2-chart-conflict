@@ -8167,5 +8167,516 @@
    "changed": 2,
    "agree": 30
   }
+ },
+ "run3": {
+  "n_answers": 264,
+  "missing": 0,
+  "models": {
+   "224": {
+    "match": {
+     "agree": 15,
+     "lie": 14,
+     "n": 22,
+     "p": 1.0
+    },
+    "mismatch": {
+     "agree": 10,
+     "lie": 11,
+     "n": 22,
+     "p": 1.0
+    },
+    "error": {
+     "agree": 15,
+     "lie": 15,
+     "n": 22,
+     "p": 1.0
+    },
+    "caught": {
+     "agree": 2,
+     "lie": 2,
+     "n": 22,
+     "p": 1.0
+    }
+   },
+   "448": {
+    "match": {
+     "agree": 16,
+     "lie": 16,
+     "n": 22,
+     "p": 1.0
+    },
+    "mismatch": {
+     "agree": 15,
+     "lie": 15,
+     "n": 22,
+     "p": 1.0
+    },
+    "error": {
+     "agree": 6,
+     "lie": 4,
+     "n": 22,
+     "p": 0.7205127812047835
+    },
+    "caught": {
+     "agree": 1,
+     "lie": 0,
+     "n": 22,
+     "p": 1.0
+    }
+   },
+   "10b-224": {
+    "match": {
+     "agree": 22,
+     "lie": 21,
+     "n": 22,
+     "p": 1.0
+    },
+    "mismatch": {
+     "agree": 18,
+     "lie": 17,
+     "n": 22,
+     "p": 1.0
+    },
+    "error": {
+     "agree": 8,
+     "lie": 10,
+     "n": 22,
+     "p": 0.7596704429215753
+    },
+    "caught": {
+     "agree": 0,
+     "lie": 0,
+     "n": 22,
+     "p": 1.0
+    }
+   },
+   "10b-448": {
+    "match": {
+     "agree": 15,
+     "lie": 15,
+     "n": 22,
+     "p": 1.0
+    },
+    "mismatch": {
+     "agree": 9,
+     "lie": 10,
+     "n": 22,
+     "p": 1.0
+    },
+    "error": {
+     "agree": 4,
+     "lie": 5,
+     "n": 22,
+     "p": 1.0
+    },
+    "caught": {
+     "agree": 2,
+     "lie": 2,
+     "n": 22,
+     "p": 1.0
+    }
+   }
+  },
+  "yes_yes": {
+   "224": {
+    "lie": 9,
+    "agree": 8
+   },
+   "448": {
+    "lie": 13,
+    "agree": 12
+   }
+  },
+  "judged": 56,
+  "sentences": 56,
+  "judge34": {
+   "n": 190,
+   "agree": 188
+  }
+ },
+ "run4": {
+  "n_answers": 3564,
+  "control_hw": {
+   "224": [
+    132,
+    132
+   ],
+   "448": [
+    132,
+    132
+   ]
+  },
+  "control_dtype": {
+   "224": [
+    577,
+    594
+   ],
+   "448": [
+    576,
+    594
+   ]
+  },
+  "models": {
+   "224bf": {
+    "ladder": {
+     "L0": [
+      0,
+      33
+     ],
+     "L1": [
+      8,
+      22
+     ],
+     "L2": [
+      18,
+      22
+     ],
+     "L3": [
+      19,
+      44
+     ]
+    },
+    "ladder_true": {
+     "L0": [
+      11,
+      11
+     ],
+     "L1": [
+      22,
+      22
+     ],
+     "L2": [
+      11,
+      11
+     ],
+     "L3": [
+      20,
+      22
+     ]
+    },
+    "l2": {
+     "agree": 18,
+     "lie": 22,
+     "n": 22,
+     "p": 0.10777084515031196
+    },
+    "which": {
+     "agree": 11,
+     "lie": 6,
+     "lie_numbers": 4,
+     "n": 22,
+     "p": 0.2151523321696016
+    },
+    "flip": {
+     "agree": 20,
+     "lie": 20,
+     "n": 22,
+     "p": 1.0
+    },
+    "caught": {
+     "agree": 0,
+     "lie": 1,
+     "n": 22,
+     "p": 1.0
+    },
+    "yes_yes": {
+     "agree": 15,
+     "lie": 18,
+     "n": 22
+    },
+    "read_lying": {
+     "label": 19,
+     "drawing": 0,
+     "other": 3
+    },
+    "composition": {
+     "has_both": 6,
+     "of": 22,
+     "cmp_right_given_both": 1,
+     "cmp_right_overall": 2
+    }
+   },
+   "448bf": {
+    "ladder": {
+     "L0": [
+      0,
+      33
+     ],
+     "L1": [
+      2,
+      22
+     ],
+     "L2": [
+      15,
+      22
+     ],
+     "L3": [
+      24,
+      44
+     ]
+    },
+    "ladder_true": {
+     "L0": [
+      11,
+      11
+     ],
+     "L1": [
+      22,
+      22
+     ],
+     "L2": [
+      11,
+      11
+     ],
+     "L3": [
+      20,
+      22
+     ]
+    },
+    "l2": {
+     "agree": 15,
+     "lie": 19,
+     "n": 22,
+     "p": 0.28057919606416487
+    },
+    "which": {
+     "agree": 14,
+     "lie": 6,
+     "lie_numbers": 7,
+     "n": 22,
+     "p": 0.0328648840650264
+    },
+    "flip": {
+     "agree": 20,
+     "lie": 19,
+     "n": 22,
+     "p": 1.0
+    },
+    "caught": {
+     "agree": 2,
+     "lie": 3,
+     "n": 22,
+     "p": 1.0
+    },
+    "yes_yes": {
+     "agree": 18,
+     "lie": 17,
+     "n": 22
+    },
+    "read_lying": {
+     "label": 22,
+     "drawing": 0,
+     "other": 0
+    },
+    "composition": {
+     "has_both": 6,
+     "of": 22,
+     "cmp_right_given_both": 1,
+     "cmp_right_overall": 3
+    }
+   },
+   "10b-224": {
+    "ladder": {
+     "L0": [
+      0,
+      33
+     ],
+     "L1": [
+      4,
+      22
+     ],
+     "L2": [
+      7,
+      22
+     ],
+     "L3": [
+      14,
+      44
+     ]
+    },
+    "ladder_true": {
+     "L0": [
+      11,
+      11
+     ],
+     "L1": [
+      22,
+      22
+     ],
+     "L2": [
+      11,
+      11
+     ],
+     "L3": [
+      22,
+      22
+     ]
+    },
+    "l2": {
+     "agree": 7,
+     "lie": 15,
+     "n": 22,
+     "p": 0.03365028978428891
+    },
+    "which": {
+     "agree": 13,
+     "lie": 8,
+     "lie_numbers": 6,
+     "n": 22,
+     "p": 0.22705644815268103
+    },
+    "flip": {
+     "agree": 22,
+     "lie": 19,
+     "n": 22,
+     "p": 0.2325581395348837
+    },
+    "caught": {
+     "agree": 0,
+     "lie": 0,
+     "n": 22,
+     "p": 1.0
+    },
+    "yes_yes": {
+     "agree": 10,
+     "lie": 10,
+     "n": 22
+    },
+    "read_lying": {
+     "label": 19,
+     "drawing": 0,
+     "other": 3
+    },
+    "composition": {
+     "has_both": 7,
+     "of": 22,
+     "cmp_right_given_both": 3,
+     "cmp_right_overall": 3
+    }
+   },
+   "10b-448": {
+    "ladder": {
+     "L0": [
+      0,
+      33
+     ],
+     "L1": [
+      0,
+      22
+     ],
+     "L2": [
+      4,
+      22
+     ],
+     "L3": [
+      19,
+      44
+     ]
+    },
+    "ladder_true": {
+     "L0": [
+      11,
+      11
+     ],
+     "L1": [
+      22,
+      22
+     ],
+     "L2": [
+      11,
+      11
+     ],
+     "L3": [
+      19,
+      22
+     ]
+    },
+    "l2": {
+     "agree": 4,
+     "lie": 13,
+     "n": 22,
+     "p": 0.012157393450151458
+    },
+    "which": {
+     "agree": 17,
+     "lie": 9,
+     "lie_numbers": 7,
+     "n": 22,
+     "p": 0.03053553605026629
+    },
+    "flip": {
+     "agree": 19,
+     "lie": 17,
+     "n": 22,
+     "p": 0.6980847945113402
+    },
+    "caught": {
+     "agree": 3,
+     "lie": 4,
+     "n": 22,
+     "p": 1.0
+    },
+    "yes_yes": {
+     "agree": 13,
+     "lie": 13,
+     "n": 22
+    },
+    "read_lying": {
+     "label": 22,
+     "drawing": 0,
+     "other": 0
+    },
+    "composition": {
+     "has_both": 9,
+     "of": 22,
+     "cmp_right_given_both": 2,
+     "cmp_right_overall": 5
+    }
+   }
+  },
+  "example": [
+   {
+    "q": "Which city has the fullest thermometer?",
+    "agree": "avlen",
+    "lie": "dimel",
+    "V": "avlen",
+    "T": "dimel"
+   },
+   {
+    "q": "Does Dimel have the fullest thermometer?",
+    "agree": "no",
+    "lie": "yes",
+    "V": "no",
+    "T": "yes"
+   },
+   {
+    "q": "What temperature is shown for Avlen?",
+    "agree": "31°",
+    "lie": "-3°",
+    "V": null,
+    "T": null
+   },
+   {
+    "q": "Is the temperature under the fullest thermometer the highest of the four?",
+    "agree": "yes",
+    "lie": "yes",
+    "V": null,
+    "T": null
+   },
+   {
+    "q": "Do the numbers match the thermometer fills?",
+    "agree": "yes",
+    "lie": "yes",
+    "V": null,
+    "T": null
+   },
+   {
+    "q": "Do the numbers contradict the thermometer fills?",
+    "agree": "yes",
+    "lie": "yes",
+    "V": null,
+    "T": null
+   }
+  ]
  }
 }
